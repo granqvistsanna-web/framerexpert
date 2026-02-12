@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogg — FramerExpert.se | Guider & tips om Framer</title>
+  <meta name="description" content="Alla artiklar om Framer. Guider, tutorials, tips och jämförelser.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Blogg — FramerExpert.se | Guider & tips om Framer">
+  <meta property="og:description" content="Alla artiklar om Framer. Guider, tutorials, tips och jämförelser.">
+  <meta property="og:url" content="https://framerexpert.se/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="sv" href="https://framerexpert.se/blog/">
+  <link rel="alternate" hreflang="en" href="https://framerexpert.se/blog/">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://framerexpert.se/blog/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se" },
+      { "@type": "ListItem", "position": 2, "name": "Blogg" }
+    ]
+  }
+  </script>
+</head>
+<body data-page="blog">
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav__inner container">
+      <a href="/" class="nav__logo">FramerExpert<span class="nav__logo-dot">.se</span></a>
+      <ul class="nav__links">
+        <li><a href="/" data-i18n="nav.home">Hem</a></li>
+        <li><a href="/blog/" data-i18n="nav.blog">Blogg</a></li>
+        <li><a href="/#about" data-i18n="nav.about">Om</a></li>
+        <li><a href="/#contact" data-i18n="nav.contact">Kontakt</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Byt språk">
+          <span class="lang-toggle__option is-active" data-lang="sv">SV</span>
+          <span class="lang-toggle__divider">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+      </div>
+      <button class="nav__hamburger" id="navHamburger" aria-label="Meny">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumbs container">
+    <ol class="breadcrumbs__list">
+      <li><a href="/" data-i18n="nav.home">Hem</a></li>
+      <li><span aria-current="page" data-i18n="nav.blog">Blogg</span></li>
+    </ol>
+  </div>
+
+  <!-- BLOG LISTING -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header animate-in">
+        <h1 class="section__title" data-i18n="blog.title">Alla artiklar</h1>
+        <p class="section__description" data-i18n="blog.description">Guider, tips och tutorials om Framer.</p>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="blog-filter" id="blogFilter">
+        <button class="blog-filter__btn is-active" data-category="all" data-i18n="blog.filter.all">Alla</button>
+        <button class="blog-filter__btn" data-category="getting-started" data-i18n="blog.filter.getting-started">Kom igång</button>
+        <button class="blog-filter__btn" data-category="comparison" data-i18n="blog.filter.comparison">Jämförelse</button>
+        <button class="blog-filter__btn" data-category="tips" data-i18n="blog.filter.tips">Tips</button>
+        <button class="blog-filter__btn" data-category="seo" data-i18n="blog.filter.seo">SEO</button>
+        <button class="blog-filter__btn" data-category="cms" data-i18n="blog.filter.cms">CMS</button>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="blog-grid" id="blogGrid">
+        <a href="/blog/vad-ar-framer.html" class="article-card animate-in" data-category="getting-started">
+          <div class="article-card__image">
+            <div class="article-card__placeholder">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <span class="article-card__category" data-i18n="articles.a1.category">Kom igång</span>
+          </div>
+          <div class="article-card__meta-row">
+            <time datetime="2026-02-10">2026-02-10</time>
+            <span data-i18n="articles.a1.readtime">8 min läsning</span>
+          </div>
+          <h2 class="article-card__title" data-i18n="articles.a1.title">Vad är Framer? En komplett guide</h2>
+          <p class="article-card__excerpt" data-i18n="articles.a1.excerpt">Allt du behöver veta om Framer — från grunderna till avancerade funktioner.</p>
+        </a>
+
+        <a href="/blog/framer-vs-wordpress.html" class="article-card animate-in" data-category="comparison">
+          <div class="article-card__image">
+            <div class="article-card__placeholder">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <span class="article-card__category" data-i18n="articles.a2.category">Jämförelse</span>
+          </div>
+          <div class="article-card__meta-row">
+            <time datetime="2026-02-08">2026-02-08</time>
+            <span data-i18n="articles.a2.readtime">12 min läsning</span>
+          </div>
+          <h2 class="article-card__title" data-i18n="articles.a2.title">Framer vs WordPress — Vilken är bäst 2026?</h2>
+          <p class="article-card__excerpt" data-i18n="articles.a2.excerpt">En ärlig jämförelse mellan Framer och WordPress. Prestanda, SEO, pris och användarvänlighet.</p>
+        </a>
+
+        <a href="/blog/5-tips-bygga-snabbare.html" class="article-card animate-in" data-category="tips">
+          <div class="article-card__image">
+            <div class="article-card__placeholder">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <span class="article-card__category" data-i18n="articles.a3.category">Tips</span>
+          </div>
+          <div class="article-card__meta-row">
+            <time datetime="2026-02-05">2026-02-05</time>
+            <span data-i18n="articles.a3.readtime">6 min läsning</span>
+          </div>
+          <h2 class="article-card__title" data-i18n="articles.a3.title">5 tips för att bygga snabbare i Framer</h2>
+          <p class="article-card__excerpt" data-i18n="articles.a3.excerpt">Spara tid och arbeta smartare. Fem konkreta tips som gör dig snabbare i Framer.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <a href="/" class="nav__logo">FramerExpert<span class="nav__logo-dot">.se</span></a>
+          <p class="footer__brand-desc" data-i18n="footer.desc">Sveriges kunskapskälla för Framer. Guider, tips och expertkunskap.</p>
+        </div>
+        <div class="footer__nav">
+          <h4 data-i18n="footer.nav.pages">Sidor</h4>
+          <ul>
+            <li><a href="/" data-i18n="nav.home">Hem</a></li>
+            <li><a href="/blog/" data-i18n="nav.blog">Blogg</a></li>
+            <li><a href="/#about" data-i18n="nav.about">Om</a></li>
+            <li><a href="/#contact" data-i18n="nav.contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav">
+          <h4 data-i18n="footer.nav.topics">Ämnen</h4>
+          <ul>
+            <li><a href="/blog/?category=getting-started" data-i18n="topics.t1.title">Kom igång med Framer</a></li>
+            <li><a href="/blog/?category=cms" data-i18n="topics.t2.title">Framer CMS</a></li>
+            <li><a href="/blog/?category=seo" data-i18n="topics.t3.title">SEO i Framer</a></li>
+            <li><a href="/blog/?category=comparison" data-i18n="topics.t5.title">Framer vs WordPress</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">&copy; 2026 Sanna Granqvist</span>
+        <span class="footer__tagline" data-i18n="footer.tagline">Byggt med Framer-expertis</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/blog.js"></script>
+</body>
+</html>

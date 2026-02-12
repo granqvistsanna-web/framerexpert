@@ -58,12 +58,12 @@ html {
 
 /* --- Custom Properties --- */
 :root {
-  --bg: #F5F5F0;
-  --bg-card: #EBEBEB;
-  --text: #1A1A1A;
-  --text-secondary: #6B6B6B;
-  --text-muted: #999999;
-  --border: #DDDDD8;
+  --bg: #27272A;
+  --bg-card: #323236;
+  --text: #F5F5F0;
+  --text-secondary: #A1A1AA;
+  --text-muted: #71717A;
+  --border: #3F3F46;
   --font: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --radius: 12px;
   --radius-pill: 9999px;
@@ -179,7 +179,7 @@ ul { list-style: none; }
   opacity: 0;
   pointer-events: auto;
   visibility: hidden;
-  background-color: #0000004d;
+  background-color: #000000a0;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -203,7 +203,7 @@ ul { list-style: none; }
   align-items: center;
   width: 100%;
   max-width: 48em;
-  padding-top: 1.25em;
+  padding-top: 0.875em;
   padding-left: 1.25em;
   padding-right: 1.25em;
   display: flex;
@@ -213,7 +213,7 @@ ul { list-style: none; }
   pointer-events: auto;
   color: var(--text);
   width: 100%;
-  max-width: 25em;
+  max-width: 22em;
   position: relative;
 }
 
@@ -237,8 +237,8 @@ ul { list-style: none; }
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 4em;
-  padding: 1.25em;
+  height: 3em;
+  padding: 0.75em 1em;
   display: flex;
   position: relative;
 }
@@ -256,24 +256,10 @@ ul { list-style: none; }
   align-items: center;
   height: 100%;
   display: flex;
-  font-size: 0.9375em;
-  font-weight: 600;
-  color: var(--text);
-  letter-spacing: -0.01em;
-  gap: 0.5rem;
-}
-
-.twostep-nav__logo-mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.75em;
-  height: 1.75em;
-  background: var(--text);
-  color: var(--bg);
-  border-radius: 6px;
   font-size: 0.8125em;
-  font-weight: 700;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: -0.02em;
 }
 
 .twostep-nav__toggle {
@@ -282,8 +268,8 @@ ul { list-style: none; }
   background-color: transparent;
   justify-content: center;
   align-items: center;
-  width: 2.5em;
-  height: 2.5em;
+  width: 2em;
+  height: 2em;
   padding: 0;
   display: flex;
   position: relative;
@@ -292,8 +278,8 @@ ul { list-style: none; }
 
 .twostep-nav__toggle-bar {
   background-color: var(--text);
-  width: 1.875em;
-  height: .125em;
+  width: 1.375em;
+  height: .1em;
   position: absolute;
 }
 
@@ -312,7 +298,7 @@ ul { list-style: none; }
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  padding: 1.5em;
+  padding: 1em;
   display: flex;
   position: relative;
 }
@@ -392,7 +378,7 @@ ul { list-style: none; }
 
 .twostep-nav__top-line {
   z-index: 2;
-  background-color: #0000001a;
+  background-color: #ffffff1a;
   height: 1px;
   position: absolute;
   bottom: 0;
@@ -404,25 +390,38 @@ ul { list-style: none; }
 .lang-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 0.2rem;
-  background: none;
-  border: none;
+  gap: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
   cursor: pointer;
   font-family: var(--font);
-  font-size: inherit;
+  font-size: 0.6875em;
   font-weight: 500;
   color: var(--text-muted);
-  padding: 0;
+  padding: 0.2em 0.25em;
+  letter-spacing: 0.03em;
+  transition: border-color 150ms;
+}
+
+.lang-toggle:hover {
+  border-color: var(--text-muted);
+}
+
+.lang-toggle__option {
+  padding: 0.15em 0.45em;
+  border-radius: var(--radius-pill);
+  transition: all 150ms;
+  line-height: 1;
 }
 
 .lang-toggle__option.is-active {
-  color: var(--text);
+  color: var(--bg);
+  background: var(--text-secondary);
 }
 
 .lang-toggle__divider {
-  color: var(--text-muted);
-  opacity: 0.4;
-  margin: 0 0.1rem;
+  display: none;
 }
 
 /* --- Two-step Nav Animation Variables --- */
@@ -544,7 +543,7 @@ ul { list-style: none; }
    HERO — KP-style: small refined type, massive whitespace
    ============================================ */
 .hero {
-  margin-top: clamp(7rem, 13vw, 10rem);
+  margin-top: clamp(9rem, 18vw, 13rem);
   padding-bottom: 0;
   text-align: center;
 }
@@ -978,7 +977,7 @@ ul { list-style: none; }
 /* Blog listing heading */
 .blog-listing__header {
   text-align: center;
-  margin-top: clamp(7rem, 13vw, 10rem);
+  margin-top: clamp(9rem, 18vw, 13rem);
   padding-bottom: 0;
 }
 

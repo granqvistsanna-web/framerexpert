@@ -15,7 +15,7 @@ const translations = {
     'nav.about': 'Om',
     'nav.contact': 'Kontakt',
 
-    'hero.title': '<strong>Framer-guider och expertkunskap</strong> \u2014 Allt du beh\u00f6ver f\u00f6r att bygga snabbare och b\u00e4ttre webbplatser i Framer',
+    'hero.title': '<strong>Framer-guider och artiklar.</strong> Guider och artiklar f\u00f6r b\u00e4ttre webbplatser i Framer.',
 
     'articles.a1.category': 'Kom ig\u00e5ng',
     'articles.a1.title': 'Vad \u00e4r Framer? En komplett guide',
@@ -103,7 +103,7 @@ const translations = {
     'nav.about': 'About',
     'nav.contact': 'Contact',
 
-    'hero.title': '<strong>Framer guides and expert knowledge</strong> \u2014 Everything you need to build faster and better websites in Framer',
+    'hero.title': '<strong>Framer guides and articles.</strong> Guides and articles for better websites in Framer.',
 
     'articles.a1.category': 'Getting started',
     'articles.a1.title': 'What is Framer? A complete guide',

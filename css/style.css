@@ -400,16 +400,16 @@ ul { list-style: none; }
   right: .5em;
 }
 
-/* Language Toggle — inside nav */
+/* Language Toggle */
 .lang-toggle {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.2rem;
   background: none;
   border: none;
   cursor: pointer;
   font-family: var(--font);
-  font-size: 0.75em;
+  font-size: inherit;
   font-weight: 500;
   color: var(--text-muted);
   padding: 0;
@@ -541,29 +541,29 @@ ul { list-style: none; }
 }
 
 /* ============================================
-   HERO — Single flowing text, no buttons
+   HERO — KP-style: small refined type, massive whitespace
    ============================================ */
 .hero {
-  padding-top: clamp(6rem, 12vh, 10rem);
-  padding-bottom: clamp(2rem, 5vh, 4rem);
+  margin-top: clamp(7rem, 13vw, 10rem);
+  padding-bottom: 0;
   text-align: center;
 }
 
 .hero__content {
-  max-width: 52em;
+  max-width: 42rem;
   margin: 0 auto;
 }
 
 .hero__title {
-  font-size: clamp(1.5rem, 2.5em, 2.75em);
-  font-weight: 500;
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  font-weight: 400;
   color: var(--text);
   line-height: 1.35;
-  letter-spacing: -0.02em;
+  letter-spacing: normal;
 }
 
 .hero__title strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* ============================================
@@ -574,35 +574,35 @@ ul { list-style: none; }
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
-  padding: clamp(1.5rem, 3vh, 2.5rem) 0 clamp(3rem, 8vh, 6rem);
+  margin-top: 1.5rem;
 }
 
 .filter-pills a,
 .filter-pills button {
   display: inline-block;
-  padding: 0.4em 1em;
-  background: transparent;
-  border: 1px solid var(--border);
+  padding: 0.25rem 0.75rem;
+  background: var(--bg-card);
+  border: none;
   border-radius: var(--radius-pill);
   font-family: var(--font);
-  font-size: 0.875em;
+  font-size: 0.875rem;
   font-weight: 500;
   color: var(--text-secondary);
   cursor: pointer;
   transition: all 150ms;
   text-decoration: none;
+  line-height: 1.4;
 }
 
 .filter-pills a:hover,
 .filter-pills button:hover {
-  border-color: var(--text);
+  background: var(--border);
   color: var(--text);
 }
 
 .filter-pills a.is-active,
 .filter-pills button.is-active {
   background: var(--text);
-  border-color: var(--text);
   color: var(--bg);
 }
 
@@ -612,25 +612,27 @@ ul { list-style: none; }
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
-  margin-bottom: clamp(2rem, 5vh, 4rem);
+  margin-top: 1.5rem;
+  margin-bottom: clamp(5rem, 13vw, 10rem);
 }
 
 .blog-filter__btn {
   display: inline-block;
-  padding: 0.4em 1em;
-  background: transparent;
-  border: 1px solid var(--border);
+  padding: 0.25rem 0.75rem;
+  background: var(--bg-card);
+  border: none;
   border-radius: var(--radius-pill);
   font-family: var(--font);
-  font-size: 0.875em;
+  font-size: 0.875rem;
   font-weight: 500;
   color: var(--text-secondary);
   cursor: pointer;
   transition: all 150ms;
+  line-height: 1.4;
 }
 
 .blog-filter__btn:hover {
-  border-color: var(--text);
+  background: var(--border);
   color: var(--text);
 }
 
@@ -648,6 +650,7 @@ ul { list-style: none; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5em;
+  margin-top: clamp(5rem, 13vw, 10rem);
   padding-bottom: clamp(4rem, 10vh, 8rem);
 }
 
@@ -668,6 +671,12 @@ ul { list-style: none; }
   border-radius: var(--radius);
   overflow: hidden;
   margin-bottom: 0.75em;
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card__image-placeholder {
@@ -969,20 +978,20 @@ ul { list-style: none; }
 /* Blog listing heading */
 .blog-listing__header {
   text-align: center;
-  padding-top: clamp(6rem, 12vh, 10rem);
-  padding-bottom: 0.5rem;
+  margin-top: clamp(7rem, 13vw, 10rem);
+  padding-bottom: 0;
 }
 
 .blog-listing__title {
-  font-size: clamp(1.5rem, 2.5em, 2.75em);
-  font-weight: 500;
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  font-weight: 400;
   color: var(--text);
   line-height: 1.35;
-  letter-spacing: -0.02em;
+  letter-spacing: normal;
 }
 
 .blog-listing__title strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* Section utility for blog grid area */

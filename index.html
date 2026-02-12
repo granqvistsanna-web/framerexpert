@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanna Granqvist | Framer Expert Sverige</title>
+  <meta name="description" content="Sveriges ledande Framer-expert. Jag bygger snabba, vackra webbplatser i Framer som konverterar.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sanna Granqvist | Framer Expert">
+  <meta property="og:description" content="Sveriges ledande Framer-expert. Snabba, vackra webbplatser i Framer.">
+  <meta property="og:url" content="https://framerexpert.se">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://framerexpert.se">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-accent">Framer</span>Expert<span class="nav__logo-dot">.se</span>
+      </a>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#portfolio" data-i18n="nav.portfolio">Projekt</a></li>
+        <li><a href="#services" data-i18n="nav.services">Tjänster</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Byt språk">
+          <span class="lang-toggle__option is-active" data-lang="sv">SV</span>
+          <span class="lang-toggle__divider">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+        <a href="#contact" class="btn btn--primary btn--sm" data-i18n="nav.cta">Boka samtal</a>
+      </div>
+
+      <button class="nav__hamburger" id="navHamburger" aria-label="Meny">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero__bg">
+      <div class="hero__gradient-orb hero__gradient-orb--1"></div>
+      <div class="hero__gradient-orb hero__gradient-orb--2"></div>
+      <div class="hero__grid-pattern"></div>
+    </div>
+
+    <div class="hero__content container">
+      <div class="hero__badge animate-in">
+        <span class="hero__badge-dot"></span>
+        <span data-i18n="hero.badge">Tillgänglig för nya projekt</span>
+      </div>
+
+      <h1 class="hero__title animate-in">
+        <span data-i18n="hero.title.line1">Jag bygger webbplatser</span><br>
+        <span class="hero__title-accent" data-i18n="hero.title.line2">som konverterar</span><span data-i18n="hero.title.line3"> i Framer.</span>
+      </h1>
+
+      <p class="hero__subtitle animate-in" data-i18n="hero.subtitle">
+        Sanna Granqvist — Sveriges ledande Framer-expert. Jag hjälper företag att lansera snabba, vackra webbplatser utan kod.
+      </p>
+
+      <div class="hero__actions animate-in">
+        <a href="#portfolio" class="btn btn--primary btn--lg" data-i18n="hero.cta1">Se mitt arbete</a>
+        <a href="#contact" class="btn btn--outline btn--lg" data-i18n="hero.cta2">Boka samtal</a>
+      </div>
+
+      <div class="hero__stats animate-in">
+        <div class="hero__stat">
+          <span class="hero__stat-number">50+</span>
+          <span class="hero__stat-label" data-i18n="hero.stat1">Levererade projekt</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">100%</span>
+          <span class="hero__stat-label" data-i18n="hero.stat2">Framer-fokus</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-i18n="hero.stat3.number">Sverige</span>
+          <span class="hero__stat-label" data-i18n="hero.stat3">Baserad i</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section portfolio">
+    <div class="container">
+      <div class="section__header animate-in">
+        <span class="section__pretitle" data-i18n="portfolio.pretitle">UTVALDA PROJEKT</span>
+        <h2 class="section__title" data-i18n="portfolio.title">Webbplatser som levererar resultat</h2>
+        <p class="section__description" data-i18n="portfolio.description">Varje projekt byggt i Framer med fokus på prestanda, design och konvertering.</p>
+      </div>
+
+      <div class="portfolio__grid">
+        <article class="project-card animate-in">
+          <div class="project-card__image">
+            <div class="project-card__placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <div class="project-card__overlay">
+              <span class="project-card__tag">E-commerce</span>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__title" data-i18n="portfolio.p1.title">Modebrand Stockholm</h3>
+            <p class="project-card__desc" data-i18n="portfolio.p1.desc">Komplett e-handelsupplevelse med Framer CMS. 40% ökning i konverteringsgrad efter lansering.</p>
+            <div class="project-card__meta">
+              <span class="project-card__tech">Framer</span>
+              <span class="project-card__tech">CMS</span>
+              <span class="project-card__tech">E-handel</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card animate-in">
+          <div class="project-card__image">
+            <div class="project-card__placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <div class="project-card__overlay">
+              <span class="project-card__tag">SaaS</span>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__title" data-i18n="portfolio.p2.title">TechStartup Landing</h3>
+            <p class="project-card__desc" data-i18n="portfolio.p2.desc">High-converting landningssida för SaaS-startup. Byggd på 2 veckor med fullständig SEO-optimering.</p>
+            <div class="project-card__meta">
+              <span class="project-card__tech">Framer</span>
+              <span class="project-card__tech">SEO</span>
+              <span class="project-card__tech">Animationer</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card animate-in">
+          <div class="project-card__image">
+            <div class="project-card__placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <div class="project-card__overlay">
+              <span class="project-card__tag" data-i18n="portfolio.p3.tag">Byrå</span>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__title" data-i18n="portfolio.p3.title">Kreativ Byrå Malmö</h3>
+            <p class="project-card__desc" data-i18n="portfolio.p3.desc">Portföljsida för kreativ byrå. Interaktiva animationer och smidig CMS-hantering för teamet.</p>
+            <div class="project-card__meta">
+              <span class="project-card__tech">Framer</span>
+              <span class="project-card__tech">CMS</span>
+              <span class="project-card__tech">Motion</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card animate-in">
+          <div class="project-card__image">
+            <div class="project-card__placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <div class="project-card__overlay">
+              <span class="project-card__tag" data-i18n="portfolio.p4.tag">Restaurang</span>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__title" data-i18n="portfolio.p4.title">Restaurang Göteborg</h3>
+            <p class="project-card__desc" data-i18n="portfolio.p4.desc">Elegant webbplats med menyhantering via CMS. Mobilanpassad med fokus på bokning och kontakt.</p>
+            <div class="project-card__meta">
+              <span class="project-card__tech">Framer</span>
+              <span class="project-card__tech">CMS</span>
+              <span class="project-card__tech">Responsiv</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section services">
+    <div class="container">
+      <div class="section__header animate-in">
+        <span class="section__pretitle" data-i18n="services.pretitle">TJÄNSTER</span>
+        <h2 class="section__title" data-i18n="services.title">Allt du behöver i Framer</h2>
+      </div>
+
+      <div class="services__grid">
+        <div class="service-card animate-in">
+          <div class="service-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3 data-i18n="services.s1.title">Webbdesign & utveckling</h3>
+          <p data-i18n="services.s1.desc">Kompletta webbplatser byggda i Framer — från koncept till lansering. Responsiv design, snabb laddning, optimerad SEO.</p>
+        </div>
+
+        <div class="service-card animate-in">
+          <div class="service-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/><path d="m7 12 3 3 7-7"/></svg>
+          </div>
+          <h3 data-i18n="services.s2.title">Framer-migrering</h3>
+          <p data-i18n="services.s2.desc">Flytta din befintliga webbplats till Framer. Behåll din design, få bättre prestanda och enklare hantering.</p>
+        </div>
+
+        <div class="service-card animate-in">
+          <div class="service-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+          </div>
+          <h3 data-i18n="services.s3.title">CMS & innehåll</h3>
+          <p data-i18n="services.s3.desc">Framers CMS för dynamiskt innehåll — blogg, produkter, teammedlemmar. Du uppdaterar, sajten förblir snabb.</p>
+        </div>
+
+        <div class="service-card animate-in">
+          <div class="service-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3 data-i18n="services.s4.title">SEO & prestanda</h3>
+          <p data-i18n="services.s4.desc">Optimerade sajter som rankar högt. Teknisk SEO, Core Web Vitals, metadata — allt inbyggt från start.</p>
+        </div>
+
+        <div class="service-card animate-in">
+          <div class="service-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 data-i18n="services.s5.title">Workshops & utbildning</h3>
+          <p data-i18n="services.s5.desc">Lär ditt team att arbeta i Framer. Praktiska workshops anpassade efter er nivå och behov.</p>
+        </div>
+
+        <div class="service-card animate-in">
+          <div class="service-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 data-i18n="services.s6.title">Support & underhåll</h3>
+          <p data-i18n="services.s6.desc">Löpande support för din Framer-sajt. Uppdateringar, fixar, nya sidor — jag finns här.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__glow"></div>
+
+        <div class="section__header animate-in">
+          <span class="section__pretitle" data-i18n="contact.pretitle">KONTAKT</span>
+          <h2 class="section__title" data-i18n="contact.title">Redo att bygga något fantastiskt?</h2>
+          <p class="section__description" data-i18n="contact.description">Berätta om ditt projekt. Jag återkommer inom 24 timmar.</p>
+        </div>
+
+        <div class="contact__actions animate-in">
+          <a href="mailto:sanna@framerexpert.se" class="btn btn--primary btn--lg" data-i18n="contact.email">Skicka mejl</a>
+        </div>
+
+        <div class="contact__links animate-in">
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact__social">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" class="contact__social">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            X / Twitter
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__copyright">&copy; 2026 Sanna Granqvist</span>
+      <span class="footer__tagline" data-i18n="footer.tagline">Byggt med Framer-expertis</span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

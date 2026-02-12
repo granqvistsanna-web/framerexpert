@@ -20,4 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.animate-in').forEach((el) => observer.observe(el));
 
+  // External links open in new tab
+  document.querySelectorAll('a[href^="http"]').forEach((a) => {
+    if (a.hostname !== window.location.hostname) {
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener');
+    }
+  });
+
 });

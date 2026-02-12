@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-  const parents = document.querySelectorAll('.hero__content, .section__header, .articles__grid, .topics__grid, .contact__inner, .about__inner, .newsletter__inner, .blog-grid, .blog-post__header');
+  const parents = document.querySelectorAll('.hero__content, .cards-grid, .blog-grid, .blog-post__header, .blog-post__related-grid');
   parents.forEach((parent) => {
     const items = parent.querySelectorAll(':scope > .animate-in');
     items.forEach((el, i) => {
@@ -19,28 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.querySelectorAll('.animate-in').forEach((el) => observer.observe(el));
-
-  // Smooth scroll for hash links
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        const offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 64;
-        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
-      }
-      document.body.classList.remove('menu-open');
-    });
-  });
-
-  // Hamburger menu
-  const hamburger = document.getElementById('navHamburger');
-  if (hamburger) {
-    hamburger.addEventListener('click', () => document.body.classList.toggle('menu-open'));
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') document.body.classList.remove('menu-open');
-  });
 
 });

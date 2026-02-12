@@ -29,6 +29,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Lenis smooth scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
@@ -51,274 +54,136 @@
   }
   </script>
 </head>
-<body data-page="home">
+<body data-page="home" data-barba="wrapper">
 
   <!-- NAVIGATION -->
-  <nav class="nav">
-    <div class="nav__inner container">
-      <a href="/" class="nav__logo">FramerExpert<span class="nav__logo-dot">.se</span></a>
-
-      <ul class="nav__links">
-        <li><a href="/" data-i18n="nav.home">Hem</a></li>
-        <li><a href="/blog/" data-i18n="nav.blog">Blogg</a></li>
-        <li><a href="#about" data-i18n="nav.about">Om</a></li>
-        <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
-      </ul>
-
-      <div class="nav__actions">
-        <button class="lang-toggle" id="langToggle" aria-label="Byt språk">
-          <span class="lang-toggle__option is-active" data-lang="sv">SV</span>
-          <span class="lang-toggle__divider">/</span>
-          <span class="lang-toggle__option" data-lang="en">EN</span>
-        </button>
+  <nav data-twostep-nav data-nav-status="not-active" class="twostep-nav">
+    <div data-nav-toggle="close" class="twostep-nav__bg"></div>
+    <div class="twostep-nav__wrap">
+      <div class="twostep-nav__width">
+        <div class="twostep-nav__bar">
+          <div class="twostep-nav__back">
+            <div class="twostep-nav__back-bg"></div>
+          </div>
+          <div class="twostep-nav__top">
+            <a href="/" class="twostep-nav__logo">
+              <span class="twostep-nav__logo-mark">F</span>
+              FramerExpert
+            </a>
+            <button data-nav-toggle="toggle" class="twostep-nav__toggle">
+              <div class="twostep-nav__toggle-bar"></div>
+              <div class="twostep-nav__toggle-bar"></div>
+            </button>
+            <div class="twostep-nav__top-line"></div>
+          </div>
+          <div class="twostep-nav__bottom">
+            <div class="twostep-nav__bottom-overflow">
+              <div class="twostep-nav__bottom-inner">
+                <div class="twostep-nav__bottom-row">
+                  <div class="twostep-nav__bottom-col">
+                    <div class="twostep-nav__info">
+                      <ul class="twostep-nav__ul">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-span" data-i18n="nav.blog">Blogg</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/#about" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-span" data-i18n="nav.about">Om</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="mailto:sanna@framerexpert.se" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-span" data-i18n="nav.contact">Kontakt</span></a>
+                        </li>
+                      </ul>
+                      <ul class="twostep-nav__ul is--small">
+                        <li class="twostep-nav__li">
+                          <a href="https://linkedin.com" target="_blank" rel="noopener" class="twostep-nav__link"><span class="twostep-nav__link-eyebrow">LinkedIn</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <button class="twostep-nav__link lang-toggle" id="langToggle" aria-label="Byt språk">
+                            <span class="twostep-nav__link-eyebrow lang-toggle__option is-active" data-lang="sv">SV</span>
+                            <span class="twostep-nav__link-eyebrow lang-toggle__divider">/</span>
+                            <span class="twostep-nav__link-eyebrow lang-toggle__option" data-lang="en">EN</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <button class="nav__hamburger" id="navHamburger" aria-label="Meny">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__content container">
-      <h1 class="hero__title animate-in" data-i18n="hero.title">Allt om Framer — guider, tips och expertkunskap.</h1>
-      <p class="hero__subtitle animate-in" data-i18n="hero.subtitle">Sveriges mest kompletta kunskapskälla för Framer. Lär dig bygga snabba, vackra webbplatser — från nybörjare till avancerad.</p>
-      <div class="hero__actions animate-in">
-        <a href="/blog/" class="btn btn--primary btn--lg" data-i18n="hero.cta1">Utforska guider</a>
-        <a href="#topics" class="btn btn--lg" data-i18n="hero.cta2">Se alla ämnen</a>
+  <main data-barba="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__content container">
+        <h1 class="hero__title animate-in" data-i18n="hero.title"><strong>Framer-guider och expertkunskap</strong> — Allt du behöver för att bygga snabbare och bättre webbplatser i Framer</h1>
       </div>
+    </section>
+
+    <!-- FILTER PILLS -->
+    <div class="filter-pills container">
+      <a href="/blog/" class="is-active" data-i18n="blog.filter.all">Alla</a>
+      <a href="/blog/?category=getting-started" data-i18n="blog.filter.getting-started">Kom igång</a>
+      <a href="/blog/?category=comparison" data-i18n="blog.filter.comparison">Jämförelse</a>
+      <a href="/blog/?category=tips" data-i18n="blog.filter.tips">Tips</a>
+      <a href="/blog/?category=seo" data-i18n="blog.filter.seo">SEO</a>
+      <a href="/blog/?category=cms" data-i18n="blog.filter.cms">CMS</a>
     </div>
-  </section>
 
-  <!-- FEATURED ARTICLES -->
-  <section class="section">
-    <div class="container">
-      <div class="section__header animate-in">
-        <span class="section__pretitle" data-i18n="articles.pretitle">SENASTE ARTIKLARNA</span>
-        <h2 class="section__title" data-i18n="articles.title">Populära guider och tips</h2>
-        <p class="section__description" data-i18n="articles.description">Fördjupa dig i Framer med våra mest lästa artiklar.</p>
-      </div>
-
-      <div class="articles__grid">
-        <a href="/blog/vad-ar-framer.html" class="article-card animate-in" data-category="getting-started">
-          <div class="article-card__image">
-            <div class="article-card__placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-            </div>
-            <span class="article-card__category" data-i18n="articles.a1.category">Kom igång</span>
-          </div>
-          <div class="article-card__meta-row">
-            <time datetime="2026-02-10">2026-02-10</time>
-            <span data-i18n="articles.a1.readtime">8 min läsning</span>
-          </div>
-          <h3 class="article-card__title" data-i18n="articles.a1.title">Vad är Framer? En komplett guide</h3>
-          <p class="article-card__excerpt" data-i18n="articles.a1.excerpt">Allt du behöver veta om Framer — från grunderna till avancerade funktioner.</p>
-        </a>
-
-        <a href="/blog/framer-vs-wordpress.html" class="article-card animate-in" data-category="comparison">
-          <div class="article-card__image">
-            <div class="article-card__placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-            </div>
-            <span class="article-card__category" data-i18n="articles.a2.category">Jämförelse</span>
-          </div>
-          <div class="article-card__meta-row">
-            <time datetime="2026-02-08">2026-02-08</time>
-            <span data-i18n="articles.a2.readtime">12 min läsning</span>
-          </div>
-          <h3 class="article-card__title" data-i18n="articles.a2.title">Framer vs WordPress — Vilken är bäst 2026?</h3>
-          <p class="article-card__excerpt" data-i18n="articles.a2.excerpt">En ärlig jämförelse mellan Framer och WordPress. Prestanda, SEO, pris och användarvänlighet.</p>
-        </a>
-
-        <a href="/blog/5-tips-bygga-snabbare.html" class="article-card animate-in" data-category="tips">
-          <div class="article-card__image">
-            <div class="article-card__placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-            </div>
-            <span class="article-card__category" data-i18n="articles.a3.category">Tips</span>
-          </div>
-          <div class="article-card__meta-row">
-            <time datetime="2026-02-05">2026-02-05</time>
-            <span data-i18n="articles.a3.readtime">6 min läsning</span>
-          </div>
-          <h3 class="article-card__title" data-i18n="articles.a3.title">5 tips för att bygga snabbare i Framer</h3>
-          <p class="article-card__excerpt" data-i18n="articles.a3.excerpt">Spara tid och arbeta smartare. Fem konkreta tips som gör dig snabbare i Framer.</p>
-        </a>
-      </div>
-
-      <div class="articles__cta animate-in">
-        <a href="/blog/" class="btn" data-i18n="articles.cta">Alla artiklar →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TOPICS -->
-  <section id="topics" class="section">
-    <div class="container">
-      <div class="section__header animate-in">
-        <span class="section__pretitle" data-i18n="topics.pretitle">ÄMNEN</span>
-        <h2 class="section__title" data-i18n="topics.title">Utforska Framer</h2>
-        <p class="section__description" data-i18n="topics.description">Hitta guider och artiklar inom det område som intresserar dig.</p>
-      </div>
-
-      <div class="topics__grid">
-        <a href="/blog/?category=getting-started" class="topic-card animate-in">
-          <div class="topic-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-          </div>
-          <h3 data-i18n="topics.t1.title">Kom igång med Framer</h3>
-          <p data-i18n="topics.t1.desc">Grunderna i Framer — skapa ditt första projekt, navigera gränssnittet och publicera din webbplats.</p>
-          <span class="topic-card__count" data-i18n="topics.t1.count">1 artikel</span>
-        </a>
-
-        <a href="/blog/?category=cms" class="topic-card animate-in">
-          <div class="topic-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
-          </div>
-          <h3 data-i18n="topics.t2.title">Framer CMS</h3>
-          <p data-i18n="topics.t2.desc">Dynamiskt innehåll med Framers inbyggda CMS. Blogg, produktsidor och samlingar.</p>
-          <span class="topic-card__count" data-i18n="topics.t2.count">Kommer snart</span>
-        </a>
-
-        <a href="/blog/?category=seo" class="topic-card animate-in">
-          <div class="topic-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-          </div>
-          <h3 data-i18n="topics.t3.title">SEO i Framer</h3>
-          <p data-i18n="topics.t3.desc">Optimera din Framer-sajt för sökmotorer. Meta-taggar, sitemap och prestanda.</p>
-          <span class="topic-card__count" data-i18n="topics.t3.count">Kommer snart</span>
-        </a>
-
-        <a href="/blog/?category=tips" class="topic-card animate-in">
-          <div class="topic-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="m6.34 6.34 2.83 2.83"/><path d="M2 12h4"/><path d="m17.66 6.34-2.83 2.83"/><path d="M22 12h-4"/><path d="M12 22v-4"/></svg>
-          </div>
-          <h3 data-i18n="topics.t4.title">Design-tips</h3>
-          <p data-i18n="topics.t4.desc">Designprinciper, animationer, typografi och layout-tips för snygga Framer-sajter.</p>
-          <span class="topic-card__count" data-i18n="topics.t4.count">1 artikel</span>
-        </a>
-
-        <a href="/blog/?category=comparison" class="topic-card animate-in">
-          <div class="topic-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="m21 3-8.5 8.5"/><path d="M3 3l8.5 8.5"/><path d="M16 21h5v-5"/><path d="M8 21H3v-5"/><path d="m21 21-8.5-8.5"/><path d="M3 21l8.5-8.5"/></svg>
-          </div>
-          <h3 data-i18n="topics.t5.title">Framer vs WordPress</h3>
-          <p data-i18n="topics.t5.desc">Jämförelser mellan Framer och andra plattformar. Hjälp att välja rätt verktyg.</p>
-          <span class="topic-card__count" data-i18n="topics.t5.count">1 artikel</span>
-        </a>
-
-        <a href="/blog/?category=advanced" class="topic-card animate-in">
-          <div class="topic-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-          </div>
-          <h3 data-i18n="topics.t6.title">Avancerade tips</h3>
-          <p data-i18n="topics.t6.desc">Code overrides, custom components och avancerade tekniker för erfarna användare.</p>
-          <span class="topic-card__count" data-i18n="topics.t6.count">Kommer snart</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="about__inner">
-        <span class="section__pretitle animate-in" data-i18n="about.pretitle">OM FRAMEREXPERT</span>
-        <h2 class="section__title animate-in" data-i18n="about.title">Driven av genuin Framer-expertis</h2>
-        <p class="about__text animate-in" data-i18n="about.text">FramerExpert.se drivs av Sanna Granqvist, en av Sveriges mest erfarna Framer-utvecklare med 50+ levererade projekt. Målet är att dela kunskap som hjälper dig bygga bättre webbplatser i Framer — oavsett nivå.</p>
-        <div class="about__stats animate-in">
-          <div class="about__stat">
-            <span class="about__stat-number">50+</span>
-            <span class="about__stat-label" data-i18n="about.stat1">Framer-projekt</span>
-          </div>
-          <div class="about__stat">
-            <span class="about__stat-number">100%</span>
-            <span class="about__stat-label" data-i18n="about.stat2">Framer-fokus</span>
+    <!-- CARDS -->
+    <div class="cards-grid container">
+      <a href="/blog/vad-ar-framer.html" class="card animate-in">
+        <div class="card__image">
+          <div class="card__image-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
           </div>
         </div>
-      </div>
+        <p class="card__text"><strong data-i18n="articles.a1.title">Vad är Framer? En komplett guide</strong> — <span data-i18n="articles.a1.excerpt">Allt du behöver veta om Framer — från grunderna till avancerade funktioner.</span></p>
+      </a>
+
+      <a href="/blog/framer-vs-wordpress.html" class="card animate-in">
+        <div class="card__image">
+          <div class="card__image-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          </div>
+        </div>
+        <p class="card__text"><strong data-i18n="articles.a2.title">Framer vs WordPress — Vilken är bäst 2026?</strong> — <span data-i18n="articles.a2.excerpt">En ärlig jämförelse mellan Framer och WordPress. Prestanda, SEO, pris och användarvänlighet.</span></p>
+      </a>
+
+      <a href="/blog/5-tips-bygga-snabbare.html" class="card animate-in">
+        <div class="card__image">
+          <div class="card__image-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          </div>
+        </div>
+        <p class="card__text"><strong data-i18n="articles.a3.title">5 tips för att bygga snabbare i Framer</strong> — <span data-i18n="articles.a3.excerpt">Spara tid och arbeta smartare. Fem konkreta tips som gör dig snabbare i Framer.</span></p>
+      </a>
     </div>
-  </section>
 
-  <!-- NEWSLETTER -->
-  <section class="section newsletter">
-    <div class="container">
-      <div class="newsletter__inner">
-        <span class="section__pretitle animate-in" data-i18n="newsletter.pretitle">NYHETSBREV</span>
-        <h2 class="section__title animate-in" data-i18n="newsletter.title">Missa inte nästa guide</h2>
-        <p class="section__description animate-in" data-i18n="newsletter.description">Få nya Framer-guider och tips direkt i din inbox.</p>
-        <form class="newsletter__form animate-in" onsubmit="return false;">
-          <input type="email" class="newsletter__input" data-i18n-placeholder="newsletter.placeholder" placeholder="din@email.com" required>
-          <button type="submit" class="btn btn--primary" data-i18n="newsletter.submit">Prenumerera</button>
-        </form>
-        <p class="newsletter__note animate-in" data-i18n="newsletter.note">Gratis. Avsluta när du vill.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="contact__inner">
-        <span class="section__pretitle animate-in" data-i18n="contact.pretitle">KONTAKT</span>
-        <h2 class="section__title animate-in" data-i18n="contact.title">Har du frågor?</h2>
-        <p class="section__description animate-in" data-i18n="contact.description">Vill du samarbeta, har en fråga om Framer eller vill föreslå ett artikelämne? Hör av dig.</p>
-
-        <div class="contact__actions animate-in">
-          <a href="mailto:sanna@framerexpert.se" class="btn btn--primary btn--lg" data-i18n="contact.email">Skicka mejl</a>
-        </div>
-
-        <div class="contact__links animate-in">
-          <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact__social">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener" class="contact__social">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            X / Twitter
-          </a>
+    <!-- FOOTER -->
+    <footer id="about" class="footer">
+      <div class="container footer__inner">
+        <span class="footer__left">&copy; <span data-current-year>2026</span> Sanna Granqvist &middot; FramerExpert.se</span>
+        <div class="footer__links">
+          <a href="/#about" data-i18n="nav.about" data-underline-link>Om</a>
+          <a href="mailto:sanna@framerexpert.se" data-i18n="nav.contact" data-underline-link>Kontakt</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" data-underline-link>LinkedIn</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__top">
-        <div>
-          <a href="/" class="nav__logo">FramerExpert<span class="nav__logo-dot">.se</span></a>
-          <p class="footer__brand-desc" data-i18n="footer.desc">Sveriges kunskapskälla för Framer. Guider, tips och expertkunskap.</p>
-        </div>
-        <div class="footer__nav">
-          <h4 data-i18n="footer.nav.pages">Sidor</h4>
-          <ul>
-            <li><a href="/" data-i18n="nav.home">Hem</a></li>
-            <li><a href="/blog/" data-i18n="nav.blog">Blogg</a></li>
-            <li><a href="#about" data-i18n="nav.about">Om</a></li>
-            <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
-          </ul>
-        </div>
-        <div class="footer__nav">
-          <h4 data-i18n="footer.nav.topics">Ämnen</h4>
-          <ul>
-            <li><a href="/blog/?category=getting-started" data-i18n="topics.t1.title">Kom igång med Framer</a></li>
-            <li><a href="/blog/?category=cms" data-i18n="topics.t2.title">Framer CMS</a></li>
-            <li><a href="/blog/?category=seo" data-i18n="topics.t3.title">SEO i Framer</a></li>
-            <li><a href="/blog/?category=comparison" data-i18n="topics.t5.title">Framer vs WordPress</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <span class="footer__copyright">&copy; 2026 Sanna Granqvist</span>
-        <span class="footer__tagline" data-i18n="footer.tagline">Byggt med Framer-expertis</span>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </main>
 
   <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.10.3/dist/barba.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/page-transitions.js"></script>
 </body>
 </html>

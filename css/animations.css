@@ -1,15 +1,3 @@
 /* ============================================
-   ANIMATIONS — Minimal fade-in only
+   ANIMATIONS — (cleared: page transitions removed)
    ============================================ */
-
-.animate-in {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  transition-delay: var(--delay, 0ms);
-}
-
-.animate-in.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}

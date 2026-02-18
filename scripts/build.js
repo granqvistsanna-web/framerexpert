@@ -74,7 +74,7 @@ async function getBlockChildren(blockId) {
 async function fetchPosts() {
   console.log('Fetching posts from Notion...');
 
-  const response = await notion.databases.query({
+  const response = await notion.dataSources.query({
     database_id: DATABASE_ID,
     filter: {
       property: 'draft',

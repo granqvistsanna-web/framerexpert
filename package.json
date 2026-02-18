@@ -1,0 +1,21 @@
+{
+  "name": "framerexpert",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "fetch": "node scripts/fetch-notion.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://local_proxy@127.0.0.1:21633/git/granqvistsanna-web/framerexpert"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@notionhq/client": "^5.9.0",
+    "dotenv": "^17.3.1"
+  }
+}

@@ -13,9 +13,11 @@ const translations = {
 
     'nav.blog': 'Blogg',
     'nav.about': 'Om',
+    'nav.home': 'Hem',
     'nav.contact': 'Kontakt',
 
-    'hero.title': '<strong>Framer-guider och artiklar.</strong> Guider och artiklar f\u00f6r b\u00e4ttre webbplatser i Framer.',
+    'hero.title.bold': 'Framer-guider och artiklar.',
+    'hero.title.rest': 'Guider och artiklar f\u00f6r b\u00e4ttre webbplatser i Framer.',
 
     'articles.a1.category': 'Kom ig\u00e5ng',
     'articles.a1.title': 'Vad \u00e4r Framer? En komplett guide',
@@ -101,9 +103,11 @@ const translations = {
 
     'nav.blog': 'Blog',
     'nav.about': 'About',
+    'nav.home': 'Home',
     'nav.contact': 'Contact',
 
-    'hero.title': '<strong>Framer guides and articles.</strong> Guides and articles for better websites in Framer.',
+    'hero.title.bold': 'Framer guides and articles.',
+    'hero.title.rest': 'Guides and articles for better websites in Framer.',
 
     'articles.a1.category': 'Getting started',
     'articles.a1.title': 'What is Framer? A complete guide',
@@ -186,11 +190,7 @@ function setLanguage(lang) {
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
-      if (key === 'hero.title') {
-        el.innerHTML = translations[lang][key];
-      } else {
-        el.textContent = translations[lang][key];
-      }
+      el.textContent = translations[lang][key];
     }
   });
 
@@ -209,7 +209,7 @@ function setLanguage(lang) {
     document.title = translations[lang][titleKey];
   }
 
-  var metaDesc = document.querySelector('meta[name="description"]');
+  const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc && translations[lang][descKey]) {
     metaDesc.content = translations[lang][descKey];
   }
@@ -219,13 +219,17 @@ function setLanguage(lang) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initI18n() {
   setLanguage(currentLang);
 
-  var toggle = document.getElementById('langToggle');
+  const toggle = document.getElementById('langToggle');
   if (toggle) {
     toggle.addEventListener('click', () => {
       setLanguage(currentLang === 'sv' ? 'en' : 'sv');
     });
   }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initI18n();
 });

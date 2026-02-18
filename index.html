@@ -12,11 +12,8 @@
   <meta property="og:url" content="https://framerexpert.se">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="sv_SE">
+  <meta property="og:image" content="https://framerexpert.se/assets/og-default.svg">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Hreflang -->
-  <link rel="alternate" hreflang="sv" href="https://framerexpert.se">
-  <link rel="alternate" hreflang="en" href="https://framerexpert.se">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://framerexpert.se">
@@ -68,7 +65,7 @@
             <a href="/" class="twostep-nav__logo">
               framer.expert
             </a>
-            <button data-nav-toggle="toggle" class="twostep-nav__toggle">
+            <button data-nav-toggle="toggle" class="twostep-nav__toggle" aria-label="Meny" aria-expanded="false">
               <div class="twostep-nav__toggle-bar"></div>
               <div class="twostep-nav__toggle-bar"></div>
             </button>
@@ -111,7 +108,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero__content container">
-        <h1 class="hero__title animate-in" data-i18n="hero.title"><strong>Framer-guider och artiklar.</strong> Guider och artiklar för bättre webbplatser i Framer.</h1>
+        <h1 class="hero__title animate-in"><strong data-i18n="hero.title.bold">Framer-guider och artiklar.</strong> <span data-i18n="hero.title.rest">Guider och artiklar för bättre webbplatser i Framer.</span></h1>
       </div>
     </section>
 
@@ -129,7 +126,7 @@
     <div class="cards-grid container">
       <a href="/blog/vad-ar-framer.html" class="card animate-in">
         <div class="card__image">
-          <img src="/assets/thumb-vad-ar-framer.svg" alt="Vad är Framer?" loading="lazy">
+          <img src="/assets/thumb-vad-ar-framer.svg" alt="Vad är Framer?">
         </div>
         <p class="card__text"><strong data-i18n="articles.a1.title">Vad är Framer? En komplett guide</strong> — <span data-i18n="articles.a1.excerpt">Allt du behöver veta om Framer — från grunderna till avancerade funktioner.</span></p>
       </a>

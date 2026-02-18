@@ -83,7 +83,7 @@ body {
 
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
-ul { list-style: none; }
+nav ul, .footer__links { list-style: none; }
 
 .container {
   width: 100%;
@@ -484,12 +484,12 @@ ul { list-style: none; }
 
 /* Thin line in nav bar */
 .twostep-nav__top-line {
-  transition: all var(--animation-default) 0s;
+  transition: opacity var(--animation-default) 0s;
   opacity: 0;
 }
 
 [data-nav-status="active"] .twostep-nav__top-line {
-  transition: all var(--animation-default) 0.1s;
+  transition: opacity var(--animation-default) 0.1s;
   opacity: 1;
 }
 
@@ -500,7 +500,7 @@ ul { list-style: none; }
 }
 
 .twostep-nav__back {
-  transition: all var(--animation-default);
+  transition: inset var(--animation-default);
   inset: 0em;
 }
 
@@ -520,7 +520,7 @@ ul { list-style: none; }
 
 /* Nav columns reveal */
 .twostep-nav__bottom-row > * {
-  transition: all var(--animation-default) 0s;
+  transition: transform var(--animation-default) 0s, opacity var(--animation-default) 0s;
   transform: translateY(2em);
   opacity: 0;
 }
@@ -530,7 +530,7 @@ ul { list-style: none; }
 }
 
 [data-nav-status="active"] .twostep-nav__bottom-row > * {
-  transition: all var(--animation-default-long) 0.5s;
+  transition: transform var(--animation-default-long) 0.5s, opacity var(--animation-default-long) 0.5s;
   transform: translateY(0em);
   opacity: 1;
 }
@@ -588,7 +588,7 @@ ul { list-style: none; }
   font-weight: 500;
   color: var(--text-secondary);
   cursor: pointer;
-  transition: all 150ms;
+  transition: background 150ms, color 150ms;
   text-decoration: none;
   line-height: 1.4;
 }
@@ -605,7 +605,7 @@ ul { list-style: none; }
   color: var(--bg);
 }
 
-/* Also support blog-filter class for blog.js compatibility */
+/* Blog filter (shares base styling with filter-pills) */
 .blog-filter {
   display: flex;
   flex-wrap: wrap;
@@ -626,7 +626,7 @@ ul { list-style: none; }
   font-weight: 500;
   color: var(--text-secondary);
   cursor: pointer;
-  transition: all 150ms;
+  transition: background 150ms, color 150ms;
   line-height: 1.4;
 }
 
@@ -637,7 +637,6 @@ ul { list-style: none; }
 
 .blog-filter__btn.is-active {
   background: var(--text);
-  border-color: var(--text);
   color: var(--bg);
 }
 

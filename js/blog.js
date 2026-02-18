@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-
+function initBlogFilter() {
   const filterContainer = document.getElementById('blogFilter');
   const blogGrid = document.getElementById('blogGrid');
 
@@ -40,5 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
       history.replaceState(null, '', url);
     });
   });
+}
 
+document.addEventListener('DOMContentLoaded', () => {
+  initBlogFilter();
 });

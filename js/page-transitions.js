@@ -18,8 +18,6 @@ let reducedMotion = rmMQ.matches;
 rmMQ.addEventListener?.("change", e => (reducedMotion = e.matches));
 rmMQ.addListener?.(e => (reducedMotion = e.matches));
 
-const has = (s) => !!nextPage.querySelector(s);
-
 let staggerDefault = 0.05;
 let durationDefault = 0.6;
 
@@ -52,6 +50,9 @@ function initAfterEnterFunctions(next) {
 
   // Runs after enter animation completes
   initDynamicCurrentYear();
+  if (typeof initScrollAnimations === 'function') initScrollAnimations();
+  if (typeof initI18n === 'function') initI18n();
+  if (typeof initBlogFilter === 'function') initBlogFilter();
 
   if (hasLenis) {
     lenis.resize();
@@ -216,7 +217,6 @@ barba.hooks.beforeEnter(data => {
   }
 
   initBeforeEnterFunctions(data.next.container);
-  applyThemeFrom(data.next.container);
 });
 
 barba.hooks.afterLeave(() => {
@@ -271,27 +271,6 @@ barba.init({
 // GENERIC + HELPERS
 // -----------------------------------------
 
-const themeConfig = {
-  light: { nav: "dark", transition: "light" },
-  dark: { nav: "light", transition: "dark" }
-};
-
-function applyThemeFrom(container) {
-  const pageTheme = container?.dataset?.pageTheme || "light";
-  const config = themeConfig[pageTheme] || themeConfig.light;
-
-  document.body.dataset.pageTheme = pageTheme;
-  const transitionEl = document.querySelector('[data-theme-transition]');
-  if (transitionEl) {
-    transitionEl.dataset.themeTransition = config.transition;
-  }
-
-  const nav = document.querySelector('[data-theme-nav]');
-  if (nav) {
-    nav.dataset.themeNav = config.nav;
-  }
-}
-
 function initLenis() {
   if (lenis) return;
   if (!hasLenis) return;
@@ -322,19 +301,6 @@ function resetPage(container) {
   }
 }
 
-function debounceOnWidthChange(fn, ms) {
-  let last = innerWidth, timer;
-  return function (...args) {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      if (innerWidth !== last) {
-        last = innerWidth;
-        fn.apply(this, args);
-      }
-    }, ms);
-  };
-}
-
 function initBarbaNavUpdate(data) {
   var tpl = document.createElement('template');
   tpl.innerHTML = data.next.html.trim();
@@ -362,15 +328,21 @@ function initBarbaNavUpdate(data) {
 // -----------------------------------------
 
 function initChangePageTitleOnLeave() {
-  const documentTitleStore = document.title;
-  const documentTitleOnBlur = "Kom tillbaka! \u2014 FramerExpert.se";
+  if (window._titleListenersAdded) return;
+  window._titleListenersAdded = true;
 
-  window.addEventListener("focus", () => {
-    document.title = documentTitleStore;
-  });
+  let storedTitle = document.title;
 
   window.addEventListener("blur", () => {
-    document.title = documentTitleOnBlur;
+    storedTitle = document.title;
+    const blurTitle = typeof currentLang !== 'undefined' && currentLang === 'en'
+      ? "Come back! \u2014 FramerExpert.se"
+      : "Kom tillbaka! \u2014 FramerExpert.se";
+    document.title = blurTitle;
+  });
+
+  window.addEventListener("focus", () => {
+    document.title = storedTitle;
   });
 }
 
@@ -396,8 +368,11 @@ function initTwostepScalingNavigation() {
 
   if (!navElement || !navStatusEl) return;
 
+  const toggleBtn = document.querySelector('[data-nav-toggle="toggle"]');
+
   const setNavStatus = (status) => {
     navStatusEl.setAttribute("data-nav-status", status);
+    if (toggleBtn) toggleBtn.setAttribute("aria-expanded", status === "active" ? "true" : "false");
   };
 
   const isActive = () => navStatusEl.getAttribute("data-nav-status") === "active";

@@ -12,11 +12,8 @@
   <meta property="og:url" content="https://framerexpert.se/blog/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="sv_SE">
+  <meta property="og:image" content="https://framerexpert.se/assets/og-default.svg">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Hreflang -->
-  <link rel="alternate" hreflang="sv" href="https://framerexpert.se/blog/">
-  <link rel="alternate" hreflang="en" href="https://framerexpert.se/blog/">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://framerexpert.se/blog/">
@@ -61,7 +58,7 @@
             <a href="/" class="twostep-nav__logo">
               framer.expert
             </a>
-            <button data-nav-toggle="toggle" class="twostep-nav__toggle">
+            <button data-nav-toggle="toggle" class="twostep-nav__toggle" aria-label="Meny" aria-expanded="false">
               <div class="twostep-nav__toggle-bar"></div>
               <div class="twostep-nav__toggle-bar"></div>
             </button>
@@ -121,34 +118,28 @@
   <div class="blog-grid blog-section container" id="blogGrid">
     <a href="/blog/vad-ar-framer.html" class="article-card animate-in" data-category="getting-started">
       <div class="article-card__image">
-        <div class="article-card__placeholder">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-        </div>
+        <img src="/assets/thumb-vad-ar-framer.svg" alt="Vad är Framer?" width="400" height="267">
       </div>
       <p class="card__text"><strong class="article-card__title" data-i18n="articles.a1.title">Vad är Framer? En komplett guide</strong> — <span class="article-card__excerpt" data-i18n="articles.a1.excerpt">Allt du behöver veta om Framer — från grunderna till avancerade funktioner.</span></p>
     </a>
 
     <a href="/blog/framer-vs-wordpress.html" class="article-card animate-in" data-category="comparison">
       <div class="article-card__image">
-        <div class="article-card__placeholder">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-        </div>
+        <img src="/assets/thumb-framer-vs-wordpress.svg" alt="Framer vs WordPress" width="400" height="267">
       </div>
       <p class="card__text"><strong class="article-card__title" data-i18n="articles.a2.title">Framer vs WordPress — Vilken är bäst 2026?</strong> — <span class="article-card__excerpt" data-i18n="articles.a2.excerpt">En ärlig jämförelse mellan Framer och WordPress. Prestanda, SEO, pris och användarvänlighet.</span></p>
     </a>
 
     <a href="/blog/5-tips-bygga-snabbare.html" class="article-card animate-in" data-category="tips">
       <div class="article-card__image">
-        <div class="article-card__placeholder">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-        </div>
+        <img src="/assets/thumb-5-tips.svg" alt="5 tips för att bygga snabbare i Framer" width="400" height="267">
       </div>
       <p class="card__text"><strong class="article-card__title" data-i18n="articles.a3.title">5 tips för att bygga snabbare i Framer</strong> — <span class="article-card__excerpt" data-i18n="articles.a3.excerpt">Spara tid och arbeta smartare. Fem konkreta tips som gör dig snabbare i Framer.</span></p>
     </a>
   </div>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer id="about" class="footer">
     <div class="container footer__inner">
       <span class="footer__left">&copy; <span data-current-year>2026</span> FramerExpert.se</span>
       <div class="footer__links">

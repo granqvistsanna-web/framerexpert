@@ -158,13 +158,6 @@ ul { list-style: none; }
 }
 
 /* ============================================
-   PAGE TRANSITION
-   ============================================ */
-.page-transition__wrapper {
-  will-change: transform;
-}
-
-/* ============================================
    TWO-STEP SCALING NAVIGATION
    ============================================ */
 .twostep-nav {

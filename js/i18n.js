@@ -17,7 +17,8 @@ const translations = {
     'nav.contact': 'Kontakt',
     'nav.menu_open': '\u00d6ppna meny',
 
-    'hero.title': '<strong>Framer-guider och artiklar.</strong> Guider och artiklar f\u00f6r b\u00e4ttre webbplatser i Framer.',
+    'hero.title.lead': 'Framer-guider och artiklar.',
+    'hero.title.rest': 'Guider och artiklar f\u00f6r b\u00e4ttre webbplatser i Framer.',
 
     'articles.a1.category': 'Kom ig\u00e5ng',
     'articles.a1.title': 'Vad \u00e4r Framer? En komplett guide',
@@ -107,7 +108,8 @@ const translations = {
     'nav.contact': 'Contact',
     'nav.menu_open': 'Open menu',
 
-    'hero.title': '<strong>Framer guides and articles.</strong> Guides and articles for better websites in Framer.',
+    'hero.title.lead': 'Framer guides and articles.',
+    'hero.title.rest': 'Guides and articles for better websites in Framer.',
 
     'articles.a1.category': 'Getting started',
     'articles.a1.title': 'What is Framer? A complete guide',
@@ -190,11 +192,7 @@ function setLanguage(lang) {
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
-      if (key === 'hero.title') {
-        el.innerHTML = translations[lang][key];
-      } else {
-        el.textContent = translations[lang][key];
-      }
+      el.textContent = translations[lang][key];
     }
   });
 

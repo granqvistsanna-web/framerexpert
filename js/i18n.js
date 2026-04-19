@@ -15,6 +15,7 @@ const translations = {
     'nav.blog': 'Blogg',
     'nav.about': 'Om',
     'nav.contact': 'Kontakt',
+    'nav.menu_open': '\u00d6ppna meny',
 
     'hero.title': '<strong>Framer-guider och artiklar.</strong> Guider och artiklar f\u00f6r b\u00e4ttre webbplatser i Framer.',
 
@@ -104,6 +105,7 @@ const translations = {
     'nav.blog': 'Blog',
     'nav.about': 'About',
     'nav.contact': 'Contact',
+    'nav.menu_open': 'Open menu',
 
     'hero.title': '<strong>Framer guides and articles.</strong> Guides and articles for better websites in Framer.',
 

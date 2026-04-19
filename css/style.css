@@ -367,7 +367,7 @@ ul { list-style: none; }
 .lang-toggle__option {
   padding: 0.15em 0.45em;
   border-radius: var(--radius-pill);
-  transition: all 150ms;
+  transition: color 150ms, background-color 150ms;
   line-height: 1;
 }
 
@@ -440,12 +440,12 @@ ul { list-style: none; }
 
 /* Thin line in nav bar */
 .twostep-nav__top-line {
-  transition: all var(--animation-default) 0s;
+  transition: opacity var(--animation-default) 0s;
   opacity: 0;
 }
 
 [data-nav-status="active"] .twostep-nav__top-line {
-  transition: all var(--animation-default) 0.1s;
+  transition: opacity var(--animation-default) 0.1s;
   opacity: 1;
 }
 
@@ -455,7 +455,7 @@ ul { list-style: none; }
 }
 
 .twostep-nav__back {
-  transition: all var(--animation-default);
+  transition: inset var(--animation-default);
   inset: 0em;
 }
 
@@ -475,7 +475,7 @@ ul { list-style: none; }
 
 /* Nav columns reveal */
 .twostep-nav__bottom-row > * {
-  transition: all var(--animation-default) 0s;
+  transition: transform var(--animation-default) 0s, opacity var(--animation-default) 0s;
   transform: translateY(2em);
   opacity: 0;
 }
@@ -485,7 +485,7 @@ ul { list-style: none; }
 }
 
 [data-nav-status="active"] .twostep-nav__bottom-row > * {
-  transition: all var(--animation-default-long) 0.5s;
+  transition: transform var(--animation-default-long) 0.5s, opacity var(--animation-default-long) 0.5s;
   transform: translateY(0em);
   opacity: 1;
 }
@@ -543,7 +543,7 @@ ul { list-style: none; }
   font-weight: 500;
   color: var(--text-secondary);
   cursor: pointer;
-  transition: all 150ms;
+  transition: background-color 150ms, color 150ms;
   text-decoration: none;
   line-height: 1.4;
 }
@@ -581,7 +581,7 @@ ul { list-style: none; }
   font-weight: 500;
   color: var(--text-secondary);
   cursor: pointer;
-  transition: all 150ms;
+  transition: background-color 150ms, border-color 150ms, color 150ms;
   line-height: 1.4;
 }
 
@@ -957,7 +957,7 @@ ul { list-style: none; }
   }
 
   [data-nav-status="active"] .twostep-nav__top-line {
-    transition: all var(--animation-default) 0.2s;
+    transition: inset var(--animation-default) 0.2s, opacity var(--animation-default) 0.2s;
     inset: auto 0em -0.5em;
   }
 

@@ -809,6 +809,20 @@ ul { list-style: none; }
   opacity: 0.7;
 }
 
+.blog-post__callout {
+  margin: 1.75rem 0;
+  padding: 1rem 1.25rem;
+  background: rgba(0, 0, 0, 0.04);
+  border-left: 3px solid var(--text);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.blog-post__callout strong {
+  margin-right: 0.4rem;
+}
+
 /* Related articles */
 .blog-post__related {
   max-width: 720px;

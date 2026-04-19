@@ -14,7 +14,6 @@ const translations = {
     'nav.home': 'Hem',
     'nav.blog': 'Blogg',
     'nav.about': 'Om',
-    'nav.contact': 'Kontakt',
     'nav.menu_open': '\u00d6ppna meny',
 
     'hero.title.lead': 'Framer-guider och artiklar.',
@@ -105,7 +104,6 @@ const translations = {
     'nav.home': 'Home',
     'nav.blog': 'Blog',
     'nav.about': 'About',
-    'nav.contact': 'Contact',
     'nav.menu_open': 'Open menu',
 
     'hero.title.lead': 'Framer guides and articles.',

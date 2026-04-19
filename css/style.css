@@ -560,42 +560,6 @@ ul { list-style: none; }
   color: var(--bg);
 }
 
-/* Also support blog-filter class for blog.js compatibility */
-.blog-filter {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-  margin-top: 1.5rem;
-  margin-bottom: clamp(5rem, 13vw, 10rem);
-}
-
-.blog-filter__btn {
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
-  background: var(--bg-card);
-  border: none;
-  border-radius: var(--radius-pill);
-  font-family: var(--font);
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  cursor: pointer;
-  transition: background-color 150ms, border-color 150ms, color 150ms;
-  line-height: 1.4;
-}
-
-.blog-filter__btn:hover {
-  background: var(--border);
-  color: var(--text);
-}
-
-.blog-filter__btn.is-active {
-  background: var(--text);
-  border-color: var(--text);
-  color: var(--bg);
-}
-
 /* ============================================
    ARTICLE CARDS — KP style
    Large image + "Title — description" text
@@ -652,50 +616,6 @@ ul { list-style: none; }
 .card__text strong {
   font-weight: 600;
   color: var(--text);
-}
-
-.article-card {
-  display: block;
-  text-decoration: none;
-  transition: opacity 200ms;
-}
-
-.article-card:hover {
-  opacity: 0.7;
-}
-
-.article-card__image {
-  position: relative;
-  aspect-ratio: 3 / 2;
-  background: var(--bg-card);
-  border-radius: var(--radius);
-  overflow: hidden;
-  margin-bottom: 0.75em;
-}
-
-.article-card__placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  color: var(--text-muted);
-  opacity: 0.5;
-}
-
-.article-card__title {
-  display: inline;
-  font-size: 0.9375em;
-  font-weight: 600;
-  color: var(--text);
-  line-height: 1.5;
-}
-
-.article-card__excerpt {
-  display: inline;
-  font-size: 0.9375em;
-  color: var(--text-secondary);
-  line-height: 1.5;
 }
 
 /* ============================================
@@ -929,18 +849,6 @@ ul { list-style: none; }
   font-weight: 600;
 }
 
-/* Section utility for blog grid area */
-.blog-section {
-  padding-bottom: clamp(4rem, 10vh, 8rem);
-}
-
-/* Blog grid (for blog.js compatibility) */
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5em;
-}
-
 /* ============================================
    RESPONSIVE
    ============================================ */
@@ -975,8 +883,7 @@ ul { list-style: none; }
     transform: translateY(0em);
   }
 
-  .cards-grid,
-  .blog-grid {
+  .cards-grid {
     grid-template-columns: 1fr;
   }
 
@@ -992,8 +899,7 @@ ul { list-style: none; }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .cards-grid,
-  .blog-grid {
+  .cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }

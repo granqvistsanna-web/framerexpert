@@ -21,34 +21,11 @@ function initSite() {
   if (document.querySelector('[data-twostep-nav]')) initTwostepScalingNavigation();
   initDynamicCurrentYear();
   initChangePageTitleOnLeave();
-  applyThemeFrom(document);
 }
 
 // -----------------------------------------
 // GENERIC + HELPERS
 // -----------------------------------------
-
-const themeConfig = {
-  light: { nav: "dark", transition: "light" },
-  dark: { nav: "light", transition: "dark" }
-};
-
-function applyThemeFrom(container) {
-  const el = container === document ? document.body : container;
-  const pageTheme = el?.dataset?.pageTheme || "light";
-  const config = themeConfig[pageTheme] || themeConfig.light;
-
-  document.body.dataset.pageTheme = pageTheme;
-  const transitionEl = document.querySelector('[data-theme-transition]');
-  if (transitionEl) {
-    transitionEl.dataset.themeTransition = config.transition;
-  }
-
-  const nav = document.querySelector('[data-theme-nav]');
-  if (nav) {
-    nav.dataset.themeNav = config.nav;
-  }
-}
 
 function initLenis() {
   if (lenis) return;
@@ -109,8 +86,14 @@ function initTwostepScalingNavigation() {
 
   if (!navElement || !navStatusEl) return;
 
+  const toggleButtons = document.querySelectorAll('[data-nav-toggle="toggle"]');
+
   const setNavStatus = (status) => {
     navStatusEl.setAttribute("data-nav-status", status);
+    const expanded = status === "active" ? "true" : "false";
+    toggleButtons.forEach((btn) => {
+      btn.setAttribute("aria-expanded", expanded);
+    });
   };
 
   const isActive = () => navStatusEl.getAttribute("data-nav-status") === "active";
@@ -127,7 +110,7 @@ function initTwostepScalingNavigation() {
 
   const toggleNav = () => (isActive() ? closeNav() : openNav());
 
-  document.querySelectorAll('[data-nav-toggle="toggle"]').forEach((btn) => {
+  toggleButtons.forEach((btn) => {
     btn.addEventListener("click", toggleNav);
   });
 

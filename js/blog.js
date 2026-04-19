@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!filterContainer || !blogGrid) return;
 
-  const buttons = filterContainer.querySelectorAll('.blog-filter__btn');
-  const cards = blogGrid.querySelectorAll('.article-card');
+  const buttons = filterContainer.querySelectorAll('button');
+  const cards = blogGrid.querySelectorAll('.card');
 
   const urlParams = new URLSearchParams(window.location.search);
   const initialCategory = urlParams.get('category') || 'all';

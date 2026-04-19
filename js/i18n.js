@@ -11,6 +11,7 @@ const translations = {
     'page.post3.title': '5 tips f\u00f6r att bygga snabbare i Framer \u2014 FramerExpert.se',
     'page.post3.description': 'Spara tid och arbeta smartare i Framer med dessa fem konkreta tips.',
 
+    'nav.home': 'Hem',
     'nav.blog': 'Blogg',
     'nav.about': 'Om',
     'nav.contact': 'Kontakt',
@@ -99,6 +100,7 @@ const translations = {
     'page.post3.title': '5 tips to build faster in Framer \u2014 FramerExpert.se',
     'page.post3.description': 'Save time and work smarter in Framer with these five practical tips.',
 
+    'nav.home': 'Home',
     'nav.blog': 'Blog',
     'nav.about': 'About',
     'nav.contact': 'Contact',

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" fill="#323236"/>
+  <rect x="100" y="230" width="60" height="70" rx="8" fill="#3F3F46"/>
+  <rect x="112" y="248" width="36" height="6" rx="3" fill="#F5F5F0" opacity="0.55"/>
+  <rect x="112" y="262" width="24" height="6" rx="3" fill="#F5F5F0" opacity="0.25"/>
+  <rect x="180" y="190" width="60" height="110" rx="8" fill="#3F3F46"/>
+  <rect x="192" y="208" width="36" height="6" rx="3" fill="#F5F5F0" opacity="0.55"/>
+  <rect x="192" y="222" width="24" height="6" rx="3" fill="#F5F5F0" opacity="0.25"/>
+  <rect x="260" y="150" width="60" height="150" rx="8" fill="#3F3F46"/>
+  <rect x="272" y="168" width="36" height="6" rx="3" fill="#F5F5F0" opacity="0.85"/>
+  <rect x="272" y="182" width="24" height="6" rx="3" fill="#F5F5F0" opacity="0.35"/>
+  <rect x="340" y="120" width="60" height="180" rx="8" fill="#3F3F46"/>
+  <rect x="352" y="138" width="36" height="6" rx="3" fill="#F5F5F0" opacity="0.55"/>
+  <rect x="352" y="152" width="24" height="6" rx="3" fill="#F5F5F0" opacity="0.25"/>
+  <rect x="420" y="90" width="60" height="210" rx="8" fill="#3F3F46"/>
+  <rect x="432" y="108" width="36" height="6" rx="3" fill="#F5F5F0" opacity="0.55"/>
+  <rect x="432" y="122" width="24" height="6" rx="3" fill="#F5F5F0" opacity="0.25"/>
+  <text x="300" y="345" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="#F5F5F0" opacity="0.55">Framer priser 2026</text>
+</svg>

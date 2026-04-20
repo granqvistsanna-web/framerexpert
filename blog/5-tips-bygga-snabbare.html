@@ -205,20 +205,36 @@
     </header>
 
     <div class="blog-post__content">
+      <p data-i18n="post3.intro_2">De här fem tipsen använder vi dagligen när vi bygger kundprojekt i Framer. Var och en är enkel att implementera direkt — men skillnaden de gör över ett helt projekt är stor, särskilt när deadline närmar sig. Tipsen passar både för dig som precis börjat i Framer och för dig som byggt ett par projekt men märker att vissa moment tar onödigt lång tid.</p>
+
       <h2 data-i18n="post3.h2_1">1. Använd komponenter för allt som upprepas</h2>
       <p data-i18n="post3.p1">Skapa komponenter för navigation, footer, knappar och kort. När du ändrar en komponent uppdateras alla instanser automatiskt. Det sparar tid och säkerställer konsistens.</p>
+      <p data-i18n="post3.p1_2">Ett konkret exempel: bygg en knapp-komponent med varianter för primär, sekundär och länk. Då räcker ett klick för att byta knapptyp i hela sajten, och när du senare vill justera border-radius eller padding sker det på ett ställe istället för på femtio.</p>
 
       <h2 data-i18n="post3.h2_2">2. Utnyttja layout-verktyget (Auto Layout)</h2>
       <p data-i18n="post3.p2">Framers auto-layout liknar Flexbox i CSS. Använd det istället för att positionera element manuellt. Det gör din design responsiv från start och sparar enormt mycket tid.</p>
+      <p data-i18n="post3.p2_2">En vanlig miss är att blanda manuell positionering med Auto Layout i samma ram. Resultatet blir ofta konstiga hopp vid olika breakpoints. Bestäm tidigt vilken metod du använder per sektion — och håll dig till den genom hela projektet.</p>
 
       <h2 data-i18n="post3.h2_3">3. Lär dig kortkommandon</h2>
       <p data-i18n="post3.p3">Kortkommandon som Cmd+D (duplicera), Cmd+Shift+K (komponent) och Alt+dra (kopiera) snabbar upp arbetsflödet avsevärt. Investera en timme i att lära dig de vanligaste.</p>
+      <p data-i18n="post3.p3_2">Fokusera på att automatisera det du gör flera gånger per timme: duplicera, gruppera (Cmd+G), frame runt markering (Cmd+Alt+G), växla mellan breakpoints och öppna inspektorn. Med dem i muskelminnet blir arbetsflödet markant snabbare.</p>
 
       <h2 data-i18n="post3.h2_4">4. Använd CMS tidigt i projektet</h2>
       <p data-i18n="post3.p4">Om sajten har upprepat innehåll (blogginlägg, teammedlemmar, produkter) — sätt upp CMS direkt. Det är mycket enklare att bygga rätt från start än att migrera innehåll senare.</p>
+      <p data-i18n="post3.p4_2">Tänk på CMS som en datamodell. Börja med att lista fälten en post behöver — titel, ingress, bild, kategori, datum — innan du börjar designa. Då blir både design och innehåll lättare att förvalta när sajten växer.</p>
 
       <h2 data-i18n="post3.h2_5">5. Designa mobile-first</h2>
       <p data-i18n="post3.p5">Börja med mobilversionen. Det tvingar dig att prioritera innehåll och göra tydliga designval. Att sedan skala upp till desktop är enklare än att skala ner från desktop.</p>
+      <p data-i18n="post3.p5_2">I praktiken betyder mobile-first att du måste prioritera hårdare. Får något inte plats på en 375 px bred skärm är det troligen inte viktigt nog att ta plats på desktop heller. Google indexerar dessutom mobilversionen först — så mobilen är SEO-mässigt den viktigaste vyn.</p>
+
+      <h2 data-i18n="post3.h2_mistakes">Vanliga misstag att undvika</h2>
+      <p data-i18n="post3.p_m1">Ett vanligt nybörjarmisstag är att bygga allt på en enda desktop-breakpoint och lämna mobilen till sist. Det leder nästan alltid till att layouten behöver göras om från scratch när du tvingas anpassa för 375 px. Bygg parallellt över breakpoints istället.</p>
+      <p data-i18n="post3.p_m2">Ett annat misstag är att skapa komponenter för sent i processen. När du märker att samma knapp finns på tio sidor är det redan dubbel-arbete att konvertera. Skapa komponenten vid andra instansen — inte vid tionde.</p>
+      <p data-i18n="post3.p_m3">Slutligen: glöm inte att ställa in meta-beskrivningar, Open Graph-bilder och alt-text på bilder. Framer gör det enkelt, men det kräver att du faktiskt fyller i fälten. Sätt det som en rutin innan du publicerar en ny sida.</p>
+
+      <h2 data-i18n="post3.h2_6">Kom igång direkt</h2>
+      <p data-i18n="post3.p6">Börja med det enklaste: identifiera de tre element som återkommer oftast i din sajt och gör dem till komponenter. Nästa gång du startar ett projekt, sätt upp CMS och mobildesignen först. Över tid bygger varje litet tips ett snabbare, mer underhållsvänligt arbetssätt.</p>
+      <p data-i18n="post3.p6_2">Vill du lära dig mer om själva verktyget? Läs vår kompletta guide till Framer eller jämförelsen mot WordPress för en bredare bild av plattformen.</p>
     </div>
 
     <!-- Related Articles -->

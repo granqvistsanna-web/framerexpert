@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#27272A">
+  <meta name="color-scheme" content="dark">
   <title>FramerExpert.se — Guider, tips och expertkunskap om Framer</title>
   <meta name="description" content="Allt om Framer på ett ställe. Guider, tips och expertkunskap för dig som vill bygga webbplatser i Framer.">
 
@@ -52,6 +54,8 @@
   </script>
 </head>
 <body data-page="home">
+
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Hoppa till innehåll</a>
 
   <!-- NAVIGATION -->
   <nav data-twostep-nav data-nav-status="not-active" class="twostep-nav">
@@ -114,7 +118,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main">
     <!-- HERO -->
     <section class="hero">
       <div class="hero__content container">
@@ -126,14 +130,14 @@
     </section>
 
     <!-- FILTER PILLS -->
-    <div class="filter-pills container">
-      <a href="/blog/" class="is-active" data-i18n="blog.filter.all">Alla</a>
+    <nav class="filter-pills container" aria-label="Kategorier">
+      <a href="/blog/" class="is-active" aria-current="page" data-i18n="blog.filter.all">Alla</a>
       <a href="/blog/?category=getting-started" data-i18n="blog.filter.getting-started">Kom igång</a>
       <a href="/blog/?category=comparison" data-i18n="blog.filter.comparison">Jämförelse</a>
       <a href="/blog/?category=tips" data-i18n="blog.filter.tips">Tips</a>
       <a href="/blog/?category=seo" data-i18n="blog.filter.seo">SEO</a>
       <a href="/blog/?category=cms" data-i18n="blog.filter.cms">CMS</a>
-    </div>
+    </nav>
 
     <!-- CARDS -->
     <div class="cards-grid container">
@@ -146,49 +150,49 @@
 
       <a href="/blog/framer-vs-wordpress.html" class="card">
         <div class="card__image">
-          <img src="/assets/thumb-framer-vs-wordpress.svg" alt="Framer vs WordPress">
+          <img src="/assets/thumb-framer-vs-wordpress.svg" alt="Framer vs WordPress" loading="lazy">
         </div>
         <p class="card__text"><strong data-i18n="articles.a2.title">Framer vs WordPress (2026): Vilken plattform är bäst för din webbplats?</strong> — <span data-i18n="articles.a2.excerpt">Djupgående jämförelse av prestanda, SEO, kostnad, flexibilitet och användarvänlighet — så väljer du rätt plattform 2026.</span></p>
       </a>
 
       <a href="/blog/5-tips-bygga-snabbare.html" class="card">
         <div class="card__image">
-          <img src="/assets/thumb-5-tips.svg" alt="5 tips för att bygga snabbare i Framer">
+          <img src="/assets/thumb-5-tips.svg" alt="5 tips för att bygga snabbare i Framer" loading="lazy">
         </div>
         <p class="card__text"><strong data-i18n="articles.a3.title">5 tips för att bygga snabbare i Framer</strong> — <span data-i18n="articles.a3.excerpt">Spara tid och arbeta smartare. Fem konkreta tips som gör dig snabbare i Framer.</span></p>
       </a>
 
       <a href="/blog/framer-cms-i-praktiken.html" class="card">
         <div class="card__image">
-          <img src="/assets/thumb-framer-cms.svg" alt="Framer CMS i praktiken">
+          <img src="/assets/thumb-framer-cms.svg" alt="Framer CMS i praktiken" loading="lazy">
         </div>
         <p class="card__text"><strong data-i18n="articles.a4.title">Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod</strong> — <span data-i18n="articles.a4.excerpt">Hands-on guide till samlingar, fält, filter och detaljsidor — så bygger du en dynamisk sajt i Framer CMS utan kod.</span></p>
       </a>
 
       <a href="/blog/framer-seo-guide.html" class="card">
         <div class="card__image">
-          <img src="/assets/thumb-framer-seo.svg" alt="Framer SEO-guide 2026">
+          <img src="/assets/thumb-framer-seo.svg" alt="Framer SEO-guide 2026" loading="lazy">
         </div>
         <p class="card__text"><strong data-i18n="articles.a5.title">Framer SEO (2026): Så optimerar du din sajt för Google</strong> — <span data-i18n="articles.a5.excerpt">Komplett guide till titlar, strukturerad data, Core Web Vitals och sitemap — så får du Framer-sajten att ranka.</span></p>
       </a>
 
       <a href="/blog/framer-vs-webflow.html" class="card">
         <div class="card__image">
-          <img src="/assets/thumb-framer-vs-webflow.svg" alt="Framer vs Webflow">
+          <img src="/assets/thumb-framer-vs-webflow.svg" alt="Framer vs Webflow" loading="lazy">
         </div>
         <p class="card__text"><strong data-i18n="articles.a6.title">Framer vs Webflow (2026): Vilken ska du välja?</strong> — <span data-i18n="articles.a6.excerpt">Ärlig jämförelse av pris, CMS, e-handel, SEO och användarvänlighet — så väljer du rätt plattform.</span></p>
       </a>
 
       <a href="/blog/framer-templates-guide.html" class="card">
         <div class="card__image">
-          <img src="/assets/thumb-framer-templates.svg" alt="Framer-mallar guide">
+          <img src="/assets/thumb-framer-templates.svg" alt="Framer-mallar guide" loading="lazy">
         </div>
         <p class="card__text"><strong data-i18n="articles.a7.title">Framer-mallar (2026): Så hittar, väljer och anpassar du rätt template</strong> — <span data-i18n="articles.a7.excerpt">Så hittar du rätt mall, anpassar den utan att förstöra designen och undviker de vanligaste licens- och CMS-fällorna.</span></p>
       </a>
 
       <a href="/blog/framer-ecommerce-guide.html" class="card">
         <div class="card__image">
-          <img src="/assets/thumb-framer-ecommerce.svg" alt="Framer för e-handel">
+          <img src="/assets/thumb-framer-ecommerce.svg" alt="Framer för e-handel" loading="lazy">
         </div>
         <p class="card__text"><strong data-i18n="articles.a8.title">Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?</strong> — <span data-i18n="articles.a8.excerpt">Så långt räcker Framers store-funktion, när du bör integrera Shopify eller Stripe, och när du ska välja en riktig e-handelsplattform.</span></p>
       </a>

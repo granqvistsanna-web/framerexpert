@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#27272A">
+  <meta name="color-scheme" content="dark">
   <title>Blogg — FramerExpert.se | Guider & tips om Framer</title>
   <meta name="description" content="Alla artiklar om Framer. Guider, tutorials, tips och jämförelser.">
 
@@ -96,6 +98,8 @@
 </head>
 <body data-page="blog">
 
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Hoppa till innehåll</a>
+
   <!-- NAVIGATION -->
   <nav data-twostep-nav data-nav-status="not-active" class="twostep-nav">
     <div data-nav-toggle="close" class="twostep-nav__bg"></div>
@@ -157,7 +161,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main">
 
   <!-- LISTING HEADER -->
   <div class="blog-listing__header container">
@@ -165,13 +169,13 @@
   </div>
 
   <!-- FILTER -->
-  <div class="filter-pills container" id="blogFilter">
-    <button class="is-active" data-category="all" data-i18n="blog.filter.all">Alla</button>
-    <button data-category="getting-started" data-i18n="blog.filter.getting-started">Kom igång</button>
-    <button data-category="comparison" data-i18n="blog.filter.comparison">Jämförelse</button>
-    <button data-category="tips" data-i18n="blog.filter.tips">Tips</button>
-    <button data-category="seo" data-i18n="blog.filter.seo">SEO</button>
-    <button data-category="cms" data-i18n="blog.filter.cms">CMS</button>
+  <div class="filter-pills container" id="blogFilter" role="group" aria-label="Filtrera artiklar per kategori">
+    <button class="is-active" data-category="all" aria-pressed="true" data-i18n="blog.filter.all">Alla</button>
+    <button data-category="getting-started" aria-pressed="false" data-i18n="blog.filter.getting-started">Kom igång</button>
+    <button data-category="comparison" aria-pressed="false" data-i18n="blog.filter.comparison">Jämförelse</button>
+    <button data-category="tips" aria-pressed="false" data-i18n="blog.filter.tips">Tips</button>
+    <button data-category="seo" aria-pressed="false" data-i18n="blog.filter.seo">SEO</button>
+    <button data-category="cms" aria-pressed="false" data-i18n="blog.filter.cms">CMS</button>
   </div>
 
   <!-- BLOG GRID -->

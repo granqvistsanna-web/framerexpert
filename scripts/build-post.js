@@ -162,6 +162,7 @@ function inline(text) {
     const attrs = isExternal ? ' target="_blank" rel="noopener"' : '';
     return `<a href="${escapeAttr(url)}"${attrs}>${label}</a>`;
   });
+  s = s.replace(/`([^`\n]+)`/g, '<code>$1</code>');
   s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
   return s;

@@ -64,7 +64,7 @@ Only a tiny markdown subset is supported — deliberately:
 - `### Heading` → `<h3>`
 - Blank-line-separated paragraphs → `<p>`
 - `- item` lines → `<ul><li>`
-- Inline `**bold**`, `*italic*`, `[text](url)`
+- Inline `**bold**`, `*italic*`, `` `code` ``, `[text](url)`
 
 Anything more exotic (tables, images mid-body, code fences) should be raised
 as a feature request; the parser intentionally rejects it rather than guess.

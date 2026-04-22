@@ -31,7 +31,7 @@ faqs:
 
 Framer publicerar statiska HTML-sidor via ett globalt CDN. Det betyder snabba svarstider, låg TTFB och inget PHP-lager att vänta på. Allt innehåll som Googles crawler ser finns direkt i serversvaret — inga klient-renderingshooks som sökmotorn behöver gissa sig igenom.
 
-Resultatet är bra Core Web Vitals utan extra optimering, vilket i sin tur är en positiv rankningssignal. Du börjar alltså redan med ett försprång jämfört med en typisk WordPress-installation.
+Resultatet är bra Core Web Vitals utan extra optimering, vilket i sin tur är en positiv rankningssignal. Du börjar alltså redan med ett försprång jämfört med en [typisk WordPress-installation](/blog/framer-vs-wordpress.html).
 
 ## Titlar, meta-beskrivningar och canonical
 
@@ -42,7 +42,7 @@ Varje sida i Framer kan få egna SEO-inställningar via page settings. Fyll allt
 - En canonical URL om sidan finns på flera platser
 - En Open Graph-bild i 1200×630 px för sociala förhandsvisningar
 
-Titeln är fortfarande den viktigaste on-page-signalen. Skriv dem för människor först, sökmotorer sen. En titel som "Vad är Framer? En komplett guide" presterar bättre än en nyckelordsspäckad "Framer guide Sverige bästa".
+Titeln är fortfarande den viktigaste on-page-signalen. Skriv dem för människor först, sökmotorer sen. En titel som ["Vad är Framer? En komplett guide"](/blog/vad-ar-framer.html) presterar bättre än en nyckelordsspäckad "Framer guide Sverige bästa".
 
 ## URL-struktur och slugs
 
@@ -101,7 +101,7 @@ Kör PageSpeed Insights på varje viktig landningssida innan du sätter en kampa
 
 Tre sätt att omedvetet sänka sina värden i just Framer:
 
-- **CMS-samlingar med tunga bilder.** När hela samlingen renderas på en listsida staplas bildvikten snabbt. Filtrera, paginera eller ladda bilder lazy nedanför fold-en.
+- **[CMS-samlingar](/blog/framer-cms-i-praktiken.html) med tunga bilder.** När hela samlingen renderas på en listsida staplas bildvikten snabbt. Filtrera, paginera eller ladda bilder lazy nedanför fold-en.
 - **Scroll-bibliotek som Lenis och GSAP.** De är kraftfulla men kostar i JavaScript-körning. Mät INP på mobil innan du lägger till fler animationer.
 - **Webfonts utan `font-display: swap`.** Framer sätter det automatiskt på sina egna typsnitt, men anpassade fonter via custom code behöver du själv sätta — annars riskerar du oskyldig layout shift.
 

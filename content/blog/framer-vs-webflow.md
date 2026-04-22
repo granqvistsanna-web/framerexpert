@@ -65,19 +65,19 @@ Det är här skillnaden blir påtaglig. Framers CMS räcker långt för bloggar,
 
 Webflows CMS är mer robust. Du kan ha många fler collection items per site, bygga komplexa relationer mellan samlingar, filtrera dynamiskt och använda CMS API:et för att pusha innehåll från externa system. För en sajt med tusentals artiklar, flera content-typer och redaktionella arbetsflöden är Webflow överlägset.
 
-Konkret: Framer är utmärkt om din CMS-behov är "en blogg, några case, ett par landningssidor". Webflow vinner så fort du behöver flera sammankopplade samlingar, avancerad filtrering eller ett content-team med flera redaktörer.
+Konkret: Framer är utmärkt om din [CMS-behov](/blog/framer-cms-i-praktiken.html) är "en blogg, några case, ett par landningssidor". Webflow vinner så fort du behöver flera sammankopplade samlingar, avancerad filtrering eller ett content-team med flera redaktörer.
 
 ## E-handel
 
 Här finns ingen debatt — Webflow vinner. Webflow Ecommerce är en fullständig produkt med produkthantering, lager, varianter, rabattkoder, skatteregler och checkout. Det är inte Shopify-nivå men klart användbart för små till medelstora butiker.
 
-Framer har ingen inbyggd e-handel. Du löser det via Shopify-integration eller embeds från tjänster som Gumroad eller Lemon Squeezy. Det fungerar för enklare försäljning, särskilt digitala produkter eller ett par fysiska varor, men bli inte förvånad om du stöter i taket.
+Framer har [ingen inbyggd e-handel](/blog/framer-ecommerce-guide.html). Du löser det via Shopify-integration eller embeds från tjänster som Gumroad eller Lemon Squeezy. Det fungerar för enklare försäljning, särskilt digitala produkter eller ett par fysiska varor, men bli inte förvånad om du stöter i taket.
 
 Ska du bygga en seriös webbshop? Välj Webflow — eller Shopify direkt. Ska du sälja kursplatser, e-böcker eller enstaka produkter på en snygg sajt? Framer med integration duger.
 
 ## Prestanda och SEO
 
-Båda plattformarna levererar statisk HTML via CDN och klarar Core Web Vitals bra direkt ur lådan. Skillnaden på tekniskt SEO är mindre än marknadsföringen antyder.
+Båda plattformarna levererar statisk HTML via CDN och klarar Core Web Vitals bra direkt ur lådan. Skillnaden på [tekniskt SEO](/blog/framer-seo-guide.html) är mindre än marknadsföringen antyder.
 
 Framer ger dig meta-inställningar per sida, automatisk `sitemap.xml`, OpenGraph-stöd och möjlighet att lägga till JSON-LD via custom code. Det räcker gott för de flesta innehållssajter. Både LCP och INP tenderar att landa bra utan extra handpåläggning, delvis för att Framer är restriktivt med JavaScript på klientsidan.
 

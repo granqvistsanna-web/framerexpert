@@ -37,7 +37,7 @@ Mallar är ett bra val när:
 
 - Du behöver en sajt snabbt och har begränsad designbudget.
 - Du bygger en kampanjsida, landningssida eller MVP där time-to-market är viktigare än unik design.
-- Du är ny i Framer och vill lära dig genom att plocka isär något som är väl uppbyggt.
+- Du är [ny i Framer](/blog/vad-ar-framer.html) och vill lära dig genom att plocka isär något som är väl uppbyggt.
 - Din brand guideline är flexibel och kan anpassa sig till mallens grundstruktur.
 
 Mallar är ett sämre val när du har en stark visuell identitet som ska genomsyra varje detalj, eller när sajten är så komplex att du ändå måste bygga om hälften.
@@ -71,7 +71,7 @@ Det är nästan alltid värt pengarna jämfört med att bygga motsvarande själv
 Innan du trycker på köp, gå igenom:
 
 - **Klicka runt i live-demon.** Fungerar navigationen? Laddar sidorna snabbt? Känns animationerna proffsiga eller överdrivna?
-- **Kör PageSpeed Insights på demosajten.** Mallen bygger grund för din prestanda. Är demon trög blir din sajt också trög.
+- **Kör PageSpeed Insights på demosajten.** Mallen bygger grund för [din prestanda](/blog/framer-seo-guide.html). Är demon trög blir din sajt också trög.
 - **Granska sidlistan.** Har mallen de sidtyper du behöver — blogg, case, pricing, kontakt, 404? Att lägga till saknade sidtyper själv är ofta mer jobb än att välja en annan mall från början.
 - **Kontrollera CMS-setupen.** Finns samlingar för blogg, produkter eller teammedlemmar? Är fälten rimligt namngivna?
 - **Titsa i komponenter.** Bra mallar använder komponenter konsekvent. Om varje knapp är en egen separat design blir uppdateringar plågsamma.
@@ -134,7 +134,7 @@ Du får oftast:
 
 ## Sammanfattning
 
-Rätt Framer-mall kan ta dig från idé till publicerad sajt på en eftermiddag. Fel mall kostar mer tid än att bygga från grunden. Minimera risken genom att:
+Rätt Framer-mall kan ta dig [från idé till publicerad sajt på en eftermiddag](/blog/5-tips-bygga-snabbare.html). Fel mall kostar mer tid än att bygga från grunden. Minimera risken genom att:
 
 - Handla främst från den officiella marketplacen
 - Klicka igenom live-demon noga innan köp

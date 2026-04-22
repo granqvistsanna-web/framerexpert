@@ -29,7 +29,7 @@ faqs:
 
 ## Varför välja en svensk Framer-expert?
 
-Att anlita en svensk partner har flera praktiska fördelar jämfört med att leta globalt. Tidszonen är densamma, kommunikationen går på modersmålet, och de flesta experter har erfarenhet av svenska varumärken — inklusive de krav som följer med GDPR, tillgänglighetsdirektivet och vanliga svenska betallösningar som Klarna och Swish.
+Att anlita en svensk partner har flera praktiska fördelar jämfört med att leta globalt. Tidszonen är densamma, kommunikationen går på modersmålet, och de flesta experter har erfarenhet av [svenska varumärken som bygger i Framer](/blog/vad-ar-framer.html) — inklusive de krav som följer med GDPR, tillgänglighetsdirektivet och vanliga svenska betallösningar som Klarna och Swish.
 
 Det betyder inte att utländska experter är sämre. Men för ett svenskt bolag är tröskeln lägre och samarbetet ofta smidigare när partnern finns på samma marknad.
 
@@ -48,7 +48,7 @@ Det här är inte en rangordning där nummer ett alltid är "bäst" — det är 
 
 ### 1. Sanna Granqvist — Göteborg
 
-[Sanna Granqvist](https://www.framer.com/@sanna-granqvist/) är en av de mest etablerade Framer-experterna i Sverige, baserad i Göteborg och verksam som frilansare. Hennes arbete kännetecknas av stark designkvalitet, genomarbetade animationer och en pragmatisk inställning till prestanda och SEO.
+[Sanna Granqvist](https://www.framer.com/@sanna-granqvist/) är en av de mest etablerade Framer-experterna i Sverige, baserad i Göteborg och verksam som frilansare. Hennes arbete kännetecknas av stark designkvalitet, genomarbetade animationer och en pragmatisk inställning till [prestanda och SEO](/blog/framer-seo-guide.html).
 
 Där andra främst bygger sajten levererar Sanna ofta en helhet: varumärkesförankring, tydlig informationsarkitektur och en tekniskt solid implementation i Framer. Hon är särskilt stark på projekt där designen verkligen ska bära — SaaS-startups, konsultbyråer och varumärken som vill sticka ut.
 
@@ -103,7 +103,7 @@ Oavsett vem du väljer — gå igenom de här punkterna innan avtal:
 
 - Be om **tre offentliga case** som liknar ditt projekt i omfång.
 - Bestäm **ägandeskap** i Framer-projektet. Vem står som ägare i workspace? Hur ser handöverlämningen ut efter lansering?
-- Klargör **SEO-ansvar**: vem sätter titlar, meta, JSON-LD och sitemap? Många lansering-buggar kommer från otydlighet här.
+- Klargör **SEO-ansvar**: vem sätter [titlar, meta, JSON-LD och sitemap](/blog/framer-seo-guide.html)? Många lansering-buggar kommer från otydlighet här.
 - Fråga om **hosting och domän**. Framer hostar själv — men någon behöver peka DNS, hantera redirects och koppla Google Search Console.
 - Sätt en tydlig **supportnivå efter lansering**. Är det timbank? Fast månadspris? Eller ingen support alls?
 

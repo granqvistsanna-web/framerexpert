@@ -78,7 +78,7 @@ Gemensamt för alla: design och varumärkeskänsla betyder mer än katalogdjup, 
 
 Framer blir fel val när:
 
-- **Du har hundratals produkter** med komplexa kategorier och filter. CMS-samlingar i Framer är inte byggda för skala.
+- **Du har hundratals produkter** med komplexa kategorier och filter. [CMS-samlingar i Framer](/blog/framer-cms-i-praktiken.html) är inte byggda för skala.
 - **Du behöver avancerade varianter** — storlek × färg × material × region med olika pris och lager per kombination.
 - **Lagersaldo är affärskritiskt** och synkas från ett befintligt WMS eller ERP.
 - **Du behöver subscriptions** med fakturerings-logik, prova-på-perioder och uppgraderingar.
@@ -144,7 +144,7 @@ Bocka av innan du spenderar två veckor på att bygga något som måste byggas o
 
 Kort översikt över när du gör något annat istället:
 
-- **Shopify** — förstahandsval för seriös e-handel. Bäst appekosystem, stöd för multi-kanal, starka POS-lösningar om du säljer offline också. Minus: designen är mer standardiserad om du inte bygger headless.
+- **Shopify** — förstahandsval för seriös e-handel. Bäst appekosystem, stöd för multi-kanal, starka POS-lösningar om du säljer offline också. Minus: designen är mer standardiserad om du inte [bygger headless](/blog/framer-vs-webflow.html).
 - **WooCommerce** — om du redan kör WordPress och behöver djup anpassning. Minus: mer underhåll, långsammare att komma igång, säkerhetsansvar på dig.
 - **Wix** — nybörjarvänligt och enkelt, men mindre flexibelt än Framer på designsidan och svagare än Shopify på commerce-sidan. Sällan det bästa valet på någon enskild parameter.
 - **Framer + Shopify (headless)** — för varumärken där design är en huvudaxel men commerce ska vara robust. Mest arbete att sätta upp, men kraftfullast.

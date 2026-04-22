@@ -7,7 +7,7 @@ date_modified: 2026-04-22
 date_display: 22 april 2026
 readtime: 9 min läsning
 thumbnail: thumb-framer-vs-webflow.svg
-og_image: og-default.png
+og_image: og-framer-vs-webflow.svg
 title: "Framer vs Webflow (2026): Vilken ska du välja?"
 meta_title: "Framer vs Webflow (2026): Vilken ska du välja? — FramerExpert.se"
 description: "Framer vs Webflow 2026: ärlig jämförelse av pris, CMS, e-handel, SEO och användarvänlighet. Så väljer du rätt plattform för din sajt."

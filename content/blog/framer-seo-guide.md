@@ -6,6 +6,7 @@ date: 2026-04-22
 date_display: 22 april 2026
 readtime: 10 min läsning
 thumbnail: thumb-framer-seo.svg
+og_image: og-framer-seo-guide.svg
 title: "Framer SEO (2026): Så optimerar du din sajt för Google"
 meta_title: "Framer SEO (2026): Så optimerar du din sajt för Google — FramerExpert.se"
 description: "Framer SEO 2026 — komplett guide till titlar, strukturerad data, Core Web Vitals och sitemap. Så får du Framer-sajten att ranka i Google."

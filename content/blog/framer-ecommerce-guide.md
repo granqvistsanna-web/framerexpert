@@ -7,7 +7,7 @@ date_modified: 2026-04-22
 date_display: 22 april 2026
 readtime: 8 min läsning
 thumbnail: thumb-framer-ecommerce.svg
-og_image: og-default.png
+og_image: og-framer-ecommerce-guide.svg
 title: "Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?"
 meta_title: "Framer för e-handel (2026): Vad funkar — och när ska du välja något annat? — FramerExpert.se"
 description: "Framer e-handel 2026 — så långt räcker Framers inbyggda store-funktion, när du bör integrera Shopify eller Stripe, och när du ska välja en riktig e-handelsplattform."

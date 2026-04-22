@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Framer för e-handel (2026): Vad funkar — och när ska du välja något annat? — FramerExpert.se</title>
+  <meta name="description" content="Framer e-handel 2026 — så långt räcker Framers inbyggda store-funktion, när du bör integrera Shopify eller Stripe, och när du ska välja en riktig e-handelsplattform.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?">
+  <meta property="og:description" content="Framer e-handel — vad funkar, vad saknas, och när du bör välja Shopify istället.">
+  <meta property="og:url" content="https://framerexpert.se/blog/framer-ecommerce-guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="article:published_time" content="2026-04-22">
+  <meta property="article:modified_time" content="2026-04-22">
+  <meta property="article:author" content="FramerExpert">
+  <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://framerexpert.se/assets/og-default.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://framerexpert.se/blog/framer-ecommerce-guide.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?",
+    "description": "Framer e-handel — vad funkar, vad saknas, och när du bör välja Shopify istället.",
+    "datePublished": "2026-04-22",
+    "dateModified": "2026-04-22",
+    "author": {
+      "@type": "Organization",
+      "name": "FramerExpert",
+      "url": "https://framerexpert.se"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FramerExpert.se",
+      "url": "https://framerexpert.se"
+    },
+    "mainEntityOfPage": "https://framerexpert.se/blog/framer-ecommerce-guide.html",
+    "inLanguage": "sv"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se" },
+      { "@type": "ListItem", "position": 2, "name": "Blogg", "item": "https://framerexpert.se/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Kan man bygga e-handel i Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, för enklare butiker. Framer har en inbyggd store-funktion för en- och flervariantsprodukter, och du kan även integrera Stripe eller bädda in Shopify-produkter. För komplexa kataloger, lagerhantering och avancerad skatt är Framer dock underdimensionerat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Behöver jag Stripe-konto för att sälja i Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Framers egna checkout bygger på Stripe Connect, så du kopplar ett Stripe-konto för att ta betalt. Stripe sköter transaktioner, kortuppgifter och utbetalningar — Framer hanterar bara frontend och produktkatalog."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Stödjer Framer moms och VAT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grundläggande ja, via Stripe Tax som du aktiverar i ditt Stripe-konto. Framer själv räknar inte ut moms per land — det delegeras till Stripe. För svenska kunder med EU-försäljning fungerar det, men kontrollera alltid att inställningarna matchar din verksamhet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan jag ha lagersaldo i Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Endast på en enkel nivå. Du kan markera produkter som slutsålda eller begränsa antal, men det finns ingen riktig lagerhantering med automatisk avräkning över flera försäljningskanaler. Har du behov av det, använd Shopify istället."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "När bör jag välja Shopify istället för Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "När du säljer i volym, har många produktvarianter, behöver integrationer mot lager- eller ERP-system, eller vill ha flera säljkanaler. Shopify är byggt för e-handel från grunden, Framer är en sajt som råkar kunna sälja."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan jag koppla Framer till Shopify?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Du kan bädda in Shopify Buy Buttons, använda Shopifys JavaScript-SDK eller visa produktinformation via API. Då får du Framers design och Shopifys e-handelsmotor i samma sajt — bra för varumärken som vill ha designfrihet ovanpå en beprövad plattform."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="post8">
+
+  <!-- NAVIGATION -->
+  <nav data-twostep-nav data-nav-status="not-active" class="twostep-nav">
+    <div data-nav-toggle="close" class="twostep-nav__bg"></div>
+    <div class="twostep-nav__wrap">
+      <div class="twostep-nav__width">
+        <div class="twostep-nav__bar">
+          <div class="twostep-nav__back">
+            <div class="twostep-nav__back-bg"></div>
+          </div>
+          <div class="twostep-nav__top">
+            <a href="/" class="twostep-nav__logo">
+              framer.expert
+            </a>
+            <button data-nav-toggle="toggle" class="twostep-nav__toggle" aria-label="Öppna meny" aria-expanded="false">
+              <div class="twostep-nav__toggle-bar"></div>
+              <div class="twostep-nav__toggle-bar"></div>
+            </button>
+            <div class="twostep-nav__top-line"></div>
+          </div>
+          <div class="twostep-nav__bottom">
+            <div class="twostep-nav__bottom-overflow">
+              <div class="twostep-nav__bottom-inner">
+                <div class="twostep-nav__bottom-row">
+                  <div class="twostep-nav__bottom-col">
+                    <div class="twostep-nav__info">
+                      <ul class="twostep-nav__ul">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-span" data-i18n="nav.blog">Blogg</span></a>
+                        </li>
+                      </ul>
+                      <ul class="twostep-nav__ul is--small">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=getting-started" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.getting-started">Kom igång</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=comparison" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.comparison">Jämförelse</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=tips" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.tips">Tips</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=seo" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.seo">SEO</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=cms" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.cms">CMS</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="https://www.framer.com" target="_blank" rel="noopener" class="twostep-nav__link"><span class="twostep-nav__link-eyebrow">Framer.com</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumbs container">
+    <ol class="breadcrumbs__list">
+      <li><a href="/" data-i18n="nav.home">Hem</a></li>
+      <li><a href="/blog/" data-i18n="nav.blog">Blogg</a></li>
+      <li><span aria-current="page">Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?</span></li>
+    </ol>
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="container">
+    <header class="blog-post__header">
+      <div class="blog-post__meta">
+        <span class="blog-post__category">Tips</span>
+        <time datetime="2026-04-22">22 april 2026</time>
+        <span>8 min läsning</span>
+      </div>
+      <h1 class="blog-post__title">Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?</h1>
+      <p class="blog-post__intro">Framer har gjort det enklare att sälja direkt från sin sajt, men plattformen är fortfarande ingen fullfjädrad e-handel. Den här guiden går rakt på sak: vad klarar Framer av, var kör det fast, och när är det dags att hoppa över till Shopify eller WooCommerce istället?</p>
+    </header>
+
+    <div class="blog-post__content">
+      <h2>Kort svar: vad klarar Framer av?</h2>
+      <p>För den som vill sälja direkt från en Framer-sajt finns fyra huvudvägar, med olika räckvidd:</p>
+      <ul>
+        <li><strong>Framers inbyggda store</strong> — bra för 1–50 produkter, enkla varianter, digitala eller fysiska varor med låg volym.</li>
+        <li><strong>Stripe-integration för enstaka produkter</strong> — perfekt för enstaka kurser, nedladdningar eller tjänster.</li>
+        <li><strong>Shopify inbäddad</strong> — för seriös e-handel där du vill ha Framer som frontend och Shopify som motor.</li>
+        <li><strong>Tredjepartsverktyg</strong> (Snipcart, Ecwid, Gumroad) — för specifika use-cases som medlemskap eller marknadsplatser.</li>
+      </ul>
+      <p>Kärnfrågan är inte om Framer kan sälja, utan hur komplex din e-handel är.</p>
+      <h2>Framers inbyggda store-funktion</h2>
+      <p>Framer lanserade under 2024–2025 en egen store-funktion som bygger på Stripe Connect. Du definierar produkter i en samling, anger pris och varianter, och Framer renderar produktsidor, varukorg och checkout åt dig.</p>
+      <p>Vad ingår direkt:</p>
+      <ul>
+        <li>Produktkort med bilder, pris och beskrivning</li>
+        <li>Varukorg och checkout via Stripe</li>
+        <li>Enkel variantstöd (storlek, färg)</li>
+        <li>Digital leverans via länk eller fil</li>
+        <li>Frakt till valda länder med fasta eller viktbaserade avgifter</li>
+        <li>Moms via Stripe Tax</li>
+      </ul>
+      <p>Vad saknas eller är begränsat:</p>
+      <ul>
+        <li>Ingen riktig lagerhantering över kanaler</li>
+        <li>Inga prenumerationer out-of-the-box (bygg det själv i Stripe)</li>
+        <li>Ingen inbyggd orderöversikt för kunder — bara kvitton via mejl</li>
+        <li>Inga rabattkoder på kampanjnivå (enkel rabatt per produkt går)</li>
+        <li>Få analys- och rapporteringsverktyg</li>
+      </ul>
+      <p>För en designbyrås egen produktserie, en illustratörs printshop eller en nyhetsbrev-författares nedladdningsbara produkt — utmärkt. För en klädbutik med 200 SKU:er och återkommande kampanjer — för tunt.</p>
+      <h2>När räcker Framer för e-handel?</h2>
+      <p>Fyra scenarier där Framer duger utmärkt:</p>
+      <ul>
+        <li><strong>Digitala produkter</strong> — e-böcker, PDF:er, Figma-filer, kurser. Checkout + filleverans är allt du behöver.</li>
+        <li><strong>Låg-SKU fysisk handel</strong> — merch för en artist eller skapare, en liten printshop, en boksläppsida.</li>
+        <li><strong>Enkel tjänstebokning</strong> — betalning för en konsultation eller workshop, där själva "produkten" är en bokad tid.</li>
+        <li><strong>Kampanj- och begränsade släpp</strong> — drop culture, pre-orders, limiterade utgåvor där du bara säljer några veckor.</li>
+      </ul>
+      <p>Gemensamt för alla: design och varumärkeskänsla betyder mer än katalogdjup, och volymen är hanterbar manuellt.</p>
+      <h2>När räcker det inte?</h2>
+      <p>Framer blir fel val när:</p>
+      <ul>
+        <li><strong>Du har hundratals produkter</strong> med komplexa kategorier och filter. CMS-samlingar i Framer är inte byggda för skala.</li>
+        <li><strong>Du behöver avancerade varianter</strong> — storlek × färg × material × region med olika pris och lager per kombination.</li>
+        <li><strong>Lagersaldo är affärskritiskt</strong> och synkas från ett befintligt WMS eller ERP.</li>
+        <li><strong>Du behöver subscriptions</strong> med fakturerings-logik, prova-på-perioder och uppgraderingar.</li>
+        <li><strong>Multi-valuta och multi-språk</strong> för internationell försäljning med lokal skattelogik.</li>
+        <li><strong>Säljer du B2B</strong> med offertflöden, kundspecifika priser och godkännandekedjor.</li>
+      </ul>
+      <p>För varje av dessa är Shopify, WooCommerce eller en dedikerad headless-commerce-lösning både snabbare att komma igång med och billigare i drift långsiktigt.</p>
+      <h2>Integrera Stripe, Shopify eller liknande</h2>
+      <p>Framers stora fördel är att plattformen är öppen — du kan bädda in i princip vilken e-handelslösning som helst via custom code.</p>
+      <h3>Stripe direkt</h3>
+      <p>För enskilda produkter eller tjänster: skapa en Payment Link i Stripe och länka en knapp till den. Ingen kod krävs, ingen checkout att bygga, transaktionen hanteras helt av Stripe.</p>
+      <p>Fungerar utmärkt för att sälja en kurs, en konsultation eller en nedladdning. Skalar inte till en riktig produktkatalog.</p>
+      <h3>Shopify inbäddat</h3>
+      <p>Har du en befintlig Shopify-butik men vill byta frontend till Framer? Två vägar:</p>
+      <ul>
+        <li><strong>Shopify Buy Button</strong> — gammalt men fungerar. Bädda in ett iframe-script per produkt.</li>
+        <li><strong>Shopify Storefront API</strong> — modernare. Hämta produktdata via GraphQL till dina Framer-sidor, behåll Shopifys checkout.</li>
+      </ul>
+      <p>Det senare ger full designkontroll i Framer medan Shopify sköter lager, betalningar och orderhantering. Ett populärt setup för varumärken som vill sticka ut visuellt utan att ge upp en beprövad commerce-stack.</p>
+      <h3>Snipcart, Ecwid, Gumroad</h3>
+      <p>Tredjepartstjänster som hanterar cart och checkout via script-tags. Enklare än Shopify för små butiker men mindre kraftfullt än Shopify för stora. Överväg dem om:</p>
+      <ul>
+        <li>Framers egen store saknar någon specifik funktion du behöver</li>
+        <li>Du vill byta butikssystem senare utan att bygga om sajten</li>
+      </ul>
+      <h2>CMS för produkter — om du bygger själv</h2>
+      <p>Bygger du en egen mini-shop via Framers CMS + Stripe Payment Links? Då behöver du strukturera produktsamlingen smart. Grundfält som brukar räcka:</p>
+      <ul>
+        <li><code>name</code>, <code>slug</code>, <code>price</code>, <code>description</code></li>
+        <li><code>main_image</code> och <code>gallery_images</code></li>
+        <li><code>stripe_link</code> — fältet där du klistrar in Stripe Payment Link URL per produkt</li>
+        <li><code>available</code> (boolean) — så du kan dölja slutsålda utan att ta bort posten</li>
+        <li><code>variant</code> eller <code>tags</code> för filtrering</li>
+      </ul>
+      <p>Med den strukturen kan du bygga en produktlista, detaljsidor och länka rakt till Stripe-checkout utan en rad kod. Fungerar för 10–30 produkter innan det blir obekvämt att hantera manuellt.</p>
+      <p>Vill du fördjupa dig i hur samlingarna fungerar i praktiken, se vår <a href="/blog/framer-cms-i-praktiken.html">CMS-guide för Framer</a>.</p>
+      <h2>Checklista innan du bygger</h2>
+      <p>Innan du bestämmer dig för Framer som e-handelsplattform, svara på:</p>
+      <ul>
+        <li><strong>Hur många produkter ska du sälja i år?</strong> Under 50, okej. Över 100, tveksamt.</li>
+        <li><strong>Har du varianter?</strong> Enkla varianter (bara storlek) funkar. Komplexa (tre dimensioner) blir rörigt.</li>
+        <li><strong>Behöver du lagerkoppling?</strong> Om ja, välj Shopify.</li>
+        <li><strong>Vilken volym räknar du med per månad?</strong> Framers store klarar låg till medel volym, men om du gör tusentals ordrar per dag vill du ha en plattform som är byggd för det.</li>
+        <li><strong>Behöver du app-integrationer?</strong> (Klarna, Collector, PostNord etc.) Kolla vad som finns via Stripe/Framer innan du börjar — annars är Shopify bredare.</li>
+        <li><strong>Vem ska administrera sajten?</strong> Framer är designerfokuserat. Icke-tekniska produktägare kan uppleva det mer krävande än Shopifys admin.</li>
+      </ul>
+      <p>Bocka av innan du spenderar två veckor på att bygga något som måste byggas om sex månader senare.</p>
+      <h2>Alternativ: Shopify, WooCommerce, Wix</h2>
+      <p>Kort översikt över när du gör något annat istället:</p>
+      <ul>
+        <li><strong>Shopify</strong> — förstahandsval för seriös e-handel. Bäst appekosystem, stöd för multi-kanal, starka POS-lösningar om du säljer offline också. Minus: designen är mer standardiserad om du inte bygger headless.</li>
+        <li><strong>WooCommerce</strong> — om du redan kör WordPress och behöver djup anpassning. Minus: mer underhåll, långsammare att komma igång, säkerhetsansvar på dig.</li>
+        <li><strong>Wix</strong> — nybörjarvänligt och enkelt, men mindre flexibelt än Framer på designsidan och svagare än Shopify på commerce-sidan. Sällan det bästa valet på någon enskild parameter.</li>
+        <li><strong>Framer + Shopify (headless)</strong> — för varumärken där design är en huvudaxel men commerce ska vara robust. Mest arbete att sätta upp, men kraftfullast.</li>
+      </ul>
+      <h2>Sammanfattning</h2>
+      <p>Framer för e-handel har gått från "knappt möjligt" till "fullt rimligt för vissa use cases". Men det är fortfarande en sajt som kan sälja — inte en e-handelsplattform som kan visas upp.</p>
+      <p>Använd Framer för att sälja när:</p>
+      <ul>
+        <li>Antalet produkter är lågt</li>
+        <li>Design och varumärke är det som driver affären</li>
+        <li>Du vill ha maximal kontroll över utseendet utan utvecklare</li>
+      </ul>
+      <p>Välj något annat när volymen, komplexiteten eller integrationsbehoven växer. Och glöm inte att du alltid kan kombinera — Framer som frontend, Shopify som motor är kanske det bästa av två världar för den som värderar design och skalbarhet lika högt.</p>
+    </div>
+
+    <!-- Related Articles -->
+    <aside class="blog-post__related">
+      <h2 class="blog-post__related-title" data-i18n="post.related">Relaterade artiklar</h2>
+      <div class="blog-post__related-grid">
+        <a href="/blog/framer-cms-i-praktiken.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-cms.svg" alt="Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod</strong> — <span>Hands-on guide till samlingar, fält, filter och detaljsidor — så bygger du en dynamisk sajt i Framer CMS utan kod.</span></p>
+        </a>
+        <a href="/blog/framer-vs-wordpress.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-vs-wordpress.svg" alt="Framer vs WordPress (2026): Vilken plattform är bäst för din webbplats?" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Framer vs WordPress (2026): Vilken plattform är bäst för din webbplats?</strong> — <span>Djupgående jämförelse av prestanda, SEO, kostnad, flexibilitet och användarvänlighet — så väljer du rätt plattform 2026.</span></p>
+        </a>
+      </div>
+    </aside>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__left">&copy; <span data-current-year>2026</span> FramerExpert.se</span>
+      <div class="footer__links">
+        <button class="lang-toggle" id="langToggle" aria-label="Byt språk">
+          <span class="lang-toggle__option is-active" data-lang="sv">SV</span>
+          <span class="lang-toggle__divider">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/init.js"></script>
+</body>
+</html>

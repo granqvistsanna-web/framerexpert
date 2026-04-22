@@ -13,7 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function filterByCategory(category) {
     buttons.forEach((btn) => {
-      btn.classList.toggle('is-active', btn.dataset.category === category);
+      const isActive = btn.dataset.category === category;
+      btn.classList.toggle('is-active', isActive);
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     });
 
     cards.forEach((card) => {

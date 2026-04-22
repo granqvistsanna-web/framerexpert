@@ -85,6 +85,43 @@ img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 
+/* --- Keyboard focus --- */
+:focus { outline: none; }
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 6px;
+  border-radius: var(--radius);
+}
+
+/* --- Skip to content --- */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--text);
+  color: var(--bg);
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0 0 var(--radius) 0;
+  transform: translateY(-100%);
+  transition: transform 150ms;
+  z-index: 200;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 .container {
   width: 100%;
   max-width: var(--size-container);
@@ -555,7 +592,9 @@ ul { list-style: none; }
 }
 
 .filter-pills a.is-active,
-.filter-pills button.is-active {
+.filter-pills button.is-active,
+.filter-pills a[aria-current="page"],
+.filter-pills button[aria-pressed="true"] {
   background: var(--text);
   color: var(--bg);
 }
@@ -901,5 +940,20 @@ ul { list-style: none; }
 @media (min-width: 768px) and (max-width: 991px) {
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+   Respect users who prefer minimal animation
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

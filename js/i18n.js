@@ -16,6 +16,7 @@ const translations = {
     'nav.home': 'Hem',
     'nav.blog': 'Blogg',
     'nav.menu_open': '\u00d6ppna meny',
+    'a11y.skip': 'Hoppa till inneh\u00e5ll',
 
     'hero.title.lead': 'Framer-guider och artiklar.',
     'hero.title.rest': 'Guider och artiklar f\u00f6r b\u00e4ttre webbplatser i Framer.',
@@ -282,6 +283,7 @@ const translations = {
     'nav.home': 'Home',
     'nav.blog': 'Blog',
     'nav.menu_open': 'Open menu',
+    'a11y.skip': 'Skip to content',
 
     'hero.title.lead': 'Framer guides and articles.',
     'hero.title.rest': 'Guides and articles for better websites in Framer.',

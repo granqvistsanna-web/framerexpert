@@ -25,6 +25,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Lenis smooth scroll -->
@@ -43,11 +44,26 @@
     "url": "https://framerexpert.se",
     "description": "Sveriges kunskapskälla för Framer. Guider, tips och expertkunskap.",
     "inLanguage": ["sv", "en"],
-    "author": {
-      "@type": "Organization",
-      "name": "FramerExpert",
-      "url": "https://framerexpert.se"
+    "publisher": { "@id": "https://framerexpert.se/#organization" },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://framerexpert.se/blog/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://framerexpert.se/#organization",
+    "name": "FramerExpert.se",
+    "url": "https://framerexpert.se",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://framerexpert.se/assets/favicon.svg"
+    },
+    "description": "Sveriges kunskapskälla för Framer — guider, jämförelser och praktiska tips för dig som bygger webbplatser i Framer."
   }
   </script>
 </head>
@@ -172,25 +188,32 @@
         <p class="card__text"><strong data-i18n="articles.a5.title">Framer SEO (2026): Så optimerar du din sajt för Google</strong> — <span data-i18n="articles.a5.excerpt">Komplett guide till titlar, strukturerad data, Core Web Vitals och sitemap — så får du Framer-sajten att ranka.</span></p>
       </a>
 
+      <a href="/blog/basta-framer-experter-sverige.html" class="card">
+        <div class="card__image">
+          <img src="/assets/thumb-framer-experter-sverige.svg" alt="Bästa Framer-experterna och byråerna i Sverige">
+        </div>
+        <p class="card__text"><strong data-i18n="articles.a6.title">Bästa Framer-experterna och byråerna i Sverige (2026)</strong> — <span data-i18n="articles.a6.excerpt">Guide till de främsta verifierade Framer-experterna och byråerna i Sverige 2026 — styrkor, specialiteter och när var och en passar.</span></p>
+      </a>
+
       <a href="/blog/framer-vs-webflow.html" class="card">
         <div class="card__image">
           <img src="/assets/thumb-framer-vs-webflow.svg" alt="Framer vs Webflow">
         </div>
-        <p class="card__text"><strong data-i18n="articles.a6.title">Framer vs Webflow (2026): Vilken ska du välja?</strong> — <span data-i18n="articles.a6.excerpt">Ärlig jämförelse av pris, CMS, e-handel, SEO och användarvänlighet — så väljer du rätt plattform.</span></p>
+        <p class="card__text"><strong data-i18n="articles.a7.title">Framer vs Webflow (2026): Vilken ska du välja?</strong> — <span data-i18n="articles.a7.excerpt">Ärlig jämförelse av pris, CMS, e-handel, SEO och användarvänlighet — så väljer du rätt plattform.</span></p>
       </a>
 
       <a href="/blog/framer-templates-guide.html" class="card">
         <div class="card__image">
           <img src="/assets/thumb-framer-templates.svg" alt="Framer-mallar guide">
         </div>
-        <p class="card__text"><strong data-i18n="articles.a7.title">Framer-mallar (2026): Så hittar, väljer och anpassar du rätt template</strong> — <span data-i18n="articles.a7.excerpt">Så hittar du rätt mall, anpassar den utan att förstöra designen och undviker de vanligaste licens- och CMS-fällorna.</span></p>
+        <p class="card__text"><strong data-i18n="articles.a8.title">Framer-mallar (2026): Så hittar, väljer och anpassar du rätt template</strong> — <span data-i18n="articles.a8.excerpt">Så hittar du rätt mall, anpassar den utan att förstöra designen och undviker de vanligaste licens- och CMS-fällorna.</span></p>
       </a>
 
       <a href="/blog/framer-ecommerce-guide.html" class="card">
         <div class="card__image">
           <img src="/assets/thumb-framer-ecommerce.svg" alt="Framer för e-handel">
         </div>
-        <p class="card__text"><strong data-i18n="articles.a8.title">Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?</strong> — <span data-i18n="articles.a8.excerpt">Så långt räcker Framers store-funktion, när du bör integrera Shopify eller Stripe, och när du ska välja en riktig e-handelsplattform.</span></p>
+        <p class="card__text"><strong data-i18n="articles.a9.title">Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?</strong> — <span data-i18n="articles.a9.excerpt">Så långt räcker Framers store-funktion, när du bör integrera Shopify eller Stripe, och när du ska välja en riktig e-handelsplattform.</span></p>
       </a>
     </div>
 
@@ -211,11 +234,11 @@
   </main>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/init.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/init.js"></script>
 </body>
 </html>

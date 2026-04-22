@@ -105,6 +105,22 @@
           "@type": "Answer",
           "text": "Om de är tunga på mobil — ja. Håll animationerna CSS- och transform-baserade, och undvik sådana som orsakar layout shift."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur lång tid tar det innan en ny Framer-sajt börjar ranka?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Räkna med 2–6 månader innan nya sidor rankar stabilt, beroende på konkurrens. Tekniska fördelar syns snabbare — men auktoritet och länkar byggs över tid, oavsett plattform."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur hanterar jag omdirigering när jag byter URL på en Framer-sida?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Konfigurera en 301-redirect i Framers site settings innan du publicerar den nya slugen. Då behåller du länkkraften och besökare som hittat den gamla URL:en hamnar rätt."
+        }
       }
     ]
   }
@@ -190,7 +206,7 @@
       <div class="blog-post__meta">
         <span class="blog-post__category">SEO</span>
         <time datetime="2026-04-22">22 april 2026</time>
-        <span>7 min läsning</span>
+        <span>10 min läsning</span>
       </div>
       <h1 class="blog-post__title">Framer SEO (2026): Så optimerar du din sajt för Google</h1>
       <p class="blog-post__intro">Framer har en stark SEO-grund direkt ur lådan — snabb leverans, ren HTML och inbyggda meta-verktyg. Men för att faktiskt ranka behöver du veta vilka inställningar som spelar roll. Den här guiden går igenom vad som gör en Framer-sajt sökmotorvänlig 2026.</p>
@@ -209,11 +225,36 @@
         <li>En Open Graph-bild i 1200×630 px för sociala förhandsvisningar</li>
       </ul>
       <p>Titeln är fortfarande den viktigaste on-page-signalen. Skriv dem för människor först, sökmotorer sen. En titel som "Vad är Framer? En komplett guide" presterar bättre än en nyckelordsspäckad "Framer guide Sverige bästa".</p>
+      <h2>URL-struktur och slugs</h2>
+      <p>Framer härleder varje sidas URL från sidnamnet, men du kan alltid skriva över slugen manuellt. Tre regler räcker långt:</p>
+      <ul>
+        <li>Håll slugen kort och beskrivande — <code>/blog/framer-seo-guide</code> slår <code>/blog/framer-sokmotoroptimering-2026-komplett-guide</code> varje gång.</li>
+        <li>Använd gemener och bindestreck, aldrig understreck eller mellanslag.</li>
+        <li>Skippa datum och årtal i slugen på evergreen-innehåll. Då slipper du döpa om URL:en när du uppdaterar posten.</li>
+      </ul>
+      <p>Byt aldrig URL på en sida som redan har trafik utan att sätta upp en 301-redirect först. Framer stöder redirects via site settings — konfigurera dem innan du publicerar den nya slugen, inte efter.</p>
       <h2>Strukturerad data (JSON-LD)</h2>
       <p>Framer stöder custom code i sidans <code>&lt;head&gt;</code>, vilket betyder att du kan lägga till JSON-LD-schemas för artiklar, FAQ, brödsmulor och produkter. Det ger dig tillgång till rich results i Google — till exempel FAQ-dropdowns, stjärnbetyg och artikelhuvuden med bild.</p>
       <p>Börja enkelt: <strong>BlogPosting</strong> för bloggposter, <strong>BreadcrumbList</strong> för navigering och <strong>FAQPage</strong> där du har frågor och svar. Lägg till fler scheman först när grunderna är på plats.</p>
+      <p>När du är redo att gå vidare är de vanligaste nästa stegen:</p>
+      <ul>
+        <li><strong>Organization</strong> på startsidan — ger logotyp och länkar till sociala kanaler i kunskapspanelen</li>
+        <li><strong>Product</strong> och <strong>Review</strong> för e-handel eller tjänstesidor</li>
+        <li><strong>HowTo</strong> för stegvisa guider</li>
+        <li><strong>Article</strong> om posten är mer nyhetsinriktad än en blogg</li>
+      </ul>
+      <p>Undvik att stapla schema för skojs skull. Google bestraffar irrelevant eller vilseledande strukturerad data, så lägg bara till det som speglar vad sidan faktiskt handlar om.</p>
       <h3>Validera innan du publicerar</h3>
       <p>Kör varje ny sida genom <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">Googles Rich Results Test</a> innan du publicerar. Felformaterad JSON-LD visas inte bara inte — den kan även få Google att misstro övrig markup på sidan.</p>
+      <h2>Bilder, alt-text och format</h2>
+      <p>Framer serverar automatiskt bilder i moderna format som WebP och AVIF till webbläsare som stöder dem, vilket brukar minska filstorleken med 30–60 procent jämfört med JPEG. Men plattformen kan bara komprimera det du laddar upp — ladda alltid upp originalen i rimlig upplösning, inte direkt från en 24-megapixels kameraexport.</p>
+      <p>Alt-text är dubbelt viktig: den är både en tillgänglighetsfunktion och en rankningssignal för bildsökningen.</p>
+      <ul>
+        <li>Beskriv vad bilden visar, kort och konkret.</li>
+        <li>Undvik att proppa den full med nyckelord — det hjälper varken användare eller Google.</li>
+        <li>Lämna alt-texten tom (<code>alt=""</code>) för rent dekorativa bilder, så att skärmläsare hoppar över dem.</li>
+      </ul>
+      <p>Sätt även explicita bredder och höjder på bilder där det går. Det ger webbläsaren möjlighet att reservera utrymme innan bilden laddas, vilket direkt påverkar CLS.</p>
       <h2>Core Web Vitals</h2>
       <p>Googles Core Web Vitals mäter tre saker du behöver hålla under kontroll:</p>
       <ul>
@@ -223,12 +264,38 @@
       </ul>
       <p>Framer levererar oftast bra värden direkt, men du kan försämra dem själv. Vanliga fallgropar är stora okomprimerade hero-bilder, tunga animationer på mobil, och inbäddade videos ovanför fold-en som laddar tidigt.</p>
       <p>Kör PageSpeed Insights på varje viktig landningssida innan du sätter en kampanj live. Fixa det som är rött — gult duger oftast.</p>
+      <h3>Vanliga fallgropar i Framer</h3>
+      <p>Tre sätt att omedvetet sänka sina värden i just Framer:</p>
+      <ul>
+        <li><strong>CMS-samlingar med tunga bilder.</strong> När hela samlingen renderas på en listsida staplas bildvikten snabbt. Filtrera, paginera eller ladda bilder lazy nedanför fold-en.</li>
+        <li><strong>Scroll-bibliotek som Lenis och GSAP.</strong> De är kraftfulla men kostar i JavaScript-körning. Mät INP på mobil innan du lägger till fler animationer.</li>
+        <li><strong>Webfonts utan <code>font-display: swap</code>.</strong> Framer sätter det automatiskt på sina egna typsnitt, men anpassade fonter via custom code behöver du själv sätta — annars riskerar du oskyldig layout shift.</li>
+      </ul>
       <h2>Sitemap och interna länkar</h2>
       <p>Framer genererar automatiskt en <code>sitemap.xml</code> baserat på dina publicerade sidor. Skicka in den i Google Search Console så att nya sidor hittas snabbt — vänta inte på att Google hittar dem själv.</p>
       <p>Interna länkar är minst lika viktigt. Länka från startsidan till dina viktigaste undersidor, och länka mellan relaterade artiklar. Det hjälper Google att förstå hierarkin på sajten och fördelar länkkraft dit du vill ha den.</p>
       <p>En bra tumregel: varje viktig sida ska gå att nå på max två klick från startsidan.</p>
+      <p>Glöm inte <code>robots.txt</code>. Framer lägger en grund-version på <code>/robots.txt</code> som tillåter allt, men om du har test-sidor eller staging-miljöer som inte ska indexeras — blockera dem explicit där, eller använd <code>noindex</code>-meta på sidnivå.</p>
+      <h2>Verktyg för uppföljning</h2>
+      <p>SEO är arbete över tid, inte en engångsinställning. Fyra verktyg täcker 90 procent av behovet:</p>
+      <ul>
+        <li><strong>Google Search Console</strong> — gratis och obligatoriskt. Visar vilka sökord du rankar på, indexeringsfel och Core Web Vitals-data från riktiga besökare.</li>
+        <li><strong>PageSpeed Insights</strong> — för punktvis prestandatestning av enskilda URL:er.</li>
+        <li><strong>Googles Rich Results Test</strong> — validerar JSON-LD innan publicering.</li>
+        <li><strong>Screaming Frog</strong> (gratis upp till 500 URL:er) — för teknisk audit av hela sajten, inklusive brutna länkar, saknade titlar och duplicerat innehåll.</li>
+      </ul>
+      <p>Lägg till <a href="https://ahrefs.com" target="_blank" rel="noopener">Ahrefs</a> eller <a href="https://semrush.com" target="_blank" rel="noopener">Semrush</a> först när du behöver nyckelordsanalys och konkurrentuppföljning — de är starka verktyg men ett rejält prissteg.</p>
       <h2>Sammanfattning</h2>
       <p>Framer ger dig mycket SEO-grund gratis: snabb leverans, ren HTML och inbyggda meta-verktyg. Din uppgift är att inte bryta fördelarna — skriv tydliga titlar, komplettera med strukturerad data, håll bilderna lätta, och länka internt med omtanke.</p>
+      <p>En pragmatisk ordning att arbeta i:</p>
+      <ul>
+        <li>Page settings per sida: title, description, canonical, OG-bild.</li>
+        <li>Slugs: korta, beskrivande, utan datum.</li>
+        <li>JSON-LD för artikel, brödsmulor och FAQ — validera innan publicering.</li>
+        <li>Bilder komprimerade, alt-text skriven, dimensioner satta.</li>
+        <li>Sitemap inskickad i Search Console, interna länkar på plats.</li>
+        <li>PageSpeed Insights kört på varje viktig sida.</li>
+      </ul>
       <p>Gör du det konsekvent står sig Framer-sajter utmärkt i sökresultaten 2026.</p>
     </div>
 

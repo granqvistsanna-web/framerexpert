@@ -44,7 +44,25 @@
   </url>
   <url>
     <loc>https://framerexpert.se/blog/basta-framer-experter-sverige.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/basta-framer-experter-goteborg.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/basta-framer-experter-europa.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/basta-framer-experter-norden.html</loc>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

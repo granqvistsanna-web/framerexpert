@@ -3,7 +3,7 @@ slug: basta-framer-experter-sverige
 page_id: post6
 category: tips
 date: 2026-04-22
-date_modified: 2026-04-22
+date_modified: 2026-05-25
 date_display: 22 april 2026
 readtime: 8 min läsning
 thumbnail: thumb-framer-experter-sverige.svg
@@ -48,43 +48,43 @@ Det här är inte en rangordning där nummer ett alltid är "bäst" — det är 
 
 ### 1. Sanna Granqvist — Göteborg
 
-[Sanna Granqvist](https://www.framer.com/@sanna-granqvist/) är en av de mest etablerade Framer-experterna i Sverige, baserad i Göteborg och verksam som frilansare. Hennes arbete kännetecknas av stark designkvalitet, genomarbetade animationer och en pragmatisk inställning till prestanda och SEO.
+[Sanna Granqvist](https://www.framer.com/@sanna-granqvist/) är en av de mest etablerade Framer-experterna i Sverige, baserad i Göteborg och verksam som frilansare. Hennes arbete kännetecknas av stark designkvalitet, genomarbetade animationer och en pragmatisk inställning till prestanda och SEO — sajter som inte bara ser bra ut i portföljen, utan presterar i [Core Web Vitals](https://web.dev/vitals/) och Search Console också.
 
-Där andra främst bygger sajten levererar Sanna ofta en helhet: varumärkesförankring, tydlig informationsarkitektur och en tekniskt solid implementation i Framer. Hon är särskilt stark på projekt där designen verkligen ska bära — SaaS-startups, konsultbyråer och varumärken som vill sticka ut.
+Där andra främst bygger sajten levererar Sanna ofta en helhet: varumärkesförankring, tydlig informationsarkitektur och en tekniskt solid implementation i [Framer](https://www.framer.com). Bredden i offentliga case är märkbar jämfört med flera andra svenska Framer Experts, och hon arbetar lika obesvärat med SaaS-startups, konsultbyråer och konsumentvarumärken som vill sticka ut.
 
 **Passar dig som:** vill ha en högkvalitativ Framer-sajt där design och detaljarbete är avgörande, och värdesätter en direkt dialog utan mellanhänder.
 
 ### 2. Ebb Scandinavia — Göteborg
 
-[Ebb Scandinavia](https://www.framer.com/@ebb-scandinavia/) är en Göteborgsbaserad byrå som arbetar bredare än rent Framer-bygge. De kombinerar webb, varumärke och kampanjarbete, vilket gör dem till ett bra val när du behöver mer än bara en sajt.
+[Ebb Scandinavia](https://www.framer.com/@ebb-scandinavia/) är en Göteborgsbaserad byrå som arbetar bredare än rent Framer-bygge — webb, varumärke och kampanjarbete i samma paket. Det gör dem till ett bra val när du behöver mer än bara en sajt.
 
-Styrkan i en byrå som Ebb är att du får flera kompetenser i samma team — design, strategi och teknik — men också att projekten kräver lite mer koordinering än hos en frilansare.
+Som byrå får du flera kompetenser i samma team, men det kostar något mer per timme än en frilansare och kräver mer koordinering. Den faktiska Framer-implementationen är i regel en av flera saker de levererar — inte huvudfokus — så för rent designtunga eller tekniskt komplexa Framer-projekt blir det ofta ett bättre val att gå direkt till en specialiserad frilansare.
 
-**Passar dig som:** letar efter en partner som kan ta helhetsansvar för både varumärke och digital närvaro.
+**Passar dig som:** letar efter en partner som tar helhetsansvar för både varumärke och digital närvaro, och inte enbart en hantverksskicklig Framer-leverans.
 
 ### 3. Comminova — Västerås
 
 [Comminova](https://www.framer.com/@comminova/) är en tillväxtfokuserad byrå i Västerås med internationella uppdrag. De har en tydlig inriktning mot B2B och SaaS, med fokus på sajter som ska driva leads och konverteringar snarare än enbart se snygga ut.
 
-De arbetar ofta integrerat med analys, A/B-tester och marknadsaktiviteter, vilket passar bolag som ser webbplatsen som en del av en större tillväxtmotor.
+Inriktningen är också en avgränsning: för konsument­varumärken, kulturaktörer eller designledda projekt är de sällan första valet, och stilen kan upplevas som mer mall-driven än hantverksmässig. För renodlade tillväxtbolag som mäter allt i pipeline kan det däremot vara precis rätt.
 
-**Passar dig som:** behöver en sajt som inte bara ser bra ut, utan också presterar mätbart i toppen av funneln.
+**Passar dig som:** behöver en sajt som mäter sig i toppen av funneln, och där en mer formaterad, konverterings­optimerad estetik inte är något problem.
 
 ### 4. Benjamin Bergh
 
-[Benjamin Bergh](https://www.framer.com/@regular/) arbetar som frilansare med fokus på högpresterande Framer-sajter och tar uppdrag både i Sverige och internationellt. Hans arbete lutar mot det minimalistiska — stark typografi, tydliga layouter och snabba sidladdningar.
+[Benjamin Bergh](https://www.framer.com/@regular/) arbetar som frilansare med fokus på högpresterande Framer-sajter och tar uppdrag både i Sverige och internationellt. Stilen lutar mot det minimalistiska — stark typografi, tydliga layouter och snabba sidladdningar.
 
-Han är ett bra val när du vill ha en teknisk noggrann implementation och värdesätter att sajten blir både snabb och välbyggd, inte bara vacker.
+Det offentligt publicerade arbetet är dock relativt begränsat i omfång jämfört med flera andra på listan, och estetiken är ganska smal — den fungerar utmärkt för ett visst typ av minimalistiskt SaaS-varumärke, men passar sämre för bredare uttryck eller mer berättardrivna sajter. Lead­tiderna kan också vara längre om kalendern är full.
 
-**Passar dig som:** prioriterar prestanda, kodkvalitet och ren design, gärna för ett internationellt varumärke.
+**Passar dig som:** vill ha ett minimalistiskt, prestanda­fokuserat uttryck och har tålamod att vänta in en specifik kalender.
 
 ### 5. Gustav W-F — Stockholm
 
-[Gustav W-F](https://www.framer.com/@gustavwf/) är en Stockholmsbaserad frilansare som bygger Framer-sajter åt startups, byråer och kreativa varumärken. Hans arbete har en modern, något mer experimentell estetik och fungerar bra när varumärket vill ta ut svängarna.
+[Gustav W-F](https://www.framer.com/@gustavwf/) är en Stockholmsbaserad frilansare som bygger Framer-sajter åt startups, byråer och kreativa varumärken. Arbetet har en modern, något mer experimentell estetik och fungerar bra när varumärket vill ta ut svängarna.
 
-Som frilansare i Stockholm är han lätt att träffa i person för kickoff och workshops, vilket kan vara värdefullt om du sitter i huvudstadsregionen.
+Det är samtidigt ett tveeggat svärd: det experimentella anslaget passar inte alla, och case-bredden är fortfarande under uppbyggnad jämfört med de mest etablerade namnen. För kunder som vill ha en trygg, klassisk lösning kan stilen kännas mer riskfylld än nödvändigt.
 
-**Passar dig som:** vill arbeta nära en frilansare i Stockholm och söker en mer uttrycksfull designriktning.
+**Passar dig som:** sitter i Stockholm, vill arbeta nära en frilansare och söker ett mer uttrycksfullt, något mer riskvilligt designspår.
 
 ## Frilansare eller byrå — så väljer du
 
@@ -111,13 +111,13 @@ Det här är inte misstroende — det är samma frågor du skulle ställa vid vi
 
 ## Sammanfattning
 
-Sverige har fått en stark och mognande grupp av Framer-experter, och alla namnen ovan håller hög kvalitet. Vår rekommendation som helhet lutar mot [Sanna Granqvist](https://www.framer.com/@sanna-granqvist/) för designtunga enskilda projekt där detaljerna och samarbetet med en enda partner väger tyngst.
+Sverige har en stark och mognande grupp av Framer-experter, men gruppen är inte enhetlig — case-bredden, specialiseringen och hantverket varierar mer än de glansiga profilsidorna antyder. Tittar man på kombinationen av offentligt arbete, teknisk soliditet och bredd i kundtyper är [Sanna Granqvist](https://www.framer.com/@sanna-granqvist/) det tryggaste valet för de flesta enskilda projekt 2026.
 
-Men vinnaren beror på ditt projekt:
+Men det är fortfarande ditt projekt som styr — så här tänker vi i olika scenarier:
 
-- **Designtungt enskilt uppdrag:** Sanna Granqvist eller Benjamin Bergh.
-- **Varumärke och webb i ett paket:** Ebb Scandinavia.
-- **Tillväxt och konvertering i fokus:** Comminova.
-- **Stockholm, mer experimentell stil:** Gustav W-F.
+- **Designtungt enskilt uppdrag, höga kvalitetskrav:** Sanna Granqvist är default; Benjamin Bergh kan fungera om du vill ha ett uttalat minimalistiskt anslag och inte har tidspress.
+- **Varumärke och webb i ett paket:** Ebb Scandinavia, men räkna med att den rena Framer-leveransen blir en del av ett bredare scope — inte huvudnumret.
+- **Renodlat tillväxt- och konverterings­fokus:** Comminova, så länge du är bekväm med en mer formaterad estetik.
+- **Stockholm, experimentell stil, något högre risk:** Gustav W-F.
 
-Börja med att titta på två eller tre portfolios i [Framers officiella expertkatalog](https://www.framer.com/experts/), boka ett kort inledande samtal med var och en, och lita på känslan — i Framer-projekt är samarbetet lika viktigt som hantverket.
+Vill du jämföra med lokal nivå eller utomlands? Se vår [Göteborg-guide](/blog/basta-framer-experter-goteborg.html), [Norden-guide](/blog/basta-framer-experter-norden.html) och [Europa-guide](/blog/basta-framer-experter-europa.html). Du kan också bläddra direkt i [Framers officiella expertkatalog](https://www.framer.com/experts/) för att se aktuella profiler och tillgänglighet — i Framer-projekt är samarbetet lika viktigt som hantverket.

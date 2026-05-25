@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" fill="#323236"/>
+
+  <!-- Multiple location dots indicating a wider geographic scope -->
+  <circle cx="240" cy="56" r="4" fill="#F5F5F0" opacity="0.5"/>
+  <circle cx="300" cy="50" r="5" fill="#F5F5F0" opacity="0.7"/>
+  <circle cx="360" cy="58" r="4" fill="#F5F5F0" opacity="0.5"/>
+  <rect x="200" y="68" width="200" height="3" rx="1.5" fill="#F5F5F0" opacity="0.12"/>
+
+  <!-- Top card: highlighted expert -->
+  <rect x="120" y="92" width="360" height="72" rx="12" fill="#3F3F46"/>
+  <circle cx="156" cy="128" r="20" fill="#F5F5F0" opacity="0.85"/>
+  <rect x="190" y="112" width="160" height="8" rx="4" fill="#F5F5F0" opacity="0.75"/>
+  <rect x="190" y="128" width="220" height="6" rx="3" fill="#F5F5F0" opacity="0.3"/>
+  <rect x="190" y="142" width="120" height="6" rx="3" fill="#F5F5F0" opacity="0.2"/>
+  <!-- Star badge -->
+  <circle cx="440" cy="128" r="16" fill="#F5F5F0" opacity="0.18"/>
+  <path d="M440 119 L443 126 L450 127 L445 132 L446 139 L440 136 L434 139 L435 132 L430 127 L437 126 Z" fill="#F5F5F0" opacity="0.85"/>
+
+  <!-- Card 2 -->
+  <rect x="120" y="180" width="360" height="52" rx="10" fill="#3F3F46" opacity="0.78"/>
+  <circle cx="150" cy="206" r="14" fill="#F5F5F0" opacity="0.5"/>
+  <rect x="176" y="196" width="140" height="7" rx="3" fill="#F5F5F0" opacity="0.45"/>
+  <rect x="176" y="210" width="200" height="5" rx="2" fill="#F5F5F0" opacity="0.16"/>
+
+  <!-- Card 3 -->
+  <rect x="120" y="244" width="360" height="52" rx="10" fill="#3F3F46" opacity="0.6"/>
+  <circle cx="150" cy="270" r="14" fill="#F5F5F0" opacity="0.4"/>
+  <rect x="176" y="260" width="120" height="7" rx="3" fill="#F5F5F0" opacity="0.35"/>
+  <rect x="176" y="274" width="180" height="5" rx="2" fill="#F5F5F0" opacity="0.14"/>
+
+  <!-- Card 4 -->
+  <rect x="120" y="308" width="360" height="52" rx="10" fill="#3F3F46" opacity="0.45"/>
+  <circle cx="150" cy="334" r="14" fill="#F5F5F0" opacity="0.28"/>
+  <rect x="176" y="324" width="100" height="7" rx="3" fill="#F5F5F0" opacity="0.25"/>
+  <rect x="176" y="338" width="160" height="5" rx="2" fill="#F5F5F0" opacity="0.1"/>
+</svg>

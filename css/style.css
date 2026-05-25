@@ -657,6 +657,17 @@ button:focus-visible,
   color: var(--text);
 }
 
+.card__title {
+  display: inline;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  color: var(--text);
+  line-height: inherit;
+  letter-spacing: inherit;
+  margin: 0;
+}
+
 /* ============================================
    FOOTER — Ultra minimal single line
    ============================================ */

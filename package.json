@@ -4,6 +4,7 @@
   "description": "Static site for framerexpert.se. No runtime deps — the build script uses only Node stdlib.",
   "scripts": {
     "build:post": "node scripts/build-post.js",
-    "build:all": "node scripts/build-post.js --all"
+    "build:all": "node scripts/build-post.js --all",
+    "build:sitemap": "node scripts/build-post.js --sitemap"
   }
 }

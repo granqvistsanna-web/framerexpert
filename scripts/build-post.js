@@ -21,6 +21,8 @@ const ROOT = path.resolve(__dirname, '..');
 const CONTENT_DIR = path.join(ROOT, 'content', 'blog');
 const TEMPLATE_PATH = path.join(ROOT, 'blog', '_template.html');
 const OUT_DIR = path.join(ROOT, 'blog');
+const SITEMAP_PATH = path.join(ROOT, 'sitemap.xml');
+const SITE_URL = 'https://framerexpert.se';
 
 const CATEGORY_LABELS = {
   'getting-started': 'Kom igång',
@@ -33,8 +35,13 @@ const CATEGORY_LABELS = {
 function main() {
   const args = process.argv.slice(2);
   if (args.length === 0) {
-    console.error('Usage: node scripts/build-post.js <slug> | --all');
+    console.error('Usage: node scripts/build-post.js <slug> | --all | --sitemap');
     process.exit(1);
+  }
+
+  if (args[0] === '--sitemap') {
+    buildSitemap();
+    return;
   }
 
   const registry = loadRegistry();
@@ -53,6 +60,8 @@ function main() {
     fs.writeFileSync(outPath, html);
     console.log(`wrote ${path.relative(ROOT, outPath)}`);
   }
+
+  buildSitemap();
 }
 
 function loadRegistry() {
@@ -180,9 +189,9 @@ function renderRelated(slugs, registry, selfSlug) {
     blocks.push(
       `        <a href="/blog/${p.slug}.html" class="card">\n` +
       `          <div class="card__image">\n` +
-      `            <img src="../assets/${p.thumbnail}" alt="${escapeAttr(p.title)}" loading="lazy">\n` +
+      `            <img src="../assets/${p.thumbnail}" alt="${escapeAttr(p.title)}" width="600" height="400" loading="lazy">\n` +
       `          </div>\n` +
-      `          <p class="card__text"><strong>${escapeHtml(p.title)}</strong>${excerpt ? ` — <span>${escapeHtml(excerpt)}</span>` : ''}</p>\n` +
+      `          <div class="card__text"><h3 class="card__title">${escapeHtml(p.title)}</h3>${excerpt ? ` — <span>${escapeHtml(excerpt)}</span>` : ''}</div>\n` +
       `        </a>`
     );
   }
@@ -295,6 +304,69 @@ function unquote(s) {
   if (s.length >= 2 && s.startsWith('"') && s.endsWith('"')) return s.slice(1, -1);
   if (s.length >= 2 && s.startsWith("'") && s.endsWith("'")) return s.slice(1, -1);
   return s;
+}
+
+/* ---------- Sitemap ---------- */
+
+function buildSitemap() {
+  const entries = [];
+
+  entries.push({
+    loc: `${SITE_URL}/`,
+    lastmod: fileLastmod(path.join(ROOT, 'index.html')),
+    changefreq: 'weekly',
+    priority: '1.0',
+  });
+
+  entries.push({
+    loc: `${SITE_URL}/blog/`,
+    lastmod: fileLastmod(path.join(OUT_DIR, 'index.html')),
+    changefreq: 'weekly',
+    priority: '0.9',
+  });
+
+  const postFiles = fs.readdirSync(OUT_DIR)
+    .filter((f) => f.endsWith('.html') && f !== 'index.html' && !f.startsWith('_'))
+    .sort();
+
+  for (const f of postFiles) {
+    entries.push({
+      loc: `${SITE_URL}/blog/${f}`,
+      lastmod: fileLastmod(path.join(OUT_DIR, f)),
+      changefreq: 'monthly',
+      priority: '0.8',
+    });
+  }
+
+  const xml = renderSitemapXml(entries);
+  fs.writeFileSync(SITEMAP_PATH, xml);
+  console.log(`wrote ${path.relative(ROOT, SITEMAP_PATH)}`);
+}
+
+function fileLastmod(p) {
+  const d = fs.statSync(p).mtime;
+  const yyyy = d.getFullYear();
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  return `${yyyy}-${mm}-${dd}`;
+}
+
+function renderSitemapXml(entries) {
+  const lines = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  ];
+  for (const e of entries) {
+    lines.push('  <url>');
+    lines.push(`    <loc>${e.loc}</loc>`);
+    lines.push(`    <lastmod>${e.lastmod}</lastmod>`);
+    lines.push(`    <changefreq>${e.changefreq}</changefreq>`);
+    lines.push(`    <priority>${e.priority}</priority>`);
+    lines.push('  </url>');
+  }
+  lines.push('</urlset>');
+  lines.push('');
+  return lines.join('\n');
 }
 
 /* ---------- Helpers ---------- */

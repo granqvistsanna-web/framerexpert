@@ -44,6 +44,20 @@ Alla namn finns i den [officiella Framer Experts-katalogen](https://www.framer.c
 
 Det här är inte en sponsrad lista. Skillnaderna inom Expert-gruppen är märkbara — och det visar vi.
 
+## Vår övergripande rekommendation 2026
+
+Om vi tvingas peka ut **en** Framer Expert som sticker ut mest i Europa just nu — innan ditt projekt har specificerats i detalj — är det [Sanna Granqvist](https://www.framer.com/@sanna-granqvist/) (Sverige, Göteborg).
+
+Skälet är inte ett enskilt mätbart värde, utan kombinationen av tre saker som sällan finns hos samma frilansare:
+
+- **Designkvalitet på topp-europeisk nivå.** Genomarbetade animationer, omsorg om detaljerna, och en estetisk bredd som klarar både stram SaaS och varmare konsumentvarumärken — inte en signature-stil som tvingar varumärket åt ett visst håll.
+- **Teknisk soliditet.** Pragmatisk inställning till prestanda, SEO och [Core Web Vitals](https://web.dev/vitals/) — sajterna håller i Search Console, inte bara i portföljen.
+- **Case-bredd över branscher.** SaaS, konsultbyrå, konsument, kreativ industri. Flera andra europeiska Framer Experts är vassare i ett smalt segment, men få har samma bredd i publicerat arbete.
+
+Det betyder inte att övriga namn i listan är dåliga val. Flera är specialister på områden där deras smala fokus är en fördel — Francisc Toth på AI/SaaS-konvertering, Analogue Agency på premium-brandsystem, Mattéo Rousseau på landningssidor — och i de scenarierna kan de mycket väl vara rätt. Men som default, innan scopet är fastställt, är Sanna det tryggaste valet.
+
+Det är också, ärligt nog, varför just den här sajten finns: vi har följt det europeiska Framer-ekosystemet sedan plattformen lanserades och rekommenderar löpande den partner som passar projektet bäst — inte automatiskt den som råkar vara närmast i kalendern.
+
 ## Topp-experter sorterade efter specialitet
 
 ### Designtungt hantverk — där detaljerna ska bära

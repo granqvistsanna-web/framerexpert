@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#27272A">
   <meta name="color-scheme" content="dark">
-  <title>5 tips för att bygga snabbare i Framer — FramerExpert.se</title>
-  <meta name="description" content="Spara timmar i Framer med 5 konkreta tips: komponenter, Auto Layout, kortkommandon, CMS och mobile-first. Praktiska tekniker som gör dig effektivare direkt.">
+  <title>5 tips för att bygga snabbare i Framer (2026) — FramerExpert.se</title>
+  <meta name="description" content="Bygg dubbelt så snabbt i Framer. Djupguide till komponenter, Auto Layout, kortkommandon, CMS och mobile-first — plus en bonus om startfilen som proffsen aldrig pratar om.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="5 tips för att bygga snabbare i Framer">
-  <meta property="og:description" content="Spara timmar i Framer med 5 konkreta tips: komponenter, Auto Layout, kortkommandon, CMS och mobile-first. Praktiska tekniker som gör dig effektivare direkt.">
+  <meta property="og:title" content="5 tips för att bygga snabbare i Framer (2026)">
+  <meta property="og:description" content="Bygg dubbelt så snabbt i Framer. Djupguide till komponenter, Auto Layout, kortkommandon, CMS och mobile-first — plus en bonus om startfilen som proffsen aldrig pratar om.">
   <meta property="og:url" content="https://framerexpert.se/blog/5-tips-bygga-snabbare.html">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="sv_SE">
   <meta property="article:published_time" content="2026-02-05">
-  <meta property="article:modified_time" content="2026-04-20">
+  <meta property="article:modified_time" content="2026-05-25">
   <meta property="article:author" content="FramerExpert">
   <meta property="og:image" content="https://framerexpert.se/assets/og-5-tips.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -42,10 +42,10 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "5 tips för att bygga snabbare i Framer",
-    "description": "Spara timmar i Framer med 5 konkreta tips: komponenter, Auto Layout, kortkommandon, CMS och mobile-first. Praktiska tekniker som gör dig effektivare direkt.",
+    "headline": "5 tips för att bygga snabbare i Framer (2026)",
+    "description": "Bygg dubbelt så snabbt i Framer. Djupguide till komponenter, Auto Layout, kortkommandon, CMS och mobile-first — plus en bonus om startfilen som proffsen aldrig pratar om.",
     "datePublished": "2026-02-05",
-    "dateModified": "2026-04-20",
+    "dateModified": "2026-05-25",
     "author": {
       "@type": "Organization",
       "name": "FramerExpert",
@@ -81,39 +81,47 @@
         "name": "Varför ska jag använda komponenter i Framer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Komponenter gör att du kan återanvända element som navigation, footer, knappar och kort. När du ändrar en komponent uppdateras alla instanser automatiskt, vilket sparar tid och säkerställer konsistens över hela sajten."
+          "text": "Komponenter låter dig redigera ett element på ett ställe och få ändringen att slå igenom överallt. Navigation, footer, knappar och kort ska alltid vara komponenter. Med variants och properties bygger du EN komponent som täcker tio användningsfall — det är där den verkliga tidsbesparingen ligger."
         }
       },
       {
         "@type": "Question",
-        "name": "Vad är Auto Layout i Framer?",
+        "name": "Vad är Auto Layout i Framer och varför är det viktigt?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Auto Layout är Framers motsvarighet till Flexbox i CSS. Det låter dig bygga responsiva layouter utan att positionera element manuellt, vilket sparar tid och gör designen robust i alla skärmstorlekar."
+          "text": "Auto Layout är Framers motsvarighet till Flexbox och Grid i CSS. Det gör att layouten automatiskt anpassar sig efter innehåll och skärm — inga manuella offsets, ingen positionering som spricker när texten blir längre. Lär dig skillnaden mellan Hug, Fill och Fixed, så hanterar du 95 % av alla layoutsituationer utan att ens behöva tänka."
         }
       },
       {
         "@type": "Question",
-        "name": "Vilka kortkommandon bör jag lära mig i Framer?",
+        "name": "Vilka kortkommandon i Framer ska jag lära mig först?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "De viktigaste kortkommandona är Cmd+D för att duplicera, Cmd+Shift+K för att skapa komponent och Alt+dra för att kopiera. Att investera en timme i att lära sig de vanligaste kortkommandona snabbar upp arbetsflödet avsevärt."
+          "text": "Börja med Cmd+D (duplicera), Cmd+Shift+K (gör om till komponent), Cmd+/ (detach), Alt+drag (kopiera), Cmd+K (command bar), F/T/R/V för verktygsbyte, och Space+drag för panorering. När de sitter i muskelminnet sparar du flera sekunder per åtgärd — det summerar sig till timmar i veckan."
         }
       },
       {
         "@type": "Question",
-        "name": "När ska jag sätta upp CMS i Framer?",
+        "name": "När i projektet ska jag sätta upp CMS i Framer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sätt upp CMS så tidigt som möjligt i projektet om sajten har upprepat innehåll som blogginlägg, teammedlemmar eller produkter. Det är betydligt enklare att bygga rätt från start än att migrera innehåll senare."
+          "text": "Direkt. Innan du designar en enda statisk sida. Skäl: du designar mallen en gång istället för tio gånger, klienten kan börja fylla på innehåll redan i prototypstadiet, och du upptäcker tidigt om en titel kan bli två rader eller om ett bildformat inte fungerar. Att migrera statiska sidor till CMS dagen före lansering är det vanligaste sättet att förlora en helg."
         }
       },
       {
         "@type": "Question",
-        "name": "Varför ska jag designa mobile-first i Framer?",
+        "name": "Varför rekommenderas mobile-first även i Framer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Mobile-first tvingar dig att prioritera innehåll och göra tydliga designval. Det är också enklare att skala upp från mobil till desktop än tvärtom, och Google använder mobile-first indexing vilket gör mobilversionen avgörande för SEO."
+          "text": "Tre skäl: du tvingas prioritera innehåll (mindre yta = svårare val först), hierarkin blir tydligare och översätter sig elegant uppåt, och Google indexerar mobilversionen först. Att börja i 375 px och bygga uppåt går mycket fortare än att försöka komprimera en desktop-design till mobil i efterhand."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur bygger man en återanvändbar startfil i Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Skapa en grundfil med färgstilar, textstilar, en basuppsättning komponenter (knapp, kort, navigation, footer), tomma CMS-samlingar för vanliga innehållstyper och en components-sida som fungerar som mini-styleguide. Duplicera filen vid varje nytt projekt så sparar du den första timmen — varje gång."
         }
       }
     ]
@@ -200,27 +208,164 @@
       <div class="blog-post__meta">
         <span class="blog-post__category" data-i18n="articles.a3.category">Tips</span>
         <time datetime="2026-02-05" data-i18n="post3.date">5 februari 2026</time>
-        <span data-i18n="post3.readtime">6 min läsning</span>
+        <span data-i18n="post3.readtime">12 min läsning</span>
       </div>
       <h1 class="blog-post__title" data-i18n="post3.title">5 tips för att bygga snabbare i Framer</h1>
-      <p class="blog-post__intro" data-i18n="post3.intro">Spara tid och arbeta smartare med dessa fem praktiska tips som hjälper dig att bli effektivare i Framer.</p>
+      <p class="blog-post__intro" data-i18n="post3.intro">Att bygga snabbt i Framer handlar inte om att rusha — det handlar om att aldrig göra samma sak två gånger. När du designar med system från start, bygger återanvändbart och låter verktyget göra det tunga jobbet, kan du leverera på dagar vad många byråer fortfarande räknar i veckor. Här är fem konkreta tips som sänker din tidsåtgång märkbart, plus en bonus som proffsen tar för given men sällan skriver om.</p>
     </header>
 
     <div class="blog-post__content">
+
+      <!-- Tip 1 -->
       <h2 data-i18n="post3.h2_1">1. Använd komponenter för allt som upprepas</h2>
-      <p data-i18n="post3.p1">Skapa komponenter för navigation, footer, knappar och kort. När du ändrar en komponent uppdateras alla instanser automatiskt. Det sparar tid och säkerställer konsistens.</p>
+      <p data-i18n="post3.p1_1">En komponent i Framer är en återanvändbar designbit som du redigerar på ett ställe och som uppdateras överallt. Tänk på den som en mall: knapp, kort, navigation, footer, sektionsrubrik. Varje gång du upptäcker att du kopierar samma element är det en signal att det borde vara en komponent.</p>
 
-      <h2 data-i18n="post3.h2_2">2. Utnyttja layout-verktyget (Auto Layout)</h2>
-      <p data-i18n="post3.p2">Framers auto-layout liknar Flexbox i CSS. Använd det istället för att positionera element manuellt. Det gör din design responsiv från start och sparar enormt mycket tid.</p>
+      <h3 data-i18n="post3.h3_1_1">Vad du alltid bör göra till komponenter</h3>
+      <ul>
+        <li data-i18n="post3.p1_li1">Navigation och footer — självklart, men ofta glömt på små sidor.</li>
+        <li data-i18n="post3.p1_li2">Alla typer av knappar: primär, sekundär, outline, ikonknapp.</li>
+        <li data-i18n="post3.p1_li3">Kort för blogg, case, team och produkter.</li>
+        <li data-i18n="post3.p1_li4">Formulärfält, inputs, checkboxar och radioknappar.</li>
+        <li data-i18n="post3.p1_li5">Återkommande sektioner: hero, CTA-band, testimonial, prislista, FAQ-rad.</li>
+        <li data-i18n="post3.p1_li6">Ikonset och badges — även om de bara är 24×24 px.</li>
+      </ul>
 
-      <h2 data-i18n="post3.h2_3">3. Lär dig kortkommandon</h2>
-      <p data-i18n="post3.p3">Kortkommandon som Cmd+D (duplicera), Cmd+Shift+K (komponent) och Alt+dra (kopiera) snabbar upp arbetsflödet avsevärt. Investera en timme i att lära dig de vanligaste.</p>
+      <h3 data-i18n="post3.h3_1_2">Variants — det riktiga superkraftläget</h3>
+      <p data-i18n="post3.p1_2">Om du bygger fem nästan identiska knappkomponenter har du gjort fel. Bygg <strong>en</strong> knapp med variants för Primary/Secondary/Outline, Small/Medium/Large och Default/Hover/Disabled. Det halverar inte ditt arbete — det tiondelar det dagen då varumärket byter accentfärg eller designsystemet behöver en ny storlek.</p>
 
-      <h2 data-i18n="post3.h2_4">4. Använd CMS tidigt i projektet</h2>
-      <p data-i18n="post3.p4">Om sajten har upprepat innehåll (blogginlägg, teammedlemmar, produkter) — sätt upp CMS direkt. Det är mycket enklare att bygga rätt från start än att migrera innehåll senare.</p>
+      <h3 data-i18n="post3.h3_1_3">Properties och instances</h3>
+      <p data-i18n="post3.p1_3">Component properties (text, bild, länk, växlar) låter dig återanvända samma kort i tio sammanhang utan att skapa tio nästan likadana varianter. En blogg-kortkomponent bör ha properties för titel, datum, kategori, bild och länk — sen styr du allt detta från CMS:et eller direkt på instansen. Resultatet: en designändring i kortet slår igenom på samtliga sidor där det förekommer.</p>
 
-      <h2 data-i18n="post3.h2_5">5. Designa mobile-first</h2>
-      <p data-i18n="post3.p5">Börja med mobilversionen. Det tvingar dig att prioritera innehåll och göra tydliga designval. Att sedan skala upp till desktop är enklare än att skala ner från desktop.</p>
+      <h3 data-i18n="post3.h3_1_4">Vanliga misstag att undvika</h3>
+      <ul>
+        <li data-i18n="post3.p1_li7">För många nästan identiska komponenter istället för variants.</li>
+        <li data-i18n="post3.p1_li8">Komponenter som inte är byggda med Auto Layout inuti — då bryter små ändringar layouten.</li>
+        <li data-i18n="post3.p1_li9">Att glömma namnge komponenter med slash-syntax — <code>Card / Blog / Default</code> är oändligt mycket bättre än <code>Frame 482</code>.</li>
+        <li data-i18n="post3.p1_li10">Att skapa komponenter direkt på en sida istället för att samla dem i en dedikerad <em>library</em>- eller <em>components</em>-sida.</li>
+      </ul>
+
+      <!-- Tip 2 -->
+      <h2 data-i18n="post3.h2_2">2. Behärska Auto Layout (Stack &amp; Grid)</h2>
+      <p data-i18n="post3.p2_1">Auto Layout är inte ett verktyg — det är ett tankesätt. När du behärskar det blir du dubbelt så snabb, för du slipper positionera om varje element när texten blir längre, när knappen byts ut eller när skärmen krymper. Auto Layout är Framers motsvarighet till Flexbox och Grid i CSS, och det är skillnaden mellan att <em>placera ut</em> en design och att <em>bygga</em> en.</p>
+
+      <h3 data-i18n="post3.h3_2_1">Stack i tre riktningar</h3>
+      <ul>
+        <li data-i18n="post3.p2_li1"><strong>Vertikal stack</strong> — för sektioner, listor och de flesta innehållsblock.</li>
+        <li data-i18n="post3.p2_li2"><strong>Horisontell stack</strong> — för knappar i rad, ikon-text-kombinationer och navigation.</li>
+        <li data-i18n="post3.p2_li3"><strong>Grid</strong> — för kortgalleri, bilduppslag och prislistor med jämna kolumner.</li>
+      </ul>
+
+      <h3 data-i18n="post3.h3_2_2">Hug, Fill och Fixed — sluta gissa</h3>
+      <p data-i18n="post3.p2_2">Tre värden styr hur element beter sig i en stack, och 90 % av alla layoutbuggar beror på att man valt fel:</p>
+      <ul>
+        <li data-i18n="post3.p2_li4"><strong>Hug content</strong> — boxen krymper till exakt det innehåll den rymmer. Default för knappar, badges och taggar.</li>
+        <li data-i18n="post3.p2_li5"><strong>Fill container</strong> — boxen tar all tillgänglig plats längs en axel. Default för main content i kort och textkolumner.</li>
+        <li data-i18n="post3.p2_li6"><strong>Fixed</strong> — exakt pixelvärde. Endast för ikoner, avatarbilder och tekniska kolumnbredder som <em>måste</em> låsas.</li>
+      </ul>
+      <p data-i18n="post3.p2_3">Lär dig vilken du ska välja när, och din layout slutar plötsligt spreta på iPad-bredd.</p>
+
+      <h3 data-i18n="post3.h3_2_3">Gap, padding och alignment</h3>
+      <ul>
+        <li data-i18n="post3.p2_li7">Använd <code>gap</code> i stacken istället för marginal på varje barn — då har du <em>en</em> siffra att ändra om mellanrummet behöver justeras.</li>
+        <li data-i18n="post3.p2_li8">Använd <code>padding</code> på containern istället för tomma element som ”luft” — luft-element är layoutpropp man alltid betalar för senare.</li>
+        <li data-i18n="post3.p2_li9">Sätt <code>alignment</code> explicit (top/center/bottom × start/center/end) — undvik manuella offsets, de bryts när innehållet ändras.</li>
+      </ul>
+
+      <h3 data-i18n="post3.h3_2_4">Nestla — men inte för djupt</h3>
+      <p data-i18n="post3.p2_4">En liten kortkomponent kan rimligen ha tre nivåer av stackar: ytterkort → innehållsstack → knapprad. Mer än fyra eller fem nivåer är nästan alltid en lukt på att du gjort något komplicerat som borde vara enklare. Pausa, plocka isär, försök igen.</p>
+
+      <!-- Tip 3 -->
+      <h2 data-i18n="post3.h2_3">3. Lär dig kortkommandon — på riktigt</h2>
+      <p data-i18n="post3.p3_1">Det är skillnad på att <em>ha sett</em> att Cmd+D duplicerar och att verkligen ha det i muskelminnet. En timmes deliberat övning ger dig kanske 30 % tidsbesparing under resten av karriären. Mängden mikrofriktion som försvinner när du slipper högerklicka, leta i menyn och pricka rätt menyrad är häpnadsväckande.</p>
+
+      <h3 data-i18n="post3.h3_3_1">De viktigaste kortkommandona (Mac — byt Cmd mot Ctrl på Windows)</h3>
+      <ul>
+        <li data-i18n="post3.p3_li1"><strong>Cmd+D</strong> — duplicera markerat element.</li>
+        <li data-i18n="post3.p3_li2"><strong>Cmd+Shift+K</strong> — gör om markering till komponent.</li>
+        <li data-i18n="post3.p3_li3"><strong>Cmd+/</strong> — detach component (gör om instans till vanlig design).</li>
+        <li data-i18n="post3.p3_li4"><strong>Cmd+Alt+G</strong> — gruppera markeringen i en stack.</li>
+        <li data-i18n="post3.p3_li5"><strong>Cmd+R</strong> — döp om markerat lager.</li>
+        <li data-i18n="post3.p3_li6"><strong>Cmd+F</strong> — sök i layers och canvas.</li>
+        <li data-i18n="post3.p3_li7"><strong>F / T / R / V</strong> — byt till Frame, Text, Rectangle eller pekare.</li>
+        <li data-i18n="post3.p3_li8"><strong>Alt+drag</strong> — kopiera ett element direkt med musen.</li>
+        <li data-i18n="post3.p3_li9"><strong>Shift+Alt+drag</strong> — kopiera och låsa till rak axel.</li>
+        <li data-i18n="post3.p3_li10"><strong>Cmd+klick</strong> — markera djupt nestlade element direkt.</li>
+        <li data-i18n="post3.p3_li11"><strong>Space+drag</strong> — panorera canvasen.</li>
+        <li data-i18n="post3.p3_li12"><strong>Cmd+0</strong> — zooma till 100 %.</li>
+        <li data-i18n="post3.p3_li13"><strong>Cmd+1</strong> — zooma så att hela sidan får plats.</li>
+        <li data-i18n="post3.p3_li14"><strong>Cmd+\</strong> — visa eller dölj UI för rent canvas-läge.</li>
+      </ul>
+
+      <h3 data-i18n="post3.h3_3_2">Bygg muskelminne med en enkel regel</h3>
+      <p data-i18n="post3.p3_2">Sätt en regel åt dig själv: när du gör samma sak via menyn två gånger — lär dig kortkommandot innan tredje gången. Det är jobbigt en vecka och oslagbart för alltid. Skriv ner de fem du oftast missar på en post-it bredvid skärmen tills de sitter.</p>
+
+      <h3 data-i18n="post3.h3_3_3">Command Bar — Framers smartaste genväg</h3>
+      <p data-i18n="post3.p3_3">Med <strong>Cmd+K</strong> öppnar du Command Bar, en sökruta där du hittar <em>allt</em>: sidor, komponenter, CMS-poster, åtgärder, plugins. För många funktioner är den snabbare än att leta i menyn — och den fungerar som en universalsökning genom hela ditt projekt. Lär dig Cmd+K först av allt, så får du resten på köpet.</p>
+
+      <!-- Tip 4 -->
+      <h2 data-i18n="post3.h2_4">4. Bygg på CMS från första dagen</h2>
+      <p data-i18n="post3.p4_1">Det vanligaste misstaget i Framer-projekt: man designar tio statiska blogginlägg manuellt, ser hur fint det blir och får sedan migrera allt till CMS dagen före lansering. Det blir alltid dyrare, alltid läskigare och alltid något som hade kunnat undvikas. CMS är inte en sluttamping — det är en startposition.</p>
+
+      <h3 data-i18n="post3.h3_4_1">Varför börja med CMS direkt</h3>
+      <ul>
+        <li data-i18n="post3.p4_li1">Du designar mallen <strong>en</strong> gång istället för tio.</li>
+        <li data-i18n="post3.p4_li2">Klienten kan börja fylla på riktigt innehåll redan i prototypfasen.</li>
+        <li data-i18n="post3.p4_li3">Du upptäcker tidigt om en titel kan bli två rader, om en bild saknas eller om datumformatet behöver justeras.</li>
+        <li data-i18n="post3.p4_li4">Du sparar timmar på lanseringsdagen — när tid är dyrast.</li>
+        <li data-i18n="post3.p4_li5">SEO blir korrekt från start: rätt slugs, rätt meta, rätt OG-bild per post.</li>
+      </ul>
+
+      <h3 data-i18n="post3.h3_4_2">Planera samlingar innan du designar</h3>
+      <p data-i18n="post3.p4_2">Innan första pennstrecket: lista vilka innehållstyper sajten har (Blogg, Case, Team, Tjänster, FAQ, Tjänsteorter…) och vilka fält var och en behöver. Det är trettio minuters arbete som sparar två dagar längre fram. Skapa samlingarna direkt — de får vara tomma, men de ska finnas.</p>
+
+      <h3 data-i18n="post3.h3_4_3">Bind in fält direkt i mallen</h3>
+      <p data-i18n="post3.p4_3">När du bygger ditt blogg-kort: koppla titel, datum, bild och slug till samlingen direkt. Lägg in tre tomma testposter med olika titellängder — kort, medel och absurt lång — så ser du hur layouten faktiskt beter sig. Det är skillnaden mellan en design som faller ihop när Lorem Ipsum byts mot en riktig rubrik på tre rader, och en design som bara fungerar.</p>
+
+      <h3 data-i18n="post3.h3_4_4">CMS-driven prototyping</h3>
+      <p data-i18n="post3.p4_4">Med CMS:et på plats kan du också skapa en designdriven innehållsstrategi: du vet exakt hur många tecken titeln får vara, du har en mall för bildformat och du har en checklista för varje ny post. Allt sådant som annars förhandlas fram via mejl en månad efter lansering, är redan beslutat.</p>
+
+      <!-- Tip 5 -->
+      <h2 data-i18n="post3.h2_5">5. Designa mobile-first — och content-first</h2>
+      <p data-i18n="post3.p5_1">Mobile-first är inte en trend, det är en arbetsbesparande disciplin. När du börjar i 375 px och bygger uppåt löser du de svåra besluten först (vad <em>måste</em> få plats?) istället för sist. Att försöka komprimera en färdig desktop-design till mobil i efterhand är som att försöka stoppa tillbaka tandkrämen i tuben.</p>
+
+      <h3 data-i18n="post3.h3_5_1">Tre konkreta vinster</h3>
+      <ul>
+        <li data-i18n="post3.p5_li1"><strong>Snabbare beslut.</strong> På 375 px ryms inte allt — du tvingas prioritera, och därmed försvinner timmar av designdiskussioner.</li>
+        <li data-i18n="post3.p5_li2"><strong>Tydligare hierarki.</strong> En mobil hero med en rubrik, en underrubrik och en CTA översätter sig elegant uppåt. Tvärtom blir det stökigt.</li>
+        <li data-i18n="post3.p5_li3"><strong>Bättre SEO.</strong> Google indexerar mobilversionen först. Det som är vackert på desktop men brutet på mobil rankar sämre — punkt.</li>
+      </ul>
+
+      <h3 data-i18n="post3.h3_5_2">Breakpoints i Framer</h3>
+      <p data-i18n="post3.p5_2">Framer låter dig sätta hur många breakpoints du vill, men i 95 % av fallen klarar du dig med tre: <strong>Phone</strong> (≤ 480 px), <strong>Tablet</strong> (481–810 px) och <strong>Desktop</strong> (≥ 1200 px). Bygg klart på Phone först, kopiera över layouten och justera vad som måste justeras. Den disciplinen ger en mer konsekvent design — och färre överraskningar mellan breakpoints.</p>
+
+      <h3 data-i18n="post3.h3_5_3">Touch targets och tumzon</h3>
+      <ul>
+        <li data-i18n="post3.p5_li4">Knappar minst 44×44 px (Apples Human Interface Guidelines som golv).</li>
+        <li data-i18n="post3.p5_li5">Viktiga CTA:s i den nedre tredjedelen av skärmen, där tummen faktiskt når.</li>
+        <li data-i18n="post3.p5_li6">Aldrig brödtext under 16 px — då zoomar iOS automatiskt vid input-fokus, vilket bryter layouten.</li>
+        <li data-i18n="post3.p5_li7">Minst 8 px luft mellan klickbara element så att man inte träffar fel.</li>
+      </ul>
+
+      <h3 data-i18n="post3.h3_5_4">Testa på riktig telefon — inte i preview</h3>
+      <p data-i18n="post3.p5_3">Preview-fönstret i Framer ljuger lite. Skanna QR-koden från preview-läget med din mobil och testa på riktiga händer, riktig glasreflex och riktig nätverkshastighet. Det är där användarna är. Många layoutbuggar — och alla touch-buggar — syns bara på en faktisk enhet.</p>
+
+      <!-- Bonus -->
+      <h2 data-i18n="post3.h2_6">Bonus: bygg upp en återanvändbar startfil</h2>
+      <p data-i18n="post3.p6_1">Det halva sjätte tipset som proffsen sällan pratar om: ha en personlig startfil i Framer som du duplicerar för varje nytt projekt. När du har den slipper du börja på blank canvas — du börjar med ett halvfärdigt designsystem. I startfilen bör finnas:</p>
+      <ul>
+        <li data-i18n="post3.p6_li1">Färgstilar (brand-palett, neutral-skala, signalfärger för success/warning/error).</li>
+        <li data-i18n="post3.p6_li2">Textstilar (H1–H6, body large/regular/small, caption, button label).</li>
+        <li data-i18n="post3.p6_li3">En basuppsättning komponenter: knapp, kort, navigation, footer, sektionsrubrik, badge, input.</li>
+        <li data-i18n="post3.p6_li4">Tomma CMS-samlingar för Blogg, Case och Team — färdiga att fyllas på.</li>
+        <li data-i18n="post3.p6_li5">En <em>components</em>-sida som fungerar som mini-styleguide och visningsyta för alla komponenter och variants.</li>
+        <li data-i18n="post3.p6_li6">Färdiga sidmallar för 404, kontakt, om oss och blogg-arkiv.</li>
+      </ul>
+      <p data-i18n="post3.p6_2">Första timmen på ett nytt projekt är gratis. Och du sparar dem alla, i varje projekt, resten av karriären.</p>
+
+      <!-- Conclusion -->
+      <h2 data-i18n="post3.h2_7">Slutsats</h2>
+      <p data-i18n="post3.p7_1">Hastighet i Framer är inte fingerflinkhet — det är system. Komponenter, Auto Layout, kortkommandon, CMS och mobile-first är inte fem fristående tips utan ett ekosystem där varje vana förstärker de andra. När knappkomponenten är variantdriven, Auto Layout är reflex, kortkommandona sitter, CMS:et är på plats och du designar från 375 px och uppåt — då gör du på två dagar vad som annars hade tagit en vecka.</p>
+      <p data-i18n="post3.p7_2">Och har du startfilen liggande? Då gör du det på en eftermiddag. Det är inte magi, det är metod — och metod är den enskilt största skillnaden mellan en bra Framer-designer och en snabb Framer-designer.</p>
     </div>
 
     <!-- Related Articles -->
@@ -233,11 +378,11 @@
           </div>
           <p class="card__text"><strong data-i18n="articles.a1.title">Vad är Framer? En komplett guide</strong> — <span data-i18n="articles.a1.excerpt">Allt du behöver veta om Framer — från grunderna till avancerade funktioner.</span></p>
         </a>
-        <a href="/blog/framer-vs-wordpress.html" class="card">
+        <a href="/blog/framer-cms-i-praktiken.html" class="card">
           <div class="card__image">
-            <img src="../assets/thumb-framer-vs-wordpress.svg" alt="Framer vs WordPress" loading="lazy">
+            <img src="../assets/thumb-framer-cms.svg" alt="Framer CMS i praktiken" loading="lazy">
           </div>
-          <p class="card__text"><strong data-i18n="articles.a2.title">Framer vs WordPress (2026): Vilken plattform är bäst för din webbplats?</strong> — <span data-i18n="articles.a2.excerpt">Djupgående jämförelse av prestanda, SEO, kostnad, flexibilitet och användarvänlighet — så väljer du rätt plattform 2026.</span></p>
+          <p class="card__text"><strong data-i18n="articles.a4.title">Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod</strong> — <span data-i18n="articles.a4.excerpt">Hands-on guide till samlingar, fält, filter och detaljsidor — så bygger du en dynamisk sajt i Framer CMS utan kod.</span></p>
         </a>
       </div>
     </aside>

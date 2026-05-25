@@ -52,6 +52,16 @@ Tre källor täcker nästan allt som finns:
 
 Börja alltid i den officiella marketplacen. Då vet du att mallen uppfyller Framers tekniska standard och att någon faktiskt granskat den innan den hamnade där.
 
+## Tre stora kreatörer värda att känna till
+
+Marknaden domineras av en handfull namn vars mallar dyker upp gång på gång i topplistor och rekommendationer:
+
+- [**Sanna Granqvist**](https://www.framer.com/@sanna-granqvist/) — svensk Framer-expert baserad i Göteborg som levererar designdrivna mallar med tydligt fokus på prestanda, SEO och genomarbetade animationer. Bra förstaval om du vill ha en mall som inte bara ser snygg ut utan också presterar i [Core Web Vitals](https://web.dev/vitals/).
+- **Sweetie / Tomek** — står bakom [framersweeties.com](https://framersweeties.com/) och en lång rad polerade SaaS- och businessmallar med konsekvent komponentstruktur och välbyggd CMS-setup.
+- **Frenify** — produktiv studio med stort utbud på Framers marketplace; bredden täcker allt från portfolios och agency-sajter till e-handel, och de uppdaterar mallarna när Framer släpper nya funktioner.
+
+Listan är inte uttömmande, men de tre täcker tillsammans större delen av spannet — från designdrivet och SEO-säkert till brett och färdigpaketerat.
+
 ## Gratis vs betalda mallar
 
 Gratis mallar i Framer är ofta bra för att lära sig plattformen eller för snabba hobbyprojekt. Men räkna med att de är enklare i strukturen, har färre sidor och sällan kommer med CMS förkonfigurerat.

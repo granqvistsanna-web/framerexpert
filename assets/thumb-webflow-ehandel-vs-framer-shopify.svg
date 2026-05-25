@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" fill="#323236"/>
+  <rect x="80" y="120" width="160" height="160" rx="20" fill="#3F3F46"/>
+  <rect x="360" y="120" width="160" height="160" rx="20" fill="#3F3F46"/>
+  <text x="160" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#F5F5F0">Wf</text>
+  <text x="440" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#F5F5F0">F+S</text>
+  <text x="300" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="#71717A">vs</text>
+  <text x="160" y="252" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#F5F5F0" opacity="0.55">e-handel</text>
+  <text x="440" y="252" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#F5F5F0" opacity="0.55">Shopify</text>
+</svg>

@@ -92,7 +92,7 @@ function render(template, post, registry) {
     INTRO: escapeHtml(post.intro),
     JSON_TITLE: JSON.stringify(post.title),
     JSON_DESCRIPTION: JSON.stringify(post.og_description || post.description),
-    BODY: renderBody(post.body || ''),
+    BODY: renderBody(post.body || '', registry),
     RELATED: renderRelated(post.related || [], registry, post.slug),
     FAQ_SCHEMA: renderFaqSchema(post.faqs || []),
   };
@@ -103,7 +103,7 @@ function render(template, post, registry) {
   });
 }
 
-function renderBody(markdown) {
+function renderBody(markdown, registry) {
   const lines = markdown.replace(/\r\n/g, '\n').split('\n');
   const out = [];
   let i = 0;
@@ -116,10 +116,20 @@ function renderBody(markdown) {
     }
   };
 
+  const SEE_ALSO_RE = /^\[see-also\]\(([^)]+)\)\s*$/;
+
   while (i < lines.length) {
     const line = lines[i];
 
     if (/^\s*$/.test(line)) { flushList(); i++; continue; }
+
+    const seeAlso = line.match(SEE_ALSO_RE);
+    if (seeAlso) {
+      flushList();
+      out.push(renderSeeAlso(seeAlso[1].trim(), registry));
+      i++;
+      continue;
+    }
 
     if (/^###\s+/.test(line)) {
       flushList();
@@ -143,7 +153,7 @@ function renderBody(markdown) {
     // Paragraph: consume until blank line or structural token.
     const buf = [line.trim()];
     i++;
-    while (i < lines.length && !/^\s*$/.test(lines[i]) && !/^(#{2,3}\s+|-\s+)/.test(lines[i])) {
+    while (i < lines.length && !/^\s*$/.test(lines[i]) && !/^(#{2,3}\s+|-\s+|\[see-also\]\()/.test(lines[i])) {
       buf.push(lines[i].trim());
       i++;
     }
@@ -152,6 +162,22 @@ function renderBody(markdown) {
   }
   flushList();
   return out.join('\n');
+}
+
+function renderSeeAlso(slug, registry) {
+  const target = registry[slug];
+  if (!target) die(`see-also: unknown slug "${slug}"`);
+  required(target, ['title']);
+  const excerpt = target.excerpt || target.description || '';
+  return (
+    `      <aside class="see-also">\n` +
+    `        <a href="/blog/${target.slug}.html" class="see-also__link">\n` +
+    `          <span class="see-also__eyebrow">Läs också</span>\n` +
+    `          <span class="see-also__title">${escapeHtml(target.title)}</span>\n` +
+    (excerpt ? `          <span class="see-also__excerpt">${escapeHtml(excerpt)}</span>\n` : '') +
+    `        </a>\n` +
+    `      </aside>`
+  );
 }
 
 function inline(text) {
@@ -205,6 +231,7 @@ function renderFaqSchema(faqs) {
     JSON.stringify(schema, null, 2).split('\n').join('\n  ') +
     '\n  </script>\n';
 }
+
 
 /* ---------- Minimal frontmatter + markdown parser ---------- */
 

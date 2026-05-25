@@ -30,7 +30,8 @@ file; the boilerplate is re-used from the template.
 4. **Build**: `node scripts/build-post.js <slug>` (or `node scripts/build-post.js --all`).
 5. **Wire it up** (small manual diffs — far less than writing the whole HTML):
    - Add a card to `blog/index.html` inside `#blogGrid`.
-   - Add a `<url>` entry to `sitemap.xml`.
+   - Rebuild the sitemap: `npm run build:sitemap` (auto-generated from
+     markdown frontmatter — don't hand-edit `sitemap.xml`).
    - Add translation keys for the title/meta/body in `js/i18n.js` if you want
      English support for this post (optional — plain HTML falls back to
      Swedish if keys are missing).
@@ -65,6 +66,9 @@ Only a tiny markdown subset is supported — deliberately:
 - Blank-line-separated paragraphs → `<p>`
 - `- item` lines → `<ul><li>`
 - Inline `**bold**`, `*italic*`, `` `code` ``, `[text](url)`
+- `[see-also](slug)` on its own line → renders an inline cross-link
+  callout to another post. Use 1–3 per long post to surface related
+  reading mid-flow (the bottom `related:` block stays as-is).
 
 Anything more exotic (tables, images mid-body, code fences) should be raised
 as a feature request; the parser intentionally rejects it rather than guess.

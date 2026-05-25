@@ -114,6 +114,8 @@ Några fel man ser om och om igen:
 - **Glömda meta-taggar** — en mall har demo-SEO. Sätt om title, description, canonical och OG-bild för varje sida innan publicering.
 - **Ignorerad prestanda** — byt ut mallens stock-bilder mot dina egna *komprimerade* bilder. Orörda exporter från iPhone eller kamera kan halvera laddningstiden om du glömmer det.
 
+[see-also](framer-seo-guide)
+
 ## Licensiering och återanvändning
 
 Framer-mallar säljs nästan alltid som **single-site license** — du får använda mallen till ett projekt. Vill du bygga flera sajter behöver du köpa flera licenser, eller hitta en utvecklarlicens om mallförfattaren erbjuder det.

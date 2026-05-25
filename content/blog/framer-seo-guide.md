@@ -69,6 +69,8 @@ När du är redo att gå vidare är de vanligaste nästa stegen:
 
 Undvik att stapla schema för skojs skull. Google bestraffar irrelevant eller vilseledande strukturerad data, så lägg bara till det som speglar vad sidan faktiskt handlar om.
 
+[see-also](framer-cms-i-praktiken)
+
 ### Validera innan du publicerar
 
 Kör varje ny sida genom [Googles Rich Results Test](https://search.google.com/test/rich-results) innan du publicerar. Felformaterad JSON-LD visas inte bara inte — den kan även få Google att misstro övrig markup på sidan.
@@ -112,6 +114,8 @@ Framer genererar automatiskt en `sitemap.xml` baserat på dina publicerade sidor
 Interna länkar är minst lika viktigt. Länka från startsidan till dina viktigaste undersidor, och länka mellan relaterade artiklar. Det hjälper Google att förstå hierarkin på sajten och fördelar länkkraft dit du vill ha den.
 
 En bra tumregel: varje viktig sida ska gå att nå på max två klick från startsidan.
+
+[see-also](framer-vs-webflow)
 
 Glöm inte `robots.txt`. Framer lägger en grund-version på `/robots.txt` som tillåter allt, men om du har test-sidor eller staging-miljöer som inte ska indexeras — blockera dem explicit där, eller använd `noindex`-meta på sidnivå.
 

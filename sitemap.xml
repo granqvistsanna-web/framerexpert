@@ -1,87 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://framerexpert.se/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://framerexpert.se/blog/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/vad-ar-framer.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/framer-vs-wordpress.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/5-tips-bygga-snabbare.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/framer-cms-i-praktiken.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/framer-seo-guide.html</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/basta-framer-experter-sverige.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/basta-framer-experter-goteborg.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://framerexpert.se/blog/basta-framer-experter-europa.html</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://framerexpert.se/assets/thumb-framer-experter-europa.svg</image:loc>
+      <image:title>Bästa Framer-experterna i Europa (2026)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/basta-framer-experter-goteborg.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://framerexpert.se/assets/thumb-framer-experter-goteborg.svg</image:loc>
+      <image:title>Bästa Framer-experterna i Göteborg (2026)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://framerexpert.se/blog/basta-framer-experter-norden.html</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://framerexpert.se/assets/thumb-framer-experter-norden.svg</image:loc>
+      <image:title>Bästa Framer-experterna i Norden (2026)</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://framerexpert.se/blog/framer-vs-webflow.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://framerexpert.se/blog/basta-framer-experter-sverige.html</loc>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/framer-templates-guide.html</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://framerexpert.se/assets/thumb-framer-experter-sverige.svg</image:loc>
+      <image:title>Bästa Framer-experterna och byråerna i Sverige (2026)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://framerexpert.se/blog/framer-ecommerce-guide.html</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://framerexpert.se/assets/thumb-framer-ecommerce.svg</image:loc>
+      <image:title>Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-seo-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://framerexpert.se/assets/thumb-framer-seo.svg</image:loc>
+      <image:title>Framer SEO (2026): Så optimerar du din sajt för Google</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-templates-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://framerexpert.se/assets/thumb-framer-templates.svg</image:loc>
+      <image:title>Framer-mallar (2026): Så hittar, väljer och anpassar du rätt template</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-vs-webflow.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://framerexpert.se/assets/thumb-framer-vs-webflow.svg</image:loc>
+      <image:title>Framer vs Webflow (2026): Vilken ska du välja?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/5-tips-bygga-snabbare.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://framerexpert.se/assets/thumb-5-tips.svg</image:loc>
+      <image:title>5 tips för att bygga snabbare i Framer</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-cms-i-praktiken.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://framerexpert.se/assets/thumb-framer-cms.svg</image:loc>
+      <image:title>Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-vs-wordpress.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://framerexpert.se/assets/thumb-framer-vs-wordpress.svg</image:loc>
+      <image:title>Framer vs WordPress (2026): Vilken plattform är bäst för din webbplats?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/vad-ar-framer.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://framerexpert.se/assets/thumb-vad-ar-framer.svg</image:loc>
+      <image:title>Vad är Framer? En komplett guide</image:title>
+    </image:image>
   </url>
 </urlset>

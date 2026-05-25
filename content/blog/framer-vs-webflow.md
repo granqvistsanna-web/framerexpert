@@ -85,6 +85,8 @@ Webflow har lite djupare SEO-verktyg, inklusive mer granulär kontroll över rob
 
 Ingen av dem är en SEO-genväg. Ranking kommer fortfarande från bra innehåll, solida interna länkar och auktoritet över tid. Tekniskt är båda plattformarna mer än goda nog — det är vad du gör med dem som avgör.
 
+[see-also](framer-seo-guide)
+
 ## Pris
 
 Prisjämförelsen beror på vilken nivå du tittar på. Framer är billigare på ingångsnivå — Basic-planen hamnar ungefär $10 per månad vid årsbetalning och passar en enkel sajt med få sidor. Webflows Basic ligger något högre på runt $14 per månad. Notera att Framer förenklade sin prissättning hösten 2025 och tog bort den tidigare Mini-planen, så strukturen är nu Free, Basic, Pro, Scale och Enterprise.

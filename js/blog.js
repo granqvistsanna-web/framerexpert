@@ -10,34 +10,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const urlParams = new URLSearchParams(window.location.search);
   const initialCategory = urlParams.get('category') || 'all';
+  const initialQuery = (urlParams.get('q') || '').trim().toLowerCase();
 
-  function filterByCategory(category) {
+  let currentCategory = initialCategory;
+  let currentQuery = initialQuery;
+
+  function applyFilters() {
     buttons.forEach((btn) => {
-      const isActive = btn.dataset.category === category;
+      const isActive = btn.dataset.category === currentCategory;
       btn.classList.toggle('is-active', isActive);
       btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     });
 
     cards.forEach((card) => {
-      if (category === 'all' || card.dataset.category === category) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
+      const matchesCategory = currentCategory === 'all' || card.dataset.category === currentCategory;
+      const matchesQuery = currentQuery === '' || card.textContent.toLowerCase().includes(currentQuery);
+      card.style.display = matchesCategory && matchesQuery ? '' : 'none';
     });
   }
 
-  filterByCategory(initialCategory);
+  applyFilters();
 
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      const category = btn.dataset.category;
-      filterByCategory(category);
+      currentCategory = btn.dataset.category;
+      applyFilters();
       const url = new URL(window.location);
-      if (category === 'all') {
+      if (currentCategory === 'all') {
         url.searchParams.delete('category');
       } else {
-        url.searchParams.set('category', category);
+        url.searchParams.set('category', currentCategory);
       }
       history.replaceState(null, '', url);
     });

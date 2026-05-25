@@ -149,6 +149,8 @@ Kort översikt över när du gör något annat istället:
 - **Wix** — nybörjarvänligt och enkelt, men mindre flexibelt än Framer på designsidan och svagare än Shopify på commerce-sidan. Sällan det bästa valet på någon enskild parameter.
 - **Framer + Shopify (headless)** — för varumärken där design är en huvudaxel men commerce ska vara robust. Mest arbete att sätta upp, men kraftfullast.
 
+[see-also](framer-vs-webflow)
+
 ## Sammanfattning
 
 Framer för e-handel har gått från "knappt möjligt" till "fullt rimligt för vissa use cases". Men det är fortfarande en sajt som kan sälja — inte en e-handelsplattform som kan visas upp.

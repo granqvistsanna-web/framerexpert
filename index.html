@@ -21,6 +21,10 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://framerexpert.se">
 
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="sv" href="https://framerexpert.se/">
+  <link rel="alternate" hreflang="x-default" href="https://framerexpert.se/">
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
@@ -49,6 +53,14 @@
       "@type": "Organization",
       "name": "FramerExpert",
       "url": "https://framerexpert.se"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://framerexpert.se/blog/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
     }
   }
   </script>

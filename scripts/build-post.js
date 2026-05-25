@@ -180,7 +180,7 @@ function renderRelated(slugs, registry, selfSlug) {
     blocks.push(
       `        <a href="/blog/${p.slug}.html" class="card">\n` +
       `          <div class="card__image">\n` +
-      `            <img src="../assets/${p.thumbnail}" alt="${escapeAttr(p.title)}" loading="lazy">\n` +
+      `            <img src="../assets/${p.thumbnail}" alt="${escapeAttr(p.title)}" width="600" height="400" loading="lazy" decoding="async">\n` +
       `          </div>\n` +
       `          <p class="card__text"><strong>${escapeHtml(p.title)}</strong>${excerpt ? ` — <span>${escapeHtml(excerpt)}</span>` : ''}</p>\n` +
       `        </a>`

@@ -27,15 +27,27 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
 
-  <!-- Fonts -->
+  <!-- Preconnects (fonts + CDNs) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/animations.css">
+
+  <!-- Scripts (deferred so they download in parallel with parsing) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
+  <script defer src="../js/i18n.js"></script>
+  <script defer src="../js/main.js"></script>
+  <script defer src="../js/init.js"></script>
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
@@ -307,13 +319,13 @@
       <div class="blog-post__related-grid">
         <a href="/blog/vad-ar-framer.html" class="card">
           <div class="card__image">
-            <img src="../assets/thumb-vad-ar-framer.svg" alt="Vad är Framer? En komplett guide" loading="lazy">
+            <img src="../assets/thumb-vad-ar-framer.svg" alt="Vad är Framer? En komplett guide" width="600" height="400" loading="lazy" decoding="async">
           </div>
           <p class="card__text"><strong>Vad är Framer? En komplett guide</strong> — <span>Allt du behöver veta om Framer — från grunderna till avancerade funktioner.</span></p>
         </a>
         <a href="/blog/framer-vs-wordpress.html" class="card">
           <div class="card__image">
-            <img src="../assets/thumb-framer-vs-wordpress.svg" alt="Framer vs WordPress (2026): Vilken plattform är bäst för din webbplats?" loading="lazy">
+            <img src="../assets/thumb-framer-vs-wordpress.svg" alt="Framer vs WordPress (2026): Vilken plattform är bäst för din webbplats?" width="600" height="400" loading="lazy" decoding="async">
           </div>
           <p class="card__text"><strong>Framer vs WordPress (2026): Vilken plattform är bäst för din webbplats?</strong> — <span>Djupgående jämförelse av prestanda, SEO, kostnad, flexibilitet och användarvänlighet — så väljer du rätt plattform 2026.</span></p>
         </a>
@@ -337,11 +349,5 @@
 
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
-  <script src="../js/i18n.js"></script>
-  <script src="../js/main.js"></script>
-  <script src="../js/init.js"></script>
 </body>
 </html>

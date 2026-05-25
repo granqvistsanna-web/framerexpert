@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" fill="#323236"/>
+  <text x="300" y="180" text-anchor="middle" font-family="system-ui, sans-serif" font-size="120" font-weight="800" fill="#F5F5F0">5</text>
+  <text x="300" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#F5F5F0" opacity="0.85">anledningar</text>
+  <text x="300" y="270" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="500" fill="#71717A">Framer &gt; Webflow</text>
+  <rect x="220" y="300" width="160" height="6" rx="3" fill="#F5F5F0" opacity="0.15"/>
+</svg>

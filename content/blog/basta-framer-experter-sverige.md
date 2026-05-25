@@ -7,7 +7,7 @@ date_modified: 2026-05-25
 date_display: 22 april 2026
 readtime: 8 min läsning
 thumbnail: thumb-framer-experter-sverige.svg
-og_image: og-default.png
+og_image: thumb-framer-experter-sverige.svg
 title: "Bästa Framer-experterna och byråerna i Sverige (2026)"
 meta_title: "Bästa Framer-experterna och byråerna i Sverige (2026) — FramerExpert.se"
 description: "Guide till de främsta verifierade Framer-experterna och byråerna i Sverige 2026 — styrkor, specialiteter och när var och en passar bäst."

@@ -7,7 +7,7 @@ date_modified: 2026-05-25
 date_display: 25 maj 2026
 readtime: 7 min läsning
 thumbnail: thumb-framer-experter-goteborg.svg
-og_image: og-default.png
+og_image: thumb-framer-experter-goteborg.svg
 title: "Bästa Framer-experterna i Göteborg (2026)"
 meta_title: "Bästa Framer-experterna i Göteborg (2026) — FramerExpert.se"
 description: "Guide till de mest etablerade verifierade Framer Experts i Göteborg 2026 — vem som passar för vad, och varför Göteborg punchar över sin storlek."

@@ -1,13 +1,13 @@
 ---
 slug: framer-templates-guide
-page_id: post7
+page_id: post8
 category: tips
 date: 2026-04-22
 date_modified: 2026-04-22
 date_display: 22 april 2026
 readtime: 7 min läsning
 thumbnail: thumb-framer-templates.svg
-og_image: og-default.png
+og_image: thumb-framer-templates.svg
 title: "Framer-mallar (2026): Så hittar, väljer och anpassar du rätt template"
 meta_title: "Framer-mallar (2026): Så hittar, väljer och anpassar du rätt template — FramerExpert.se"
 description: "Framer-mallar 2026 — så hittar du rätt template, anpassar den utan att förstöra designen och undviker de vanligaste licens- och CMS-fällorna."

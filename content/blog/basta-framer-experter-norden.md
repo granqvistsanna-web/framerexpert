@@ -7,7 +7,7 @@ date_modified: 2026-05-25
 date_display: 25 maj 2026
 readtime: 7 min läsning
 thumbnail: thumb-framer-experter-norden.svg
-og_image: og-default.png
+og_image: thumb-framer-experter-norden.svg
 title: "Bästa Framer-experterna i Norden (2026)"
 meta_title: "Bästa Framer-experterna i Norden (2026) — FramerExpert.se"
 description: "Guide till de mest etablerade verifierade Framer Experts i Norden 2026 — Sverige, Norge, Danmark och Finland. Styrkor, svagheter och vem som passar för vad."

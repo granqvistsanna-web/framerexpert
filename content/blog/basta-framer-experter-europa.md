@@ -7,7 +7,7 @@ date_modified: 2026-05-25
 date_display: 25 maj 2026
 readtime: 9 min läsning
 thumbnail: thumb-framer-experter-europa.svg
-og_image: og-default.png
+og_image: thumb-framer-experter-europa.svg
 title: "Bästa Framer-experterna i Europa (2026)"
 meta_title: "Bästa Framer-experterna i Europa (2026) — FramerExpert.se"
 description: "Guide till de mest etablerade verifierade Framer Experts i Europa 2026 — UK, Tyskland, Nederländerna, Frankrike, Italien, Portugal och Norden. Styrkor och vem som passar för vad."

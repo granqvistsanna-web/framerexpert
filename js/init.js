@@ -52,14 +52,17 @@ function initLenis() {
 // -----------------------------------------
 
 function initChangePageTitleOnLeave() {
-  const documentTitleStore = document.title;
   const documentTitleOnBlur = "Kom tillbaka! \u2014 FramerExpert.se";
+  let documentTitleStore = document.title;
 
   window.addEventListener("focus", () => {
     document.title = documentTitleStore;
   });
 
   window.addEventListener("blur", () => {
+    // Capture the current title at blur time so language toggles
+    // and other runtime updates aren't lost across focus cycles.
+    documentTitleStore = document.title;
     document.title = documentTitleOnBlur;
   });
 }

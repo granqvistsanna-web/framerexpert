@@ -1,13 +1,13 @@
 ---
 slug: my-new-post
-page_id: post5
+page_id: post13
 category: tips
 date: 2026-04-22
 date_modified: 2026-04-22
 date_display: 22 april 2026
 readtime: 6 min läsning
 thumbnail: thumb-my-post.svg
-og_image: og-default.png
+og_image: thumb-my-post.svg
 title: My new post title
 meta_title: My new post title — FramerExpert.se
 description: Short SEO description used in <meta name="description"> (≤ 160 chars).

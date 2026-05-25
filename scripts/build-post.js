@@ -87,7 +87,7 @@ function render(template, post, registry) {
     DATE_MODIFIED: post.date_modified || post.date,
     DATE_DISPLAY: escapeHtml(post.date_display),
     READTIME: escapeHtml(post.readtime),
-    OG_IMAGE: post.og_image || 'og-default.png',
+    OG_IMAGE: post.og_image || post.thumbnail,
     CATEGORY_LABEL: escapeHtml(categoryLabel),
     INTRO: escapeHtml(post.intro),
     JSON_TITLE: JSON.stringify(post.title),

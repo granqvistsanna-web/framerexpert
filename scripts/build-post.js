@@ -92,6 +92,7 @@ function render(template, post, registry) {
     INTRO: escapeHtml(post.intro),
     JSON_TITLE: JSON.stringify(post.title),
     JSON_DESCRIPTION: JSON.stringify(post.og_description || post.description),
+    JSON_CATEGORY_LABEL: JSON.stringify(categoryLabel),
     BODY: renderBody(post.body || ''),
     RELATED: renderRelated(post.related || [], registry, post.slug),
     FAQ_SCHEMA: renderFaqSchema(post.faqs || []),

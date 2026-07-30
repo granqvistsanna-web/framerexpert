@@ -6,16 +6,16 @@
   <meta name="theme-color" content="#27272A">
   <meta name="color-scheme" content="dark">
   <title>Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod — FramerExpert.se</title>
-  <meta name="description" content="Framer CMS i praktiken — så strukturerar du samlingar, fält, filter och detaljsidor. En hands-on guide för dig som vill bygga en dynamisk webbplats i Framer utan kod.">
+  <meta name="description" content="Framer CMS 2026 — hands-on guide till samlingar, fält, dynamiska listor, detaljsidor, filter och migrering. Så bygger du en dynamisk sajt utan kod.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod">
-  <meta property="og:description" content="Framer CMS i praktiken — så strukturerar du samlingar, fält, filter och detaljsidor i Framer.">
+  <meta property="og:description" content="Hands-on guide till Framer CMS 2026 — samlingar, fält, detaljsidor, filter och migrering, utan kod.">
   <meta property="og:url" content="https://framerexpert.se/blog/framer-cms-i-praktiken.html">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="sv_SE">
   <meta property="article:published_time" content="2026-04-20">
-  <meta property="article:modified_time" content="2026-04-20">
+  <meta property="article:modified_time" content="2026-07-30">
   <meta property="article:author" content="FramerExpert">
   <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -43,9 +43,9 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod",
-    "description": "Framer CMS i praktiken — så strukturerar du samlingar, fält, filter och detaljsidor i Framer.",
+    "description": "Hands-on guide till Framer CMS 2026 — samlingar, fält, detaljsidor, filter och migrering, utan kod.",
     "datePublished": "2026-04-20",
-    "dateModified": "2026-04-20",
+    "dateModified": "2026-07-30",
     "author": {
       "@type": "Organization",
       "name": "FramerExpert",
@@ -68,6 +68,54 @@
       { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se" },
       { "@type": "ListItem", "position": 2, "name": "Blogg", "item": "https://framerexpert.se/blog/" },
       { "@type": "ListItem", "position": 3, "name": "Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vad är Framer CMS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Framer CMS är ett inbyggt innehållssystem där du skapar samlingar (collections) som fungerar som databaser — till exempel blogginlägg, case eller team. Varje samling har poster med fält du själv definierar, och du bygger en mall en gång i stället för att designa varje sida manuellt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur många poster klarar Framer CMS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Framer CMS fungerar bra för hundratals till några tusen poster per samling. För tiotusentals poster eller mycket tung filtrering är plattformen inte byggd — då passar ett dedikerat CMS eller en e-handelsplattform bättre."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan jag importera innehåll till Framer CMS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Framer kan importera från CSV, vilket gör migrering från WordPress, Webflow eller ett annat CMS hanterbar även för hundratals poster. Städa datan och testa importen i en test-samling innan du kör skarpt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Får varje CMS-sida egen SEO-metadata?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Varje CMS-genererad sida kan ha egen title, meta description och OG-bild, styrt från fält i samlingen. Det är avgörande för att varje inlägg ska kunna ranka individuellt i Google."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan jag ändra fälttyper i efterhand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Det går, men det är tidskrävande och kan innebära att data behöver flyttas manuellt. Välj rätt fälttyp från början — särskilt plain text kontra formatted text — så slipper du omarbete senare."
+        }
+      }
     ]
   }
   </script>
@@ -142,7 +190,7 @@
     <ol class="breadcrumbs__list">
       <li><a href="/" data-i18n="nav.home">Hem</a></li>
       <li><a href="/blog/" data-i18n="nav.blog">Blogg</a></li>
-      <li><span aria-current="page" data-i18n="post4.title">Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod</span></li>
+      <li><span aria-current="page">Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod</span></li>
     </ol>
   </div>
 
@@ -150,120 +198,115 @@
   <article class="container">
     <header class="blog-post__header">
       <div class="blog-post__meta">
-        <span class="blog-post__category" data-i18n="articles.a4.category">CMS</span>
-        <time datetime="2026-04-20" data-i18n="post4.date">20 april 2026</time>
-        <span data-i18n="post4.readtime">10 min läsning</span>
+        <span class="blog-post__category">CMS</span>
+        <time datetime="2026-04-20">20 april 2026</time>
+        <span>10 min läsning</span>
       </div>
-      <h1 class="blog-post__title" data-i18n="post4.title">Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod</h1>
-      <p class="blog-post__intro" data-i18n="post4.intro">Framer CMS gör det möjligt att bygga en dynamisk webbplats med upprepat innehåll — blogginlägg, case, teammedlemmar, produkter — utan en enda rad kod. I den här guiden går vi igenom hur CMS fungerar i Framer, hur du strukturerar samlingar och fält, hur du kopplar dynamiska listor och detaljsidor, och vilka fallgropar som är värda att undvika.</p>
+      <h1 class="blog-post__title">Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod</h1>
+      <p class="blog-post__intro">Framer CMS gör det möjligt att bygga en dynamisk webbplats med upprepat innehåll — blogginlägg, case, teammedlemmar, produkter — utan en enda rad kod. Den här guiden går igenom hur CMS fungerar, hur du strukturerar samlingar och fält, hur du kopplar dynamiska listor och detaljsidor, och vilka fallgropar som är värda att undvika.</p>
     </header>
 
     <div class="blog-post__content">
-      <h2 data-i18n="post4.h2_1">Vad är Framer CMS?</h2>
-      <p data-i18n="post4.p1_1">Framer CMS är ett innehållssystem inbyggt i Framer där du skapar samlingar (collections) som fungerar som databaser — till exempel ”Blogginlägg”, ”Case” eller ”Team”. Varje samling innehåller poster (items) med fält som du själv definierar: rubrik, bild, datum, brödtext och så vidare.</p>
-      <p data-i18n="post4.p1_2">Istället för att designa varje sida manuellt bygger du en mall en gång och låter Framer generera alla detaljsidor automatiskt utifrån innehållet i samlingen.</p>
-
-      <h2 data-i18n="post4.h2_2">Så strukturerar du dina samlingar</h2>
-      <p data-i18n="post4.p2_1">Bra struktur är halva jobbet. Innan du skapar din första samling, tänk igenom:</p>
+      <h2>Vad är Framer CMS?</h2>
+      <p>Framer CMS är ett innehållssystem inbyggt i Framer där du skapar samlingar (collections) som fungerar som databaser — till exempel "Blogginlägg", "Case" eller "Team". Varje samling innehåller poster (items) med fält som du själv definierar: rubrik, bild, datum, brödtext och så vidare.</p>
+      <p>Istället för att designa varje sida manuellt bygger du en mall en gång och låter Framer generera alla detaljsidor automatiskt utifrån innehållet i samlingen. Lägger du till en post skapas sidan åt dig; ändrar du mallen uppdateras alla sidor samtidigt.</p>
+      <h2>Så strukturerar du dina samlingar</h2>
+      <p>Bra struktur är halva jobbet. Innan du skapar din första samling, tänk igenom:</p>
       <ul>
-        <li data-i18n="post4.p2_li1">Vilka typer av innehåll upprepas på sajten?</li>
-        <li data-i18n="post4.p2_li2">Vilka fält behövs för varje post?</li>
-        <li data-i18n="post4.p2_li3">Behöver du relationer mellan samlingar (t.ex. inlägg kopplat till författare)?</li>
+        <li>Vilka typer av innehåll upprepas på sajten?</li>
+        <li>Vilka fält behövs för varje post?</li>
+        <li>Behöver du relationer mellan samlingar (t.ex. inlägg kopplat till författare)?</li>
       </ul>
-      <p data-i18n="post4.p2_2">En tumregel: en samling per innehållstyp. Blanda aldrig blogginlägg och case i samma samling, även om de ser lika ut — du kommer vilja filtrera och layouta dem olika.</p>
-
-      <h2 data-i18n="post4.h2_3">Fälttyper du bör känna till</h2>
-      <p data-i18n="post4.p3_1">Framer CMS stödjer flera fälttyper. De viktigaste är:</p>
+      <p>En tumregel: en samling per innehållstyp. Blanda aldrig blogginlägg och case i samma samling, även om de ser lika ut — du kommer vilja filtrera och layouta dem olika, och en delad samling gör båda krångligare.</p>
+      <h2>Fälttyper du bör känna till</h2>
+      <p>Framer CMS stödjer flera fälttyper. De viktigaste är:</p>
       <ul>
-        <li><strong data-i18n="post4.p3_li1_key">Plain text</strong><span data-i18n="post4.p3_li1_val"> — för rubriker och korta texter</span></li>
-        <li><strong data-i18n="post4.p3_li2_key">Formatted text</strong><span data-i18n="post4.p3_li2_val"> — för brödtext med rubriker, listor och länkar</span></li>
-        <li><strong data-i18n="post4.p3_li3_key">Image & File</strong><span data-i18n="post4.p3_li3_val"> — för bilder, PDF:er och andra filer</span></li>
-        <li><strong data-i18n="post4.p3_li4_key">Date</strong><span data-i18n="post4.p3_li4_val"> — för publiceringsdatum och sortering</span></li>
-        <li><strong data-i18n="post4.p3_li5_key">Link</strong><span data-i18n="post4.p3_li5_val"> — för externa URL:er och interna referenser</span></li>
-        <li><strong data-i18n="post4.p3_li6_key">Reference</strong><span data-i18n="post4.p3_li6_val"> — för att koppla poster mellan samlingar</span></li>
-        <li><strong data-i18n="post4.p3_li7_key">Multi-reference</strong><span data-i18n="post4.p3_li7_val"> — för taggar och kategorier</span></li>
+        <li>Plain text — för rubriker och korta texter</li>
+        <li>Formatted text — för brödtext med rubriker, listor och länkar</li>
+        <li>Image &amp; File — för bilder, PDF:er och andra filer</li>
+        <li>Date — för publiceringsdatum och sortering</li>
+        <li>Link — för externa URL:er och interna referenser</li>
+        <li>Reference — för att koppla poster mellan samlingar</li>
+        <li>Multi-reference — för taggar och kategorier</li>
       </ul>
-      <p data-i18n="post4.p3_2">Välj fälttyp med omsorg från början — det är möjligt men tidskrävande att migrera fält i efterhand.</p>
-
-      <h2 data-i18n="post4.h2_4">Bygga listvyn (collection list)</h2>
-      <p data-i18n="post4.p4_1">När samlingen är på plats kan du visa innehållet dynamiskt. Placera en layout-container på canvasen, koppla den till din samling och designa en post. Framer duplicerar designen för varje item.</p>
-      <p data-i18n="post4.p4_2">Några principer för bra listvyer:</p>
+      <p>Välj fälttyp med omsorg från början. Det är möjligt men tidskrävande att migrera fält i efterhand, och den vanligaste tabben är att lägga rubriker i formatted text när plain text hade räckt — då släpar du med onödig formatering överallt.</p>
+      <h2>Bygga listvyn (collection list)</h2>
+      <p>När samlingen är på plats kan du visa innehållet dynamiskt. Placera en layout-container på canvasen, koppla den till din samling och designa en post. Framer duplicerar designen för varje item.</p>
+      <p>Några principer för bra listvyer:</p>
       <ul>
-        <li data-i18n="post4.p4_li1">håll kortdesignen enkel — ett fokus per kort</li>
-        <li data-i18n="post4.p4_li2">sortera på datum (nyast först) som default</li>
-        <li data-i18n="post4.p4_li3">visa max 6–12 poster innan du lägger till filter eller paginering</li>
-        <li data-i18n="post4.p4_li4">använd samma kortdesign över hela sajten för konsistens</li>
+        <li>Håll kortdesignen enkel — ett fokus per kort</li>
+        <li>Sortera på datum (nyast först) som default</li>
+        <li>Visa max 6–12 poster innan du lägger till filter eller paginering</li>
+        <li>Använd samma kortdesign över hela sajten för konsistens</li>
       </ul>
-
-      <h2 data-i18n="post4.h2_5">Skapa detaljsidor automatiskt</h2>
-      <p data-i18n="post4.p5_1">Det är här Framer CMS verkligen sparar tid. För varje samling kan du skapa en detaljsidemall som Framer använder för att generera en sida per post — med egen URL, egen meta-data och egen layout.</p>
-      <p data-i18n="post4.p5_2">Gör så här:</p>
+      <h2>Skapa detaljsidor automatiskt</h2>
+      <p>Det är här Framer CMS verkligen sparar tid. För varje samling kan du skapa en detaljsidemall som Framer använder för att generera en sida per post — med egen URL, egen metadata och egen layout.</p>
+      <p>Gör så här:</p>
       <ul>
-        <li data-i18n="post4.p5_li1">skapa en ny sida och ange att den är en CMS-mall för samlingen</li>
-        <li data-i18n="post4.p5_li2">bind varje element (rubrik, bild, brödtext) till rätt fält</li>
-        <li data-i18n="post4.p5_li3">sätt upp slug-fältet så att URL:en blir läsbar och SEO-vänlig</li>
-        <li data-i18n="post4.p5_li4">publicera — Framer genererar automatiskt en sida per post</li>
+        <li>Skapa en ny sida och ange att den är en CMS-mall för samlingen</li>
+        <li>Bind varje element (rubrik, bild, brödtext) till rätt fält</li>
+        <li>Sätt upp slug-fältet så att URL:en blir läsbar och SEO-vänlig</li>
+        <li>Publicera — Framer genererar automatiskt en sida per post</li>
       </ul>
-      <p data-i18n="post4.p5_3">Uppdaterar du mallen ändras alla detaljsidor samtidigt. Det är stor skillnad mot att bygga sidor manuellt.</p>
-
-      <h2 data-i18n="post4.h2_6">Filter, sök och kategorier</h2>
-      <p data-i18n="post4.p6_1">När innehållet växer behöver besökaren hjälp att hitta rätt. Framer CMS låter dig filtrera listor på valfritt fält — kategori, tagg, år eller författare.</p>
-      <p data-i18n="post4.p6_2">Tips för bra filterupplevelser:</p>
+      <p>Uppdaterar du mallen ändras alla detaljsidor samtidigt. Det är stor skillnad mot att bygga sidor manuellt, och det är också det som gör att en sajt med hundra inlägg tar lika lång tid att designa som en med tre.</p>
+      <h2>Filter, sök och kategorier</h2>
+      <p>När innehållet växer behöver besökaren hjälp att hitta rätt. Framer CMS låter dig filtrera listor på valfritt fält — kategori, tagg, år eller författare.</p>
+      <p>Tips för bra filterupplevelser:</p>
       <ul>
-        <li data-i18n="post4.p6_li1">använd en separat samling för kategorier och koppla via reference</li>
-        <li data-i18n="post4.p6_li2">gör filter delbara via URL-parametrar (t.ex. ?category=cms)</li>
-        <li data-i18n="post4.p6_li3">visa en tydlig ”ingenting matchade”-vy om filtret är tomt</li>
+        <li>Använd en separat samling för kategorier och koppla via reference</li>
+        <li>Gör filter delbara via URL-parametrar (t.ex. <code>?category=cms</code>)</li>
+        <li>Visa en tydlig "ingenting matchade"-vy om filtret är tomt</li>
       </ul>
-
-      <h2 data-i18n="post4.h2_7">SEO och CMS: hur de hänger ihop</h2>
-      <p data-i18n="post4.p7_1">Varje CMS-sida i Framer kan ha sin egen title, meta description och OG-bild — styrt från fält i samlingen. Det är avgörande för att varje inlägg ska kunna ranka individuellt.</p>
-      <p data-i18n="post4.p7_2">Checklista per post:</p>
+      <h2>SEO och CMS: hur de hänger ihop</h2>
+      <p>Varje CMS-sida i Framer kan ha sin egen title, meta description och OG-bild — styrt från fält i samlingen. Det är avgörande för att varje inlägg ska kunna ranka individuellt. Vill du ha hela bilden går vi igenom den i vår <a href="/blog/framer-seo-guide.html">Framer SEO-guide</a>.</p>
+      <p>Checklista per post:</p>
       <ul>
-        <li data-i18n="post4.p7_li1">unik title med huvudnyckelord</li>
-        <li data-i18n="post4.p7_li2">meta description under 160 tecken</li>
-        <li data-i18n="post4.p7_li3">slug med nyckelord, utan datum eller ID-nummer</li>
-        <li data-i18n="post4.p7_li4">OG-bild i 1200×630 px</li>
-        <li data-i18n="post4.p7_li5">korrekt datum-metadata för färskhet</li>
+        <li>Unik title med huvudnyckelord</li>
+        <li>Meta description under 160 tecken</li>
+        <li>Slug med nyckelord, utan datum eller ID-nummer</li>
+        <li>OG-bild i 1200×630 px</li>
+        <li>Korrekt datum-metadata för färskhet</li>
       </ul>
-
-      <h2 data-i18n="post4.h2_8">Import och migrering</h2>
-      <p data-i18n="post4.p8_1">Kommer du från WordPress, Webflow eller ett annat CMS? Framer kan importera från CSV, vilket gör migrering hanterbar även för hundratals poster.</p>
-      <p data-i18n="post4.p8_2">Planera migreringen i tre steg:</p>
+      <h2>Import och migrering</h2>
+      <p>Kommer du från WordPress, Webflow eller ett annat CMS? Framer kan importera från CSV, vilket gör migrering hanterbar även för hundratals poster.</p>
+      <p>Planera migreringen i tre steg:</p>
       <ul>
-        <li data-i18n="post4.p8_li1">exportera allt innehåll till CSV med tydliga kolumnnamn</li>
-        <li data-i18n="post4.p8_li2">städa datan — bilder, HTML-taggar, interna länkar</li>
-        <li data-i18n="post4.p8_li3">importera till en test-samling först innan du kör skarpt</li>
+        <li>Exportera allt innehåll till CSV med tydliga kolumnnamn</li>
+        <li>Städa datan — bilder, HTML-taggar, interna länkar</li>
+        <li>Importera till en test-samling först innan du kör skarpt</li>
       </ul>
-
-      <h2 data-i18n="post4.h2_9">Vanliga misstag att undvika</h2>
+      <h2>Ett exempel: en blogg från grunden</h2>
+      <p>Säg att du bygger en blogg. Du skapar en samling "Blogginlägg" med fälten rubrik (plain text), slug, publiceringsdatum (date), utdrag (plain text), omslagsbild (image), brödtext (formatted text) och kategori (reference mot en separat "Kategorier"-samling). Sju fält, inte fler — allt du inte behöver dag ett gör bara samlingen rörigare.</p>
+      <p>Sedan bygger du två sidor. På bloggöversikten lägger du en collection list kopplad till samlingen, sorterad på datum med nyast först, och designar ett kort som visar omslagsbild, rubrik och utdrag. På detaljsidemallen binder du rubrik, bild, datum och brödtext till fälten, och sätter slug-fältet som URL.</p>
+      <p>Därifrån är sajten självgående. Varje nytt inlägg du lägger till dyker upp överst i listan och får sin egen sida med rätt metadata — utan att du rör designen igen.</p>
+      <h2>Vanliga misstag att undvika</h2>
       <ul>
-        <li data-i18n="post4.p9_li1">att sätta upp för många fält ”för säkerhets skull” — håll det minimalt</li>
-        <li data-i18n="post4.p9_li2">att använda plain text där formatted text behövs (eller tvärtom)</li>
-        <li data-i18n="post4.p9_li3">att glömma sätta upp detaljsidemallen innan första posten publiceras</li>
-        <li data-i18n="post4.p9_li4">att inte tänka på slug-formatet från start — det blir krångligt att ändra senare</li>
-        <li data-i18n="post4.p9_li5">att blanda olika innehållstyper i samma samling</li>
+        <li>Att sätta upp för många fält "för säkerhets skull" — håll det minimalt</li>
+        <li>Att använda plain text där formatted text behövs (eller tvärtom)</li>
+        <li>Att glömma sätta upp detaljsidemallen innan första posten publiceras</li>
+        <li>Att inte tänka på slug-formatet från start — det blir krångligt att ändra senare</li>
+        <li>Att blanda olika innehållstyper i samma samling</li>
       </ul>
-
-      <h2 data-i18n="post4.h2_10">Slutsats</h2>
-      <p data-i18n="post4.p10_1">Framer CMS är ett av de enklaste sätten att bygga en dynamisk webbplats utan utvecklare. Du får kraften i ett riktigt CMS — samlingar, relationer, detaljsidor, filter — i samma visuella miljö där du designar.</p>
-      <p data-i18n="post4.p10_2">Nyckeln är att planera strukturen innan du börjar: en samling per innehållstyp, rätt fälttyper från start och en detaljsidemall som ger varje post sin egen SEO-optimerade sida. Gör du det rätt kan du lägga till nytt innehåll i flera år framåt utan att ändra en enda designdetalj.</p>
+      <h2>Sammanfattning</h2>
+      <p>Framer CMS är ett av de enklaste sätten att bygga en dynamisk webbplats utan utvecklare. Du får kraften i ett riktigt CMS — samlingar, relationer, detaljsidor, filter — i samma visuella miljö där du designar.</p>
+      <p>Nyckeln är att planera strukturen innan du börjar: en samling per innehållstyp, rätt fälttyper från start och en detaljsidemall som ger varje post sin egen SEO-optimerade sida. Gör du det rätt kan du lägga till nytt innehåll i flera år framåt utan att ändra en enda designdetalj.</p>
     </div>
 
     <!-- Related Articles -->
     <aside class="blog-post__related">
       <h2 class="blog-post__related-title" data-i18n="post.related">Relaterade artiklar</h2>
       <div class="blog-post__related-grid">
-        <a href="/blog/vad-ar-framer.html" class="card">
+        <a href="/blog/framer-ecommerce-guide.html" class="card">
           <div class="card__image">
-            <img src="../assets/thumb-vad-ar-framer.svg" alt="Vad är Framer?" loading="lazy">
+            <img src="../assets/thumb-framer-ecommerce.svg" alt="Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?" loading="lazy">
           </div>
-          <p class="card__text"><strong data-i18n="articles.a1.title">Vad är Framer? En komplett guide</strong> — <span data-i18n="articles.a1.excerpt">Allt du behöver veta om Framer — från grunderna till avancerade funktioner.</span></p>
+          <p class="card__text"><strong>Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?</strong> — <span>Framer e-handel 2026 — så långt räcker Framers inbyggda store-funktion, när du bör integrera Shopify eller Stripe, och när du ska välja en riktig e-handelsplattform.</span></p>
         </a>
-        <a href="/blog/5-tips-bygga-snabbare.html" class="card">
+        <a href="/blog/framer-seo-guide.html" class="card">
           <div class="card__image">
-            <img src="../assets/thumb-5-tips.svg" alt="5 tips för att bygga snabbare i Framer" loading="lazy">
+            <img src="../assets/thumb-framer-seo.svg" alt="Framer SEO (2026): Så optimerar du din sajt för Google" loading="lazy">
           </div>
-          <p class="card__text"><strong data-i18n="articles.a3.title">5 tips för att bygga snabbare i Framer</strong> — <span data-i18n="articles.a3.excerpt">Spara tid och arbeta smartare. Fem konkreta tips som gör dig snabbare i Framer.</span></p>
+          <p class="card__text"><strong>Framer SEO (2026): Så optimerar du din sajt för Google</strong> — <span>Framer SEO 2026 — komplett guide till titlar, strukturerad data, Core Web Vitals och sitemap. Så får du Framer-sajten att ranka i Google.</span></p>
         </a>
       </div>
     </aside>

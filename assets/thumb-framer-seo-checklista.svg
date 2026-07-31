@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" fill="#323236"/>
+
+  <!-- Checklist rows -->
+  <g>
+    <!-- row 1 checked -->
+    <rect x="170" y="110" width="28" height="28" rx="7" fill="#3F3F46"/>
+    <path d="M177 124 l5 5 l9 -10" stroke="#F5F5F0" stroke-width="3" stroke-opacity="0.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="214" y="119" width="216" height="10" rx="5" fill="#F5F5F0" opacity="0.5"/>
+
+    <!-- row 2 checked -->
+    <rect x="170" y="160" width="28" height="28" rx="7" fill="#3F3F46"/>
+    <path d="M177 174 l5 5 l9 -10" stroke="#F5F5F0" stroke-width="3" stroke-opacity="0.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="214" y="169" width="180" height="10" rx="5" fill="#F5F5F0" opacity="0.45"/>
+
+    <!-- row 3 checked -->
+    <rect x="170" y="210" width="28" height="28" rx="7" fill="#3F3F46"/>
+    <path d="M177 224 l5 5 l9 -10" stroke="#F5F5F0" stroke-width="3" stroke-opacity="0.55" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="214" y="219" width="200" height="10" rx="5" fill="#F5F5F0" opacity="0.32"/>
+
+    <!-- row 4 unchecked -->
+    <rect x="170" y="260" width="28" height="28" rx="7" fill="#3F3F46" opacity="0.7"/>
+    <rect x="214" y="269" width="150" height="10" rx="5" fill="#F5F5F0" opacity="0.18"/>
+  </g>
+
+  <!-- Label -->
+  <text x="300" y="345" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#F5F5F0" opacity="0.55">SEO-checklista</text>
+</svg>

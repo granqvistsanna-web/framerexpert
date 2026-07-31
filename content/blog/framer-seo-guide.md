@@ -3,6 +3,7 @@ slug: framer-seo-guide
 page_id: post5
 category: seo
 date: 2026-04-22
+date_modified: 2026-07-31
 date_display: 22 april 2026
 readtime: 10 min läsning
 thumbnail: thumb-framer-seo.svg
@@ -56,7 +57,7 @@ Byt aldrig URL på en sida som redan har trafik utan att sätta upp en 301-redir
 
 ## Strukturerad data (JSON-LD)
 
-Framer stöder custom code i sidans `<head>`, vilket betyder att du kan lägga till JSON-LD-schemas för artiklar, FAQ, brödsmulor och produkter. Det ger dig tillgång till rich results i Google — till exempel FAQ-dropdowns, stjärnbetyg och artikelhuvuden med bild.
+Framer stöder custom code i sidans `<head>`, vilket betyder att du kan lägga till JSON-LD-schemas för artiklar, FAQ, brödsmulor och produkter. Det ger dig tillgång till rich results i Google — till exempel FAQ-dropdowns, stjärnbetyg och artikelhuvuden med bild. Vi går igenom varje schema, med exempel och validering, i djupdykningen om [strukturerad data i Framer](/blog/framer-strukturerad-data.html).
 
 Börja enkelt: **BlogPosting** för bloggposter, **BreadcrumbList** för navigering och **FAQPage** där du har frågor och svar. Lägg till fler scheman först när grunderna är på plats.
 
@@ -95,7 +96,7 @@ Googles Core Web Vitals mäter tre saker du behöver hålla under kontroll:
 
 Framer levererar oftast bra värden direkt, men du kan försämra dem själv. Vanliga fallgropar är stora okomprimerade hero-bilder, tunga animationer på mobil, och inbäddade videos ovanför fold-en som laddar tidigt.
 
-Kör PageSpeed Insights på varje viktig landningssida innan du sätter en kampanj live. Fixa det som är rött — gult duger oftast.
+Kör PageSpeed Insights på varje viktig landningssida innan du sätter en kampanj live. Fixa det som är rött — gult duger oftast. Vill du veta exakt vad som sänker varje mått i Framer har vi en egen guide till [Core Web Vitals i Framer](/blog/framer-core-web-vitals.html).
 
 ### Vanliga fallgropar i Framer
 
@@ -138,5 +139,7 @@ En pragmatisk ordning att arbeta i:
 - Bilder komprimerade, alt-text skriven, dimensioner satta.
 - Sitemap inskickad i Search Console, interna länkar på plats.
 - PageSpeed Insights kört på varje viktig sida.
+
+Vill du ha den som en avbockningsbar lista finns hela [Framer SEO-checklistan](/blog/framer-seo-checklista.html) med 24 punkter att gå igenom innan du publicerar.
 
 Gör du det konsekvent står sig Framer-sajter utmärkt i sökresultaten 2026.

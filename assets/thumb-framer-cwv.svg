@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" fill="#323236"/>
+
+  <!-- Gauge arc background -->
+  <path d="M190 260 A110 110 0 0 1 410 260" stroke="#3F3F46" stroke-width="26" fill="none" stroke-linecap="round"/>
+  <!-- Gauge arc value (good / green zone, ~75%) -->
+  <path d="M190 260 A110 110 0 0 1 388 197" stroke="#F5F5F0" stroke-width="26" fill="none" stroke-linecap="round" stroke-opacity="0.6"/>
+
+  <!-- Needle -->
+  <line x1="300" y1="260" x2="360" y2="205" stroke="#F5F5F0" stroke-width="5" stroke-opacity="0.75" stroke-linecap="round"/>
+  <circle cx="300" cy="260" r="12" fill="#3F3F46"/>
+  <circle cx="300" cy="260" r="5" fill="#F5F5F0" opacity="0.6"/>
+
+  <!-- Three metric dots -->
+  <text x="232" y="300" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#F5F5F0" opacity="0.5">LCP</text>
+  <text x="300" y="300" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#F5F5F0" opacity="0.5">INP</text>
+  <text x="368" y="300" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#F5F5F0" opacity="0.5">CLS</text>
+
+  <!-- Label -->
+  <text x="300" y="345" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#F5F5F0" opacity="0.55">Core Web Vitals</text>
+</svg>

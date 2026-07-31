@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#27272A">
+  <meta name="color-scheme" content="dark">
+  <title>Strukturerad data i Framer (2026): Så lägger du till JSON-LD — FramerExpert.se</title>
+  <meta name="description" content="Så lägger du till strukturerad data (JSON-LD) i Framer 2026 — vilka scheman som ger rich results, hur du lägger in dem via custom code, och hur du validerar.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Strukturerad data i Framer (2026): Så lägger du till JSON-LD-schema">
+  <meta property="og:description" content="Så lägger du till JSON-LD-schema i Framer — vilka scheman ger rich results, var du klistrar in dem, och hur du validerar.">
+  <meta property="og:url" content="https://framerexpert.se/blog/framer-strukturerad-data.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="article:published_time" content="2026-07-31">
+  <meta property="article:modified_time" content="2026-07-31">
+  <meta property="article:author" content="FramerExpert">
+  <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://framerexpert.se/assets/og-default.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://framerexpert.se/blog/framer-strukturerad-data.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Strukturerad data i Framer (2026): Så lägger du till JSON-LD-schema",
+    "description": "Så lägger du till JSON-LD-schema i Framer — vilka scheman ger rich results, var du klistrar in dem, och hur du validerar.",
+    "datePublished": "2026-07-31",
+    "dateModified": "2026-07-31",
+    "author": {
+      "@type": "Organization",
+      "name": "FramerExpert",
+      "url": "https://framerexpert.se"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FramerExpert.se",
+      "url": "https://framerexpert.se"
+    },
+    "mainEntityOfPage": "https://framerexpert.se/blog/framer-strukturerad-data.html",
+    "inLanguage": "sv"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se" },
+      { "@type": "ListItem", "position": 2, "name": "Blogg", "item": "https://framerexpert.se/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Strukturerad data i Framer (2026): Så lägger du till JSON-LD-schema" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Behöver jag strukturerad data om Framer redan lägger till metadata?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Framer lägger till grundläggande meta och Open Graph automatiskt, men inte artikelspecifik strukturerad data som BlogPosting eller FAQPage. Vill du ha rich results som FAQ-dropdowns eller artikelhuvuden lägger du till JSON-LD själv."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Var lägger jag JSON-LD i Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I page settings under custom code, i fältet för sidans head. Klistra in ett script-block med type application/ld+json. Du kan lägga det per sida eller globalt för scheman som gäller hela sajten, som Organization."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ger strukturerad data automatiskt rich results?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nej. Korrekt schema gör en sida berättigad till rich results, men Google avgör själv om och när de visas. Felfri och relevant markup ökar chansen, men garanterar inget."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad händer om min JSON-LD har fel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Felformaterad JSON-LD visas inte bara inte — den kan få Google att misstro övrig markup på sidan. Kör alltid varje sida genom Rich Results Test innan du publicerar."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="post16">
+
+  <!-- NAVIGATION -->
+  <nav data-twostep-nav data-nav-status="not-active" class="twostep-nav">
+    <div data-nav-toggle="close" class="twostep-nav__bg"></div>
+    <div class="twostep-nav__wrap">
+      <div class="twostep-nav__width">
+        <div class="twostep-nav__bar">
+          <div class="twostep-nav__back">
+            <div class="twostep-nav__back-bg"></div>
+          </div>
+          <div class="twostep-nav__top">
+            <a href="/" class="twostep-nav__logo">
+              framer.expert
+            </a>
+            <button data-nav-toggle="toggle" class="twostep-nav__toggle" aria-label="Öppna meny" aria-expanded="false">
+              <div class="twostep-nav__toggle-bar"></div>
+              <div class="twostep-nav__toggle-bar"></div>
+            </button>
+            <div class="twostep-nav__top-line"></div>
+          </div>
+          <div class="twostep-nav__bottom">
+            <div class="twostep-nav__bottom-overflow">
+              <div class="twostep-nav__bottom-inner">
+                <div class="twostep-nav__bottom-row">
+                  <div class="twostep-nav__bottom-col">
+                    <div class="twostep-nav__info">
+                      <ul class="twostep-nav__ul">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-span" data-i18n="nav.blog">Blogg</span></a>
+                        </li>
+                      </ul>
+                      <ul class="twostep-nav__ul is--small">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=getting-started" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.getting-started">Kom igång</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=comparison" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.comparison">Jämförelse</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=tips" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.tips">Tips</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=seo" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.seo">SEO</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=cms" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.cms">CMS</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="https://www.framer.com" target="_blank" rel="noopener" class="twostep-nav__link"><span class="twostep-nav__link-eyebrow">Framer.com</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumbs container">
+    <ol class="breadcrumbs__list">
+      <li><a href="/" data-i18n="nav.home">Hem</a></li>
+      <li><a href="/blog/" data-i18n="nav.blog">Blogg</a></li>
+      <li><span aria-current="page">Strukturerad data i Framer (2026): Så lägger du till JSON-LD-schema</span></li>
+    </ol>
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="container">
+    <header class="blog-post__header">
+      <div class="blog-post__meta">
+        <span class="blog-post__category">SEO</span>
+        <time datetime="2026-07-31">31 juli 2026</time>
+        <span>9 min läsning</span>
+      </div>
+      <h1 class="blog-post__title">Strukturerad data i Framer (2026): Så lägger du till JSON-LD-schema</h1>
+      <p class="blog-post__intro">Strukturerad data är hur du berättar för Google exakt vad en sida innehåller — att det här är en artikel, det här en FAQ, det här ett företag. Rätt använt ger det rich results i sökresultatet. Framer har inget inbyggt schemaverktyg, men du lägger till JSON-LD via custom code. Så här gör du, schema för schema.</p>
+    </header>
+
+    <div class="blog-post__content">
+      <h2>Vad strukturerad data faktiskt gör</h2>
+      <p>Strukturerad data ändrar inte hur sidan ser ut för besökaren. Den lägger till ett osynligt lager, skrivet i formatet JSON-LD, som beskriver innehållet på ett sätt sökmotorer förstår exakt. I stället för att gissa att en text är en artikel med författare och datum får Google det serverat.</p>
+      <p>Belöningen är rich results: FAQ-dropdowns direkt i sökträffen, artikelhuvuden med bild och datum, brödsmulor i stället för en naken URL, stjärnbetyg på produkter. De tar mer plats, sticker ut och får fler klick.</p>
+      <p>Framer lägger till grundläggande meta och Open Graph på egen hand, men inte den här typen av sidspecifik markup. Den lägger du till själv, och det är enklare än det låter. Strukturerad data är ett steg i den bredare <a href="/blog/framer-seo-guide.html">Framer SEO-guiden</a> — här går vi på djupet i just den delen.</p>
+      <h2>Så lägger du in JSON-LD i Framer</h2>
+      <p>Du arbetar i page settings. Öppna sidan, gå till custom code och hitta fältet för sidans <code>&lt;head&gt;</code>. Där klistrar du in ett <code>&lt;script type="application/ld+json"&gt;</code>-block med ditt schema inuti.</p>
+      <p>Två saker att hålla reda på:</p>
+      <ul>
+        <li><strong>Per sida eller globalt.</strong> Scheman som beskriver en specifik sida — artikel, FAQ, produkt — läggs på just den sidan. Scheman som gäller hela sajten, som <code>Organization</code>, lägger du i site settings så att de finns överallt.</li>
+        <li><strong>Ett block per schema, eller en graf.</strong> Har en sida flera scheman kan du antingen lägga flera script-block eller samla dem i en <code>@graph</code>-array. Båda fungerar; flera block är enklast att överblicka.</li>
+      </ul>
+      <h2>BlogPosting: för artiklar</h2>
+      <p>Det här är schemat du använder mest om du bloggar. Det talar om att sidan är en artikel och ger Google rubrik, bild, datum och författare i strukturerad form.</p>
+      <p>De viktigaste egenskaperna att fylla i:</p>
+      <ul>
+        <li><code>headline</code> — artikelns rubrik</li>
+        <li><code>image</code> — URL till en representativ bild, gärna 1200 px bred</li>
+        <li><code>datePublished</code> och <code>dateModified</code> — i ISO-format, <code>2026-07-31</code></li>
+        <li><code>author</code> — ett <code>Person</code>- eller <code>Organization</code>-objekt med namn</li>
+        <li><code>publisher</code> — organisationen bakom sajten, med logotyp</li>
+        <li><code>mainEntityOfPage</code> — sidans kanoniska URL</li>
+      </ul>
+      <p>Håll <code>dateModified</code> uppdaterat när du faktiskt reviderar innehållet. Färskhet är en signal, och ett ärligt datum är bättre än ett påhittat.</p>
+      <h2>FAQPage: för frågor och svar</h2>
+      <p><code>FAQPage</code> är det schema som ger snabbast synlig effekt. Har en sida en sektion med frågor och svar kan Google visa dem som utfällbara rader direkt i sökträffen.</p>
+      <p>Strukturen är en lista av <code>Question</code>-objekt, där varje fråga har en <code>acceptedAnswer</code> av typen <code>Answer</code> med själva svarstexten. Två regler avgör om det fungerar:</p>
+      <ul>
+        <li>Frågorna och svaren måste <strong>synas på sidan</strong> för besökaren, inte bara i markup. Dold FAQ-markup bryter mot Googles riktlinjer.</li>
+        <li>Svaren ska vara <strong>äkta svar</strong>, inte länkar eller uppmaningar. Skriv dem så att de är begripliga lösryckta.</li>
+      </ul>
+      <p>Just den här sajten använder <code>FAQPage</code> på de flesta artiklar — inklusive den du läser nu.</p>
+      <h2>BreadcrumbList: för navigering</h2>
+      <p><code>BreadcrumbList</code> ersätter den nakna URL:en i sökträffen med en läsbar sökväg, till exempel Hem › Blogg › Strukturerad data. Det ser proffsigare ut och hjälper Google förstå sajtens hierarki.</p>
+      <p>Schemat är en ordnad lista av <code>ListItem</code>, var och en med <code>position</code>, <code>name</code> och <code>item</code> (URL). Låt ordningen spegla den faktiska vägen till sidan, och se till att namnen matchar dina riktiga sidtitlar.</p>
+      <h2>Organization: för hela sajten</h2>
+      <p><code>Organization</code> läggs en gång, globalt, och beskriver företaget bakom sajten. Det kopplar ihop namn, logotyp och sociala kanaler, och är det som kan ge dig en kunskapspanel med rätt logotyp.</p>
+      <p>Fyll i <code>name</code>, <code>url</code>, en <code>logo</code> (URL till en kvadratisk logotyp) och <code>sameAs</code> med länkar till dina profiler på LinkedIn, Instagram och liknande. Det är ett litet schema med lång räckvidd.</p>
+      <h2>När du är redo för mer</h2>
+      <p>När grunderna sitter finns fler scheman att lägga till, men bara när de speglar vad sidan faktiskt är:</p>
+      <ul>
+        <li><code>Product</code> och <code>Review</code> för produkt- och tjänstesidor med betyg</li>
+        <li><code>HowTo</code> för stegvisa guider</li>
+        <li><code>LocalBusiness</code> om du har en fysisk verksamhet med adress</li>
+        <li><code>VideoObject</code> om video är en central del av sidan</li>
+      </ul>
+      <p>Undvik att stapla schema för sakens skull. Google straffar irrelevant eller vilseledande strukturerad data, så varje schema du lägger till ska motsvara något som verkligen finns på sidan.</p>
+      <h2>Validera innan du publicerar</h2>
+      <p>Det här steget hoppar folk över, och det är just där det går fel. Felformaterad JSON-LD visas inte bara inte — den kan få Google att misstro övrig markup på sidan.</p>
+      <p>Kör varje ny sida genom <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">Googles Rich Results Test</a>. Den säger både om schemat är giltigt och vilka rich results sidan blir berättigad till. För en bredare kontroll finns <a href="https://validator.schema.org" target="_blank" rel="noopener">Schema Markup Validator</a>. När sidan väl är live kan du följa upp under Förbättringar i Search Console, som rapporterar fel och varningar på skarpa sidor.</p>
+      <p>Rätt strukturerad data är inte ett rankningstrick i sig, men det är skillnaden mellan en grå länk och en träff som tar plats och drar blicken till sig.</p>
+    </div>
+
+    <!-- Related Articles -->
+    <aside class="blog-post__related">
+      <h2 class="blog-post__related-title" data-i18n="post.related">Relaterade artiklar</h2>
+      <div class="blog-post__related-grid">
+        <a href="/blog/framer-seo-guide.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-seo.svg" alt="Framer SEO (2026): Så optimerar du din sajt för Google" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Framer SEO (2026): Så optimerar du din sajt för Google</strong> — <span>Framer SEO 2026 — komplett guide till titlar, strukturerad data, Core Web Vitals och sitemap. Så får du Framer-sajten att ranka i Google.</span></p>
+        </a>
+        <a href="/blog/framer-seo-checklista.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-seo-checklista.svg" alt="Framer SEO-checklista (2026): 24 punkter innan du publicerar" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Framer SEO-checklista (2026): 24 punkter innan du publicerar</strong> — <span>24 konkreta punkter för sidinställningar, teknik, innehåll och uppföljning — bocka av innan du publicerar.</span></p>
+        </a>
+      </div>
+    </aside>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__left">&copy; <span data-current-year>2026</span> FramerExpert.se</span>
+      <div class="footer__links">
+        <button class="lang-toggle" id="langToggle" aria-label="Byt språk">
+          <span class="lang-toggle__option is-active" data-lang="sv">SV</span>
+          <span class="lang-toggle__divider">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/init.js"></script>
+</body>
+</html>

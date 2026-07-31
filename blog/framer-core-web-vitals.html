@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#27272A">
+  <meta name="color-scheme" content="dark">
+  <title>Core Web Vitals i Framer (2026): Så får du grönt — FramerExpert.se</title>
+  <meta name="description" content="Core Web Vitals i Framer 2026 — vad LCP, INP och CLS mäter, vad som sänker dem i Framer, och hur du får gröna värden på riktiga besökare.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Core Web Vitals i Framer (2026): Så får du grönt">
+  <meta property="og:description" content="Vad LCP, INP och CLS mäter, vad som sänker dem i Framer, och hur du får gröna värden på riktiga besökare.">
+  <meta property="og:url" content="https://framerexpert.se/blog/framer-core-web-vitals.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="article:published_time" content="2026-07-31">
+  <meta property="article:modified_time" content="2026-07-31">
+  <meta property="article:author" content="FramerExpert">
+  <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://framerexpert.se/assets/og-default.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://framerexpert.se/blog/framer-core-web-vitals.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Core Web Vitals i Framer (2026): Så får du grönt",
+    "description": "Vad LCP, INP och CLS mäter, vad som sänker dem i Framer, och hur du får gröna värden på riktiga besökare.",
+    "datePublished": "2026-07-31",
+    "dateModified": "2026-07-31",
+    "author": {
+      "@type": "Organization",
+      "name": "FramerExpert",
+      "url": "https://framerexpert.se"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FramerExpert.se",
+      "url": "https://framerexpert.se"
+    },
+    "mainEntityOfPage": "https://framerexpert.se/blog/framer-core-web-vitals.html",
+    "inLanguage": "sv"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se" },
+      { "@type": "ListItem", "position": 2, "name": "Blogg", "item": "https://framerexpert.se/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Core Web Vitals i Framer (2026): Så får du grönt" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Har Framer bra Core Web Vitals som standard?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Framer publicerar statisk HTML via ett globalt CDN, serverar bilder i WebP och AVIF och sätter font-display på sina egna typsnitt. De flesta Framer-sajter börjar med gröna värden — problemen uppstår när man lägger till tunga bilder eller animationer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Var mäter jag Core Web Vitals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PageSpeed Insights för en enskild URL, och Core Web Vitals-rapporten i Google Search Console för fältdata från riktiga besökare. Det är fältdatan Google rankar på, inte labbtestet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Påverkar Framers animationer Core Web Vitals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "De kan göra det på mobil om de är tunga. Scroll-bibliotek som Lenis och GSAP kostar JavaScript-körning som visar sig i INP. Håll animationer CSS- och transform-baserade och mät på mobil innan du lägger till fler."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad är ett bra LCP-värde?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under 2,5 sekunder räknas som bra. INP bör vara under 200 millisekunder och CLS under 0,1. Alla tre mäts på det sämre utfallet för verkliga besökare, så mobil väger tungt."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="post17">
+
+  <!-- NAVIGATION -->
+  <nav data-twostep-nav data-nav-status="not-active" class="twostep-nav">
+    <div data-nav-toggle="close" class="twostep-nav__bg"></div>
+    <div class="twostep-nav__wrap">
+      <div class="twostep-nav__width">
+        <div class="twostep-nav__bar">
+          <div class="twostep-nav__back">
+            <div class="twostep-nav__back-bg"></div>
+          </div>
+          <div class="twostep-nav__top">
+            <a href="/" class="twostep-nav__logo">
+              framer.expert
+            </a>
+            <button data-nav-toggle="toggle" class="twostep-nav__toggle" aria-label="Öppna meny" aria-expanded="false">
+              <div class="twostep-nav__toggle-bar"></div>
+              <div class="twostep-nav__toggle-bar"></div>
+            </button>
+            <div class="twostep-nav__top-line"></div>
+          </div>
+          <div class="twostep-nav__bottom">
+            <div class="twostep-nav__bottom-overflow">
+              <div class="twostep-nav__bottom-inner">
+                <div class="twostep-nav__bottom-row">
+                  <div class="twostep-nav__bottom-col">
+                    <div class="twostep-nav__info">
+                      <ul class="twostep-nav__ul">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-span" data-i18n="nav.blog">Blogg</span></a>
+                        </li>
+                      </ul>
+                      <ul class="twostep-nav__ul is--small">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=getting-started" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.getting-started">Kom igång</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=comparison" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.comparison">Jämförelse</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=tips" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.tips">Tips</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=seo" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.seo">SEO</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=cms" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.cms">CMS</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="https://www.framer.com" target="_blank" rel="noopener" class="twostep-nav__link"><span class="twostep-nav__link-eyebrow">Framer.com</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumbs container">
+    <ol class="breadcrumbs__list">
+      <li><a href="/" data-i18n="nav.home">Hem</a></li>
+      <li><a href="/blog/" data-i18n="nav.blog">Blogg</a></li>
+      <li><span aria-current="page">Core Web Vitals i Framer (2026): Så får du grönt</span></li>
+    </ol>
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="container">
+    <header class="blog-post__header">
+      <div class="blog-post__meta">
+        <span class="blog-post__category">SEO</span>
+        <time datetime="2026-07-31">31 juli 2026</time>
+        <span>9 min läsning</span>
+      </div>
+      <h1 class="blog-post__title">Core Web Vitals i Framer (2026): Så får du grönt</h1>
+      <p class="blog-post__intro">Framer ger dig bra Core Web Vitals nästan gratis — statiska sidor på ett CDN är en stark utgångspunkt. Men du kan sänka värdena själv med tunga bilder, för många animationer eller fel typsnittsinställning. Den här guiden går igenom de tre måtten och exakt vad som påverkar dem i just Framer.</p>
+    </header>
+
+    <div class="blog-post__content">
+      <h2>Vad Core Web Vitals är</h2>
+      <p>Core Web Vitals är tre mått Google använder för att bedöma upplevd prestanda, och de är en rankningssignal. De mäter tre olika saker: hur snabbt sidan känns laddad, hur snabbt den svarar på klick, och hur mycket den hoppar medan den laddar.</p>
+      <ul>
+        <li><strong>LCP</strong> (Largest Contentful Paint) — tiden tills det största elementet syns. Bra: under 2,5 sekunder.</li>
+        <li><strong>INP</strong> (Interaction to Next Paint) — hur snabbt sidan svarar på interaktion. Bra: under 200 millisekunder.</li>
+        <li><strong>CLS</strong> (Cumulative Layout Shift) — hur mycket layouten flyttar sig oväntat. Bra: under 0,1.</li>
+      </ul>
+      <p>Det viktiga att förstå: Google rankar på <strong>fältdata</strong> — mätningar från riktiga besökare, samlade i Search Console — inte på labbtestet i PageSpeed Insights. Labbtestet är din verkstad, fältdatan är domen.</p>
+      <h2>Varför Framer börjar starkt</h2>
+      <p>Framer publicerar statiska sidor bakom ett CDN. Det finns ingen databas att fråga och inget PHP att köra, så servern svarar snabbt och LCP får en bra start. Bilder serveras automatiskt i WebP och AVIF till webbläsare som stöder dem, kritisk CSS injiceras per sida, och Framers egna typsnitt laddas med <code>font-display: swap</code>.</p>
+      <p>Med andra ord: en tom Framer-sajt är nästan alltid grön. Problemen uppstår när du fyller den. Resten av guiden handlar om att inte förstöra ett bra utgångsläge — en pusselbit i den bredare <a href="/blog/framer-seo-guide.html">Framer SEO-guiden</a>.</p>
+      <h2>LCP: håll det största elementet lätt</h2>
+      <p>LCP-elementet är oftast en hero-bild eller en stor rubrik högst upp. Den vanligaste orsaken till dålig LCP i Framer är en tung hero-bild.</p>
+      <p>Så håller du den nere:</p>
+      <ul>
+        <li><strong>Ladda upp bilden i rätt storlek.</strong> Framer komprimerar det du ger den, men kan inte trolla — en 24-megapixelsexport blir en stor fil även som WebP. Ladda upp i rimlig upplösning från början.</li>
+        <li><strong>Undvik video eller tunga bakgrunder ovanför fold-en</strong> som huvudinnehåll. En autospelande hero-video är nästan alltid det som drar ner LCP mest.</li>
+        <li><strong>Låt hero-bilden ladda tidigt.</strong> Bilder långt ner på sidan ska vara lazy-laddade, men just LCP-elementet ska inte fördröjas.</li>
+      </ul>
+      <p>Mät på mobil, för det är där LCP oftast fastnar — mindre bandbredd och svagare hårdvara.</p>
+      <h2>INP: passa dig för tung JavaScript</h2>
+      <p>INP mäter hur snabbt sidan reagerar när någon klickar, trycker eller skriver. Statiska sidor svarar snabbt, så INP-problem i Framer kommer nästan alltid från tillagd JavaScript.</p>
+      <p>De vanligaste bovarna:</p>
+      <ul>
+        <li><strong>Scroll-bibliotek som Lenis och GSAP.</strong> De ger mjuk scroll och effektfulla animationer, men kostar JavaScript-körning som direkt visar sig i INP på mobil. Använd dem sparsamt och mät effekten.</li>
+        <li><strong>Tunga inbäddningar.</strong> Chattwidgetar, bokningsverktyg och tredjepartsskript kör sin egen kod. Varje sådant tillägg är en potentiell INP-kostnad.</li>
+        <li><strong>För många samtidiga animationer.</strong> En sida där allt rör sig samtidigt tvingar webbläsaren att arbeta hårt precis när användaren vill interagera.</li>
+      </ul>
+      <p>Regeln: det som går att göra i CSS ska göras i CSS. Transform- och opacity-baserade animationer är billiga; JavaScript-drivna är det inte. Lägg inte till ett scroll-bibliotek förrän du sett att du behöver det.</p>
+      <h2>CLS: reservera plats i förväg</h2>
+      <p>CLS är oftast enklast att fixa. Layouten hoppar när något laddar in sent och knuffar undan det som redan syns.</p>
+      <ul>
+        <li><strong>Sätt explicita dimensioner på bilder.</strong> När webbläsaren vet höjd och bredd i förväg reserverar den utrymmet, så att texten under inte hoppar när bilden dyker upp.</li>
+        <li><strong>Var försiktig med custom-typsnitt.</strong> Framer sätter <code>font-display: swap</code> på sina egna fonter, men laddar du in ett eget typsnitt via custom code måste du sätta det själv — annars riskerar du ett hopp när fonten byts.</li>
+        <li><strong>Undvik innehåll som skjuts in ovanför befintligt.</strong> En banner eller cookie-ruta som dyker upp och trycker ner sidan är en klassisk CLS-källa.</li>
+      </ul>
+      <h2>Fallgroparna som är specifika för Framer</h2>
+      <p>Tre sätt att omedvetet sänka sina värden i just Framer:</p>
+      <ul>
+        <li><strong>CMS-listor med tunga bilder.</strong> När en hel samling renderas på en listsida staplas bildvikten snabbt. Filtrera, paginera eller lazy-ladda allt nedanför fold-en.</li>
+        <li><strong>Animationer staplade på animationer.</strong> Framer gör det lätt att lägga till scroll-effekter, och just därför blir de lätt för många. Varje effekt är billig, summan är det inte.</li>
+        <li><strong>Custom code som laddar externa resurser tidigt.</strong> Ett skript i sidans head som hämtar något från en annan domän kan blockera renderingen. Lägg det så sent som möjligt och ladda asynkront.</li>
+      </ul>
+      <h2>Så mäter du rätt</h2>
+      <p>Arbeta i två steg. Använd <a href="https://pagespeed.web.dev" target="_blank" rel="noopener">PageSpeed Insights</a> för att testa en enskild URL medan du bygger — kör alltid på mobilfliken, för det är den hårdare domen. Fixa det som är rött; gult duger oftast.</p>
+      <p>När sidan är live är det fältdatan som räknas. Öppna Core Web Vitals-rapporten i Google Search Console, som visar hur riktiga besökare upplever sajten över tid. Det är den siffran Google rankar på, och den släpar några veckor efter dina ändringar — så mät, vänta, mät igen.</p>
+      <p>Framer ger dig ett försprång på Core Web Vitals. Din uppgift är enklare än på de flesta plattformar: inte att jaga gröna värden, utan att låta bli att förstöra dem.</p>
+    </div>
+
+    <!-- Related Articles -->
+    <aside class="blog-post__related">
+      <h2 class="blog-post__related-title" data-i18n="post.related">Relaterade artiklar</h2>
+      <div class="blog-post__related-grid">
+        <a href="/blog/framer-seo-guide.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-seo.svg" alt="Framer SEO (2026): Så optimerar du din sajt för Google" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Framer SEO (2026): Så optimerar du din sajt för Google</strong> — <span>Framer SEO 2026 — komplett guide till titlar, strukturerad data, Core Web Vitals och sitemap. Så får du Framer-sajten att ranka i Google.</span></p>
+        </a>
+        <a href="/blog/framer-seo-checklista.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-seo-checklista.svg" alt="Framer SEO-checklista (2026): 24 punkter innan du publicerar" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Framer SEO-checklista (2026): 24 punkter innan du publicerar</strong> — <span>24 konkreta punkter för sidinställningar, teknik, innehåll och uppföljning — bocka av innan du publicerar.</span></p>
+        </a>
+      </div>
+    </aside>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__left">&copy; <span data-current-year>2026</span> FramerExpert.se</span>
+      <div class="footer__links">
+        <button class="lang-toggle" id="langToggle" aria-label="Byt språk">
+          <span class="lang-toggle__option is-active" data-lang="sv">SV</span>
+          <span class="lang-toggle__divider">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/init.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" fill="#323236"/>
+
+  <!-- Left panel: Framer (F) -->
+  <rect x="96" y="120" width="150" height="150" rx="18" fill="#3F3F46"/>
+  <text x="171" y="215" text-anchor="middle" font-family="system-ui, sans-serif" font-size="70" font-weight="700" fill="#F5F5F0" opacity="0.7">F</text>
+
+  <!-- vs -->
+  <text x="300" y="205" text-anchor="middle" font-family="system-ui, sans-serif" font-size="30" font-weight="600" fill="#F5F5F0" opacity="0.4">vs</text>
+
+  <!-- Right panel: Wix (W) -->
+  <rect x="354" y="120" width="150" height="150" rx="18" fill="#3F3F46" opacity="0.75"/>
+  <text x="429" y="215" text-anchor="middle" font-family="system-ui, sans-serif" font-size="62" font-weight="700" fill="#F5F5F0" opacity="0.55">W</text>
+
+  <!-- Label -->
+  <text x="300" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#F5F5F0" opacity="0.55">Framer vs Wix</text>
+</svg>

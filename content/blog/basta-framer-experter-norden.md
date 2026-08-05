@@ -3,7 +3,7 @@ slug: basta-framer-experter-norden
 page_id: post12
 category: tips
 date: 2026-05-25
-date_modified: 2026-05-25
+date_modified: 2026-08-05
 date_display: 25 maj 2026
 readtime: 7 min läsning
 thumbnail: thumb-framer-experter-norden.svg
@@ -70,13 +70,11 @@ När hela varumärket byggs om samtidigt och sajten är en av flera leverabler.
 
 Köpenhamn och Stockholm har också flera klassiska designstudior som lagt till Framer i tjänsteportföljen senaste åren. Många av dem saknar officiell Expert-status — använd [katalogen](https://www.framer.com/experts/) för att verifiera, annars riskerar du att betala byråpris för en partner som lär sig plattformen på ditt projekt.
 
-### Frilansare med teknisk eller minimalistisk profil
+### Experimentell frilansprofil
 
-För minimalistisk, utvecklarnära stil.
+För varumärken som vill ta ut svängarna med ett mer uttrycksfullt, mindre konventionellt formspråk.
 
-[Benjamin Bergh](https://www.framer.com/@regular/) (Sverige) är det tydligaste nordiska exemplet — minimalistisk, prestandafokuserad. Det offentliga arbetet är dock relativt begränsat i omfång, och estetiken är ganska smal: utmärkt för minimalistiska SaaS-varumärken, mindre rätt för bredare uttryck eller berättardrivna sajter.
-
-I Stockholm finns även [Gustav W-F](https://www.framer.com/@gustavwf/) med en mer experimentell stil; den passar inte alla varumärken och case-bredden är ännu under uppbyggnad jämfört med de mest etablerade namnen, men för vågade designprojekt kan han vara rätt.
+I Stockholm finns [Gustav W-F](https://www.framer.com/@gustavwf/) med en mer experimentell stil; den passar inte alla varumärken och case-bredden är ännu under uppbyggnad jämfört med de mest etablerade namnen, men för vågade designprojekt kan han vara rätt.
 
 ### Norge, Danmark och Finland — specifikt
 
@@ -116,6 +114,6 @@ Scenariobaserat:
 - **Designtungt enskilt uppdrag, höga kvalitetskrav:** Sanna Granqvist är default; för en uttalat dansk grafisk känsla kan en Köpenhamn-baserad frilansare via katalogen fungera.
 - **Tillväxt och konvertering:** Comminova är det renaste valet i Norden.
 - **Varumärke och webb i ett paket:** Ebb Scandinavia, eller en större designstudio i Köpenhamn/Stockholm — verifierad i katalogen.
-- **Minimalistiskt eller experimentellt:** Benjamin Bergh eller Gustav W-F.
+- **Experimentellt formspråk:** Gustav W-F.
 
 Börja med två eller tre profiler i [Framers officiella expertkatalog](https://www.framer.com/experts/), boka korta inledande samtal, och lita på känslan. Vill du jämföra med Sverige eller Europa specifikt, se vår [Sverige-guide](/blog/basta-framer-experter-sverige.html) och [Europa-guide](/blog/basta-framer-experter-europa.html).

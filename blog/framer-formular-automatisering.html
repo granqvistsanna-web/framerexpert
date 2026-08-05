@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#27272A">
+  <meta name="color-scheme" content="dark">
+  <title>Formulär och automatisering i Framer (2026) — FramerExpert.se</title>
+  <meta name="description" content="Så kopplar du Framers inbyggda formulär till Zapier eller Make via webhook — Slack-notiser, CRM, Google Sheets och andra automationsflöden utan kod.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Formulär och automatisering i Framer (2026): Koppla till Zapier och Make">
+  <meta property="og:description" content="Koppla Framer-formulär till Zapier eller Make via webhook — utan kod.">
+  <meta property="og:url" content="https://framerexpert.se/blog/framer-formular-automatisering.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="article:published_time" content="2026-08-05">
+  <meta property="article:modified_time" content="2026-08-05">
+  <meta property="article:author" content="FramerExpert">
+  <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://framerexpert.se/assets/og-default.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://framerexpert.se/blog/framer-formular-automatisering.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Formulär och automatisering i Framer (2026): Koppla till Zapier och Make",
+    "description": "Koppla Framer-formulär till Zapier eller Make via webhook — utan kod.",
+    "datePublished": "2026-08-05",
+    "dateModified": "2026-08-05",
+    "author": {
+      "@type": "Organization",
+      "name": "FramerExpert",
+      "url": "https://framerexpert.se"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FramerExpert.se",
+      "url": "https://framerexpert.se"
+    },
+    "mainEntityOfPage": "https://framerexpert.se/blog/framer-formular-automatisering.html",
+    "inLanguage": "sv"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se" },
+      { "@type": "ListItem", "position": 2, "name": "Blogg", "item": "https://framerexpert.se/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Formulär och automatisering i Framer (2026): Koppla till Zapier och Make" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Behöver jag kunna koda för att koppla ett Framer-formulär till Zapier?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nej. Du lägger till en webhook i formulärets inställningar, klistrar in webhook-URL:en från Zapier och är klar. Ingen kod krävs på någon sida av kopplingen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Fungerar samma metod för Make (tidigare Integromat)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Principen är identisk — skapa ett scenario i Make med en \"Custom webhook\"-modul som utlösare, kopiera webhook-URL:en och klistra in den i Framers formulärinställningar precis som med Zapier."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad skickar Framer egentligen i webhooken?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Formulärsvaren skickas som JSON via en HTTP POST-förfrågan. Namnen på formulärfälten blir nycklar i JSON-objektet och de ifyllda värdena blir motsvarande värden — rakt igenom, utan extra formatering du behöver hantera."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan jag skicka samma formulärsvar till flera verktyg samtidigt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Både Zapier och Make kan ta emot en enskild webhook-utlösare och sedan förgrena till flera åtgärder — till exempel lägga till en rad i Google Sheets, skicka ett Slack-meddelande och skapa en kontakt i CRM:et, allt från samma formulärsvar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Är det GDPR-säkert att koppla formulär till tredjepartsverktyg som Zapier eller Make?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Det beror på vilka fält du samlar in och vad mottagande verktyg gör med datan. Samla bara in det du faktiskt behöver, ha ett tydligt samtycke där det krävs, och kontrollera att verktygen du kopplar till har ett personuppgiftsbiträdesavtal (DPA) som täcker din verksamhet."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="post24">
+
+  <!-- NAVIGATION -->
+  <nav data-twostep-nav data-nav-status="not-active" class="twostep-nav">
+    <div data-nav-toggle="close" class="twostep-nav__bg"></div>
+    <div class="twostep-nav__wrap">
+      <div class="twostep-nav__width">
+        <div class="twostep-nav__bar">
+          <div class="twostep-nav__back">
+            <div class="twostep-nav__back-bg"></div>
+          </div>
+          <div class="twostep-nav__top">
+            <a href="/" class="twostep-nav__logo">
+              framer.expert
+            </a>
+            <button data-nav-toggle="toggle" class="twostep-nav__toggle" aria-label="Öppna meny" aria-expanded="false">
+              <div class="twostep-nav__toggle-bar"></div>
+              <div class="twostep-nav__toggle-bar"></div>
+            </button>
+            <div class="twostep-nav__top-line"></div>
+          </div>
+          <div class="twostep-nav__bottom">
+            <div class="twostep-nav__bottom-overflow">
+              <div class="twostep-nav__bottom-inner">
+                <div class="twostep-nav__bottom-row">
+                  <div class="twostep-nav__bottom-col">
+                    <div class="twostep-nav__info">
+                      <ul class="twostep-nav__ul">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-span" data-i18n="nav.blog">Blogg</span></a>
+                        </li>
+                      </ul>
+                      <ul class="twostep-nav__ul is--small">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=getting-started" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.getting-started">Kom igång</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=comparison" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.comparison">Jämförelse</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=tips" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.tips">Tips</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=seo" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.seo">SEO</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=cms" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.cms">CMS</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="https://www.framer.com" target="_blank" rel="noopener" class="twostep-nav__link"><span class="twostep-nav__link-eyebrow">Framer.com</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumbs container">
+    <ol class="breadcrumbs__list">
+      <li><a href="/" data-i18n="nav.home">Hem</a></li>
+      <li><a href="/blog/" data-i18n="nav.blog">Blogg</a></li>
+      <li><span aria-current="page">Formulär och automatisering i Framer (2026): Koppla till Zapier och Make</span></li>
+    </ol>
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="container">
+    <header class="blog-post__header">
+      <div class="blog-post__meta">
+        <span class="blog-post__category">Tips</span>
+        <time datetime="2026-08-05">5 augusti 2026</time>
+        <span>7 min läsning</span>
+      </div>
+      <h1 class="blog-post__title">Formulär och automatisering i Framer (2026): Koppla till Zapier och Make</h1>
+      <p class="blog-post__intro">Ett formulär som bara skickar ett mejl räcker sällan i längden. Den här guiden går igenom hur du kopplar Framers inbyggda formulär till Zapier eller Make via webhook, och vilka automationsflöden som faktiskt är värda att sätta upp — plus vad du bör tänka på kring GDPR innan formulärdata börjar flöda till tredjepartsverktyg.</p>
+    </header>
+
+    <div class="blog-post__content">
+      <h2>Framers inbyggda formulär</h2>
+      <p>Formulär byggs direkt i editorn som vilken annan komponent som helst — textfält, e-post, kryssrutor, textarea — och kopplas till en inskickningshantering i sidopanelen. Som standard går svaren till en angiven e-postadress. Det räcker för ett enkelt kontaktformulär, men blir snabbt otillräckligt så fort svaren ska in i ett CRM, en kalkylark-lista eller trigga en uppföljning i flera steg.</p>
+      <h2>Skicka formulärdata till andra verktyg via webhook</h2>
+      <p>Lösningen är en webhook, inbyggd i formulärinställningarna. Klicka på "Add…" bredvid "Send To", välj <strong>Webhook</strong> och klistra in mål-URL:en. Varje inskickning skickas då som en JSON-förfrågan till den adressen, med fältnamnen som nycklar och de ifyllda värdena som värden. Från den punkten är det upp till mottagaren — Zapier, Make eller ett eget system — att göra något med datan.</p>
+      <h2>Koppla till Zapier</h2>
+      <ul>
+        <li>Skapa en ny Zap och välj <strong>Webhooks by Zapier</strong> som utlösare.</li>
+        <li>Zapier genererar en unik webhook-URL — kopiera den.</li>
+        <li>Klistra in URL:en i Framers formulärinställningar under Send To → Webhook.</li>
+        <li>Skicka en testinskickning från formuläret för att bekräfta att Zapier tar emot datan korrekt.</li>
+        <li>Bygg vidare med valfria åtgärder: lägg till kontakten i HubSpot eller Mailchimp, posta ett meddelande i Slack, skapa en rad i Google Sheets — Zapier kopplar vidare till i princip vilken tjänst som helst.</li>
+      </ul>
+      <h2>Koppla till Make</h2>
+      <p>Samma princip, annat verktyg:</p>
+      <ul>
+        <li>Skapa ett nytt scenario i Make och lägg till en <strong>Custom webhook</strong>-modul som första steg.</li>
+        <li>Generera webhook-URL:en i Make och klistra in den i Framers Send To-inställning, precis som med Zapier.</li>
+        <li>Skicka en testinskickning och kontrollera att Make tar emot fälten korrekt strukturerade.</li>
+        <li>Lägg till efterföljande moduler i scenariot — routing till flera system, villkorslogik eller fördröjda uppföljningar är enklare att bygga i Make än i Zapiers mer linjära flöden.</li>
+      </ul>
+      <p>Vilket av de två du väljer handlar mest om vana och prisnivå — funktionellt gör båda samma jobb för ett formulär-till-webhook-flöde.</p>
+      <h2>Vanliga automationsflöden värda att sätta upp</h2>
+      <ul>
+        <li><strong>Slack-notis direkt vid inskickning</strong> — snabbare uppföljning än att vänta på att någon kollar mejlen.</li>
+        <li><strong>Automatisk kontakt i CRM</strong> — undviker manuell inmatning och glömda leads.</li>
+        <li><strong>Rad i Google Sheets</strong> — enkel logg utan eget system, bra för mindre volymer.</li>
+        <li><strong>Trigger i ett e-postmarknadsföringsverktyg</strong> — lägger till prenumeranten i rätt lista eller startar ett automatiserat välkomstflöde.</li>
+        <li><strong>Fan-out till flera samtidigt</strong> — en enda webhook-utlösare i Zapier eller Make kan mata flera av ovanstående parallellt från samma formulärsvar.</li>
+      </ul>
+      <h2>Saker att tänka på</h2>
+      <ul>
+        <li><strong>Testa webhooken innan lansering.</strong> En felaktig eller föråldrad URL gör att formulärsvar tyst försvinner utan att någon märker det förrän en kund undrar varför ingen hört av sig.</li>
+        <li><strong>Samla bara in de fält du faktiskt behöver.</strong> Färre fält som skickas vidare till tredjepartsverktyg betyder mindre GDPR-exponering och högre svarsfrekvens.</li>
+        <li><strong>Ha koll på DPA:er.</strong> Zapier, Make och de verktyg du kopplar vidare till hanterar personuppgifter å dina vägnar. Kontrollera att avtalen finns på plats innan formulär med personuppgifter går live mot dem.</li>
+        <li><strong>Räkna med gränser i gratisplaner.</strong> Både Zapier och Make begränsar antal körningar per månad på lägre nivåer — ett populärt formulär kan snabbt växa ur en gratisplan.</li>
+      </ul>
+      <h2>Vanliga misstag</h2>
+      <ul>
+        <li><strong>Ingen bekräftelse till användaren efter inskickning.</strong> Utan en tydlig tacksida eller ett bekräftelsemeddelande vet besökaren inte om formuläret faktiskt gick igenom.</li>
+        <li><strong>Otestad webhook som tyst slutar fungera.</strong> Sätt gärna upp en enkel bevakning — till exempel ett Slack-meddelande vid varje inskickning — så att ett trasigt flöde upptäcks samma dag, inte samma månad.</li>
+        <li><strong>Skickar hela formulärsvaret vidare till marknadsföringsverktyg utan att tänka på samtycke.</strong> Separera "kontakta mig"-fält från marknadsföringssamtycke istället för att anta att alla vill ha nyhetsbrevet.</li>
+      </ul>
+      <h2>Sammanfattning</h2>
+      <p>Framers inbyggda formulär plus en webhook täcker nästan alla automationsbehov en marknadssajt har, utan att en enda rad kod behöver skrivas. Zapier och Make gör i praktiken samma jobb från den punkten — välj det du redan känner till, koppla en handfull nyckelflöden (CRM, Slack, e-postlista), och testa ordentligt innan formuläret går live.</p>
+    </div>
+
+    <!-- Related Articles -->
+    <aside class="blog-post__related">
+      <h2 class="blog-post__related-title" data-i18n="post.related">Relaterade artiklar</h2>
+      <div class="blog-post__related-grid">
+        <a href="/blog/framer-cms-i-praktiken.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-cms.svg" alt="Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod</strong> — <span>Hands-on guide till samlingar, fält, filter och detaljsidor — så bygger du en dynamisk sajt i Framer CMS utan kod.</span></p>
+        </a>
+        <a href="/blog/5-tips-bygga-snabbare.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-5-tips.svg" alt="5 tips för att bygga snabbare i Framer" loading="lazy">
+          </div>
+          <p class="card__text"><strong>5 tips för att bygga snabbare i Framer</strong> — <span>Spara tid och arbeta smartare. Fem konkreta tips som gör dig snabbare i Framer.</span></p>
+        </a>
+      </div>
+    </aside>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__left">&copy; <span data-current-year>2026</span> FramerExpert.se</span>
+      <div class="footer__links">
+        <button class="lang-toggle" id="langToggle" aria-label="Byt språk">
+          <span class="lang-toggle__option is-active" data-lang="sv">SV</span>
+          <span class="lang-toggle__divider">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/init.js"></script>
+</body>
+</html>

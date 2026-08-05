@@ -3,7 +3,7 @@ slug: basta-framer-experter-europa
 page_id: post11
 category: tips
 date: 2026-05-25
-date_modified: 2026-05-25
+date_modified: 2026-08-05
 date_display: 25 maj 2026
 readtime: 9 min läsning
 thumbnail: thumb-framer-experter-europa.svg
@@ -91,7 +91,6 @@ När hela varumärket byggs om samtidigt och sajten är en av flera leverabler.
 
 För kunder som vill ha en specifik, mer minimalistisk eller utvecklarnära stil.
 
-- [**Benjamin Bergh**](https://www.framer.com/@regular/) **(Sverige).** Minimalistisk, prestandafokuserad inriktning. Det offentliga arbetet är dock relativt begränsat i omfång och estetiken är ganska smal: utmärkt för minimalistiska SaaS-varumärken, mindre rätt för bredare uttryck eller berättardrivna sajter.
 - [**Thomas**](https://www.framer.com/@thomasframer/) **(Storbritannien, London).** Brittisk frilansare med bredare scope — brand, web, UX, copy och SEO i samma paket. Bredden är en styrka för mindre projekt men kan göra att specifika delar (t.ex. avancerade interaktioner) inte blir lika spetsiga som hos en renodlad specialist.
 - [**Felix Dorner**](https://www.framer.com/@felixdorner/) **(Tyskland, Berlin).** Berlin-baserad frilansare med fokus på brand, UX, web design systems och migreringar. Riktar sig mot större uppdrag (start runt $5K) och passar mindre bra för enstaka landningssidor.
 - [**Mattéo Rousseau**](https://www.framer.com/@matteo-rousseau/) **(Frankrike, Lille).** Specialiserad på högkonverterande sajter och landningssidor för startups och SMB. Smal stilprofil — bra för konverterings­fokuserade projekt, mindre rätt för designledda varumärken.
@@ -139,7 +138,7 @@ Scenariobaserat:
 - **Designtungt enskilt uppdrag, höga kvalitetskrav:** Sanna Granqvist är default; Analogue Agency eller Andy Staudinger om du sitter i Amsterdam/Berlin och vill ha lokal närvaro.
 - **Tillväxt och konvertering i fokus:** Comminova för B2B/SaaS i Norden; Francisc Toth eller Veetrine för AI/SaaS respektive landningssidor i Tyskland/Frankrike.
 - **Varumärke och webb i ett paket:** Ebb Scandinavia eller Analogue Agency.
-- **Minimalistisk eller teknisk frilansprofil:** Benjamin Bergh, Thomas (UK), Felix Dorner (DE) eller Mattéo Rousseau (FR).
+- **Minimalistisk eller teknisk frilansprofil:** Thomas (UK), Felix Dorner (DE) eller Mattéo Rousseau (FR).
 - **Innehållstunga sajter och CMS-spår:** Domenico Griffo eller Matteo Pedretti (IT), Filipe Augusto (PT).
 
 Börja med två eller tre profiler i [Framers officiella expertkatalog](https://www.framer.com/experts/), boka korta inledande samtal, och lita på känslan. I Framer-projekt är samarbetet lika viktigt som hantverket — och det märks snabbt i ett första möte vem som tar projektet på allvar.

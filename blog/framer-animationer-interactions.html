@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#27272A">
+  <meta name="color-scheme" content="dark">
+  <title>Framer-animationer i praktiken (2026) — FramerExpert.se</title>
+  <meta name="description" content="Så bygger du animationer i Framer utan kod — variants, hover- och scroll-interaktioner och det nya Flow Effect. Praktiska exempel och när du bör hålla igen.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Framer-animationer i praktiken (2026): Variants, scroll-effekter och Flow Effect">
+  <meta property="og:description" content="Variants, scroll-effekter och Flow Effect i Framer — praktisk guide, utan kod.">
+  <meta property="og:url" content="https://framerexpert.se/blog/framer-animationer-interactions.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="article:published_time" content="2026-08-05">
+  <meta property="article:modified_time" content="2026-08-05">
+  <meta property="article:author" content="FramerExpert">
+  <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://framerexpert.se/assets/og-default.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://framerexpert.se/blog/framer-animationer-interactions.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Framer-animationer i praktiken (2026): Variants, scroll-effekter och Flow Effect",
+    "description": "Variants, scroll-effekter och Flow Effect i Framer — praktisk guide, utan kod.",
+    "datePublished": "2026-08-05",
+    "dateModified": "2026-08-05",
+    "author": {
+      "@type": "Organization",
+      "name": "FramerExpert",
+      "url": "https://framerexpert.se"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FramerExpert.se",
+      "url": "https://framerexpert.se"
+    },
+    "mainEntityOfPage": "https://framerexpert.se/blog/framer-animationer-interactions.html",
+    "inLanguage": "sv"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se" },
+      { "@type": "ListItem", "position": 2, "name": "Blogg", "item": "https://framerexpert.se/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Framer-animationer i praktiken (2026): Variants, scroll-effekter och Flow Effect" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Behöver jag kunna kod för att animera i Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nej. De flesta animationer — entré/exit, hover, tap och scroll-effekter — byggs helt via panelerna i editorn. Kod behövs bara för riktigt specialanpassade rörelser som inte täcks av de inbyggda verktygen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad är Flow Effect i Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Flow Effect är en funktion som låter dig animera hela sektioner av en sida som svar på interaktioner eller förändringar i andra komponenter, snarare än att bara animera ett enskilt element för sig. Bra för sajter som vill ha en mer sammanhängande, filmisk känsla mellan sektioner."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan för många animationer skada Core Web Vitals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, om de är fel byggda. Tunga scroll-scrub-effekter och för många samtidiga entré-animationer kan påverka INP och upplevd prestanda negativt, särskilt på mobil. Framer optimerar mycket under huven, men det ersätter inte sunt förnuft i hur mycket som animeras samtidigt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur bygger jag en scroll-triggad animation i Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Markera elementet, öppna panelen för scroll-effekter och välj om animationen ska trigga en gång när elementet kommer in i vyn, eller \"scrubba\" kontinuerligt kopplat till scrollpositionen. Justera start- och slutpunkt tills rörelsen känns rätt i förhandsvisningen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Bör jag ta hänsyn till användare som föredrar mindre rörelse på skärmen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Testa alltid sajten med webbläsarens inställning för reducerad rörelse aktiverad, och håll animationerna diskreta nog att inte bli ett tillgänglighetsproblem för känsliga besökare. Snabba, storskaliga rörelser över hela viewporten är den vanligaste boven."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="post22">
+
+  <!-- NAVIGATION -->
+  <nav data-twostep-nav data-nav-status="not-active" class="twostep-nav">
+    <div data-nav-toggle="close" class="twostep-nav__bg"></div>
+    <div class="twostep-nav__wrap">
+      <div class="twostep-nav__width">
+        <div class="twostep-nav__bar">
+          <div class="twostep-nav__back">
+            <div class="twostep-nav__back-bg"></div>
+          </div>
+          <div class="twostep-nav__top">
+            <a href="/" class="twostep-nav__logo">
+              framer.expert
+            </a>
+            <button data-nav-toggle="toggle" class="twostep-nav__toggle" aria-label="Öppna meny" aria-expanded="false">
+              <div class="twostep-nav__toggle-bar"></div>
+              <div class="twostep-nav__toggle-bar"></div>
+            </button>
+            <div class="twostep-nav__top-line"></div>
+          </div>
+          <div class="twostep-nav__bottom">
+            <div class="twostep-nav__bottom-overflow">
+              <div class="twostep-nav__bottom-inner">
+                <div class="twostep-nav__bottom-row">
+                  <div class="twostep-nav__bottom-col">
+                    <div class="twostep-nav__info">
+                      <ul class="twostep-nav__ul">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-span" data-i18n="nav.blog">Blogg</span></a>
+                        </li>
+                      </ul>
+                      <ul class="twostep-nav__ul is--small">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=getting-started" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.getting-started">Kom igång</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=comparison" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.comparison">Jämförelse</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=tips" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.tips">Tips</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=seo" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.seo">SEO</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=cms" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.cms">CMS</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="https://www.framer.com" target="_blank" rel="noopener" class="twostep-nav__link"><span class="twostep-nav__link-eyebrow">Framer.com</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumbs container">
+    <ol class="breadcrumbs__list">
+      <li><a href="/" data-i18n="nav.home">Hem</a></li>
+      <li><a href="/blog/" data-i18n="nav.blog">Blogg</a></li>
+      <li><span aria-current="page">Framer-animationer i praktiken (2026): Variants, scroll-effekter och Flow Effect</span></li>
+    </ol>
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="container">
+    <header class="blog-post__header">
+      <div class="blog-post__meta">
+        <span class="blog-post__category">Tips</span>
+        <time datetime="2026-08-05">5 augusti 2026</time>
+        <span>8 min läsning</span>
+      </div>
+      <h1 class="blog-post__title">Framer-animationer i praktiken (2026): Variants, scroll-effekter och Flow Effect</h1>
+      <p class="blog-post__intro">Framer har byggt in animationer i själva editorn istället för att kräva kod, men det gör det också lätt att göra för mycket. Den här guiden går igenom vad som faktiskt finns att jobba med — variants, scroll-effekter och det nyare Flow Effect — och var gränsen går mellan snyggt och stökigt.</p>
+    </header>
+
+    <div class="blog-post__content">
+      <h2>De fyra typerna av animation i Framer</h2>
+      <p>Allt animationsarbete i Framer landar i någon av fyra kategorier:</p>
+      <ul>
+        <li><strong>Entré- och exit-animationer</strong> — hur ett element dyker upp eller försvinner.</li>
+        <li><strong>Interaktionsanimationer</strong> — svar på hover, tap eller fokus.</li>
+        <li><strong>Scroll-animationer</strong> — reagerar på scrollposition, antingen en gång när elementet blir synligt eller kontinuerligt kopplat till scrollen ("scrubbing").</li>
+        <li><strong>Flow Effect</strong> — animerar hela sektioner som svar på interaktioner eller förändringar i andra komponenter, snarare än ett enda element.</li>
+      </ul>
+      <p>De flesta sajter behöver bara de tre första. Flow Effect är kraftfullt men också lättast att överanvända.</p>
+      <h2>Variants — grunden för interaktiva komponenter</h2>
+      <p>En variant är ett alternativt tillstånd för samma komponent: standard, hover, aktiv, ihopfälld, mobilversion. Kombinerat med interaktioner kan du bygga animerade knappar, dropdown-menyer och hela navigationsmenyer utan en rad kod — komponenten byter helt enkelt variant när ett villkor uppfylls.</p>
+      <p>Det här är den mest underutnyttjade delen av Framers animationsverktyg. Många bygger separata element för varje tillstånd istället för en komponent med flera varianter, vilket gör sajten tyngre att underhålla och animationerna svårare att hålla konsekventa.</p>
+      <h2>Scroll-baserade effekter</h2>
+      <p>Två lägen täcker nästan alla behov:</p>
+      <ul>
+        <li><strong>En gång</strong> — elementet tonas in, glider in eller skalas upp när det första gången kommer in i vyn. Bäst för de flesta sektioner på en marknadssajt.</li>
+        <li><strong>Scrubbing</strong> — animationen är direkt kopplad till scrollpositionen och spolas fram och tillbaka i takt med att besökaren scrollar. Kraftfullt för hero-sektioner och storytelling-tunga sidor, men tyngre att få att kännas smidigt på mobil.</li>
+      </ul>
+      <p>En vanlig, säker kombination: entré-animationer en gång per sektion för det mesta av sidan, och spara scrubbing för en eller två nyckelmoment — till exempel hero-sektionen eller en produktdemonstration.</p>
+      <h2>Flow Effect — animera hela sektioner</h2>
+      <p>Flow Effect är den senaste tillökningen i Framers animationsverktyg: istället för att en enda komponent reagerar på en interaktion kan hela sektioner av sidan animeras tillsammans, kopplat till ett gemensamt tillstånd. Det passar sajter som vill ha en mer sammanhängande övergång mellan block — exempelvis att en hel sektion tonar in och skiftar layout samtidigt när en knapp klickas, snarare än att bara knappen själv reagerar.</p>
+      <p>Använd det sparsamt. Effekten är mest slående när den markerar ett fåtal viktiga ögonblick på sidan, inte när den ligger på varje sektion.</p>
+      <h2>Gester: tap, drag och hover</h2>
+      <p>Utöver scroll och variants stödjer Framer nativt tap-, drag- och hover-gester för mer handgriplig interaktion — kort- eller bildkaruseller man kan dra i, knappar som trycks in visuellt vid tap, hover-states som känns responsiva snarare än abrupta. Det här är detaljerna som gör att en sajt känns genomarbetad snarare än bara "har animationer".</p>
+      <h2>Prestanda: håll koll på Core Web Vitals</h2>
+      <p>Framer optimerar en hel del under huven — bland annat effektivare hantering av entré-animationer och senarelagd upplösning av keyframes, samt att den lutar sig mot webbläsarens inbyggda animations-API:er istället för tunga JavaScript-bibliotek. Det gör grundprestandan bättre än i handkodade lösningar från några år tillbaka.</p>
+      <p>Det tar dock inte bort ansvaret att hålla igen. Många samtidiga scroll-scrub-effekter, särskilt över stora ytor, kan fortfarande påverka INP negativt på svagare mobiler. Se vår <a href="/blog/framer-core-web-vitals.html">guide till Core Web Vitals i Framer</a> om du vill mäta effekten konkret innan och efter du lägger till animationer.</p>
+      <h2>Vanliga misstag</h2>
+      <ul>
+        <li><strong>Animerar varje element på sidan.</strong> Resultatet blir en sajt som känns seg snarare än levande — spara rörelse för de moment som faktiskt förtjänar uppmärksamhet.</li>
+        <li><strong>Olika hastighet och easing på olika sektioner.</strong> Skapar en osammanhängande känsla även om varje enskild animation är fin för sig.</li>
+        <li><strong>Tung scrubbing på mobil utan att testa på riktig enhet.</strong> Det som känns smidigt i skrivbordsförhandsvisningen kan hacka rejält på en äldre telefon.</li>
+        <li><strong>Ignorerar reducerad rörelse.</strong> Testa alltid med webbläsarens inställning för reducerad rörelse påslagen — stora, snabba rörelser över hela skärmen är den vanligaste boven för känsliga besökare.</li>
+      </ul>
+      <h2>Så börjar du enkelt</h2>
+      <p>Bygg hellre två eller tre signaturmoment ordentligt än att animera hela sidan halvhjärtat:</p>
+      <ul>
+        <li>Välj ut hero-sektionen eller en annan nyckelsektion för den tyngsta effekten — scrubbing eller Flow Effect om det passar varumärket.</li>
+        <li>Lägg entré-animationer en gång per sektion på resten av sidan, med konsekvent timing.</li>
+        <li>Använd variants för alla interaktiva komponenter (knappar, kort, navigation) istället för dubblerade element per tillstånd.</li>
+        <li>Testa på en riktig mobil, inte bara i förhandsvisningen, innan du publicerar.</li>
+      </ul>
+      <h2>Sammanfattning</h2>
+      <p>Framers animationsverktyg täcker det mesta en marknadssajt behöver utan en rad kod — variants för komponenttillstånd, scroll-effekter för rörelse kopplad till sidan, och Flow Effect för mer sammanhängande sektionsövergångar. Den tekniska begränsningen är sällan problemet. Det är återhållsamheten som avgör om resultatet känns genomarbetat eller bara stökigt.</p>
+    </div>
+
+    <!-- Related Articles -->
+    <aside class="blog-post__related">
+      <h2 class="blog-post__related-title" data-i18n="post.related">Relaterade artiklar</h2>
+      <div class="blog-post__related-grid">
+        <a href="/blog/framer-templates-guide.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-templates.svg" alt="Framer-mallar (2026): Så hittar, väljer och anpassar du rätt template" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Framer-mallar (2026): Så hittar, väljer och anpassar du rätt template</strong> — <span>Framer-mallar 2026 — så hittar du rätt template, anpassar den utan att förstöra designen och undviker de vanligaste licens- och CMS-fällorna.</span></p>
+        </a>
+        <a href="/blog/5-tips-bygga-snabbare.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-5-tips.svg" alt="5 tips för att bygga snabbare i Framer" loading="lazy">
+          </div>
+          <p class="card__text"><strong>5 tips för att bygga snabbare i Framer</strong> — <span>Spara tid och arbeta smartare. Fem konkreta tips som gör dig snabbare i Framer.</span></p>
+        </a>
+      </div>
+    </aside>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__left">&copy; <span data-current-year>2026</span> FramerExpert.se</span>
+      <div class="footer__links">
+        <button class="lang-toggle" id="langToggle" aria-label="Byt språk">
+          <span class="lang-toggle__option is-active" data-lang="sv">SV</span>
+          <span class="lang-toggle__divider">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/init.js"></script>
+</body>
+</html>

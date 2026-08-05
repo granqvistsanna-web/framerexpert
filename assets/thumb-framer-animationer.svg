@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" fill="#323236"/>
+
+  <!-- Motion trail -->
+  <rect x="130" y="130" width="120" height="120" rx="20" fill="#3F3F46" opacity="0.35"/>
+  <rect x="190" y="120" width="130" height="130" rx="20" fill="#3F3F46" opacity="0.6"/>
+  <rect x="260" y="110" width="140" height="140" rx="20" fill="#3F3F46"/>
+
+  <!-- Play triangle -->
+  <path d="M312 148 L360 180 L312 212 Z" fill="#F5F5F0" opacity="0.65"/>
+
+  <!-- Motion lines -->
+  <line x1="420" y1="150" x2="470" y2="150" stroke="#F5F5F0" stroke-width="4" stroke-opacity="0.3" stroke-linecap="round"/>
+  <line x1="420" y1="180" x2="460" y2="180" stroke="#F5F5F0" stroke-width="4" stroke-opacity="0.2" stroke-linecap="round"/>
+  <line x1="420" y1="210" x2="450" y2="210" stroke="#F5F5F0" stroke-width="4" stroke-opacity="0.12" stroke-linecap="round"/>
+
+  <!-- Label -->
+  <text x="300" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#F5F5F0" opacity="0.55">Animationer</text>
+</svg>

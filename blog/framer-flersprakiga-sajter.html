@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#27272A">
+  <meta name="color-scheme" content="dark">
+  <title>Flerspråkiga sajter i Framer (2026) — FramerExpert.se</title>
+  <meta name="description" content="Så bygger du en flerspråkig sajt i Framer — locales, AI-översättning, automatisk språkdetektering och hreflang-taggar. Vad som sköts automatiskt och vad du måste kontrollera själv.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Flerspråkiga sajter i Framer (2026): Lokalisering, hreflang och vanliga misstag">
+  <meta property="og:description" content="Lokalisering i Framer — locales, AI-översättning och hreflang, utan kod.">
+  <meta property="og:url" content="https://framerexpert.se/blog/framer-flersprakiga-sajter.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="article:published_time" content="2026-08-05">
+  <meta property="article:modified_time" content="2026-08-05">
+  <meta property="article:author" content="FramerExpert">
+  <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://framerexpert.se/assets/og-default.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://framerexpert.se/blog/framer-flersprakiga-sajter.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Flerspråkiga sajter i Framer (2026): Lokalisering, hreflang och vanliga misstag",
+    "description": "Lokalisering i Framer — locales, AI-översättning och hreflang, utan kod.",
+    "datePublished": "2026-08-05",
+    "dateModified": "2026-08-05",
+    "author": {
+      "@type": "Organization",
+      "name": "FramerExpert",
+      "url": "https://framerexpert.se"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FramerExpert.se",
+      "url": "https://framerexpert.se"
+    },
+    "mainEntityOfPage": "https://framerexpert.se/blog/framer-flersprakiga-sajter.html",
+    "inLanguage": "sv"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se" },
+      { "@type": "ListItem", "position": 2, "name": "Blogg", "item": "https://framerexpert.se/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Flerspråkiga sajter i Framer (2026): Lokalisering, hreflang och vanliga misstag" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Stödjer Framer flera språk inbyggt, utan plugins?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Lokalisering är en inbyggd funktion i Framer, uppbyggd kring locales (språk plus valfri region), lokaliseringsgrupper (sidor eller CMS-samlingar som innehåller översättningskällor) och själva översättningskällorna. Ingen tredjepartsplugin krävs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan jag använda AI för att översätta hela sajten på en gång?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, Framer erbjuder AI-översättning som kan täcka allt innehåll eller bara delar av det. Det är ett bra sätt att komma igång snabbt, men granska alltid rubriker, call-to-actions och varumärkesspecifika formuleringar manuellt innan lansering — AI missar ofta ton och lokala uttryck."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Skapar Framer hreflang-taggar automatiskt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Både lang-attributet och hreflang-taggarna hanteras automatiskt i bakgrunden när du använder Framers lokalisering, och är inte redigerbara direkt i gränssnittet. Det tar bort det mesta av det tekniska SEO-arbetet som annars görs manuellt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan jag dölja vissa sidor eller CMS-poster för specifika språk?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Du kan exkludera enskilda sidor eller CMS-poster per locale, så att en marknad bara ser innehåll som faktiskt är relevant och översatt för just den marknaden istället för ett tomt eller halvfärdigt läge."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Behöver jag separata domäner för varje språkversion?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nej. Framer hanterar flerspråkighet via lokaliserade URL-sökvägar under samma domän, inte separata domäner eller subdomäner. Du slipper hantera flera DNS-uppsättningar för samma sajt."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="post23">
+
+  <!-- NAVIGATION -->
+  <nav data-twostep-nav data-nav-status="not-active" class="twostep-nav">
+    <div data-nav-toggle="close" class="twostep-nav__bg"></div>
+    <div class="twostep-nav__wrap">
+      <div class="twostep-nav__width">
+        <div class="twostep-nav__bar">
+          <div class="twostep-nav__back">
+            <div class="twostep-nav__back-bg"></div>
+          </div>
+          <div class="twostep-nav__top">
+            <a href="/" class="twostep-nav__logo">
+              framer.expert
+            </a>
+            <button data-nav-toggle="toggle" class="twostep-nav__toggle" aria-label="Öppna meny" aria-expanded="false">
+              <div class="twostep-nav__toggle-bar"></div>
+              <div class="twostep-nav__toggle-bar"></div>
+            </button>
+            <div class="twostep-nav__top-line"></div>
+          </div>
+          <div class="twostep-nav__bottom">
+            <div class="twostep-nav__bottom-overflow">
+              <div class="twostep-nav__bottom-inner">
+                <div class="twostep-nav__bottom-row">
+                  <div class="twostep-nav__bottom-col">
+                    <div class="twostep-nav__info">
+                      <ul class="twostep-nav__ul">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-span" data-i18n="nav.blog">Blogg</span></a>
+                        </li>
+                      </ul>
+                      <ul class="twostep-nav__ul is--small">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=getting-started" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.getting-started">Kom igång</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=comparison" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.comparison">Jämförelse</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=tips" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.tips">Tips</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=seo" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.seo">SEO</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=cms" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.cms">CMS</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="https://www.framer.com" target="_blank" rel="noopener" class="twostep-nav__link"><span class="twostep-nav__link-eyebrow">Framer.com</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumbs container">
+    <ol class="breadcrumbs__list">
+      <li><a href="/" data-i18n="nav.home">Hem</a></li>
+      <li><a href="/blog/" data-i18n="nav.blog">Blogg</a></li>
+      <li><span aria-current="page">Flerspråkiga sajter i Framer (2026): Lokalisering, hreflang och vanliga misstag</span></li>
+    </ol>
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="container">
+    <header class="blog-post__header">
+      <div class="blog-post__meta">
+        <span class="blog-post__category">Tips</span>
+        <time datetime="2026-08-05">5 augusti 2026</time>
+        <span>7 min läsning</span>
+      </div>
+      <h1 class="blog-post__title">Flerspråkiga sajter i Framer (2026): Lokalisering, hreflang och vanliga misstag</h1>
+      <p class="blog-post__intro">Framer har ett inbyggt lokaliseringssystem som täcker det mesta en flerspråkig marknadssajt behöver — utan plugins och utan att koda hreflang-taggar för hand. Den tekniska biten är inte det svåra. Det som avgör om resultatet blir bra är hur du hanterar innehåll och nyans per språk.</p>
+    </header>
+
+    <div class="blog-post__content">
+      <h2>Så fungerar lokalisering i Framer</h2>
+      <p>Systemet bygger på tre begrepp:</p>
+      <ul>
+        <li><strong>Locales</strong> — ett språk, med en valfri regional variant (till exempel svenska för Sverige respektive svenska för Finland).</li>
+        <li><strong>Lokaliseringsgrupper</strong> — sidor eller CMS-samlingar som innehåller innehåll som ska översättas.</li>
+        <li><strong>Översättningskällor</strong> — de enskilda textsträngarna på sajten, tillsammans med deras översatta värden per locale.</li>
+      </ul>
+      <p>Lägger du till en ny locale skapas automatiskt en lokaliserad version av varje sida och CMS-post, redo att fyllas i — antingen manuellt eller med AI-hjälp.</p>
+      <h2>Lägg till ett nytt språk</h2>
+      <p>Flödet är kort: välj "Add Locale", ange språk, och lägg till en specifik region om det behövs (till exempel engelska för Storbritannien kontra engelska för USA). Du kan också sätta ett standardspråk som fallback om en sträng saknar översättning, så att sajten aldrig visar tomma fält för besökaren.</p>
+      <h2>AI-översättning eller manuell översättning?</h2>
+      <p>AI-översättningen i Framer är snabb och ett bra sätt att fylla en ny locale med ett första utkast över hela sajten på minuter istället för dagar. Problemet är sällan grammatik — det är ton, idiom och varumärkesspråk som tappas på vägen.</p>
+      <p>En praktisk arbetsordning:</p>
+      <ul>
+        <li>Kör AI-översättning för hela sajten som ett första lager.</li>
+        <li>Gå igenom rubriker, call-to-actions och andra korta, säljande formuleringar manuellt — det är där AI-översättningar oftast känns stelast.</li>
+        <li>Låt längre, mer neutral brödtext (FAQ-svar, produktbeskrivningar) vara AI-översatt om resurserna är begränsade, men markera det internt så ni vet vad som är granskat och inte.</li>
+      </ul>
+      <h2>Innehåll som skiljer sig per marknad</h2>
+      <p>Alla sidor eller CMS-poster passar inte alla marknader — en kampanjsida riktad mot en specifik region, eller ett prisexempel i en valuta som inte är relevant globalt. Du kan exkludera enskilda sidor eller poster per locale, så att varje marknad bara ser innehåll som faktiskt är avsett för den. Det är bättre än att lämna en halvöversatt eller irrelevant sida synlig "för säkerhets skull".</p>
+      <h2>Automatisk språkdetektering</h2>
+      <p>Framer kan automatiskt föreslå rätt språkversion för en besökare baserat på webbläsarens språkinställning och enhetens tidszon, och omdirigera dit. Det är bekvämt, men bygg alltid in en synlig, manuell språkväljare också — automatisk detektering gissar fel ibland (en svensk som reser och surfar på engelsk webbläsare, till exempel), och besökare ska aldrig sitta fast i fel språkversion utan en tydlig väg ut.</p>
+      <p>Väljaren uppdaterar sig själv och visar inte det språk besökaren redan befinner sig på, vilket gör den enkel att placera i navigationen utan extra logik.</p>
+      <h2>SEO: hreflang hanteras automatiskt — men bara om innehållet är på plats</h2>
+      <p>Både <code>lang</code>-attributet och <code>hreflang</code>-taggarna som talar om för Google vilka sidor som är språkversioner av varandra sköts automatiskt av Framer i bakgrunden. Du behöver inte skriva eller underhålla dem för hand, och de går inte att redigera manuellt i gränssnittet — vilket också betyder att du inte kan råka sätta dem fel.</p>
+      <p>Den automatiken löser bara den tekniska halvan. Den hjälper inte om en locale har oöversatta metabeskrivningar, en tom rubrik eller innehåll som bara är en rak maskinöversättning utan granskning. Sökmotorer värderar fortfarande varje språkversion på sitt eget innehåll — se vår <a href="/blog/framer-seo-guide.html">SEO-guide för Framer</a> för hur titlar och meta-beskrivningar sätts per sida.</p>
+      <h2>Vanliga misstag</h2>
+      <ul>
+        <li><strong>Lanserar en hel locale med enbart oreviderad AI-översättning.</strong> Fungerar tekniskt, men känns märkbart maskinöversatt för modersmålstalare — särskilt i rubriker.</li>
+        <li><strong>Glömmer översätta metatitlar och beskrivningar.</strong> Sidan visas på rätt språk, men syns fortfarande med svensk metatext i sökresultat för andra marknader.</li>
+        <li><strong>Litar enbart på automatisk språkdetektering.</strong> Utan en synlig växlare blir besökare som gissats fel fast utan enkel väg att byta.</li>
+        <li><strong>Publicerar tunt, nästan identiskt innehåll över flera locales</strong> bara för att fylla på antal språk. Få väl underhållna språkversioner slår många halvfärdiga.</li>
+      </ul>
+      <h2>Sammanfattning</h2>
+      <p>Framers lokalisering löser det tekniska SEO-arbetet — hreflang, lang-attribut, lokaliserade URL:er — automatiskt i bakgrunden. Det som återstår är redaktionellt: bestäm vilket innehåll som faktiskt behövs per marknad, låt AI göra grovjobbet med översättningen, och lägg den mänskliga granskningen där den gör mest nytta — rubriker, CTA:er och första intrycket på varje språk.</p>
+    </div>
+
+    <!-- Related Articles -->
+    <aside class="blog-post__related">
+      <h2 class="blog-post__related-title" data-i18n="post.related">Relaterade artiklar</h2>
+      <div class="blog-post__related-grid">
+        <a href="/blog/framer-seo-guide.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-seo.svg" alt="Framer SEO (2026): Så optimerar du din sajt för Google" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Framer SEO (2026): Så optimerar du din sajt för Google</strong> — <span>Framer SEO 2026 — komplett guide till titlar, strukturerad data, Core Web Vitals och sitemap. Så får du Framer-sajten att ranka i Google.</span></p>
+        </a>
+        <a href="/blog/framer-cms-i-praktiken.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-cms.svg" alt="Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod</strong> — <span>Hands-on guide till samlingar, fält, filter och detaljsidor — så bygger du en dynamisk sajt i Framer CMS utan kod.</span></p>
+        </a>
+      </div>
+    </aside>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__left">&copy; <span data-current-year>2026</span> FramerExpert.se</span>
+      <div class="footer__links">
+        <button class="lang-toggle" id="langToggle" aria-label="Byt språk">
+          <span class="lang-toggle__option is-active" data-lang="sv">SV</span>
+          <span class="lang-toggle__divider">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/init.js"></script>
+</body>
+</html>

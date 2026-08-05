@@ -3,7 +3,7 @@ slug: framer-core-web-vitals
 page_id: post17
 category: seo
 date: 2026-07-31
-date_modified: 2026-07-31
+date_modified: 2026-08-05
 date_display: 31 juli 2026
 readtime: 9 min läsning
 thumbnail: thumb-framer-cwv.svg
@@ -71,7 +71,7 @@ Regeln: det som går att göra i CSS ska göras i CSS. Transform- och opacity-ba
 CLS är oftast enklast att fixa. Layouten hoppar när något laddar in sent och knuffar undan det som redan syns.
 
 - **Sätt explicita dimensioner på bilder.** När webbläsaren vet höjd och bredd i förväg reserverar den utrymmet, så att texten under inte hoppar när bilden dyker upp.
-- **Var försiktig med custom-typsnitt.** Framer sätter `font-display: swap` på sina egna fonter, men laddar du in ett eget typsnitt via custom code måste du sätta det själv — annars riskerar du ett hopp när fonten byts.
+- **Var försiktig med custom-typsnitt.** Framer sätter `font-display: swap` på sina egna fonter, men laddar du in ett eget typsnitt via custom code måste du sätta det själv — annars riskerar du ett hopp när fonten byts. Hur många vikter du faktiskt behöver — och varför färre laddar snabbare — tar vi upp i [typografiguiden](/blog/responsiv-typografi-framer.html).
 - **Undvik innehåll som skjuts in ovanför befintligt.** En banner eller cookie-ruta som dyker upp och trycker ner sidan är en klassisk CLS-källa.
 
 ## Fallgroparna som är specifika för Framer

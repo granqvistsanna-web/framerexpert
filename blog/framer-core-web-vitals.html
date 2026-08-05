@@ -15,7 +15,7 @@
   <meta property="og:type" content="article">
   <meta property="og:locale" content="sv_SE">
   <meta property="article:published_time" content="2026-07-31">
-  <meta property="article:modified_time" content="2026-07-31">
+  <meta property="article:modified_time" content="2026-08-05">
   <meta property="article:author" content="FramerExpert">
   <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -45,7 +45,7 @@
     "headline": "Core Web Vitals i Framer (2026): Så får du grönt",
     "description": "Vad LCP, INP och CLS mäter, vad som sänker dem i Framer, och hur du får gröna värden på riktiga besökare.",
     "datePublished": "2026-07-31",
-    "dateModified": "2026-07-31",
+    "dateModified": "2026-08-05",
     "author": {
       "@type": "Organization",
       "name": "FramerExpert",
@@ -232,7 +232,7 @@
       <p>CLS är oftast enklast att fixa. Layouten hoppar när något laddar in sent och knuffar undan det som redan syns.</p>
       <ul>
         <li><strong>Sätt explicita dimensioner på bilder.</strong> När webbläsaren vet höjd och bredd i förväg reserverar den utrymmet, så att texten under inte hoppar när bilden dyker upp.</li>
-        <li><strong>Var försiktig med custom-typsnitt.</strong> Framer sätter <code>font-display: swap</code> på sina egna fonter, men laddar du in ett eget typsnitt via custom code måste du sätta det själv — annars riskerar du ett hopp när fonten byts.</li>
+        <li><strong>Var försiktig med custom-typsnitt.</strong> Framer sätter <code>font-display: swap</code> på sina egna fonter, men laddar du in ett eget typsnitt via custom code måste du sätta det själv — annars riskerar du ett hopp när fonten byts. Hur många vikter du faktiskt behöver — och varför färre laddar snabbare — tar vi upp i <a href="/blog/responsiv-typografi-framer.html">typografiguiden</a>.</li>
         <li><strong>Undvik innehåll som skjuts in ovanför befintligt.</strong> En banner eller cookie-ruta som dyker upp och trycker ner sidan är en klassisk CLS-källa.</li>
       </ul>
       <h2>Fallgroparna som är specifika för Framer</h2>

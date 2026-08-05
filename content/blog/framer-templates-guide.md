@@ -3,7 +3,7 @@ slug: framer-templates-guide
 page_id: post7
 category: tips
 date: 2026-04-22
-date_modified: 2026-04-22
+date_modified: 2026-08-05
 date_display: 22 april 2026
 readtime: 7 min läsning
 thumbnail: thumb-framer-templates.svg
@@ -13,7 +13,7 @@ meta_title: "Framer-mallar (2026): Så hittar, väljer och anpassar du rätt tem
 description: "Framer-mallar 2026 — så hittar du rätt template, anpassar den utan att förstöra designen och undviker de vanligaste licens- och CMS-fällorna."
 og_description: "Så hittar, väljer och anpassar du en Framer-mall 2026 — praktisk guide."
 intro: "En färdig Framer-mall kan spara veckor av designarbete — om du väljer rätt. Den här guiden går igenom var du hittar mallar, vad du ska titta efter innan du köper, och hur du anpassar en template utan att bryta sönder den."
-related: vad-ar-framer, 5-tips-bygga-snabbare
+related: framer-mall-eller-bygga-sjalv, utvardera-framer-template
 faqs:
   - q: Är Framer-mallar gratis?
     a: En del är det. Framer har ett urval gratis officiella templates, men de flesta professionella mallar kostar någonstans mellan 50 och 150 dollar som engångsköp. Priset återspeglar oftast komplexitet, antal sidor och om CMS är förkonfigurerat.
@@ -40,7 +40,7 @@ Mallar är ett bra val när:
 - Du är ny i Framer och vill lära dig genom att plocka isär något som är väl uppbyggt.
 - Din brand guideline är flexibel och kan anpassa sig till mallens grundstruktur.
 
-Mallar är ett sämre val när du har en stark visuell identitet som ska genomsyra varje detalj, eller när sajten är så komplex att du ändå måste bygga om hälften.
+Mallar är ett sämre val när du har en stark visuell identitet som ska genomsyra varje detalj, eller när sajten är så komplex att du ändå måste bygga om hälften. Väger du fortfarande mellan de två vägarna räknar vi på beslutet — i timmar och behållen struktur — i [Framer-mall eller bygga själv](/blog/framer-mall-eller-bygga-sjalv.html).
 
 ## Var hittar du Framer-mallar
 
@@ -78,7 +78,7 @@ Innan du trycker på köp, gå igenom:
 - **Läs recensioner om det finns.** Officiella Framer-mallar har ofta betyg och kommentarer. Återkommande klagomål är en varningsflagga.
 - **Licensvillkoren.** Får du använda den för kundprojekt? För flera sajter? För återförsäljning?
 
-Kör du genom hela listan på 10 minuter och allt ser bra ut, är du i princip redo.
+Kör du genom hela listan på 10 minuter och allt ser bra ut, är du i princip redo. Vill du gå djupare — med röda flaggor, stilstruktur och hur du prestandatestar demon innan köp — finns en utförlig genomgång i [checklistan för att utvärdera en Framer-template](/blog/utvardera-framer-template.html).
 
 ## Så anpassar du en mall utan att förstöra den
 

@@ -15,7 +15,7 @@
   <meta property="og:type" content="article">
   <meta property="og:locale" content="sv_SE">
   <meta property="article:published_time" content="2026-02-05">
-  <meta property="article:modified_time" content="2026-07-30">
+  <meta property="article:modified_time" content="2026-08-05">
   <meta property="article:author" content="FramerExpert">
   <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -45,7 +45,7 @@
     "headline": "5 tips för att bygga snabbare i Framer",
     "description": "Fem konkreta tips som gör dig snabbare i Framer — komponenter, Auto Layout, kortkommandon, CMS och mobile-first.",
     "datePublished": "2026-02-05",
-    "dateModified": "2026-07-30",
+    "dateModified": "2026-08-05",
     "author": {
       "@type": "Organization",
       "name": "FramerExpert",
@@ -211,6 +211,7 @@
       <p>Det första proffs gör i en ny fil är att bestämma vad som ska bli en komponent. Navigation, footer, knappar, kort och sektionsrubriker återkommer på nästan varje sida — bygg dem en gång som komponenter, så uppdateras varje instans automatiskt när du ändrar originalet. Byter kunden logotyp eller knappfärg fixar du det på ett ställe i stället för på trettio sidor.</p>
       <p>Ta det ett steg längre med <strong>varianter</strong>. En knapp-komponent kan ha varianterna primär, sekundär och inaktiverad, och en hover-variant som Framer animerar mellan automatiskt. Du bygger interaktionen en gång och återanvänder den överallt.</p>
       <p>Med <strong>properties</strong> gör du komponenten flexibel utan att bryta kopplingen till originalet. Ett kort kan ha en text-property för rubriken och en bild-property för toppbilden, så att varje instans visar olika innehåll men delar samma design. Faran att undvika är att detacha en instans för att göra en liten ändring — då tappar du den automatiska uppdateringen. Lägg hellre till en variant eller en property.</p>
+      <p>Samma princip gäller typografin: låt textstilar äga alla storlekar i stället för lokala värden. Hur du bygger en hel typskala med egna värden per brytpunkt visar vi i <a href="/blog/responsiv-typografi-framer.html">typografiguiden</a>.</p>
       <h2>2. Låt Auto Layout göra jobbet</h2>
       <p>Att positionera element för hand är den vanligaste tidstjuven i Framer. Auto Layout, som Framer kallar stacks, är plattformens motsvarighet till Flexbox i CSS: element placeras i rad eller kolumn med ett bestämt mellanrum, och layouten flödar om av sig själv när innehållet ändras.</p>
       <p>Nyckeln är att förstå <strong>fill</strong> och <strong>hug</strong>. Ett element som är satt till hug krymper till sitt innehåll, ett som är satt till fill växer för att fylla utrymmet. Med rätt kombination av de två blir en sektion responsiv utan att du rör en enda breakpoint — lägger du till ett kort i en rad så justerar sig de andra automatiskt.</p>

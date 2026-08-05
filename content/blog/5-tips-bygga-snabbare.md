@@ -3,7 +3,7 @@ slug: 5-tips-bygga-snabbare
 page_id: post3
 category: tips
 date: 2026-02-05
-date_modified: 2026-07-30
+date_modified: 2026-08-05
 date_display: 5 februari 2026
 readtime: 7 min läsning
 thumbnail: thumb-5-tips.svg
@@ -35,6 +35,8 @@ Det första proffs gör i en ny fil är att bestämma vad som ska bli en kompone
 Ta det ett steg längre med **varianter**. En knapp-komponent kan ha varianterna primär, sekundär och inaktiverad, och en hover-variant som Framer animerar mellan automatiskt. Du bygger interaktionen en gång och återanvänder den överallt.
 
 Med **properties** gör du komponenten flexibel utan att bryta kopplingen till originalet. Ett kort kan ha en text-property för rubriken och en bild-property för toppbilden, så att varje instans visar olika innehåll men delar samma design. Faran att undvika är att detacha en instans för att göra en liten ändring — då tappar du den automatiska uppdateringen. Lägg hellre till en variant eller en property.
+
+Samma princip gäller typografin: låt textstilar äga alla storlekar i stället för lokala värden. Hur du bygger en hel typskala med egna värden per brytpunkt visar vi i [typografiguiden](/blog/responsiv-typografi-framer.html).
 
 ## 2. Låt Auto Layout göra jobbet
 

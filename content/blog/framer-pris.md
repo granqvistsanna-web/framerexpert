@@ -3,7 +3,7 @@ slug: framer-pris
 page_id: post14
 category: tips
 date: 2026-07-30
-date_modified: 2026-07-30
+date_modified: 2026-08-05
 date_display: 30 juli 2026
 readtime: 8 min läsning
 thumbnail: thumb-framer-pris.svg
@@ -65,7 +65,7 @@ Här kommer det breda prisspannet från. Vad ett bygge kostar beror på omfattni
 
 En frilansande [Framer-expert](/blog/basta-framer-experter-sverige.html) ligger normalt i den lägre delen av spannet, en byrå i den övre. Skillnaden är inte bara pris utan också vad du får: en byrå levererar ofta strategi, copy och grafisk profil på köpet, medan en frilansare bygger det du redan har tänkt ut.
 
-Det som driver priset uppåt är mängden unik design och mängden innehåll. En sajt byggd på en anpassad mall är snabbare, och därmed billigare, än en ritad från ett blankt ark.
+Det som driver priset uppåt är mängden unik design och mängden innehåll. En sajt byggd på en anpassad mall är snabbare, och därmed billigare, än en ritad från ett blankt ark. När mallen är rätt val — och när den inte är det — går vi igenom i [Framer-mall eller bygga själv](/blog/framer-mall-eller-bygga-sjalv.html).
 
 ## Total kostnad över ett år
 

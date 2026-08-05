@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#27272A">
+  <meta name="color-scheme" content="dark">
+  <title>Underhåll i Framer vs Webflow (2026) — FramerExpert.se</title>
+  <meta name="description" content="Vad underhåll faktiskt innebär i Framer och Webflow — backuper, CMS-gränser, integrationer, staging och löpande kostnad. Ärlig jämförelse för tiden efter lansering.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Underhåll i Framer vs Webflow (2026): Vad kostar det egentligen efter lansering?">
+  <meta property="og:description" content="Underhåll i Framer vs Webflow — backuper, CMS-gränser, integrationer och löpande kostnad.">
+  <meta property="og:url" content="https://framerexpert.se/blog/underhall-framer-webflow.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="article:published_time" content="2026-08-05">
+  <meta property="article:modified_time" content="2026-08-05">
+  <meta property="article:author" content="FramerExpert">
+  <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://framerexpert.se/assets/og-default.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://framerexpert.se/blog/underhall-framer-webflow.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Underhåll i Framer vs Webflow (2026): Vad kostar det egentligen efter lansering?",
+    "description": "Underhåll i Framer vs Webflow — backuper, CMS-gränser, integrationer och löpande kostnad.",
+    "datePublished": "2026-08-05",
+    "dateModified": "2026-08-05",
+    "author": {
+      "@type": "Organization",
+      "name": "FramerExpert",
+      "url": "https://framerexpert.se"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FramerExpert.se",
+      "url": "https://framerexpert.se"
+    },
+    "mainEntityOfPage": "https://framerexpert.se/blog/underhall-framer-webflow.html",
+    "inLanguage": "sv"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se" },
+      { "@type": "ListItem", "position": 2, "name": "Blogg", "item": "https://framerexpert.se/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Underhåll i Framer vs Webflow (2026): Vad kostar det egentligen efter lansering?" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Kräver Framer eller Webflow plugin-uppdateringar som WordPress?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nej, ingen av plattformarna har ett plugin-ekosystem att underhålla i den bemärkelsen. Hosting, SSL, CDN och säkerhetspatchar sköts av plattformen på båda. Det är den delen av det klassiska CMS-underhållet som försvinner helt oavsett vilken av de två du väljer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Har Webflow en gräns för hur mycket CMS-innehåll jag kan ha?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, gränserna är knutna till planen. Starter (gratis) ger 50 poster, medan Premium och Team gav 20 000 CMS-poster per maj 2026 (upp från tidigare 10 000), med 40 respektive 100 samlingar. Väx du förbi taket på din nuvarande plan behöver du uppgradera."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Blir en Framer-sajt svår att underhålla om den växer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, om strukturen inte är genomtänkt från början. Framer sätter ingen hård CMS-gräns på samma sätt som Webflow, men en sajt med många unika, för hand byggda sidor istället för komponenter och samlingar blir snabbt tung att ändra i — problemet är strukturellt, inte en plattformsbegränsning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Är det dyrare att koppla tredjepartsverktyg till Framer än till Webflow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ofta ja. Webflow har över 270 inbyggda integrationer och ett större appekosystem, medan Framer saknar ett motsvarande bibliotek och lutar sig på Zapier, Make eller egna webhooks. Det fungerar utmärkt men lägger till en extra tjänst — och ofta en extra månadskostnad — att hålla koll på."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Har båda plattformarna backup och versionshistorik?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, men mekaniken skiljer sig. Webflow sparar automatiska backuper du kan återställa i sin helhet. Framer sparar versioner löpande (var femte minut de senaste timmarna, därefter glesare) som du återställer genom att kopiera in det gamla innehållet i den senaste versionen — mer manuellt, men lika pålitligt för att inte tappa arbete."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="post29">
+
+  <!-- NAVIGATION -->
+  <nav data-twostep-nav data-nav-status="not-active" class="twostep-nav">
+    <div data-nav-toggle="close" class="twostep-nav__bg"></div>
+    <div class="twostep-nav__wrap">
+      <div class="twostep-nav__width">
+        <div class="twostep-nav__bar">
+          <div class="twostep-nav__back">
+            <div class="twostep-nav__back-bg"></div>
+          </div>
+          <div class="twostep-nav__top">
+            <a href="/" class="twostep-nav__logo">
+              framer.expert
+            </a>
+            <button data-nav-toggle="toggle" class="twostep-nav__toggle" aria-label="Öppna meny" aria-expanded="false">
+              <div class="twostep-nav__toggle-bar"></div>
+              <div class="twostep-nav__toggle-bar"></div>
+            </button>
+            <div class="twostep-nav__top-line"></div>
+          </div>
+          <div class="twostep-nav__bottom">
+            <div class="twostep-nav__bottom-overflow">
+              <div class="twostep-nav__bottom-inner">
+                <div class="twostep-nav__bottom-row">
+                  <div class="twostep-nav__bottom-col">
+                    <div class="twostep-nav__info">
+                      <ul class="twostep-nav__ul">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-span" data-i18n="nav.blog">Blogg</span></a>
+                        </li>
+                      </ul>
+                      <ul class="twostep-nav__ul is--small">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=getting-started" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.getting-started">Kom igång</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=comparison" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.comparison">Jämförelse</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=tips" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.tips">Tips</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=seo" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.seo">SEO</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=cms" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.cms">CMS</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="https://www.framer.com" target="_blank" rel="noopener" class="twostep-nav__link"><span class="twostep-nav__link-eyebrow">Framer.com</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumbs container">
+    <ol class="breadcrumbs__list">
+      <li><a href="/" data-i18n="nav.home">Hem</a></li>
+      <li><a href="/blog/" data-i18n="nav.blog">Blogg</a></li>
+      <li><span aria-current="page">Underhåll i Framer vs Webflow (2026): Vad kostar det egentligen efter lansering?</span></li>
+    </ol>
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="container">
+    <header class="blog-post__header">
+      <div class="blog-post__meta">
+        <span class="blog-post__category">Jämförelse</span>
+        <time datetime="2026-08-05">5 augusti 2026</time>
+        <span>8 min läsning</span>
+      </div>
+      <h1 class="blog-post__title">Underhåll i Framer vs Webflow (2026): Vad kostar det egentligen efter lansering?</h1>
+      <p class="blog-post__intro">Ingen av plattformarna kräver plugin-uppdateringar eller serverpatchar som WordPress gör — det är den delen av underhållet båda har löst åt dig. Men 'inget underhåll' är en sanning med modifikation. Det som återstår skiljer sig mer mellan Framer och Webflow än marknadsföringen antyder, särskilt när sajten växer.</p>
+    </header>
+
+    <div class="blog-post__content">
+      <h2>Vad "underhåll" faktiskt betyder på en modern plattform</h2>
+      <p>Både Framer och Webflow säljer sig på att vara underhållsfria jämfört med WordPress, och på ett plan stämmer det: ingen av dem kräver att du håller koll på kärnuppdateringar, pluginversioner eller säkerhetspatchar på en server du ansvarar för. Det är riktigt, och det är den största enskilda skillnaden mot en självhostad lösning.</p>
+      <p>Men "underhållsfritt" är inte samma sak som "inget att göra". Det som återstår — CMS-skala, integrationer, backuper, innehållshygien — skiljer sig påtagligt mellan de två, och det är där den här jämförelsen faktiskt är användbar.</p>
+      <h2>Teknisk drift: båda är i praktiken skötta åt dig</h2>
+      <p>SSL, CDN, hosting och grundläggande säkerhet ingår på båda plattformarna som en del av abonnemanget. Du lägger aldrig tid på att patcha en server eller uppdatera en pluginversion som slutat fungera efter en kärnuppdatering. Den här baslinjen är i praktiken likvärdig — skillnaderna dyker upp först i lagren ovanför.</p>
+      <h2>Backuper och versionshistorik</h2>
+      <p>Webflow sparar automatiska backuper som går att återställa i sin helhet, och sedan en uppdatering i mars 2024 påverkar en återställning inte längre Collection- eller post-ID:n — vilket betyder att API-kopplingar och tredjepartsintegrationer överlever en återställning utan att gå sönder.</p>
+      <p>Framer sparar versioner löpande: ögonblicksbilder var femte minut de senaste fyra timmarna, varje timme det senaste dygnet, och dagligen därefter. Skillnaden mot Webflow är hur återställningen går till — du öppnar en tidigare version, kopierar det innehåll du vill ha tillbaka, och klistrar in det i den aktuella versionen, snarare än att trycka på en knapp och återställa hela sajten. Mer manuellt, men lika tillförlitligt för att inte tappa arbete permanent. Publicerar du en ny version skapas dessutom en egen post under "Staging &amp; Versions" i projektinställningarna.</p>
+      <h2>CMS-skala: här skiljer det sig på riktigt</h2>
+      <p>Webflow har en tydlig, publicerad gräns: Starter (gratis) ger 50 poster, medan Premium och Team-planerna gav 20 000 CMS-poster per maj 2026 (upp från tidigare 10 000 poster), med 40 respektive 100 samlingar. Gränsen är förutsägbar — du vet exakt när du behöver uppgradera plan.</p>
+      <p>Framer har ingen lika hårt publicerad gräns, men det betyder inte att skala är gratis. Problemet är strukturellt snarare än en teknisk spärr: en sajt byggd med många unika, för hand konstruerade sidor istället för komponenter och CMS-samlingar blir tung att underhålla långt innan den når något tak — enligt flera oberoende jämförelser börjar det märkas redan runt femtio sidor om strukturen inte är genomtänkt från start. Lösningen är att bygga med samlingar och komponenter från början, inte att vänta tills det gör ont.</p>
+      <h2>Integrationer: plugin-hylla vs bygga själv</h2>
+      <p>Det här är kanske den tydligaste praktiska skillnaden i löpande underhåll. Webflow har över 270 inbyggda integrationer och ytterligare några hundra i sitt appekosystem — de flesta vanliga kopplingar (CRM, e-postmarknadsföring, analys) fungerar utan extra mellanhand.</p>
+      <p>Framer saknar ett motsvarande bibliotek. Vill du koppla formulär eller annan data till externa verktyg går vägen via webhook, oftast i kombination med Zapier eller Make (vi går igenom exakt hur i vår <a href="/blog/framer-formular-automatisering.html">guide till formulär och automatisering i Framer</a>). Det fungerar bra, men det är ett extra lager att hålla koll på: en trasig webhook eller en Zap som slutat fungera upptäcks inte av sig själv, och Zapier eller Make tillkommer ofta som en egen löpande kostnad utöver själva sajtabonnemanget.</p>
+      <h2>Staging och testmiljö</h2>
+      <p>Webflow erbjuder staging-sajter kopplat till Workspace-planen — gratis staging-sajter syns under Webflows eget subdomännamn utan egen domän kopplad.</p>
+      <p>Framer har en liknande funktion under "Staging &amp; Versions" i projektinställningarna, men den kräver att en egen domän är kopplad till projektet för att bli tillgänglig. Sitter du fortfarande på Framers standarddomän får du testa förändringar i förhandsvisningen istället för en riktig staging-miljö.</p>
+      <h2>Löpande kostnad: vad du faktiskt betalar för</h2>
+      <p>Grovt jämfört (kolla alltid aktuella priser innan beslut, planerna ändras löpande): Webflows CMS-hostingplaner har legat runt 23–29 dollar i månaden, medan Framer Pro har legat runt 30 dollar mot Webflow Premium runt 25 dollar — men Webflow Premium har historiskt saknat funktioner som staging och A/B-testning som ingår i Framer Pro. Ingen av plattformarna är alltså entydigt billigast rakt av; det beror på vilken nivå du faktiskt behöver.</p>
+      <p>Lägg därtill Framers extra beroende av Zapier eller Make för integrationer som Webflow ofta löser inbyggt — det kan lägga till allt från någon hundralapp till några tusenlappar i månaden beroende på volym och antal kopplingar, en kostnad som lätt glöms bort i den initiala kalkylen.</p>
+      <h2>Innehållsunderhåll: det som är lika på båda plattformarna</h2>
+      <p>Oavsett plattform återstår samma redaktionella arbete: trasiga länkar att hitta och fixa, redirects att hålla ordning på när innehåll flyttas eller tas bort, bilder att komprimera och alt-texter att hålla uppdaterade, och en regelbunden koll av <a href="/blog/framer-core-web-vitals.html">Core Web Vitals</a> för att fånga prestandaförsämringar innan de syns i rankingen. Det här är den del av underhållet som ofta väger tyngst i praktiken, och den skiljer sig knappt alls mellan plattformarna — se vår <a href="/blog/framer-seo-checklista.html">SEO-checklista för Framer</a> för en konkret genomgång.</p>
+      <h2>Så väljer du utifrån underhållsbehov</h2>
+      <ul>
+        <li><strong>Mycket integrationer mot ett befintligt verktygsstack</strong> (CRM, marketing automation, betalningar) — Webflows inbyggda ekosystem betyder mindre löpande övervakning av tredjepartskopplingar.</li>
+        <li><strong>Enklare marknadssajt med få externa kopplingar</strong> — Framers enkelhet vinner, och Zapier/Make-beroendet för de fåtal integrationer du faktiskt behöver blir aldrig ett problem.</li>
+        <li><strong>Innehåll som väntas växa förbi tiotusentals poster</strong> — kontrollera Webflows plangränser tidigt, det är en hård gräns du annars stöter på med kort varsel.</li>
+        <li><strong>Många unika landningssidor snarare än CMS-tungt innehåll</strong> — lägg extra omsorg på komponentstruktur i Framer från start, det är där skalproblemen annars smyger sig in.</li>
+      </ul>
+      <h2>Sammanfattning</h2>
+      <p>Varken Framer eller Webflow ger dig klassiskt CMS-underhåll att bekymra sig om — ingen server, inga plugins, inga säkerhetspatchar. Det som återstår är CMS-skala, integrationer, backup-mekanik och staging, och där skiljer sig plattformarna mer än de flesta räknar med innan de väljer. Webflow ger dig förutsägbara gränser och fler inbyggda kopplingar. Framer ger dig enkelhet så länge strukturen är genomtänkt och integrationsbehovet är modest. Räkna på vilket av de två som matchar din faktiska drift — inte bara lanseringsdagen.</p>
+    </div>
+
+    <!-- Related Articles -->
+    <aside class="blog-post__related">
+      <h2 class="blog-post__related-title" data-i18n="post.related">Relaterade artiklar</h2>
+      <div class="blog-post__related-grid">
+        <a href="/blog/framer-vs-webflow.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-vs-webflow.svg" alt="Framer vs Webflow (2026): Vilken ska du välja?" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Framer vs Webflow (2026): Vilken ska du välja?</strong> — <span>Framer vs Webflow 2026: ärlig jämförelse av pris, CMS, e-handel, SEO och användarvänlighet. Så väljer du rätt plattform för din sajt.</span></p>
+        </a>
+        <a href="/blog/framer-pris.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-pris.svg" alt="Vad kostar en Framer-webbplats? Prisguide 2026" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Vad kostar en Framer-webbplats? Prisguide 2026</strong> — <span>Framers abonnemang, vad det kostar att bygga själv eller anlita, och totalkostnaden över tid — i klartext.</span></p>
+        </a>
+      </div>
+    </aside>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__left">&copy; <span data-current-year>2026</span> FramerExpert.se</span>
+      <div class="footer__links">
+        <button class="lang-toggle" id="langToggle" aria-label="Byt språk">
+          <span class="lang-toggle__option is-active" data-lang="sv">SV</span>
+          <span class="lang-toggle__divider">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/init.js"></script>
+</body>
+</html>

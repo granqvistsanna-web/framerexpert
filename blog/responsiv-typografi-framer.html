@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#27272A">
+  <meta name="color-scheme" content="dark">
+  <title>Typografi i Framer (2026): Bygg en responsiv typskala som håller — FramerExpert.se</title>
+  <meta name="description" content="Så bygger du en responsiv typskala i Framer med textstilar och brytpunkter — konkreta storlekar, radavstånd och misstagen som förstör mobilvyn.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Typografi i Framer (2026): Bygg en responsiv typskala som håller">
+  <meta property="og:description" content="Responsiv typskala i Framer — konkreta storlekar och stegen som håller.">
+  <meta property="og:url" content="https://framerexpert.se/blog/responsiv-typografi-framer.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="article:published_time" content="2026-08-05">
+  <meta property="article:modified_time" content="2026-08-05">
+  <meta property="article:author" content="FramerExpert">
+  <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://framerexpert.se/assets/og-default.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://framerexpert.se/blog/responsiv-typografi-framer.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Typografi i Framer (2026): Bygg en responsiv typskala som håller",
+    "description": "Responsiv typskala i Framer — konkreta storlekar och stegen som håller.",
+    "datePublished": "2026-08-05",
+    "dateModified": "2026-08-05",
+    "author": {
+      "@type": "Organization",
+      "name": "FramerExpert",
+      "url": "https://framerexpert.se"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FramerExpert.se",
+      "url": "https://framerexpert.se"
+    },
+    "mainEntityOfPage": "https://framerexpert.se/blog/responsiv-typografi-framer.html",
+    "inLanguage": "sv"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se" },
+      { "@type": "ListItem", "position": 2, "name": "Blogg", "item": "https://framerexpert.se/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Typografi i Framer (2026): Bygg en responsiv typskala som håller" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vilken textstorlek ska brödtext ha i Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "16–17 pixlar på desktop är rätt utgångspunkt för längre text, med radavstånd runt 1,5. Gå inte under 16 pixlar på mobil — det straffar både läsbarheten och hur sajten upplevs på nära håll."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad är en typskala?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En fast uppsättning textstorlekar härledda ur en gemensam kvot, till exempel 1,25. I stället för att välja storlek fritt varje gång väljer du en nivå ur skalan. Resultatet är konsekvent hierarki och betydligt färre beslut per sida."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur många textstilar behöver en Framer-sajt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sex rubriknivåer plus två till tre brödtextvarianter räcker för de flesta sajter. Fler stilar än så brukar betyda att skalan saknar förankring — då är det bättre att revidera nivåerna än att lägga till fler."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur gör jag rubriker mindre på mobil i Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Öppna textstilen, växla till mobil-brytpunkten och sätt en egen storlek där. Ändringen slår igenom överallt där stilen används. Sätt aldrig mobilstorlekar lokalt på enskilda textlager — då tappar du den centrala kontrollen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Påverkar typsnittsvalet sajtens prestanda?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Varje vikt och variant är en fil som ska laddas innan texten visas rätt. Två typsnittsfamiljer i två till tre vikter räcker för de flesta sajter — fler vikter kostar laddtid och syns i Core Web Vitals."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="post27">
+
+  <!-- NAVIGATION -->
+  <nav data-twostep-nav data-nav-status="not-active" class="twostep-nav">
+    <div data-nav-toggle="close" class="twostep-nav__bg"></div>
+    <div class="twostep-nav__wrap">
+      <div class="twostep-nav__width">
+        <div class="twostep-nav__bar">
+          <div class="twostep-nav__back">
+            <div class="twostep-nav__back-bg"></div>
+          </div>
+          <div class="twostep-nav__top">
+            <a href="/" class="twostep-nav__logo">
+              framer.expert
+            </a>
+            <button data-nav-toggle="toggle" class="twostep-nav__toggle" aria-label="Öppna meny" aria-expanded="false">
+              <div class="twostep-nav__toggle-bar"></div>
+              <div class="twostep-nav__toggle-bar"></div>
+            </button>
+            <div class="twostep-nav__top-line"></div>
+          </div>
+          <div class="twostep-nav__bottom">
+            <div class="twostep-nav__bottom-overflow">
+              <div class="twostep-nav__bottom-inner">
+                <div class="twostep-nav__bottom-row">
+                  <div class="twostep-nav__bottom-col">
+                    <div class="twostep-nav__info">
+                      <ul class="twostep-nav__ul">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-span" data-i18n="nav.blog">Blogg</span></a>
+                        </li>
+                      </ul>
+                      <ul class="twostep-nav__ul is--small">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=getting-started" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.getting-started">Kom igång</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=comparison" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.comparison">Jämförelse</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=tips" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.tips">Tips</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=seo" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.seo">SEO</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=cms" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.cms">CMS</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="https://www.framer.com" target="_blank" rel="noopener" class="twostep-nav__link"><span class="twostep-nav__link-eyebrow">Framer.com</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumbs container">
+    <ol class="breadcrumbs__list">
+      <li><a href="/" data-i18n="nav.home">Hem</a></li>
+      <li><a href="/blog/" data-i18n="nav.blog">Blogg</a></li>
+      <li><span aria-current="page">Typografi i Framer (2026): Bygg en responsiv typskala som håller</span></li>
+    </ol>
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="container">
+    <header class="blog-post__header">
+      <div class="blog-post__meta">
+        <span class="blog-post__category">Tips</span>
+        <time datetime="2026-08-05">5 augusti 2026</time>
+        <span>7 min läsning</span>
+      </div>
+      <h1 class="blog-post__title">Typografi i Framer (2026): Bygg en responsiv typskala som håller</h1>
+      <p class="blog-post__intro">De flesta typografiproblem i Framer-sajter kommer inte från typsnittsvalet. De kommer från att storlekarna sattes en i taget, sida för sida, tills ingen längre vet varför en rubrik är 42 pixlar på ett ställe och 44 på ett annat. Lösningen är en typskala: en fast uppsättning storlekar, definierade som textstilar, med egna värden per brytpunkt. Den tar en timme att sätta upp och betalar tillbaka på varje sida du bygger efteråt.</p>
+    </header>
+
+    <div class="blog-post__content">
+      <h2>Varför en typskala slår enskilda beslut</h2>
+      <p>Utan system blir varje textstorlek ett nytt beslut, och besluten glider isär med tiden. En typskala vänder på det: du bestämmer en gång — en basstorlek och en kvot — och alla storlekar följer ur det.</p>
+      <p>Vinsten är inte bara estetisk konsekvens. Skalan gör sajten snabbare att bygga, eftersom valet står mellan sex nivåer i stället för oändligt många pixelvärden. Den gör sajten billigare att underhålla, eftersom en justering i textstilen slår igenom överallt. Och den gör samarbete möjligt — nästa person som öppnar projektet ser ett system i stället för hundra undantag.</p>
+      <p>Det är samma princip som gör att välbyggda mallar tål att ändras: utseendet styrs från stilar, inte från enskilda lager.</p>
+      <h2>Börja med brödtexten, inte rubrikerna</h2>
+      <p>Rubrikerna är det roliga, men brödtexten är grunden — det är den besökaren faktiskt läser. Sätt den först: 16–17 pixlar på desktop för längre text, med radavstånd runt 1,5.</p>
+      <p>När brödtexten sitter härleder du resten. Bildtexter och etiketter ett steg ner, rubriker i steg uppåt enligt en fast kvot. En kvot på 1,25 ger en lugn, redaktionell skala som passar de flesta sajter. Vill du ha större kontrast mellan rubrik och text — vanligt på landningssidor med korta texter — fungerar 1,333 eller mer.</p>
+      <p>I praktiken ser en skala med kvoten 1,25 ut ungefär så här på desktop: 17, 21, 27, 34, 42 och 53 pixlar. Avrunda till hela pixlar — ingen läsare ser skillnaden mellan 33,2 och 34, men du slipper decimaler i panelen.</p>
+      <h2>Så bygger du skalan med textstilar</h2>
+      <p>Allt i Framer bygger på textstilar. Skapa en stil per nivå — till exempel <code>Heading 1</code> till <code>Heading 6</code>, <code>Body</code>, <code>Body Small</code> och <code>Caption</code> — och arbeta sedan så här:</p>
+      <ul>
+        <li><strong>Sätt desktopvärdena först</strong>, enligt skalan du valt. Desktop är basen som de andra brytpunkterna ärver från.</li>
+        <li><strong>Definiera egna värden för tablet och mobil</strong> direkt i varje textstil. Öppna stilen, växla brytpunkt, sätt storleken — ändringen slår igenom överallt där stilen används.</li>
+        <li><strong>Använd alltid stilarna, aldrig lokala storlekar.</strong> Behöver en rubrik vara mindre på ett ställe är det ett tecken på att skalan saknar en nivå. Lägg till en stil i stället för att skriva över — ett lokalt undantag är osynligt nästa gång du justerar skalan.</li>
+        <li><strong>Låt även komponenter använda stilarna.</strong> Textlager inne i kort, knappar och navigation ska peka på samma textstilar. Annars uppdaterar du skalan och undrar varför korten inte följde med.</li>
+      </ul>
+      <p>Det är hela metoden. Ingen kod, inga plugins — bara disciplinen att låta stilarna äga alla storlekar.</p>
+      <h2>Krymp rubrikerna mer än brödtexten</h2>
+      <p>Det vanligaste mobilmisstaget är att skala ner allt lika mycket. Brödtext på 17 pixlar kan stå kvar på 16 på mobil — men en rubrik på 53 pixlar behöver ofta ner mot 32–36 för att inte radbrytas till en vägg av text.</p>
+      <p>Tumregeln: ju större storlek, desto mer krymper den. Skalan blir alltså flackare på mobil, och det är rätt. Kontrasten mellan nivåerna får komma från vikt och spacing i stället för enbart storlek.</p>
+      <p>Glöm inte tablet på vägen ner. Desktopvärden som står kvar på tablet ger rubriker som är för stora precis i det läge där många beslutfattare granskar sajten.</p>
+      <h2>Radavstånd och radlängd</h2>
+      <p>Radavstånd följer storleken åt motsatt håll: brödtext behöver runt 1,5, stora rubriker mår bäst kring 1,1–1,2. Sätter du 1,5 på en rubrik i 53 pixlar ser tvåradiga rubriker ut att glida isär.</p>
+      <p>Radlängden styr du med maxbredd på textblocket, inte med typstorleken. Sikta på 60–75 tecken per rad för löptext. I Framer betyder det i praktiken en maxbredd runt 640–700 pixlar på textcontainern — inte text som flödar över hela sektionsbredden. Det är en av de justeringar som gör störst skillnad för läsbarheten och som tar under en minut att göra.</p>
+      <h2>Typsnittsval och prestanda</h2>
+      <p>Typografi är också en prestandafråga. Varje typsnittsvikt är en fil som laddas innan texten visas rätt, och det syns i mätvärdena.</p>
+      <ul>
+        <li><strong>Begränsa antalet vikter.</strong> Två familjer i två till tre vikter räcker för de flesta sajter. Regular, medium och bold täcker nästan alla behov.</li>
+        <li><strong>Överväg en variabel font</strong> om du vill ha många vikter — en fil ersätter flera, ofta med mindre total vikt.</li>
+        <li><strong>Testa efteråt.</strong> Kör sajten genom PageSpeed Insights och titta särskilt på om texten hoppar när typsnittet laddats in. Hur du läser resultaten går vi igenom i guiden till <a href="/blog/framer-core-web-vitals.html">Core Web Vitals i Framer</a>.</li>
+      </ul>
+      <h2>Tre misstag som sabbar skalan</h2>
+      <ul>
+        <li><strong>För många stilar.</strong> Tolv rubriknivåer betyder att ingen är förankrad. Klarar du dig med sex nivåer plus brödtextvarianterna har du ett system — fler är oftast obeslutsamhet i förklädnad.</li>
+        <li><strong>Hoppa över tablet.</strong> Den bortglömda brytpunkten, och den där felen oftast upptäcks av fel person: kunden.</li>
+        <li><strong>Lokala undantag i komponenter.</strong> Ett textlager med hårdkodad storlek inne i en komponent är en tidsinställd inkonsekvens. Den syns inte i dag, men den syns dagen du ändrar skalan.</li>
+      </ul>
+      <h2>Sammanfattning</h2>
+      <p>En typskala är inte ett estetiskt val utan ett underhållsval: sex stilar med värden per brytpunkt ersätter hundratals enskilda beslut, och varje framtida justering blir en ändring i stället för femtio. Sätt brödtexten först, härled resten ur en kvot, ge rubrikerna egna mobilvärden och låt textstilarna äga varje storlek på sajten.</p>
+      <p>Vill du ha fler arbetssätt som snabbar upp bygget på samma sätt fortsätter vi i <a href="/blog/5-tips-bygga-snabbare.html">5 tips för att bygga snabbare i Framer</a>.</p>
+    </div>
+
+    <!-- Related Articles -->
+    <aside class="blog-post__related">
+      <h2 class="blog-post__related-title" data-i18n="post.related">Relaterade artiklar</h2>
+      <div class="blog-post__related-grid">
+        <a href="/blog/5-tips-bygga-snabbare.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-5-tips.svg" alt="5 tips för att bygga snabbare i Framer" loading="lazy">
+          </div>
+          <p class="card__text"><strong>5 tips för att bygga snabbare i Framer</strong> — <span>Spara tid och arbeta smartare. Fem konkreta tips som gör dig snabbare i Framer.</span></p>
+        </a>
+        <a href="/blog/framer-core-web-vitals.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-cwv.svg" alt="Core Web Vitals i Framer (2026): Så får du grönt" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Core Web Vitals i Framer (2026): Så får du grönt</strong> — <span>Vad LCP, INP och CLS mäter, vad som sänker värdena i Framer, och hur du får grönt på riktiga besökare.</span></p>
+        </a>
+      </div>
+    </aside>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__left">&copy; <span data-current-year>2026</span> FramerExpert.se</span>
+      <div class="footer__links">
+        <button class="lang-toggle" id="langToggle" aria-label="Byt språk">
+          <span class="lang-toggle__option is-active" data-lang="sv">SV</span>
+          <span class="lang-toggle__divider">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/init.js"></script>
+</body>
+</html>

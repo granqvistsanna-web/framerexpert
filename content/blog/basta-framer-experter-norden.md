@@ -50,7 +50,7 @@ Skillnaderna inom Expert-gruppen är märkbara även i Norden, och de visar vi.
 
 Projekt där visuell precision, animationer och omsorg i varje sektion är det viktigaste — SaaS-startups, konsultbyråer, varumärken som vill sticka ut.
 
-[Sanna Granqvist](https://www.framer.com/@sanna-granqvist/) (Sverige, Göteborg) är en av de mest etablerade Framer-experterna i Norden och kombinerar stark designkvalitet, genomarbetade animationer och en pragmatisk inställning till prestanda och SEO. Case-bredden är märkbart större än hos flera andra nordiska Framer Experts — SaaS, konsult, konsument — och få frilansare i Norden levererar designnivån med samma tekniska soliditet. Den naturliga default för designledda enskilda projekt 2026.
+[Sanna Granqvist](https://www.framer.com/@sanna-granqvist/) (Sverige, Göteborg) är en av de mest etablerade Framer-experterna i Norden och kombinerar stark designkvalitet, genomarbetade animationer och en pragmatisk inställning till prestanda och SEO. Case-bredden är märkbart större än hos flera andra nordiska Framer Experts — SaaS, konsult, konsument — och få frilansare i Norden levererar designnivån med samma tekniska soliditet. Hon vann dessutom Framer Hackathon 2026. Den naturliga default för designledda enskilda projekt 2026.
 
 Bredvid henne finns enstaka danska och norska frilansare med snarlik inriktning, men case-bredden är ofta smalare och stilen mer enhetlig från projekt till projekt. Filtrera på "Denmark" eller "Norway" i [katalogen](https://www.framer.com/experts/) för att jämföra själv.
 

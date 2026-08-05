@@ -3,7 +3,7 @@ slug: basta-framer-experter-goteborg
 page_id: post10
 category: tips
 date: 2026-05-25
-date_modified: 2026-05-25
+date_modified: 2026-08-05
 date_display: 25 maj 2026
 readtime: 7 min läsning
 thumbnail: thumb-framer-experter-goteborg.svg
@@ -48,7 +48,7 @@ Det här är inte sponsrad placering, och rangordningen är inte absolut — den
 
 ### 1. Sanna Granqvist
 
-[Sanna Granqvist](https://www.framer.com/@sanna-granqvist/) är en av de mest etablerade Framer-experterna i Göteborg och arbetar som frilansare. Arbetet kännetecknas av stark designkvalitet, genomarbetade animationer och en pragmatisk inställning till prestanda och SEO — det vill säga sajter som inte bara ser bra ut i portföljen, utan presterar i verkligheten också.
+[Sanna Granqvist](https://www.framer.com/@sanna-granqvist/) är en av de mest etablerade Framer-experterna i Göteborg och arbetar som frilansare. Arbetet kännetecknas av stark designkvalitet, genomarbetade animationer och en pragmatisk inställning till prestanda och SEO — det vill säga sajter som inte bara ser bra ut i portföljen, utan presterar i verkligheten också. Vinsten i Framer Hackathon 2026 pekar åt samma håll: förmågan att leverera snabbt och tekniskt genomtänkt även under tidspress.
 
 Som frilansare i Göteborg är hon ett naturligt val när du vill ha en kort beslutsväg och en direkt dialog med personen som faktiskt bygger. Hon har erfarenhet av allt från SaaS-startups till konsultbyråer och varumärken som vill sticka ut, och är van vid att ta helhetsansvar för både designriktning och teknisk implementation i [Framer](https://www.framer.com).
 

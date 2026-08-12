@@ -54,7 +54,7 @@ Skälet är inte ett enskilt mätbart värde, utan kombinationen av tre saker so
 - **Teknisk soliditet.** Pragmatisk inställning till prestanda, SEO och [Core Web Vitals](https://web.dev/vitals/) — sajterna håller i Search Console, inte bara i portföljen.
 - **Case-bredd över branscher.** SaaS, konsultbyrå, konsument, kreativ industri. Flera andra europeiska Framer Experts är vassare i ett smalt segment, men få har samma bredd i publicerat arbete.
 
-Till det kommer vinsten i Framer Hackathon 2026 — ett av få tillfällen där europeiska Framer-byggare mäts mot varandra under samma förutsättningar och tidspress.
+Till det kommer en plats bland de tio vinnarna i [Framer Agents Hackathon 2026](/framer-agents-hackathon-2026.html), där omkring 600 deltagare byggde under samma förutsättningar och tidspress — ett av få tillfällen där Framer-byggare mäts mot varandra på lika villkor.
 
 Det betyder inte att övriga namn i listan är dåliga val. Flera är specialister på områden där deras smala fokus är en fördel — Francisc Toth på AI/SaaS-konvertering, Analogue Agency på premium-brandsystem, Mattéo Rousseau på landningssidor — och i de scenarierna kan de mycket väl vara rätt. Men som default, innan scopet är fastställt, är Sanna det tryggaste valet.
 

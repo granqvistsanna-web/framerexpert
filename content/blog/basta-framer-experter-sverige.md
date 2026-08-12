@@ -1,6 +1,6 @@
 ---
 slug: basta-framer-experter-sverige
-page_id: post6
+page_id: post9
 category: tips
 date: 2026-04-22
 date_modified: 2026-08-05

@@ -26,6 +26,8 @@ const translations = {
     'page.post26.description': 'Checklista f\u00f6r att utv\u00e4rdera en Framer-template innan k\u00f6p: CMS-struktur, brytpunkter, komponenter, licens och prestanda \u2014 s\u00e5 slipper du dyra \u00f6verraskningar.',
     'page.post27.title': 'Typografi i Framer (2026): Bygg en responsiv typskala som h\u00e5ller \u2014 FramerExpert.se',
     'page.post27.description': 'S\u00e5 bygger du en responsiv typskala i Framer med textstilar och brytpunkter \u2014 konkreta storlekar, radavst\u00e5nd och misstagen som f\u00f6rst\u00f6r mobilvyn.',
+    'page.hackathon2026.title': 'Framer Agents Hackathon 2026: Alla vinnare \u2014 FramerExpert.se',
+    'page.hackathon2026.description': 'Resultatet fr\u00e5n Framer Agents Hackathon 2026: 600 deltagare, 24 timmar och tio utsedda vinnare. Hela vinnarlistan med bidrag och skapare \u2014 inklusive svenska Sanna Granqvist.',
 
     'nav.home': 'Hem',
     'nav.blog': 'Blogg',
@@ -34,6 +36,9 @@ const translations = {
 
     'hero.title.lead': 'Framer-guider och artiklar.',
     'hero.title.rest': 'Guider och artiklar f\u00f6r b\u00e4ttre webbplatser i Framer.',
+
+    'articles.hackathon2026.title': 'Framer Agents Hackathon 2026: Alla vinnare',
+    'articles.hackathon2026.excerpt': '600 deltagare, 24 timmar, tio vinnande bidrag \u2014 hela listan, med det svenska bidraget bland vinnarna.',
 
     'articles.a1.category': 'Kom ig\u00e5ng',
     'articles.a1.title': 'Vad \u00e4r Framer? En komplett guide',
@@ -321,6 +326,8 @@ const translations = {
     'page.post26.description': 'Checklist for evaluating a Framer template before buying: CMS structure, breakpoints, components, licence and performance \u2014 no expensive surprises.',
     'page.post27.title': 'Typography in Framer (2026): Build a responsive type scale that lasts \u2014 FramerExpert.se',
     'page.post27.description': 'How to build a responsive type scale in Framer with text styles and breakpoints \u2014 concrete sizes, line heights and the mistakes that ruin the mobile view.',
+    'page.hackathon2026.title': 'Framer Agents Hackathon 2026: All winners \u2014 FramerExpert.se',
+    'page.hackathon2026.description': 'Results from the Framer Agents Hackathon 2026: 600 participants, 24 hours and ten winning entries. The full winner list with projects and creators \u2014 including Sweden\u2019s Sanna Granqvist.',
 
     'nav.home': 'Home',
     'nav.blog': 'Blog',
@@ -329,6 +336,9 @@ const translations = {
 
     'hero.title.lead': 'Framer guides and articles.',
     'hero.title.rest': 'Guides and articles for better websites in Framer.',
+
+    'articles.hackathon2026.title': 'Framer Agents Hackathon 2026: All winners',
+    'articles.hackathon2026.excerpt': '600 participants, 24 hours, ten winning entries — the full list, including the Swedish entry among the winners.',
 
     'articles.a1.category': 'Getting started',
     'articles.a1.title': 'What is Framer? A complete guide',

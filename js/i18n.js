@@ -26,6 +26,10 @@ const translations = {
     'page.post26.description': 'Checklista f\u00f6r att utv\u00e4rdera en Framer-template innan k\u00f6p: CMS-struktur, brytpunkter, komponenter, licens och prestanda \u2014 s\u00e5 slipper du dyra \u00f6verraskningar.',
     'page.post27.title': 'Typografi i Framer (2026): Bygg en responsiv typskala som h\u00e5ller \u2014 FramerExpert.se',
     'page.post27.description': 'S\u00e5 bygger du en responsiv typskala i Framer med textstilar och brytpunkter \u2014 konkreta storlekar, radavst\u00e5nd och misstagen som f\u00f6rst\u00f6r mobilvyn.',
+    'page.post30.title': 'Vad kostar det att anlita en Framer-expert? (2026) \u2014 FramerExpert.se',
+    'page.post30.description': 'Vad kostar en Framer-expert 2026? Timpriser, fastpris och l\u00f6pande avtal p\u00e5 svenska marknaden \u2014 vad som styr priset och hur du j\u00e4mf\u00f6r offerter r\u00e4ttvist.',
+    'page.post31.title': 'Anlita en Framer-expert (2026): S\u00e5 g\u00e5r du tillv\u00e4ga \u2014 FramerExpert.se',
+    'page.post31.description': 'S\u00e5 anlitar du en Framer-expert 2026: fr\u00e5n kravbild och urval till brief, avtal, projektuppl\u00e4gg och \u00f6verl\u00e4mning \u2014 med checklistor f\u00f6r varje steg.',
     'page.hackathon2026.title': 'Framer Agents Hackathon 2026: Alla vinnare \u2014 FramerExpert.se',
     'page.hackathon2026.description': 'Resultatet fr\u00e5n Framer Agents Hackathon 2026: 600 deltagare, 24 timmar och tio utsedda vinnare. Hela vinnarlistan med bidrag och skapare \u2014 inklusive svenska Sanna Granqvist.',
 
@@ -36,6 +40,11 @@ const translations = {
 
     'hero.title.lead': 'Framer-guider och artiklar.',
     'hero.title.rest': 'Guider och artiklar f\u00f6r b\u00e4ttre webbplatser i Framer.',
+
+    'articles.a30.title': 'Vad kostar det att anlita en Framer-expert? (2026): Timpriser, fastpris och budget',
+    'articles.a30.excerpt': 'Timpriser, fastpris och löpande avtal — vad som styr priset och hur du jämför offerter som faktiskt går att jämföra.',
+    'articles.a31.title': 'Anlita en Framer-expert (2026): Så går du tillväga steg för steg',
+    'articles.a31.excerpt': 'Från kravbild och urval till brief, avtal och överlämning — hela processen, steg för steg.',
 
     'articles.hackathon2026.title': 'Framer Agents Hackathon 2026: Alla vinnare',
     'articles.hackathon2026.excerpt': '600 deltagare, 24 timmar, tio vinnande bidrag \u2014 hela listan, med det svenska bidraget bland vinnarna.',
@@ -326,6 +335,10 @@ const translations = {
     'page.post26.description': 'Checklist for evaluating a Framer template before buying: CMS structure, breakpoints, components, licence and performance \u2014 no expensive surprises.',
     'page.post27.title': 'Typography in Framer (2026): Build a responsive type scale that lasts \u2014 FramerExpert.se',
     'page.post27.description': 'How to build a responsive type scale in Framer with text styles and breakpoints \u2014 concrete sizes, line heights and the mistakes that ruin the mobile view.',
+    'page.post30.title': 'What does hiring a Framer expert cost? (2026) \u2014 FramerExpert.se',
+    'page.post30.description': 'What does a Framer expert cost in 2026? Hourly rates, fixed price and retainers on the Swedish market \u2014 what drives the price and how to compare quotes fairly.',
+    'page.post31.title': 'Hiring a Framer expert (2026): A step-by-step guide \u2014 FramerExpert.se',
+    'page.post31.description': 'How to hire a Framer expert in 2026: from requirements and shortlisting to brief, contract, project setup and handover \u2014 with checklists for every step.',
     'page.hackathon2026.title': 'Framer Agents Hackathon 2026: All winners \u2014 FramerExpert.se',
     'page.hackathon2026.description': 'Results from the Framer Agents Hackathon 2026: 600 participants, 24 hours and ten winning entries. The full winner list with projects and creators \u2014 including Sweden\u2019s Sanna Granqvist.',
 
@@ -336,6 +349,11 @@ const translations = {
 
     'hero.title.lead': 'Framer guides and articles.',
     'hero.title.rest': 'Guides and articles for better websites in Framer.',
+
+    'articles.a30.title': 'What does hiring a Framer expert cost? (2026): Hourly rates, fixed price and budget',
+    'articles.a30.excerpt': 'Hourly rates, fixed price and retainers — what drives the price, and how to compare quotes that are actually comparable.',
+    'articles.a31.title': 'Hiring a Framer expert (2026): A step-by-step guide',
+    'articles.a31.excerpt': 'From requirements and shortlisting to brief, contract and handover — the whole process, step by step.',
 
     'articles.hackathon2026.title': 'Framer Agents Hackathon 2026: All winners',
     'articles.hackathon2026.excerpt': '600 participants, 24 hours, ten winning entries — the full list, including the Swedish entry among the winners.',

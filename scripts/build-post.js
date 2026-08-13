@@ -20,6 +20,7 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const CONTENT_DIR = path.join(ROOT, 'content', 'blog');
 const TEMPLATE_PATH = path.join(ROOT, 'blog', '_template.html');
+const I18N_PATH = path.join(ROOT, 'js', 'i18n.js');
 const OUT_DIR = path.join(ROOT, 'blog');
 
 const CATEGORY_LABELS = {
@@ -39,6 +40,7 @@ function main() {
 
   const registry = loadRegistry();
   const template = fs.readFileSync(TEMPLATE_PATH, 'utf8');
+  const i18n = loadSwedishI18n();
 
   const slugs = args[0] === '--all'
     ? Object.keys(registry).filter((s) => !registry[s].stub)
@@ -48,7 +50,7 @@ function main() {
     const post = registry[slug];
     if (!post) die(`No content/blog/${slug}.md found.`);
     if (post.stub) die(`${slug} is a stub — add body content before building.`);
-    const html = render(template, post, registry);
+    const html = render(template, post, registry, i18n);
     const outPath = path.join(OUT_DIR, `${slug}.html`);
     fs.writeFileSync(outPath, html);
     console.log(`wrote ${path.relative(ROOT, outPath)}`);
@@ -69,9 +71,63 @@ function loadRegistry() {
   return registry;
 }
 
-function render(template, post, registry) {
+/*
+ * js/i18n.js rewrites document.title and the meta description on every page
+ * load — including in Swedish. If the frontmatter and the Swedish i18n strings
+ * disagree, a raw crawler reads one text and every human reads another. That
+ * divergence is silent, so the build refuses to produce it.
+ *
+ * Returns { 'page.post5.title': '…', 'page.post5.description': '…', … } for the
+ * sv block only. The en strings are translations and must NOT match.
+ */
+function loadSwedishI18n() {
+  const raw = fs.readFileSync(I18N_PATH, 'utf8');
+
+  const svStart = raw.indexOf('sv: {');
+  const enStart = raw.indexOf('en: {');
+  if (svStart === -1 || enStart === -1) die('js/i18n.js: could not locate the sv and en blocks.');
+  const sv = raw.slice(svStart, enStart);
+
+  const out = {};
+  const re = /'(page\.[A-Za-z0-9]+\.(?:title|description))':\s*'((?:[^'\\]|\\.)*)'/g;
+  let m;
+  while ((m = re.exec(sv)) !== null) out[m[1]] = decodeJsString(m[2]);
+  return out;
+}
+
+function decodeJsString(s) {
+  return s
+    .replace(/\\u([0-9a-fA-F]{4})/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
+    .replace(/\\'/g, "'")
+    .replace(/\\"/g, '"')
+    .replace(/\\\\/g, '\\');
+}
+
+function assertI18nMatches(post, i18n) {
+  const checks = [
+    { key: `page.${post.page_id}.title`, field: 'meta_title', value: post.meta_title },
+    { key: `page.${post.page_id}.description`, field: 'description', value: post.description },
+  ];
+
+  for (const { key, field, value } of checks) {
+    if (!(key in i18n)) {
+      die(`${post.slug}: js/i18n.js is missing '${key}' (sv). Add it, or the page will render `
+        + `${field} from frontmatter to crawlers and nothing to visitors.`);
+    }
+    if (i18n[key] !== value) {
+      die(`${post.slug}: ${field} differs between frontmatter and js/i18n.js (sv).\n`
+        + `  frontmatter: ${value}\n`
+        + `  i18n '${key}': ${i18n[key]}\n`
+        + `  i18n.js wins at runtime — make them identical.`);
+    }
+  }
+}
+
+function render(template, post, registry, i18n) {
   required(post, ['slug', 'page_id', 'category', 'date', 'date_display', 'readtime',
     'thumbnail', 'title', 'meta_title', 'description', 'intro']);
+
+  assertI18nMatches(post, i18n);
 
   const categoryLabel = CATEGORY_LABELS[post.category];
   if (!categoryLabel) die(`Unknown category "${post.category}" on ${post.slug}.`);

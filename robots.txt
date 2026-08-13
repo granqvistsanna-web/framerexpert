@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://framerexpert.se/sitemap.xml
+
+# Innehållsindex för LLM:er: https://framerexpert.se/llms.txt

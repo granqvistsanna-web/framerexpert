@@ -1,0 +1,71 @@
+# FramerExpert.se
+
+> Svensk kunskapskälla om Framer. Guider, plattformsjämförelser, SEO-hjälp och listor över verifierade Framer Experts, för dig som bygger eller beställer en webbplats i Framer.
+
+Innehållet är skrivet på svenska av praktiserande Framer-experter och uppdateras löpande. En engelsk översättning finns i gränssnittet på samma URL:er. Alla artiklar ligger under `/blog/`, har publicerings- och uppdateringsdatum i sidhuvudet och JSON-LD (`Article`, `BreadcrumbList`, i vissa fall `FAQPage`) i källkoden. Årtalet i titeln anger vilken version av Framer och vilken prisbild texten beskriver.
+
+## Huvudsidor
+
+- [FramerExpert.se — start](https://framerexpert.se/): Ingång till allt innehåll om Framer, med de senaste artiklarna.
+- [Blogg — alla artiklar](https://framerexpert.se/blog/): Samtliga artiklar, filtrerbara på kategorierna Kom igång, Jämförelse, Tips, SEO och CMS.
+
+## Kom igång med Framer
+
+- [Vad är Framer? En komplett guide (2026)](https://framerexpert.se/blog/vad-ar-framer.html): Så fungerar editorn, CMS:et, publiceringen och prissättningen, plus när Framer är rätt val framför Webflow eller WordPress.
+- [5 tips för att bygga snabbare i Framer (2026)](https://framerexpert.se/blog/5-tips-bygga-snabbare.html): Komponenter, Auto Layout, kortkommandon, CMS och mobile-first, med vanliga misstag.
+
+## Jämförelser mot andra plattformar
+
+- [Framer vs Webflow (2026)](https://framerexpert.se/blog/framer-vs-webflow.html): Pris, CMS, e-handel, SEO och användarvänlighet ställda mot varandra.
+- [Framer vs WordPress (2026)](https://framerexpert.se/blog/framer-vs-wordpress.html): Prestanda, SEO, kostnad, flexibilitet, underhåll och migrering.
+- [Framer vs Wix (2026)](https://framerexpert.se/blog/framer-vs-wix.html): Design, prestanda, funktioner, e-handel, SEO och pris.
+- [Framer vs Squarespace (2026)](https://framerexpert.se/blog/framer-vs-squarespace.html): Design, mallar, e-handel, blogg, SEO och pris.
+- [Framer vs Figma (2026)](https://framerexpert.se/blog/framer-vs-figma.html): Skillnaden mellan designverktyg och publiceringsplattform, och vad Figma Sites ändrar.
+- [Underhåll i Framer vs Webflow (2026)](https://framerexpert.se/blog/underhall-framer-webflow.html): Backuper, CMS-gränser, integrationer, staging och löpande kostnad efter lansering.
+- [Webflow-byrå eller Framer-byrå? (2026)](https://framerexpert.se/blog/webflow-byra-eller-framer-byra.html): Skillnader i pris, leveranstid, CMS och underhåll mellan de två byråtyperna.
+- [Migrera från WordPress till Framer (2026)](https://framerexpert.se/blog/migrera-wordpress-till-framer.html): Steg för steg genom innehåll, redirects, CMS-import, DNS och fallgroparna som kostar ranking.
+
+## SEO och prestanda
+
+- [Framer SEO (2026): så optimerar du din sajt för Google](https://framerexpert.se/blog/framer-seo-guide.html): Titlar, strukturerad data, Core Web Vitals och sitemap i en sammanhängande guide.
+- [Framer SEO-checklista (2026)](https://framerexpert.se/blog/framer-seo-checklista.html): 24 punkter för sidinställningar, teknik, innehåll och uppföljning att bocka av före publicering.
+- [Core Web Vitals i Framer (2026)](https://framerexpert.se/blog/framer-core-web-vitals.html): Vad LCP, INP och CLS mäter, vad som sänker dem i Framer och hur du får gröna värden på riktig trafik.
+- [Strukturerad data i Framer (2026)](https://framerexpert.se/blog/framer-strukturerad-data.html): Vilka JSON-LD-scheman ger rich results, hur du lägger in dem via custom code och hur du validerar.
+
+## CMS, innehåll och integrationer
+
+- [Framer CMS i praktiken (2026)](https://framerexpert.se/blog/framer-cms-i-praktiken.html): Samlingar, fält, dynamiska listor, detaljsidor, filter och migrering, hands-on.
+- [Formulär och automatisering i Framer (2026)](https://framerexpert.se/blog/framer-formular-automatisering.html): Koppla Framers formulär till Zapier eller Make via webhook, till Slack, CRM och Google Sheets.
+- [Flerspråkiga sajter i Framer (2026)](https://framerexpert.se/blog/framer-flersprakiga-sajter.html): Locales, AI-översättning, språkdetektering och hreflang, och vad du måste kontrollera själv.
+- [Framer för e-handel (2026)](https://framerexpert.se/blog/framer-ecommerce-guide.html): Hur långt Framers store-funktion räcker, när Shopify eller Stripe är rätt, och när du bör välja en riktig e-handelsplattform.
+
+## Design, animation och typografi
+
+- [Framer-animationer i praktiken (2026)](https://framerexpert.se/blog/framer-animationer-interactions.html): Variants, hover- och scroll-interaktioner och Flow Effect, utan kod, plus när du bör hålla igen.
+- [Typografi i Framer (2026)](https://framerexpert.se/blog/responsiv-typografi-framer.html): Bygg en responsiv typskala med textstilar och brytpunkter, med konkreta storlekar och radavstånd.
+
+## Mallar och templates
+
+- [Framer-mallar (2026): hitta, välj och anpassa](https://framerexpert.se/blog/framer-templates-guide.html): Så hittar du rätt template, anpassar den utan att förstöra designen och undviker licens- och CMS-fällorna.
+- [Framer-mall eller bygga själv? (2026)](https://framerexpert.se/blog/framer-mall-eller-bygga-sjalv.html): När en template sparar veckor, när den kostar mer än den smakar, och hur du räknar på beslutet.
+- [Utvärdera en Framer-template innan du köper (2026)](https://framerexpert.se/blog/utvardera-framer-template.html): Checklista för CMS-struktur, brytpunkter, komponenter, licens och prestanda.
+
+## Priser och att anlita hjälp
+
+- [Vad kostar en Framer-webbplats? Prisguide 2026](https://framerexpert.se/blog/framer-pris.html): Framers abonnemang, kostnaden att bygga själv eller anlita en expert, och totalkostnaden över tid.
+- [Vad kostar det att anlita en Framer-expert? (2026)](https://framerexpert.se/blog/anlita-framer-expert-kostnad.html): Timpriser, fastpris och löpande avtal på svenska marknaden, och hur du jämför offerter rättvist.
+- [Anlita en Framer-expert (2026): så går du tillväga](https://framerexpert.se/blog/anlita-framer-expert-process.html): Från kravbild och urval till brief, avtal, projektupplägg och överlämning, med checklistor.
+- [Så väljer du rätt Framer- eller Webflow-byrå (2026)](https://framerexpert.se/blog/byra-checklista-framer-webflow.html): Case, ägandeskap, SEO-ansvar, underhåll och de röda flaggorna som kostar dig senare.
+
+## Framer-experter och byråer
+
+- [Bästa Framer-experterna och byråerna i Sverige (2026)](https://framerexpert.se/blog/basta-framer-experter-sverige.html): Verifierade svenska Framer Experts och byråer, med styrkor, specialiteter och när var och en passar.
+- [Bästa Framer-experterna i Göteborg (2026)](https://framerexpert.se/blog/basta-framer-experter-goteborg.html): Göteborgsscenen, vem som passar för vad och varför staden punchar över sin storlek.
+- [Bästa Framer-experterna i Norden (2026)](https://framerexpert.se/blog/basta-framer-experter-norden.html): Sverige, Norge, Danmark och Finland, med styrkor, svagheter och matchning mot projekttyp.
+- [Bästa Framer-experterna i Europa (2026)](https://framerexpert.se/blog/basta-framer-experter-europa.html): De mest etablerade verifierade Framer Experts i UK, Tyskland, Nederländerna, Frankrike, Italien, Portugal och Norden.
+
+## Optional
+
+- [Framer Agents Hackathon 2026: alla vinnare](https://framerexpert.se/framer-agents-hackathon-2026.html): Resultatlista från hackathonet med 600 deltagare, samtliga tio vinnare med bidrag och skapare.
+- [sitemap.xml](https://framerexpert.se/sitemap.xml): Maskinläsbar lista över alla publicerade URL:er med lastmod.
+- [robots.txt](https://framerexpert.se/robots.txt): Crawl-regler, all indexering tillåten.

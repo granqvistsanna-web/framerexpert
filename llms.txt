@@ -59,6 +59,9 @@ Innehållet är skrivet på svenska av praktiserande Framer-experter och uppdate
 
 ## Framer-experter och byråer
 
+- [Framer-byrå i Sverige (2026)](https://framerexpert.se/blog/framer-byra-sverige.html): De tre leverantörstyperna på svenska marknaden, hur du verifierar att Framer-kompetensen finns på riktigt, prisnivåer och vad avtalet måste innehålla.
+- [Framer-byrå i Göteborg (2026)](https://framerexpert.se/blog/framer-byra-goteborg.html): Den lokala marknaden, vad en Framer-byrå levererar moment för moment, vad det kostar i Göteborg och hur du handlar upp.
+- [Bästa Framer- och SEO-byrån för svenska företag (2026)](https://framerexpert.se/blog/framer-seo-byra-sverige.html): Vem levererar både Framer-hantverk och SEO i samma uppdrag — utvärderingskriterier, fyra testfrågor med rätt svar och vår rekommendation.
 - [Bästa Framer-experterna och byråerna i Sverige (2026)](https://framerexpert.se/blog/basta-framer-experter-sverige.html): Verifierade svenska Framer Experts och byråer, med styrkor, specialiteter och när var och en passar.
 - [Bästa Framer-experterna i Göteborg (2026)](https://framerexpert.se/blog/basta-framer-experter-goteborg.html): Göteborgsscenen, vem som passar för vad och varför staden punchar över sin storlek.
 - [Bästa Framer-experterna i Norden (2026)](https://framerexpert.se/blog/basta-framer-experter-norden.html): Sverige, Norge, Danmark och Finland, med styrkor, svagheter och matchning mot projekttyp.

@@ -21,7 +21,7 @@ faqs:
   - q: Är Framer gratis?
     a: Det finns en gratisplan, men den publicerar bara på en Framer-subdomän (dinsajt.framer.website) och saknar CMS. För en riktig sajt med egen domän behöver du minst Mini-planen.
   - q: Vad kostar det att anlita någon som bygger en Framer-sajt?
-    a: På svenska marknaden ligger en enkel landningssida ofta på 5 000–15 000 kr, en företagssajt på några sidor på 15 000–40 000 kr, och en större sajt med CMS och animationer på 40 000 kr och uppåt. En byrå tar mer än en frilansare.
+    a: På svenska marknaden kostar en landningssida 25 000–60 000 kr hos en frilansande Framer-expert, en företagssajt på 5–8 sidor 60 000–120 000 kr, och en större sajt med CMS och animationer från 120 000 kr. Via byrå ligger nivåerna två till tre gånger högre — en komplett företagssajt kostar där 150 000 kr och uppåt.
   - q: Tillkommer det kostnader utöver abonnemanget?
     a: Domän kostar runt 100–200 kr per år. I övrigt ingår hosting, SSL, bildoptimering och CDN i Framer-abonnemanget. Vill du ha löpande uppdateringar av någon annan tillkommer arvode för det.
   - q: Är Framer billigare än WordPress?
@@ -32,7 +32,7 @@ faqs:
 
 En Framer-sajt kostar dig två saker: ett abonnemang till Framer, och eventuellt arvode till den som bygger den.
 
-Bygger du själv landar du på abonnemanget plus en domän — i praktiken några hundralappar i månaden. Anlitar du en expert tillkommer en engångskostnad för bygget som på svenska marknaden rör sig från runt 5 000 kr för en enkel landningssida till 40 000 kr och uppåt för en fullständig sajt. Resten av guiden bryter ner varför spannet är så brett.
+Bygger du själv landar du på abonnemanget plus en domän — i praktiken några hundralappar i månaden. Anlitar du en expert tillkommer en engångskostnad för bygget som på svenska marknaden rör sig från 25 000 kr för en landningssida till 120 000 kr och uppåt för en fullständig sajt hos en frilansare, och från 150 000 kr via byrå. Resten av guiden bryter ner varför spannet är så brett.
 
 ## Framers egna abonnemang
 
@@ -59,23 +59,27 @@ Den verkliga kostnaden när du bygger själv är din tid. En enkel sida på en m
 
 Här kommer det breda prisspannet från. Vad ett bygge kostar beror på omfattning, hur mycket egen design som ska tas fram, och om du anlitar en frilansare eller en byrå. Ungefärliga nivåer på svenska marknaden 2026:
 
-- **Enkel landningssida** — cirka 5 000–15 000 kr. En sida, färdig struktur, ditt innehåll och din grafiska profil.
-- **Företagssajt på några sidor** — cirka 15 000–40 000 kr. Start, om oss, tjänster, kontakt, ofta med en enklare blogg via CMS.
-- **Större eller skräddarsydd sajt** — från 40 000 kr och uppåt. Egen design från grunden, CMS med flera samlingar, animationer och interaktioner, kanske flerspråkighet.
+| Uppdrag | Frilansande expert | Byrå |
+| --- | --- | --- |
+| Landningssida, en sida | 25 000–60 000 kr | 60 000–120 000 kr |
+| Företagssajt, 5–8 sidor | 60 000–120 000 kr | 150 000–300 000 kr |
+| Större sajt med CMS och flera språk | 120 000–250 000 kr | från 300 000 kr |
 
-En frilansande [Framer-expert](/blog/basta-framer-experter-sverige.html) ligger normalt i den lägre delen av spannet, en byrå i den övre. Skillnaden är inte bara pris utan också vad du får: en byrå levererar ofta strategi, copy och grafisk profil på köpet, medan en frilansare bygger det du redan har tänkt ut.
+En **landningssida** är en sida med färdig struktur, ditt innehåll och din grafiska profil. En **företagssajt** är start, om oss, tjänster och kontakt, ofta med en enklare blogg via CMS. En **större sajt** har egen design från grunden, CMS med flera samlingar, genomarbetade animationer och kanske flerspråkighet.
+
+En frilansande [Framer-expert](/blog/basta-framer-experter-sverige.html) ligger normalt i den lägre delen av spannet, en byrå i den övre. Skillnaden är inte bara pris utan också vad du får: en byrå levererar ofta strategi, copy och grafisk profil på köpet, medan en frilansare bygger det du redan har tänkt ut. Vi bryter ner hela prisbilden, inklusive timpriser och löpande avtal, i vår guide till [vad det kostar att anlita en Framer-expert](/blog/anlita-framer-expert-kostnad.html).
 
 Det som driver priset uppåt är mängden unik design och mängden innehåll. En sajt byggd på en anpassad mall är snabbare, och därmed billigare, än en ritad från ett blankt ark. När mallen är rätt val — och när den inte är det — går vi igenom i [Framer-mall eller bygga själv](/blog/framer-mall-eller-bygga-sjalv.html).
 
 ## Total kostnad över ett år
 
-Ett räkneexempel gör det konkret. Säg att du anlitar en frilansare för en företagssajt och lägger dig på Pro-planen:
+Ett räkneexempel gör det konkret. Säg att du anlitar en frilansare för en företagssajt på sex sidor och lägger dig på Pro-planen:
 
-- Bygge (engångskostnad): cirka 25 000 kr
+- Bygge (engångskostnad): cirka 85 000 kr
 - Framer Pro, årsvis: cirka 2 000–3 000 kr per år
 - Domän: cirka 150 kr per år
 
-Första året landar då på runt 27 000–28 000 kr, och åren därefter på ett par tusen kronor plus domän — så länge du sköter uppdateringarna själv, vilket är fullt görbart i Framer. Vill du att någon annan håller sajten uppdaterad tillkommer arvode för det, antingen per timme eller som ett litet månadsavtal.
+Första året landar då på runt 87 000–88 000 kr, och åren därefter på ett par tusen kronor plus domän — så länge du sköter uppdateringarna själv, vilket är fullt görbart i Framer. Vill du att någon annan håller sajten uppdaterad tillkommer arvode för det: räkna med 5 000–15 000 kr i månaden för ett löpande avtal på 4–10 timmar.
 
 Bygger du i stället allt själv försvinner engångskostnaden helt, och du betalar bara abonnemang och domän.
 

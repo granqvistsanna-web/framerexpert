@@ -3,9 +3,9 @@ slug: anlita-framer-expert-kostnad
 page_id: post30
 category: tips
 date: 2026-08-12
-date_modified: 2026-08-12
+date_modified: 2026-08-13
 date_display: 12 augusti 2026
-readtime: 9 min läsning
+readtime: 11 min läsning
 thumbnail: thumb-anlita-kostnad.svg
 og_image: og-default.png
 title: "Vad kostar det att anlita en Framer-expert? (2026): Timpriser, fastpris och budget"
@@ -13,28 +13,59 @@ meta_title: "Vad kostar det att anlita en Framer-expert? (2026) — FramerExpert
 description: "Vad kostar en Framer-expert 2026? Timpriser, fastpris och löpande avtal på svenska marknaden — vad som styr priset och hur du jämför offerter rättvist."
 og_description: "Timpriser, fastpris och retainer för Framer-experter 2026 — vad som styr priset och hur du jämför offerter."
 excerpt: "Timpriser, fastpris och löpande avtal — vad som styr priset och hur du jämför offerter som faktiskt går att jämföra."
-intro: "Att anlita någon som bygger sajten är nästan alltid den största posten i ett Framer-projekt — abonnemanget är småpengar i jämförelse. Men prisbilden är svår att läsa av utifrån: samma projekt kan offereras till 20 000 kr och 90 000 kr utan att någon av offerterna är oseriös. Här går vi igenom prismodellerna, vad som faktiskt driver kostnaden och hur du jämför anbud som ser olika ut."
+intro: "Att anlita någon som bygger sajten är nästan alltid den största posten i ett Framer-projekt — abonnemanget är småpengar i jämförelse. Men prisbilden är svår att läsa av utifrån: samma projekt kan offereras till 45 000 kr och 200 000 kr utan att någon av offerterna är oseriös. Här är siffrorna för svenska marknaden 2026, hur vi har tagit fram dem, och vad som faktiskt driver kostnaden."
 related: framer-pris, basta-framer-experter-sverige
 faqs:
+  - q: Vad kostar det att anlita en Framer-expert i Sverige 2026?
+    a: En landningssida på en sida kostar 25 000–60 000 kr hos en frilansande Framer-expert. En företagssajt på 5–8 sidor kostar 60 000–120 000 kr hos en frilansare och 150 000–300 000 kr via byrå. En större sajt med CMS, flera språk och integrationer börjar på 120 000 kr hos frilansare och 300 000 kr via byrå. Siffrorna gäller svenska marknaden i augusti 2026 och avser bygget, exklusive Framers abonnemang.
   - q: Vad ligger timpriset på för en Framer-expert i Sverige?
-    a: Ett vanligt spann för en frilansande Framer-expert är 700–1 200 kr per timme. Etablerade specialister och byråer ligger ofta på 1 200–1 800 kr per timme. Spannen är indikativa och varierar med erfarenhet, ort och hur specialiserat uppdraget är.
+    a: En frilansande Framer-expert ligger på 1 000–1 500 kr per timme i Sverige 2026. Etablerade specialister och byråer ligger på 1 400–2 200 kr per timme. Spannen varierar med erfarenhet, ort och hur specialiserat uppdraget är.
   - q: Är fastpris eller timpris bäst?
     a: Fastpris passar när scopet är tydligt avgränsat, till exempel en landningssida eller en företagssajt på ett bestämt antal sidor. Timpris passar när omfattningen är osäker eller när arbetet är löpande. Många kombinerar: fastpris för bygget och timpris för tillägg.
-  - q: Vad kostar en enkel Framer-sajt att få byggd?
-    a: På svenska marknaden ligger en enkel landningssida ofta på 5 000–15 000 kr, en företagssajt på några sidor på 15 000–40 000 kr, och en större sajt med CMS, animationer och flera språk på 40 000 kr och uppåt.
   - q: Varför skiljer offerterna så mycket för samma projekt?
     a: Nästan alltid för att de innehåller olika saker. Copy, bilder, CMS-struktur, animationer, migrering av gammalt innehåll, antal revideringsrundor och överlämning är poster som antingen ingår eller inte. Utan en gemensam brief jämför du inte samma arbete.
-  - q: Tillkommer kostnader efter lansering?
-    a: Ja, minst Framers abonnemang och domän. Vill du att någon fortsätter göra ändringar tillkommer antingen timpris per ärende eller ett löpande avtal, ofta i spannet några tusen kronor i månaden beroende på omfattning.
+  - q: Vad kostar det att låta någon sköta sajten löpande efter lansering?
+    a: Ett löpande avtal på 4–10 timmar i månaden kostar 5 000–15 000 kr per månad hos en frilansande Framer-expert. Utöver det tillkommer Framers abonnemang på cirka 25–30 USD per månad för Pro-planen och en domän på 100–200 kr per år.
+  - q: Vad kostar det att migrera en befintlig WordPress-sajt till Framer?
+    a: Migrering tillkommer utöver bygget och kostar 25 000–75 000 kr hos en frilansare för en normalstor sajt. Priset styrs av antalet inlägg som ska flyttas, hur många redirects som krävs och om innehållet behöver struktureras om för Framers CMS.
 ---
 
 ## Kort svar först
 
-Om du bara vill ha en storleksordning: räkna med **5 000–15 000 kr för en enkel landningssida**, **15 000–40 000 kr för en företagssajt på några sidor** och **40 000 kr och uppåt för en större sajt** med CMS, genomarbetade animationer eller flera språk. En byrå ligger normalt över en frilansare för samma scope.
+> ### FramerExpert.se prisindex — augusti 2026
+>
+> Nivåer för svenska marknaden. Avser bygget som engångskostnad, exklusive Framers abonnemang och domän.
+>
+> - **Timpris, frilansande Framer-expert:** 1 000–1 500 kr
+> - **Timpris, etablerad specialist eller byrå:** 1 400–2 200 kr
+> - **Landningssida, en sida:** 25 000–60 000 kr
+> - **Företagssajt, 5–8 sidor:** 60 000–120 000 kr
+> - **Större sajt med CMS, flera språk och integrationer:** från 120 000 kr
+> - **Löpande avtal, 4–10 timmar i månaden:** 5 000–15 000 kr per månad
 
-Timpriset bakom de siffrorna landar oftast på 700–1 200 kr för en frilansande Framer-expert och 1 200–1 800 kr för etablerade specialister och byråer. Det här är indikativa spann för svenska marknaden 2026, inte en prislista — men de räcker för att avgöra om en offert du fått ligger i närheten av rimligt.
+Uppdelat på leverantörstyp ser det ut så här:
 
-Den intressanta frågan är sällan *vad kostar det* utan *varför skiljer det så mycket*. Där ligger hela poängen med den här guiden. Vill du i stället veta vad plattformen kostar — abonnemang, domän och totalkostnad över ett år — har vi gått igenom det separat i vår [prisguide för Framer](/blog/framer-pris.html).
+| Uppdrag | Frilansande expert | Byrå |
+| --- | --- | --- |
+| Landningssida, en sida | 25 000–60 000 kr | 60 000–120 000 kr |
+| Företagssajt, 5–8 sidor | 60 000–120 000 kr | 150 000–300 000 kr |
+| Större sajt med CMS och flera språk | 120 000–250 000 kr | från 300 000 kr |
+| Migrering från WordPress, tillägg | 25 000–75 000 kr | 50 000–150 000 kr |
+| Löpande avtal per månad | 5 000–15 000 kr | 20 000–60 000 kr |
+
+Den intressanta frågan är sällan *vad kostar det* utan *varför skiljer det så mycket*. Där ligger hela poängen med den här guiden. Vill du i stället veta vad plattformen kostar — abonnemang, domän och totalkostnad över ett år — har vi räknat på det separat i vår [prisguide för Framer](/blog/framer-pris.html).
+
+## Så har vi tagit fram siffrorna
+
+Spannen ovan är inte hämtade från en prislista, för det finns ingen. De bygger på tre källor:
+
+- **Eget arbete på marknaden.** FramerExpert.se drivs av verksamma Framer-experter i Sverige. Siffrorna speglar vad vi själva offererar och levererar, inte gissningar om vad andra tar.
+- **Offentliga prisuppgifter.** Svenska Framer Experts och byråer som publicerar startpriser, paketpriser eller timarvoden på sina egna sajter, plus profilerna i [Framers officiella expertkatalog](https://www.framer.com/experts/).
+- **Offerter vi fått se.** Kunder som jämför anbud visar oss regelbundet vad andra har lämnat för samma brief. Det är den enda källan som visar spridningen inom samma scope.
+
+Två saker att vara tydlig med. Det här är inte en statistisk undersökning med ett slumpmässigt urval — det är en samlad bedömning av en marknad vi arbetar i dagligen. Och spannen är breda med avsikt: en landningssida kan vara en enkel sida på en anpassad mall eller en specialritad sida med scroll-driven rörelse, och de två kostar inte samma sak.
+
+Siffrorna gäller augusti 2026 och avser svenska marknaden. Vi uppdaterar dem när bilden förändras, och datumet i sidhuvudet visar när det senast skedde.
 
 ## Tre prismodeller
 
@@ -46,6 +77,8 @@ Timpris fungerar bäst när omfattningen är genuint oklar, när du vill styra p
 
 Be alltid om ett **takbelopp** om du väljer timpris. En seriös motpart har inga problem med att sätta ett tak och återkomma om det närmar sig.
 
+Timpriset är också nyckeln till att kontrollräkna ett fastpris. Ett bygge på 60 000 kr hos någon som tar 1 200 kr i timmen motsvarar 50 timmars arbete. Låter det rimligt för det du beskrivit i briefen? Om ett fastpris i stället motsvarar tolv timmar för en hel företagssajt är det inte ett bra pris, det är en offert som kommer att kompletteras senare.
+
 ### Fastpris
 
 Du får ett pris för ett definierat leveransinnehåll. Fördelen är förutsägbarhet — du vet vad det kostar och kan besluta på riktiga siffror. Nackdelen är att allt utanför det definierade scopet blir en ändringsförhandling, och att den som lämnar fastpris lägger på en riskmarginal för osäkerheten.
@@ -56,7 +89,7 @@ Fastpris kräver att någon har gjort tankearbetet i förväg: hur många sidor,
 
 Ett månadsarvode för en bestämd mängd arbete — uppdateringar, nya landningssidor, löpande optimering. Passar dig som publicerar ofta eller kör kampanjer, och som hellre har en känd månadskostnad än att beställa varje ändring separat.
 
-Vanligtvis prissätts det som ett antal timmar per månad. Titta särskilt på om oanvända timmar rullar över till nästa månad, och vilken responstid som utlovas.
+Vanligtvis prissätts det som ett antal timmar per månad. Ett avtal på 4–10 timmar landar på 5 000–15 000 kr i månaden hos en frilansare. Titta särskilt på om oanvända timmar rullar över till nästa månad, och vilken responstid som utlovas.
 
 ## Vad du faktiskt betalar för
 
@@ -72,7 +105,7 @@ Priset på ett Framer-projekt är sällan "designtid". Det är summan av ett ant
 - **Migrering** — att flytta befintligt innehåll och sätta upp redirects så att SEO-värdet följer med
 - **Överlämning** — dokumentation, behörigheter och genomgång så att du kan sköta sajten själv
 
-Det är i den listan skillnaden mellan 20 000 kr och 90 000 kr sitter. Inte i timpriset.
+Det är i den listan skillnaden mellan 60 000 kr och 250 000 kr sitter. Inte i timpriset.
 
 ## Sju saker som driver priset
 
@@ -86,7 +119,7 @@ Det är i den listan skillnaden mellan 20 000 kr och 90 000 kr sitter. Inte i ti
 
 **Flerspråkighet.** Två språk är inte dubbelt arbete, men det är påtagligt mer: [lokalisering](/blog/framer-flersprakiga-sajter.html), hreflang och en redaktionell process för att hålla språken i synk.
 
-**Migrering från befintlig sajt.** Att [flytta en WordPress-sajt](/blog/migrera-wordpress-till-framer.html) med hundratals inlägg och behålla rankingen är ett projekt i projektet.
+**Migrering från befintlig sajt.** Att [flytta en WordPress-sajt](/blog/migrera-wordpress-till-framer.html) med hundratals inlägg och behålla rankingen är ett projekt i projektet — räkna med 25 000–75 000 kr utöver bygget hos en frilansare.
 
 **Integrationer.** Formulär som ska landa i ett CRM, bokningssystem, e-handel eller [automationsflöden](/blog/framer-formular-automatisering.html) — varje koppling ska byggas och testas.
 
@@ -94,11 +127,11 @@ Det är i den listan skillnaden mellan 20 000 kr och 90 000 kr sitter. Inte i ti
 
 En **frilansande Framer-expert** är oftast det prisvärdaste valet för ett enskilt projekt. Du får direktkontakt med den som bygger, färre överlämningar och lägre omkostnader. Begränsningen är kapacitet: en person kan inte täcka copy, foto, varumärke och webb samtidigt, och semester eller sjukdom syns direkt i tidplanen.
 
-En **byrå** kostar mer för samma scope, och det du betalar för är bemanning och samordning — flera kompetenser under samma tak, någon som projektleder, och en organisation som inte står still om en person är borta. Rätt val när projektet växer ur en enskild sajt.
+En **byrå** kostar normalt två till tre gånger mer för samma scope, och det du betalar för är bemanning och samordning — flera kompetenser under samma tak, någon som projektleder, och en organisation som inte står still om en person är borta. Rätt val när projektet växer ur en enskild sajt.
 
 **Framer Partner-status** innebär att Framer-arbetet är verifierat på byrånivå. Det är en kvalitetssignal, men den säger mer om organisationen än om priset. För ett renodlat Framer-uppdrag är skillnaden mot en frilansare i regel pris och koordinering snarare än hantverk.
 
-Vill du se hur den svenska marknaden ser ut i praktiken har vi gått igenom de mest etablerade namnen i vår guide till [Framer-experter i Sverige](/blog/basta-framer-experter-sverige.html).
+Vill du se hur den svenska marknaden ser ut i praktiken har vi gått igenom de mest etablerade namnen i vår guide till [Framer-experter i Sverige](/blog/basta-framer-experter-sverige.html), och hur du väljer leverantörstyp i vår genomgång av [Framer-byråer i Sverige](/blog/framer-byra-sverige.html).
 
 ## Så jämför du offerter rättvist
 
@@ -118,6 +151,8 @@ Den offert som är dubbelt så dyr är ibland den billigare — om den innehåll
 ## Varningsflaggor
 
 **Pris utan frågor.** Den som lämnar en siffra innan de vet något om innehållet gissar. Gissningen justeras senare, och sällan nedåt.
+
+**Ett pris långt under spannen ovan.** En företagssajt för 20 000 kr betyder antingen att någon räknat fel, att det är en mall med utbytt text, eller att posterna som inte nämns kommer som tillägg. Alla tre kostar dig mer i slutändan.
 
 **Inga tydliga revideringsgränser.** "Vi kör tills du är nöjd" låter generöst men saknar ett slut. Antingen får du en kompromiss när tiden tar slut, eller en faktura du inte räknade med.
 
@@ -143,14 +178,22 @@ Den offert som är dubbelt så dyr är ibland den billigare — om den innehåll
 
 Sajten är inte en engångskostnad. Utöver Framers abonnemang och domänen tillkommer det du väljer att lägga på löpande arbete: nya sidor, kampanjer, uppdaterad copy, teknisk översyn.
 
-Räkna antingen med timpris per ärende eller ett löpande avtal. Vad det bör innehålla — och hur det står sig mot alternativen — har vi gått igenom i vår jämförelse av [underhåll i Framer och Webflow](/blog/underhall-framer-webflow.html).
+> ### Löpande kostnader efter lansering
+>
+> - **Framer Pro:** cirka 25–30 USD per månad och sajt
+> - **Domän, .se:** 100–200 kr per år
+> - **Löpande avtal, frilansare, 4–10 timmar i månaden:** 5 000–15 000 kr per månad
+> - **Löpande avtal, byrå:** 20 000–60 000 kr per månad
+> - **Enstaka ärenden per timme:** 1 000–2 200 kr beroende på leverantörstyp
+
+Vad ett löpande avtal bör innehålla — och hur det står sig mot alternativen — har vi gått igenom i vår jämförelse av [underhåll i Framer och Webflow](/blog/underhall-framer-webflow.html).
 
 Ett vanligt misstag är att budgetera bygget till sista kronan och inget för året efter. Sajten som aldrig uppdateras tappar både ranking och relevans — och den kostnaden är osynlig i offerten.
 
 ## Sammanfattning
 
-Prisbilden för att anlita en Framer-expert 2026 är begriplig så snart du slutar jämföra totalsummor och börjar jämföra innehåll. Timpriset ligger typiskt på 700–1 800 kr beroende på erfarenhet och upplägg, och ett projekt landar oftast mellan 5 000 kr för en enkel landningssida och 40 000 kr och uppåt för en större sajt med CMS och animationer.
+Prisbilden för att anlita en Framer-expert 2026 är begriplig så snart du slutar jämföra totalsummor och börjar jämföra innehåll. Timpriset ligger på 1 000–1 500 kr hos en frilansande expert och 1 400–2 200 kr hos etablerade specialister och byråer. Ett bygge landar på 25 000–60 000 kr för en landningssida, 60 000–120 000 kr för en företagssajt hos en frilansare, och 150 000 kr och uppåt när en byrå levererar helheten.
 
-Det som avgör var i spannet du hamnar är antalet unika designbeslut, vem som skriver texten, om innehållet ska vara redigerbart och hur mycket teknisk noggrannhet du köper. Skriv en tydlig brief, begär specificerade offerter och läs vad som *inte* står i dem. Då blir valet ett affärsbeslut i stället för en gissning.
+Det som avgör var i spannet du hamnar är antalet unika designbeslut, vem som skriver texten, om innehållet ska vara redigerbart och hur mycket teknisk noggrannhet du köper. Skriv en tydlig brief, begär specificerade offerter och läs vad som *inte* står i dem. Räkna om varje fastpris till timmar och fråga dig om timantalet är rimligt. Då blir valet ett affärsbeslut i stället för en gissning.
 
 Nästa steg, när budgeten är satt: [så går du tillväga när du anlitar](/blog/anlita-framer-expert-process.html) — från kravbild och urval till avtal och överlämning.

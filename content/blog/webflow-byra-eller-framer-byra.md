@@ -20,7 +20,7 @@ faqs:
   - q: Vilken plattform passar bäst för min typ av projekt?
     a: Landningssida, portfolio, kampanjsajt eller blogg under några hundra poster — Framer är nästan alltid snabbare och billigare. Webbshop med produkthantering, innehållstung sajt med tusentals artiklar eller flera redaktörer — Webflow har djupare verktyg.
   - q: Vad kostar en sajt hos en svensk Framer-byrå 2026?
-    a: En enklare landningssida hos en frilansande Framer-expert hamnar oftast mellan 25 000 och 60 000 kronor. En komplett byråleverans med strategi, copy och varumärke ligger från cirka 100 000 kronor och uppåt. Webflow-byråer ligger i samma intervall men kräver oftare löpande timmar för underhåll och plugin-hantering.
+    a: En enklare landningssida hos en frilansande Framer-expert hamnar oftast mellan 25 000 och 60 000 kronor. En komplett byråleverans med strategi, copy och varumärke ligger från cirka 150 000 kronor och uppåt. Webflow-byråer ligger i samma intervall men kräver oftare löpande timmar för underhåll och plugin-hantering.
   - q: Kan en befintlig Webflow-sajt flyttas till Framer?
     a: Ja, men det är manuellt arbete. Det finns ingen automatisk import — designen byggs om i Framer och CMS-innehållet exporteras från Webflow som CSV och läses in på nytt. För en medelstor sajt räknar en byrå med några dagars till en veckas arbete för migreringen, plus tiden för designen.
   - q: Behöver jag en byrå alls eller räcker en frilansare?

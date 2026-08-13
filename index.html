@@ -11,15 +11,16 @@
   <!-- Open Graph -->
   <meta property="og:title" content="FramerExpert.se — Guider, tips och expertkunskap om Framer">
   <meta property="og:description" content="Allt om Framer på ett ställe. Guider, tips och expertkunskap för dig som vill bygga webbplatser i Framer.">
-  <meta property="og:url" content="https://framerexpert.se">
+  <meta property="og:url" content="https://framerexpert.se/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="FramerExpert.se">
   <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://framerexpert.se/assets/og-default.png">
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://framerexpert.se">
+  <link rel="canonical" href="https://framerexpert.se/">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -40,16 +41,37 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "FramerExpert.se",
-    "url": "https://framerexpert.se",
-    "description": "Sveriges kunskapskälla för Framer. Guider, tips och expertkunskap.",
-    "inLanguage": ["sv", "en"],
-    "author": {
-      "@type": "Organization",
-      "name": "FramerExpert",
-      "url": "https://framerexpert.se"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://framerexpert.se/#organization",
+        "name": "FramerExpert.se",
+        "alternateName": "FramerExpert",
+        "url": "https://framerexpert.se/",
+        "description": "Svensk kunskapskälla med guider, tips och expertkunskap om Framer-plattformen.",
+        "foundingDate": "2026-04",
+        "inLanguage": "sv",
+        "areaServed": { "@type": "Country", "name": "Sverige" },
+        "knowsAbout": [
+          "Framer",
+          "Framer CMS",
+          "webbdesign",
+          "teknisk SEO",
+          "Core Web Vitals",
+          "migrering från WordPress till Framer",
+          "Framer-mallar"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://framerexpert.se/#website",
+        "url": "https://framerexpert.se/",
+        "name": "FramerExpert.se",
+        "description": "Sveriges kunskapskälla för Framer. Guider, tips och expertkunskap.",
+        "inLanguage": "sv",
+        "publisher": { "@id": "https://framerexpert.se/#organization" }
+      }
+    ]
   }
   </script>
 </head>

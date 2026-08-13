@@ -14,6 +14,7 @@
   <meta property="og:url" content="https://framerexpert.se/framer-agents-hackathon-2026.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="FramerExpert.se">
   <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://framerexpert.se/assets/og-default.png">
@@ -40,17 +41,50 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://framerexpert.se/#organization",
+        "name": "FramerExpert.se",
+        "alternateName": "FramerExpert",
+        "url": "https://framerexpert.se/",
+        "description": "Svensk kunskapskälla med guider, tips och expertkunskap om Framer-plattformen.",
+        "foundingDate": "2026-04",
+        "inLanguage": "sv",
+        "areaServed": { "@type": "Country", "name": "Sverige" },
+        "knowsAbout": [
+          "Framer",
+          "Framer CMS",
+          "webbdesign",
+          "teknisk SEO",
+          "Core Web Vitals",
+          "migrering från WordPress till Framer",
+          "Framer-mallar"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://framerexpert.se/#website",
+        "url": "https://framerexpert.se/",
+        "name": "FramerExpert.se",
+        "description": "Sveriges kunskapskälla för Framer. Guider, tips och expertkunskap.",
+        "inLanguage": "sv",
+        "publisher": { "@id": "https://framerexpert.se/#organization" }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Framer Agents Hackathon 2026: Alla vinnare",
     "url": "https://framerexpert.se/framer-agents-hackathon-2026.html",
     "description": "Resultatet från Framer Agents Hackathon 2026: 600 deltagare, 24 timmar och tio utsedda vinnare. Hela vinnarlistan med bidrag och skapare.",
     "inLanguage": "sv",
     "datePublished": "2026-08-12",
-    "publisher": {
-      "@type": "Organization",
-      "name": "FramerExpert.se",
-      "url": "https://framerexpert.se"
-    },
+    "dateModified": "2026-08-13",
+    "publisher": { "@id": "https://framerexpert.se/#organization" },
     "about": {
       "@type": "Person",
       "name": "Sanna Granqvist",
@@ -97,7 +131,7 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se" },
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se/" },
       { "@type": "ListItem", "position": 2, "name": "Framer Agents Hackathon 2026: Alla vinnare" }
     ]
   }

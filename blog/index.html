@@ -14,6 +14,7 @@
   <meta property="og:url" content="https://framerexpert.se/blog/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="FramerExpert.se">
   <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://framerexpert.se/assets/og-default.png">
@@ -38,9 +39,50 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://framerexpert.se/#organization",
+        "name": "FramerExpert.se",
+        "alternateName": "FramerExpert",
+        "url": "https://framerexpert.se/",
+        "description": "Svensk kunskapskälla med guider, tips och expertkunskap om Framer-plattformen.",
+        "foundingDate": "2026-04",
+        "inLanguage": "sv",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Sverige"
+        },
+        "knowsAbout": [
+          "Framer",
+          "Framer CMS",
+          "webbdesign",
+          "teknisk SEO",
+          "Core Web Vitals",
+          "migrering från WordPress till Framer",
+          "Framer-mallar"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://framerexpert.se/#website",
+        "url": "https://framerexpert.se/",
+        "name": "FramerExpert.se",
+        "description": "Sveriges kunskapskälla för Framer. Guider, tips och expertkunskap.",
+        "inLanguage": "sv",
+        "publisher": {
+          "@id": "https://framerexpert.se/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se" },
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se/" },
       { "@type": "ListItem", "position": 2, "name": "Blogg", "item": "https://framerexpert.se/blog/" }
     ]
   }
@@ -49,202 +91,222 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
+    "@id": "https://framerexpert.se/blog/#collection",
     "name": "Blogg — FramerExpert.se",
     "description": "Alla artiklar om Framer. Guider, tutorials, tips och jämförelser.",
     "url": "https://framerexpert.se/blog/",
     "inLanguage": "sv",
     "isPartOf": {
-      "@type": "WebSite",
-      "name": "FramerExpert.se",
-      "url": "https://framerexpert.se"
+      "@id": "https://framerexpert.se/#website"
+    },
+    "publisher": {
+      "@id": "https://framerexpert.se/#organization"
     },
     "mainEntity": {
       "@type": "ItemList",
-      "numberOfItems": 31,
+      "numberOfItems": 34,
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
+          "url": "https://framerexpert.se/blog/framer-byra-goteborg.html",
+          "name": "Framer-byrå i Göteborg (2026): Så hittar och handlar du upp rätt"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://framerexpert.se/blog/framer-byra-sverige.html",
+          "name": "Framer-byrå i Sverige (2026): Så väljer du rätt leverantör"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://framerexpert.se/blog/framer-seo-byra-sverige.html",
+          "name": "Bästa Framer- och SEO-byrån för svenska företag (2026)"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
           "url": "https://framerexpert.se/blog/anlita-framer-expert-kostnad.html",
           "name": "Vad kostar det att anlita en Framer-expert? (2026): Timpriser, fastpris och budget"
         },
         {
           "@type": "ListItem",
-          "position": 2,
+          "position": 5,
           "url": "https://framerexpert.se/blog/anlita-framer-expert-process.html",
           "name": "Anlita en Framer-expert (2026): Så går du tillväga steg för steg"
         },
         {
           "@type": "ListItem",
-          "position": 3,
+          "position": 6,
           "url": "https://framerexpert.se/blog/vad-ar-framer.html",
           "name": "Vad är Framer? En komplett guide"
         },
         {
           "@type": "ListItem",
-          "position": 4,
+          "position": 7,
           "url": "https://framerexpert.se/blog/framer-vs-wordpress.html",
           "name": "Framer vs WordPress (2026): Vilken plattform är bäst för din webbplats?"
         },
         {
           "@type": "ListItem",
-          "position": 5,
+          "position": 8,
           "url": "https://framerexpert.se/blog/5-tips-bygga-snabbare.html",
           "name": "5 tips för att bygga snabbare i Framer"
         },
         {
           "@type": "ListItem",
-          "position": 6,
+          "position": 9,
           "url": "https://framerexpert.se/blog/framer-cms-i-praktiken.html",
           "name": "Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod"
         },
         {
           "@type": "ListItem",
-          "position": 7,
+          "position": 10,
           "url": "https://framerexpert.se/blog/framer-seo-guide.html",
           "name": "Framer SEO (2026): Så optimerar du din sajt för Google"
         },
         {
           "@type": "ListItem",
-          "position": 8,
+          "position": 11,
           "url": "https://framerexpert.se/blog/framer-seo-checklista.html",
           "name": "Framer SEO-checklista (2026): 24 punkter innan du publicerar"
         },
         {
           "@type": "ListItem",
-          "position": 9,
+          "position": 12,
           "url": "https://framerexpert.se/blog/framer-strukturerad-data.html",
           "name": "Strukturerad data i Framer (2026): Så lägger du till JSON-LD-schema"
         },
         {
           "@type": "ListItem",
-          "position": 10,
+          "position": 13,
           "url": "https://framerexpert.se/blog/framer-core-web-vitals.html",
           "name": "Core Web Vitals i Framer (2026): Så får du grönt"
         },
         {
           "@type": "ListItem",
-          "position": 11,
+          "position": 14,
           "url": "https://framerexpert.se/blog/basta-framer-experter-sverige.html",
           "name": "Bästa Framer-experterna och byråerna i Sverige (2026)"
         },
         {
           "@type": "ListItem",
-          "position": 12,
+          "position": 15,
           "url": "https://framerexpert.se/blog/framer-vs-webflow.html",
           "name": "Framer vs Webflow (2026): Vilken ska du välja?"
         },
         {
           "@type": "ListItem",
-          "position": 13,
+          "position": 16,
           "url": "https://framerexpert.se/blog/webflow-byra-eller-framer-byra.html",
           "name": "Webflow-byrå eller Framer-byrå? Så väljer du rätt 2026"
         },
         {
           "@type": "ListItem",
-          "position": 14,
+          "position": 17,
           "url": "https://framerexpert.se/blog/framer-vs-wix.html",
           "name": "Framer vs Wix (2026): Vilken ska du välja?"
         },
         {
           "@type": "ListItem",
-          "position": 15,
+          "position": 18,
           "url": "https://framerexpert.se/blog/framer-vs-squarespace.html",
           "name": "Framer vs Squarespace (2026): Vilken ska du välja?"
         },
         {
           "@type": "ListItem",
-          "position": 16,
+          "position": 19,
           "url": "https://framerexpert.se/blog/framer-vs-figma.html",
           "name": "Framer vs Figma (2026): Vad är skillnaden — och vilket ska du välja?"
         },
         {
           "@type": "ListItem",
-          "position": 17,
+          "position": 20,
           "url": "https://framerexpert.se/blog/framer-templates-guide.html",
           "name": "Framer-mallar (2026): Så hittar, väljer och anpassar du rätt template"
         },
         {
           "@type": "ListItem",
-          "position": 18,
+          "position": 21,
           "url": "https://framerexpert.se/blog/framer-ecommerce-guide.html",
           "name": "Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?"
         },
         {
           "@type": "ListItem",
-          "position": 19,
+          "position": 22,
           "url": "https://framerexpert.se/blog/framer-pris.html",
           "name": "Vad kostar en Framer-webbplats? Prisguide 2026"
         },
         {
           "@type": "ListItem",
-          "position": 20,
+          "position": 23,
           "url": "https://framerexpert.se/blog/basta-framer-experter-goteborg.html",
           "name": "Bästa Framer-experterna i Göteborg (2026)"
         },
         {
           "@type": "ListItem",
-          "position": 21,
+          "position": 24,
           "url": "https://framerexpert.se/blog/basta-framer-experter-europa.html",
           "name": "Bästa Framer-experterna i Europa (2026)"
         },
         {
           "@type": "ListItem",
-          "position": 22,
+          "position": 25,
           "url": "https://framerexpert.se/blog/basta-framer-experter-norden.html",
           "name": "Bästa Framer-experterna i Norden (2026)"
         },
         {
           "@type": "ListItem",
-          "position": 23,
+          "position": 26,
           "url": "https://framerexpert.se/blog/migrera-wordpress-till-framer.html",
           "name": "Migrera från WordPress till Framer (2026): Steg-för-steg utan att tappa SEO"
         },
         {
           "@type": "ListItem",
-          "position": 24,
+          "position": 27,
           "url": "https://framerexpert.se/blog/framer-animationer-interactions.html",
           "name": "Framer-animationer i praktiken (2026): Variants, scroll-effekter och Flow Effect"
         },
         {
           "@type": "ListItem",
-          "position": 25,
+          "position": 28,
           "url": "https://framerexpert.se/blog/framer-flersprakiga-sajter.html",
           "name": "Flerspråkiga sajter i Framer (2026): Lokalisering, hreflang och vanliga misstag"
         },
         {
           "@type": "ListItem",
-          "position": 26,
+          "position": 29,
           "url": "https://framerexpert.se/blog/framer-formular-automatisering.html",
           "name": "Formulär och automatisering i Framer (2026): Koppla till Zapier och Make"
         },
         {
           "@type": "ListItem",
-          "position": 27,
+          "position": 30,
           "url": "https://framerexpert.se/blog/framer-mall-eller-bygga-sjalv.html",
           "name": "Framer-mall eller bygga själv (2026): Så väljer du rätt väg"
         },
         {
           "@type": "ListItem",
-          "position": 28,
+          "position": 31,
           "url": "https://framerexpert.se/blog/utvardera-framer-template.html",
           "name": "Utvärdera en Framer-template innan du köper (2026): Checklistan"
         },
         {
           "@type": "ListItem",
-          "position": 29,
+          "position": 32,
           "url": "https://framerexpert.se/blog/responsiv-typografi-framer.html",
           "name": "Typografi i Framer (2026): Bygg en responsiv typskala som håller"
         },
         {
           "@type": "ListItem",
-          "position": 30,
+          "position": 33,
           "url": "https://framerexpert.se/blog/byra-checklista-framer-webflow.html",
           "name": "Så väljer du rätt Framer- eller Webflow-byrå (2026): Frågorna att ställa innan kontrakt"
         },
         {
           "@type": "ListItem",
-          "position": 31,
+          "position": 34,
           "url": "https://framerexpert.se/blog/underhall-framer-webflow.html",
           "name": "Underhåll i Framer vs Webflow (2026): Vad kostar det egentligen efter lansering?"
         }

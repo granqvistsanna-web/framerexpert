@@ -2,7 +2,9 @@
 
 > Svensk kunskapskälla om Framer. Guider, plattformsjämförelser, SEO-hjälp och listor över verifierade Framer Experts, för dig som bygger eller beställer en webbplats i Framer.
 
-Innehållet är skrivet på svenska av praktiserande Framer-experter och uppdateras löpande. En engelsk översättning finns i gränssnittet på samma URL:er. Alla artiklar ligger under `/blog/`, har publicerings- och uppdateringsdatum i sidhuvudet och JSON-LD (`Article`, `BreadcrumbList`, i vissa fall `FAQPage`) i källkoden. Årtalet i titeln anger vilken version av Framer och vilken prisbild texten beskriver.
+Senast uppdaterad: 2026-08-13
+
+Innehållet är skrivet på svenska och uppdateras löpande. Alla artiklar ligger under `/blog/`, har publicerings- och uppdateringsdatum i sidhuvudet och JSON-LD (`BlogPosting`, `BreadcrumbList`, i de flesta fall `FAQPage`) i källkoden. Årtalet i titeln anger vilken version av Framer och vilken prisbild texten beskriver.
 
 ## Huvudsidor
 

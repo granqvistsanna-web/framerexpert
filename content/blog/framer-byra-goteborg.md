@@ -9,8 +9,8 @@ readtime: 10 min läsning
 thumbnail: thumb-framer-byra-goteborg.svg
 og_image: og-default.png
 title: "Framer-byrå i Göteborg (2026): Så hittar och handlar du upp rätt"
-meta_title: "Framer-byrå i Göteborg (2026) — så väljer du rätt — FramerExpert.se"
-description: "Letar du en Framer-byrå i Göteborg? Så ser den lokala marknaden ut 2026, vad en Framer-byrå levererar, vad det kostar och hur du handlar upp rätt leverantör."
+meta_title: "Framer-byrå i Göteborg (2026): Så handlar du upp rätt"
+description: "Letar du en Framer-byrå i Göteborg? Den lokala marknaden 2026, vad en byrå levererar moment för moment, vad det kostar och hur du handlar upp."
 og_description: "Framer-byrå i Göteborg 2026 — så ser marknaden ut, vad en leverans innehåller, vad det kostar och hur du handlar upp rätt."
 excerpt: "Så ser den lokala marknaden ut, vad en Framer-byrå faktiskt levererar och hur du handlar upp rätt leverantör i Göteborg."
 intro: "Göteborg har ovanligt mycket Framer-kompetens för sin storlek, men den är ojämnt fördelad: några få gör det på heltid, och betydligt fler lägger till Framer i en bredare byråleverans. Den här guiden går igenom hur den lokala marknaden ser ut 2026, vad en Framer-byrå faktiskt levererar, vad det kostar — och hur du handlar upp utan att betala för samordning du inte behöver."

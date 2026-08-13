@@ -9,8 +9,8 @@ readtime: 8 min läsning
 thumbnail: thumb-framer-ecommerce.svg
 og_image: og-default.png
 title: "Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?"
-meta_title: "Framer för e-handel (2026): Vad funkar — och när ska du välja något annat? — FramerExpert.se"
-description: "Framer e-handel 2026 — så långt räcker Framers inbyggda store-funktion, när du bör integrera Shopify eller Stripe, och när du ska välja en riktig e-handelsplattform."
+meta_title: "Framer för e-handel (2026): Vad funkar och vad inte?"
+description: "Framer e-handel 2026 — så långt räcker store-funktionen, när du bör integrera Shopify eller Stripe, och när du ska välja en riktig e-handelsplattform."
 og_description: "Framer e-handel — vad funkar, vad saknas, och när du bör välja Shopify istället."
 intro: "Framer har gjort det enklare att sälja direkt från sin sajt, men plattformen är fortfarande ingen fullfjädrad e-handel. Den här guiden går rakt på sak: vad klarar Framer av, var kör det fast, och när är det dags att hoppa över till Shopify eller WooCommerce istället?"
 related: framer-cms-i-praktiken, framer-vs-wordpress

@@ -8,7 +8,7 @@ date_display: 22 april 2026
 readtime: 10 min läsning
 thumbnail: thumb-framer-seo.svg
 title: "Framer SEO (2026): Så optimerar du din sajt för Google"
-meta_title: "Framer SEO (2026): Så optimerar du din sajt för Google — FramerExpert.se"
+meta_title: "Framer SEO (2026): Så optimerar du sajten för Google"
 description: "Framer SEO 2026 — komplett guide till titlar, strukturerad data, Core Web Vitals och sitemap. Så får du Framer-sajten att ranka i Google."
 og_description: "Komplett guide till Framer SEO 2026 — titlar, strukturerad data, Core Web Vitals och sitemap."
 intro: "Framer har en stark SEO-grund direkt ur lådan — snabb leverans, ren HTML och inbyggda meta-verktyg. Men för att faktiskt ranka behöver du veta vilka inställningar som spelar roll. Den här guiden går igenom vad som gör en Framer-sajt sökmotorvänlig 2026."

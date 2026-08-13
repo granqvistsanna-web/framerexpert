@@ -9,7 +9,7 @@ readtime: 9 min läsning
 thumbnail: thumb-framer-vs-wordpress.svg
 og_image: og-default.png
 title: "Framer vs WordPress (2026): Vilken plattform är bäst för din webbplats?"
-meta_title: "Framer vs WordPress (2026): Vilken plattform är bäst? — FramerExpert.se"
+meta_title: "Framer vs WordPress (2026): Vilken plattform är bäst?"
 description: "Framer vs WordPress 2026 — ärlig jämförelse av prestanda, SEO, kostnad, flexibilitet, underhåll och migrering. Så väljer du rätt plattform för din sajt."
 og_description: "Framer vs WordPress 2026 — prestanda, SEO, kostnad, underhåll och migrering, punkt för punkt."
 excerpt: "Ärlig jämförelse av prestanda, SEO, kostnad, flexibilitet, underhåll och migrering — så väljer du rätt plattform 2026."

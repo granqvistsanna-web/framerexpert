@@ -9,7 +9,7 @@ readtime: 8 min läsning
 thumbnail: thumb-mall-eller-bygga.svg
 og_image: og-default.png
 title: "Framer-mall eller bygga själv (2026): Så väljer du rätt väg"
-meta_title: "Framer-mall eller bygga själv (2026): Så väljer du rätt väg — FramerExpert.se"
+meta_title: "Framer-mall eller bygga själv? Så väljer du rätt (2026)"
 description: "Framer-mall eller bygga från grunden? När en template sparar veckor, när den kostar mer än den smakar — och hur du räknar på beslutet innan du väljer."
 og_description: "Mall eller bygga själv i Framer? Så räknar du på beslutet."
 intro: "Du har ett sajtprojekt framför dig och två vägar in: köpa en färdig Framer-mall eller börja på en tom canvas. Svaret beror inte på hur bra mallen är — det beror på hur mycket av den du tänker behålla. Den här guiden går igenom variablerna som faktiskt avgör, med konkreta varningstecken och ett enkelt sätt att räkna på beslutet."

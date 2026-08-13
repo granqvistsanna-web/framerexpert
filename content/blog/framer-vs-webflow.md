@@ -9,7 +9,7 @@ readtime: 9 min läsning
 thumbnail: thumb-framer-vs-webflow.svg
 og_image: og-default.png
 title: "Framer vs Webflow (2026): Vilken ska du välja?"
-meta_title: "Framer vs Webflow (2026): Vilken ska du välja? — FramerExpert.se"
+meta_title: "Framer vs Webflow (2026): Vilken ska du välja?"
 description: "Framer vs Webflow 2026: ärlig jämförelse av pris, CMS, e-handel, SEO och användarvänlighet. Så väljer du rätt plattform för din sajt."
 og_description: "Framer vs Webflow 2026 — pris, CMS, e-handel och SEO ärligt jämfört."
 intro: "Framer och Webflow är de två starkaste no-code-alternativen för den som vill bygga en professionell sajt utan utvecklare. Men de är olika verktyg med olika styrkor, och valet handlar sällan om vilket som är 'bäst' — utan om vilket som passar din typ av projekt. Den här guiden jämför dem ärligt på de punkter som faktiskt avgör."

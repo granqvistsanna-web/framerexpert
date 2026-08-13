@@ -9,7 +9,7 @@ readtime: 7 min läsning
 thumbnail: thumb-framer-formular.svg
 og_image: og-default.png
 title: "Formulär och automatisering i Framer (2026): Koppla till Zapier och Make"
-meta_title: "Formulär och automatisering i Framer (2026) — FramerExpert.se"
+meta_title: "Formulär och automatisering i Framer (2026)"
 description: "Så kopplar du Framers inbyggda formulär till Zapier eller Make via webhook — Slack-notiser, CRM, Google Sheets och andra automationsflöden utan kod."
 og_description: "Koppla Framer-formulär till Zapier eller Make via webhook — utan kod."
 intro: "Ett formulär som bara skickar ett mejl räcker sällan i längden. Den här guiden går igenom hur du kopplar Framers inbyggda formulär till Zapier eller Make via webhook, och vilka automationsflöden som faktiskt är värda att sätta upp — plus vad du bör tänka på kring GDPR innan formulärdata börjar flöda till tredjepartsverktyg."

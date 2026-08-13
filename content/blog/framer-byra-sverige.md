@@ -9,8 +9,8 @@ readtime: 11 min läsning
 thumbnail: thumb-framer-byra-sverige.svg
 og_image: og-default.png
 title: "Framer-byrå i Sverige (2026): Så väljer du rätt leverantör"
-meta_title: "Framer-byrå i Sverige (2026) — så väljer du rätt — FramerExpert.se"
-description: "Så ser den svenska Framer-byråmarknaden ut 2026 — tre typer av leverantörer, hur du verifierar att kompetensen finns, vad det kostar och vad avtalet måste innehålla."
+meta_title: "Framer-byrå i Sverige (2026): Så väljer du rätt leverantör"
+description: "Så ser den svenska Framer-byråmarknaden ut 2026 — tre leverantörstyper, hur du verifierar kompetensen, prisnivåer och vad avtalet måste täcka."
 og_description: "Framer-byrå i Sverige 2026 — leverantörstyper, hur du verifierar kompetensen, prisnivåer och vad avtalet måste innehålla."
 excerpt: "Tre typer av leverantörer, hur du verifierar att Framer-kompetensen finns på riktigt, och vad avtalet måste innehålla."
 intro: "Antalet svenska byråer som säger att de bygger i Framer har ökat snabbt, men gruppen är långt ifrån enhetlig. Några är verifierade partners, några har en enskild specialist i huset, och några lägger till plattformen i offerten för att kunden frågade. Den här guiden går igenom hur du skiljer dem åt, vad varje typ passar för, vad det kostar 2026 och vilka avtalspunkter som avgör om du äger din egen sajt efteråt."

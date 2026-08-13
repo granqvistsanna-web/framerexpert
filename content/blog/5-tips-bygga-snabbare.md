@@ -9,7 +9,7 @@ readtime: 7 min läsning
 thumbnail: thumb-5-tips.svg
 og_image: og-default.png
 title: "5 tips för att bygga snabbare i Framer"
-meta_title: "5 tips för att bygga snabbare i Framer (2026) — FramerExpert.se"
+meta_title: "5 tips för att bygga snabbare i Framer (2026)"
 description: "Fem konkreta tips som gör dig snabbare i Framer 2026 — komponenter, Auto Layout, kortkommandon, CMS och mobile-first. Med exempel och vanliga misstag."
 og_description: "Fem konkreta tips som gör dig snabbare i Framer — komponenter, Auto Layout, kortkommandon, CMS och mobile-first."
 excerpt: "Spara tid och arbeta smartare. Fem konkreta tips som gör dig snabbare i Framer."

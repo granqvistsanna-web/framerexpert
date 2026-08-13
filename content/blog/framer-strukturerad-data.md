@@ -9,7 +9,7 @@ readtime: 9 min läsning
 thumbnail: thumb-framer-jsonld.svg
 og_image: og-default.png
 title: "Strukturerad data i Framer (2026): Så lägger du till JSON-LD-schema"
-meta_title: "Strukturerad data i Framer (2026): Så lägger du till JSON-LD — FramerExpert.se"
+meta_title: "Strukturerad data i Framer (2026): JSON-LD steg för steg"
 description: "Så lägger du till strukturerad data (JSON-LD) i Framer 2026 — vilka scheman som ger rich results, hur du lägger in dem via custom code, och hur du validerar."
 og_description: "Så lägger du till JSON-LD-schema i Framer — vilka scheman ger rich results, var du klistrar in dem, och hur du validerar."
 excerpt: "Vilka scheman ger rich results, hur du lägger in dem via custom code, och hur du validerar utan att bryta något."

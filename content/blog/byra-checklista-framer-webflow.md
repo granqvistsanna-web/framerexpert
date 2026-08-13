@@ -9,7 +9,7 @@ readtime: 8 min läsning
 thumbnail: thumb-byra-checklista.svg
 og_image: og-default.png
 title: "Så väljer du rätt Framer- eller Webflow-byrå (2026): Frågorna att ställa innan kontrakt"
-meta_title: "Så väljer du rätt Framer- eller Webflow-byrå (2026) — FramerExpert.se"
+meta_title: "Välj rätt Framer- eller Webflow-byrå (2026): Checklista"
 description: "Checklista för att vetta en Framer- eller Webflow-byrå innan kontrakt — case, ägandeskap, SEO-ansvar, underhåll och de röda flaggor som kostar dig senare."
 og_description: "Frågorna att ställa en Framer- eller Webflow-byrå innan du skriver under."
 intro: "Vilken plattform byrån jobbar i avgör mindre än du tror. Det som faktiskt avgör om samarbetet blir bra är sådant som sällan står i offerten: vem som äger workspace efter lansering, vad som händer om byrån går i konkurs, och om underhåll ingår eller faktureras separat varje gång du hör av dig. Den här checklistan går igenom frågorna att ställa innan du skriver under — oavsett vilken av de två plattformarna byrån använder."

@@ -9,7 +9,7 @@ readtime: 8 min läsning
 thumbnail: thumb-framer-seo-checklista.svg
 og_image: og-default.png
 title: "Framer SEO-checklista (2026): 24 punkter innan du publicerar"
-meta_title: "Framer SEO-checklista (2026): 24 punkter innan du publicerar — FramerExpert.se"
+meta_title: "Framer SEO-checklista (2026): 24 punkter före publicering"
 description: "Framer SEO-checklista 2026 — 24 konkreta punkter för sidinställningar, teknik, innehåll och uppföljning. Bocka av innan du publicerar din Framer-sajt."
 og_description: "24 konkreta SEO-punkter att bocka av innan du publicerar din Framer-sajt — sidinställningar, teknik, innehåll och uppföljning."
 excerpt: "24 konkreta punkter för sidinställningar, teknik, innehåll och uppföljning — bocka av innan du publicerar."

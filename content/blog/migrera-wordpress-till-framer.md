@@ -9,7 +9,7 @@ readtime: 9 min läsning
 thumbnail: thumb-migrera-wordpress.svg
 og_image: og-default.png
 title: "Migrera från WordPress till Framer (2026): Steg-för-steg utan att tappa SEO"
-meta_title: "Migrera från WordPress till Framer (2026): Steg-för-steg — FramerExpert.se"
+meta_title: "Migrera WordPress till Framer (2026): Steg för steg"
 description: "Praktisk guide till att flytta en WordPress-sajt till Framer — innehåll, redirects, CMS-import, DNS och de vanligaste fallgroparna som kostar SEO-ranking."
 og_description: "Så flyttar du en WordPress-sajt till Framer steg för steg — utan att tappa rankingen på vägen."
 intro: "Den vanligaste anledningen till att man letar efter den här guiden är en WordPress-sajt som blivit långsam, dyr att underhålla eller krånglig att uppdatera. Själva flytten är oftast rakare än den känns på förhand — om du gör stegen i rätt ordning. Här är hela processen, från kartläggning till lansering."

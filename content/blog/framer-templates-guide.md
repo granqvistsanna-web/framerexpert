@@ -9,7 +9,7 @@ readtime: 7 min läsning
 thumbnail: thumb-framer-templates.svg
 og_image: og-default.png
 title: "Framer-mallar (2026): Så hittar, väljer och anpassar du rätt template"
-meta_title: "Framer-mallar (2026): Så hittar, väljer och anpassar du rätt template — FramerExpert.se"
+meta_title: "Framer-mallar (2026): Hitta, välj och anpassa rätt mall"
 description: "Framer-mallar 2026 — så hittar du rätt template, anpassar den utan att förstöra designen och undviker de vanligaste licens- och CMS-fällorna."
 og_description: "Så hittar, väljer och anpassar du en Framer-mall 2026 — praktisk guide."
 intro: "En färdig Framer-mall kan spara veckor av designarbete — om du väljer rätt. Den här guiden går igenom var du hittar mallar, vad du ska titta efter innan du köper, och hur du anpassar en template utan att bryta sönder den."

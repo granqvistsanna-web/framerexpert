@@ -9,7 +9,7 @@ readtime: 8 min läsning
 thumbnail: thumb-utvardera-template.svg
 og_image: og-default.png
 title: "Utvärdera en Framer-template innan du köper (2026): Checklistan"
-meta_title: "Utvärdera en Framer-template innan du köper (2026): Checklistan — FramerExpert.se"
+meta_title: "Utvärdera en Framer-template före köp (2026): Checklista"
 description: "Checklista för att utvärdera en Framer-template innan köp: CMS-struktur, brytpunkter, komponenter, licens och prestanda — så slipper du dyra överraskningar."
 og_description: "Så granskar du en Framer-template innan du köper — checklistan."
 intro: "Demosajten är det sämsta underlaget för att bedöma en Framer-template. Den visar hur mallen ser ut orörd — men du köper den för att ändra i den, och då är det strukturen under ytan som avgör om köpet var värt det. Här är checklistan vi själva använder, punkt för punkt."

@@ -10,7 +10,7 @@ thumbnail: thumb-framer-flersprakig.svg
 og_image: og-default.png
 title: "Flerspråkiga sajter i Framer (2026): Lokalisering, hreflang och vanliga misstag"
 meta_title: "Flerspråkiga sajter i Framer (2026) — FramerExpert.se"
-description: "Så bygger du en flerspråkig sajt i Framer — locales, AI-översättning, automatisk språkdetektering och hreflang-taggar. Vad som sköts automatiskt och vad du måste kontrollera själv."
+description: "Så bygger du en flerspråkig sajt i Framer — locales, AI-översättning, språkdetektering och hreflang. Vad som sköts automatiskt och vad du måste göra."
 og_description: "Lokalisering i Framer — locales, AI-översättning och hreflang, utan kod."
 intro: "Framer har ett inbyggt lokaliseringssystem som täcker det mesta en flerspråkig marknadssajt behöver — utan plugins och utan att koda hreflang-taggar för hand. Den tekniska biten är inte det svåra. Det som avgör om resultatet blir bra är hur du hanterar innehåll och nyans per språk."
 related: framer-seo-guide, framer-cms-i-praktiken

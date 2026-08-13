@@ -9,7 +9,7 @@ readtime: 8 min läsning
 thumbnail: thumb-framer-pris.svg
 og_image: og-default.png
 title: "Vad kostar en Framer-webbplats? Prisguide 2026"
-meta_title: "Vad kostar en Framer-webbplats? Prisguide 2026 — FramerExpert.se"
+meta_title: "Vad kostar en Framer-webbplats? Prisguide 2026"
 description: "Vad kostar Framer 2026? Genomgång av Framers abonnemang, vad det kostar att bygga själv eller anlita en expert, och den totala kostnaden över tid."
 og_description: "Framer-pris 2026 — abonnemang, byggkostnad, expertarvoden och total ägandekostnad, i klartext."
 excerpt: "Framers abonnemang, vad det kostar att bygga själv eller anlita, och totalkostnaden över tid — i klartext."

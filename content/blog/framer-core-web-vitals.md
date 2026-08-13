@@ -9,7 +9,7 @@ readtime: 9 min läsning
 thumbnail: thumb-framer-cwv.svg
 og_image: og-default.png
 title: "Core Web Vitals i Framer (2026): Så får du grönt"
-meta_title: "Core Web Vitals i Framer (2026): Så får du grönt — FramerExpert.se"
+meta_title: "Core Web Vitals i Framer (2026): Så får du grönt"
 description: "Core Web Vitals i Framer 2026 — vad LCP, INP och CLS mäter, vad som sänker dem i Framer, och hur du får gröna värden på riktiga besökare."
 og_description: "Vad LCP, INP och CLS mäter, vad som sänker dem i Framer, och hur du får gröna värden på riktiga besökare."
 excerpt: "Vad LCP, INP och CLS mäter, vad som sänker värdena i Framer, och hur du får grönt på riktiga besökare."

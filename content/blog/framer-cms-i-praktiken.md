@@ -9,7 +9,7 @@ readtime: 10 min läsning
 thumbnail: thumb-framer-cms.svg
 og_image: og-default.png
 title: "Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod"
-meta_title: "Framer CMS i praktiken (2026): Så bygger du en dynamisk webbplats utan kod — FramerExpert.se"
+meta_title: "Framer CMS i praktiken (2026): Dynamisk sajt utan kod"
 description: "Framer CMS 2026 — hands-on guide till samlingar, fält, dynamiska listor, detaljsidor, filter och migrering. Så bygger du en dynamisk sajt utan kod."
 og_description: "Hands-on guide till Framer CMS 2026 — samlingar, fält, detaljsidor, filter och migrering, utan kod."
 excerpt: "Hands-on guide till samlingar, fält, filter och detaljsidor — så bygger du en dynamisk sajt i Framer CMS utan kod."

@@ -9,7 +9,7 @@ readtime: 7 min läsning
 thumbnail: thumb-responsiv-typografi.svg
 og_image: og-default.png
 title: "Typografi i Framer (2026): Bygg en responsiv typskala som håller"
-meta_title: "Typografi i Framer (2026): Bygg en responsiv typskala som håller — FramerExpert.se"
+meta_title: "Typografi i Framer (2026): Responsiv typskala som håller"
 description: "Så bygger du en responsiv typskala i Framer med textstilar och brytpunkter — konkreta storlekar, radavstånd och misstagen som förstör mobilvyn."
 og_description: "Responsiv typskala i Framer — konkreta storlekar och stegen som håller."
 intro: "De flesta typografiproblem i Framer-sajter kommer inte från typsnittsvalet. De kommer från att storlekarna sattes en i taget, sida för sida, tills ingen längre vet varför en rubrik är 42 pixlar på ett ställe och 44 på ett annat. Lösningen är en typskala: en fast uppsättning storlekar, definierade som textstilar, med egna värden per brytpunkt. Den tar en timme att sätta upp och betalar tillbaka på varje sida du bygger efteråt."

@@ -9,7 +9,7 @@ readtime: 8 min läsning
 thumbnail: thumb-framer-vs-figma.svg
 og_image: og-default.png
 title: "Framer vs Figma (2026): Vad är skillnaden — och vilket ska du välja?"
-meta_title: "Framer vs Figma (2026): Vad är skillnaden? — FramerExpert.se"
+meta_title: "Framer vs Figma (2026): Vad är skillnaden?"
 description: "Framer vs Figma 2026 — vad skiljer designverktyget från publiceringsplattformen, hur Figma Sites förändrar bilden, och när du ska välja vilket."
 og_description: "Framer vs Figma 2026 — designverktyg mot publiceringsplattform, och när du väljer vilket."
 excerpt: "Vad skiljer designverktyget från publiceringsplattformen, och när ska du välja vilket? Så hänger de ihop."

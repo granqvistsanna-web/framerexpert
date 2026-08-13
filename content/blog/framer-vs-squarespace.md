@@ -9,7 +9,7 @@ readtime: 9 min läsning
 thumbnail: thumb-framer-vs-squarespace.svg
 og_image: og-default.png
 title: "Framer vs Squarespace (2026): Vilken ska du välja?"
-meta_title: "Framer vs Squarespace (2026): Vilken ska du välja? — FramerExpert.se"
+meta_title: "Framer vs Squarespace (2026): Vilken ska du välja?"
 description: "Framer vs Squarespace 2026 — ärlig jämförelse av design, mallar, e-handel, blogg, SEO och pris. Så väljer du rätt plattform för din sajt."
 og_description: "Framer vs Squarespace 2026 — design, mallar, e-handel, blogg och pris ärligt jämfört."
 excerpt: "Ärlig jämförelse av design, mallar, e-handel, blogg, SEO och pris — så väljer du rätt av de två."

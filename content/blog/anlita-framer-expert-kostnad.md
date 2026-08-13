@@ -9,7 +9,7 @@ readtime: 11 min läsning
 thumbnail: thumb-anlita-kostnad.svg
 og_image: og-default.png
 title: "Vad kostar det att anlita en Framer-expert? (2026): Timpriser, fastpris och budget"
-meta_title: "Vad kostar det att anlita en Framer-expert? (2026) — FramerExpert.se"
+meta_title: "Vad kostar det att anlita en Framer-expert? (2026)"
 description: "Vad kostar en Framer-expert 2026? Timpriser, fastpris och löpande avtal på svenska marknaden — vad som styr priset och hur du jämför offerter rättvist."
 og_description: "Timpriser, fastpris och retainer för Framer-experter 2026 — vad som styr priset och hur du jämför offerter."
 excerpt: "Timpriser, fastpris och löpande avtal — vad som styr priset och hur du jämför offerter som faktiskt går att jämföra."

@@ -30,9 +30,11 @@ file; the boilerplate is re-used from the template.
 4. **Build**: `node scripts/build-post.js <slug>` (or `node scripts/build-post.js --all`).
 5. **Wire it up** (small manual diffs — far less than writing the whole HTML):
    - Add a card to `blog/index.html` inside `#blogGrid`.
-   - Add a `<url>` entry to `sitemap.xml`.
    - Add a bullet to the matching section in `llms.txt` (title + URL + one-line
      note, same wording as the meta description).
+
+   `sitemap.xml` needs no manual edit — `npm run build:all` regenerates it from
+   the same frontmatter, so `lastmod` always matches the page's `dateModified`.
    - Add translation keys for the title/meta/body in `js/i18n.js` if you want
      English support for this post (optional — plain HTML falls back to
      Swedish if keys are missing).

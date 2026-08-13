@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://framerexpert.se/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://framerexpert.se/blog/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://framerexpert.se/framer-agents-hackathon-2026.html</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/anlita-framer-expert-kostnad.html</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -37,145 +43,55 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://framerexpert.se/blog/anlita-framer-expert-kostnad.html</loc>
-    <lastmod>2026-08-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://framerexpert.se/blog/anlita-framer-expert-process.html</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://framerexpert.se/blog/vad-ar-framer.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/framer-vs-wordpress.html</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://framerexpert.se/blog/5-tips-bygga-snabbare.html</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/framer-cms-i-praktiken.html</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/framer-seo-guide.html</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/basta-framer-experter-sverige.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/basta-framer-experter-goteborg.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://framerexpert.se/blog/basta-framer-experter-europa.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/basta-framer-experter-goteborg.html</loc>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://framerexpert.se/blog/basta-framer-experter-norden.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://framerexpert.se/blog/framer-vs-webflow.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://framerexpert.se/blog/basta-framer-experter-sverige.html</loc>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://framerexpert.se/blog/framer-templates-guide.html</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/framer-ecommerce-guide.html</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/webflow-byra-eller-framer-byra.html</loc>
-    <lastmod>2026-08-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/framer-pris.html</loc>
-    <lastmod>2026-08-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/framer-seo-checklista.html</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/framer-strukturerad-data.html</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/framer-core-web-vitals.html</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/framer-vs-wix.html</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/framer-vs-squarespace.html</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/framer-vs-figma.html</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://framerexpert.se/blog/migrera-wordpress-till-framer.html</loc>
+    <loc>https://framerexpert.se/blog/byra-checklista-framer-webflow.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://framerexpert.se/blog/framer-animationer-interactions.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-core-web-vitals.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -199,7 +115,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://framerexpert.se/blog/utvardera-framer-template.html</loc>
+    <loc>https://framerexpert.se/blog/framer-pris.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-templates-guide.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/migrera-wordpress-till-framer.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -211,14 +139,86 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://framerexpert.se/blog/byra-checklista-framer-webflow.html</loc>
+    <loc>https://framerexpert.se/blog/underhall-framer-webflow.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://framerexpert.se/blog/underhall-framer-webflow.html</loc>
+    <loc>https://framerexpert.se/blog/utvardera-framer-template.html</loc>
     <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-seo-checklista.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-seo-guide.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-strukturerad-data.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-vs-figma.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-vs-squarespace.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-vs-wix.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-cms-i-praktiken.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-vs-wordpress.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/webflow-byra-eller-framer-byra.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-ecommerce-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/framer-vs-webflow.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://framerexpert.se/blog/vad-ar-framer.html</loc>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

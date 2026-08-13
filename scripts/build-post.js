@@ -139,11 +139,31 @@ function renderBody(markdown) {
       i++;
       continue;
     }
+    if (/^\s*\|/.test(line)) {
+      flushList();
+      const rows = [];
+      while (i < lines.length && /^\s*\|/.test(lines[i])) {
+        rows.push(lines[i].trim());
+        i++;
+      }
+      out.push(renderTable(rows));
+      continue;
+    }
+    if (/^>/.test(line)) {
+      flushList();
+      const block = [];
+      while (i < lines.length && /^>/.test(lines[i])) {
+        block.push(lines[i].replace(/^>\s?/, ''));
+        i++;
+      }
+      out.push(renderFactbox(block));
+      continue;
+    }
 
     // Paragraph: consume until blank line or structural token.
     const buf = [line.trim()];
     i++;
-    while (i < lines.length && !/^\s*$/.test(lines[i]) && !/^(#{2,3}\s+|-\s+)/.test(lines[i])) {
+    while (i < lines.length && !/^\s*$/.test(lines[i]) && !/^(#{2,3}\s+|-\s+|\s*\||>)/.test(lines[i])) {
       buf.push(lines[i].trim());
       i++;
     }
@@ -151,6 +171,89 @@ function renderBody(markdown) {
     out.push(`      <p>${inline(buf.join(' '))}</p>`);
   }
   flushList();
+  return out.join('\n');
+}
+
+/*
+ * Pipe table. First column becomes a row header so that label/value pairs stay
+ * readable for screen readers and for anything parsing the page as data.
+ *
+ *   | Uppdrag       | Prisspann          |
+ *   | ---           | ---                |
+ *   | Landningssida | 25 000–60 000 kr   |
+ */
+function renderTable(rows) {
+  const cells = (row) => row.replace(/^\|/, '').replace(/\|$/, '').split('|').map((c) => c.trim());
+  const isSeparator = (row) => cells(row).every((c) => /^:?-{2,}:?$/.test(c));
+
+  let head = null;
+  let bodyRows = rows;
+  if (rows.length >= 2 && isSeparator(rows[1])) {
+    head = cells(rows[0]);
+    bodyRows = rows.slice(2);
+  }
+  bodyRows = bodyRows.filter((row) => !isSeparator(row));
+
+  const out = ['      <div class="blog-post__table-wrap">', '        <table>'];
+  if (head) {
+    out.push('          <thead>');
+    out.push('            <tr>' + head.map((c) => `<th scope="col">${inline(c)}</th>`).join('') + '</tr>');
+    out.push('          </thead>');
+  }
+  out.push('          <tbody>');
+  for (const row of bodyRows) {
+    const tds = cells(row).map((c, idx) => (idx === 0
+      ? `<th scope="row">${inline(c)}</th>`
+      : `<td>${inline(c)}</td>`));
+    out.push('            <tr>' + tds.join('') + '</tr>');
+  }
+  out.push('          </tbody>', '        </table>', '      </div>');
+  return out.join('\n');
+}
+
+/*
+ * Fact block. Lines prefixed with `>` render as a highlighted aside — used for
+ * key figures that should be easy to lift out of the article.
+ * Supports `### heading`, paragraphs, blank-line separation and `- ` bullets.
+ */
+function renderFactbox(blockLines) {
+  const out = ['      <aside class="blog-post__factbox">'];
+  let para = [];
+  let items = [];
+
+  const flushPara = () => {
+    if (para.length) { out.push(`        <p>${inline(para.join(' '))}</p>`); para = []; }
+  };
+  const flushItems = () => {
+    if (items.length) {
+      out.push('        <ul>');
+      for (const item of items) out.push(`          <li>${inline(item)}</li>`);
+      out.push('        </ul>');
+      items = [];
+    }
+  };
+
+  for (const raw of blockLines) {
+    const line = raw.trim();
+    if (line === '') { flushPara(); flushItems(); continue; }
+    if (/^###\s+/.test(line)) {
+      flushPara();
+      flushItems();
+      out.push(`        <h3>${inline(line.replace(/^###\s+/, ''))}</h3>`);
+      continue;
+    }
+    if (/^-\s+/.test(line)) {
+      flushPara();
+      items.push(line.replace(/^-\s+/, ''));
+      continue;
+    }
+    flushItems();
+    para.push(line);
+  }
+  flushPara();
+  flushItems();
+
+  out.push('      </aside>');
   return out.join('\n');
 }
 

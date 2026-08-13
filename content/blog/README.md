@@ -67,6 +67,33 @@ Only a tiny markdown subset is supported — deliberately:
 - Blank-line-separated paragraphs → `<p>`
 - `- item` lines → `<ul><li>`
 - Inline `**bold**`, `*italic*`, `` `code` ``, `[text](url)`
+- Pipe tables → `<table>` inside a scrollable wrapper
+- `> ` blocks → a highlighted fact block (`<aside class="blog-post__factbox">`)
 
-Anything more exotic (tables, images mid-body, code fences) should be raised
-as a feature request; the parser intentionally rejects it rather than guess.
+Anything more exotic (images mid-body, code fences) should be raised as a
+feature request; the parser intentionally rejects it rather than guess.
+
+### Tables
+
+The first column becomes a `<th scope="row">`, so use it for the label and the
+remaining columns for values. The header row and its `---` separator are
+optional but recommended.
+
+```
+| Uppdrag       | Prisspann        |
+| ---           | ---              |
+| Landningssida | 25 000–60 000 kr |
+```
+
+### Fact blocks
+
+Use for key figures that should be liftable out of the running text — the
+numbers an AI answer engine or a skimming reader should find without parsing
+prose. Supports `### heading`, paragraphs, blank lines and `- ` bullets.
+
+```
+> ### Snabbfakta
+>
+> - **Timpris, frilansande Framer-expert:** 1 000–1 500 kr
+> - **Landningssida:** 25 000–60 000 kr
+```

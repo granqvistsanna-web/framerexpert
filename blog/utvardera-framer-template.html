@@ -14,6 +14,7 @@
   <meta property="og:url" content="https://framerexpert.se/blog/utvardera-framer-template.html">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="FramerExpert.se">
   <meta property="article:published_time" content="2026-08-05">
   <meta property="article:modified_time" content="2026-08-05">
   <meta property="article:author" content="FramerExpert">
@@ -41,22 +42,53 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://framerexpert.se/#organization",
+        "name": "FramerExpert.se",
+        "alternateName": "FramerExpert",
+        "url": "https://framerexpert.se/",
+        "description": "Svensk kunskapskälla med guider, tips och expertkunskap om Framer-plattformen.",
+        "foundingDate": "2026-04",
+        "inLanguage": "sv",
+        "areaServed": { "@type": "Country", "name": "Sverige" },
+        "knowsAbout": [
+          "Framer",
+          "Framer CMS",
+          "webbdesign",
+          "teknisk SEO",
+          "Core Web Vitals",
+          "migrering från WordPress till Framer",
+          "Framer-mallar"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://framerexpert.se/#website",
+        "url": "https://framerexpert.se/",
+        "name": "FramerExpert.se",
+        "description": "Sveriges kunskapskälla för Framer. Guider, tips och expertkunskap.",
+        "inLanguage": "sv",
+        "publisher": { "@id": "https://framerexpert.se/#organization" }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "@id": "https://framerexpert.se/blog/utvardera-framer-template.html#article",
     "headline": "Utvärdera en Framer-template innan du köper (2026): Checklistan",
     "description": "Så granskar du en Framer-template innan du köper — checklistan.",
     "datePublished": "2026-08-05",
     "dateModified": "2026-08-05",
-    "author": {
-      "@type": "Organization",
-      "name": "FramerExpert",
-      "url": "https://framerexpert.se"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "FramerExpert.se",
-      "url": "https://framerexpert.se"
-    },
-    "mainEntityOfPage": "https://framerexpert.se/blog/utvardera-framer-template.html",
+    "author": { "@id": "https://framerexpert.se/#organization" },
+    "publisher": { "@id": "https://framerexpert.se/#organization" },
+    "isPartOf": { "@id": "https://framerexpert.se/#website" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://framerexpert.se/blog/utvardera-framer-template.html" },
+    "image": "https://framerexpert.se/assets/og-default.png",
     "inLanguage": "sv"
   }
   </script>
@@ -65,7 +97,7 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se" },
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se/" },
       { "@type": "ListItem", "position": 2, "name": "Blogg", "item": "https://framerexpert.se/blog/" },
       { "@type": "ListItem", "position": 3, "name": "Utvärdera en Framer-template innan du köper (2026): Checklistan" }
     ]

@@ -1,0 +1,90 @@
+name: IndexNow
+
+# Pingar IndexNow med de sidor som ändrades i pushen, så att Bing, Yandex,
+# Seznam och Naver hämtar om dem inom minuter i stället för dagar. Google
+# ingår inte i protokollet — där gäller sitemap och Search Console.
+#
+# Förutsätter två saker, båda engångsarbete i Bing Webmaster Tools:
+#   1. Repository secret INDEXNOW_KEY med nyckeln från
+#      Settings -> API access -> IndexNow.
+#   2. Nyckelfilen <nyckel>.txt i repo-roten, med nyckeln som enda innehåll.
+#      Den måste svara 200 på https://framerexpert.se/<nyckel>.txt.
+#
+# Utan secret hoppar jobbet över sig självt i stället för att fela.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Samla ändrade sidor
+        id: collect
+        run: |
+          before="${{ github.event.before }}"
+          if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ] \
+             || ! git cat-file -e "$before^{commit}" 2>/dev/null; then
+            before="${{ github.sha }}^"
+          fi
+
+          changed=$(git diff --name-only --diff-filter=d "$before" "${{ github.sha }}" -- '*.html' || true)
+
+          # index.html -> /, blog/index.html -> /blog/, allt annat behåller sin sökväg.
+          urls=$(printf '%s\n' "$changed" \
+            | grep . \
+            | grep -v -x -F -e '404.html' -e 'blog/_template.html' \
+            | sed -e 's|^index\.html$||' -e 's|^blog/index\.html$|blog/|' \
+            | sed -e 's|^|https://framerexpert.se/|' \
+            | sort -u || true)
+
+          count=$(printf '%s' "$urls" | grep -c . || true)
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          {
+            echo 'urls<<EOF'
+            printf '%s\n' "$urls"
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+          echo "$count sidor ändrade"
+          printf '%s\n' "$urls"
+
+      - name: Pinga IndexNow
+        if: steps.collect.outputs.count != '0'
+        env:
+          KEY: ${{ secrets.INDEXNOW_KEY }}
+          URLS: ${{ steps.collect.outputs.urls }}
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "INDEXNOW_KEY saknas — hoppar över. Lägg till den som repository secret."
+            exit 0
+          fi
+
+          payload=$(printf '%s\n' "$URLS" | grep . | jq -R . | jq -s \
+            --arg host "framerexpert.se" \
+            --arg key "$KEY" \
+            --arg loc "https://framerexpert.se/$KEY.txt" \
+            '{host: $host, key: $key, keyLocation: $loc, urlList: .}')
+
+          status=$(curl -s -o /tmp/indexnow.out -w '%{http_code}' \
+            -X POST 'https://api.indexnow.org/indexnow' \
+            -H 'Content-Type: application/json' \
+            -d "$payload")
+
+          echo "HTTP $status"
+          cat /tmp/indexnow.out || true
+
+          # 200 = accepterad, 202 = mottagen men nyckeln inte validerad än.
+          case "$status" in
+            200|202) exit 0 ;;
+            *) echo "IndexNow avvisade pingen."; exit 1 ;;
+          esac

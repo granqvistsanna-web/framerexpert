@@ -171,7 +171,8 @@ function render(template, post, registry, i18n) {
     JSON_DESCRIPTION: JSON.stringify(post.og_description || post.description),
     BODY: renderBody(post.body || ''),
     RELATED: renderRelated(post.related || [], registry, post.slug),
-    FAQ_SCHEMA: renderFaqSchema(post.faqs || []),
+    FAQ_SCHEMA: renderFaqSchema(post.faqs || [])
+      + (post.defined_terms ? renderDefinedTermSchema(post) : ''),
   };
 
   return template.replace(/\{\{([A-Z_]+)\}\}/g, (match, key) => {
@@ -384,6 +385,57 @@ function renderFaqSchema(faqs) {
   return '  <script type="application/ld+json">\n  ' +
     JSON.stringify(schema, null, 2).split('\n').join('\n  ') +
     '\n  </script>\n';
+}
+
+/*
+ * Glossary pages (`defined_terms: true`): every `### Term` followed by one
+ * paragraph becomes a DefinedTerm, so answer engines can lift a definition
+ * with its term attached instead of guessing where one entry ends.
+ */
+function renderDefinedTermSchema(post) {
+  const lines = (post.body || '').replace(/\r\n/g, '\n').split('\n');
+  const terms = [];
+  for (let i = 0; i < lines.length; i++) {
+    const m = lines[i].match(/^###\s+(.+)$/);
+    if (!m) continue;
+    let j = i + 1;
+    while (j < lines.length && /^\s*$/.test(lines[j])) j++;
+    const para = [];
+    while (j < lines.length && !/^\s*$/.test(lines[j]) && !/^(#{2,3}\s+|-\s+|\s*\||>)/.test(lines[j])) {
+      para.push(lines[j].trim());
+      j++;
+    }
+    if (!para.length) die(`${post.slug}: term "${m[1]}" has no definition paragraph.`);
+    terms.push({ name: m[1].trim(), description: plainText(para.join(' ')) });
+  }
+  if (!terms.length) die(`${post.slug}: defined_terms is set but no ### terms were found.`);
+
+  const url = `https://framerexpert.se${urlPath(post)}`;
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'DefinedTermSet',
+    '@id': `${url}#terms`,
+    name: post.title,
+    url,
+    inLanguage: 'sv',
+    hasDefinedTerm: terms.map((t) => ({
+      '@type': 'DefinedTerm',
+      name: t.name,
+      description: t.description,
+      inDefinedTermSet: `${url}#terms`,
+    })),
+  };
+  return '  <script type="application/ld+json">\n  ' +
+    JSON.stringify(schema, null, 2).split('\n').join('\n  ') +
+    '\n  </script>\n';
+}
+
+function plainText(md) {
+  return md
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1');
 }
 
 /* ---------- Minimal frontmatter + markdown parser ---------- */

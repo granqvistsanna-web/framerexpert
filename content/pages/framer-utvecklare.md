@@ -32,7 +32,7 @@ I Framer flyter rollerna ihop mer än på andra plattformar. En skicklig Framer-
 
 Utvecklaren tar vid där de visuella verktygen tar slut. Framer låter dig skriva egna React-komponenter i TypeScript direkt i projektet, ändra beteendet hos element på canvasen med code overrides, lägga in egen kod i sidhuvudet och bygga plugins som körs i editorn. Det är det arbetet en Framer-utvecklare gör.
 
-I praktiken är det sällan två olika personer. De flesta som säljer Framer-tjänster i Sverige gör båda delarna, med tyngdpunkt åt ena hållet. Det viktiga för dig som beställare är att veta vilken sorts problem du har, så att du kan fråga efter rätt kompetens.
+I praktiken är det sällan två olika personer. De flesta som säljer Framer-tjänster i Sverige gör båda delarna, med tyngdpunkt åt ena hållet. Det viktiga för dig som beställare är att veta vilken sorts problem du har, så att du kan fråga efter rätt kompetens. Designsidan av rollen beskriver vi i [Framer-designer](/framer-designer.html).
 
 > ### Kort sagt
 > - **Framer-designer:** layout, typografi, responsivitet, animationer, CMS-mallar och formulär på canvasen.

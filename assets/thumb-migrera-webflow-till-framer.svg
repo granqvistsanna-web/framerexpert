@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" fill="#323236"/>
+
+  <rect x="120" y="120" width="140" height="140" rx="18" fill="#3F3F46"/>
+  <rect x="340" y="120" width="140" height="140" rx="18" fill="#3F3F46"/>
+  <path d="M150 170 l15 45 l15 -35 l15 35 l15 -45" stroke="#F5F5F0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+  <path d="M385 150 H435 V180 H385 Z M385 180 H410 L435 205 H410 V230 L385 205 Z" fill="#F5F5F0" opacity="0.6"/>
+  <path d="M275 190 H320 M305 175 L322 190 L305 205" stroke="#F5F5F0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+
+  <text x="300" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#F5F5F0" opacity="0.55">Webflow → Framer</text>
+</svg>

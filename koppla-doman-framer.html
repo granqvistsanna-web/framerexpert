@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#27272A">
+  <meta name="color-scheme" content="dark">
+  <title>Koppla domän till Framer (2026): DNS steg för steg</title>
+  <meta name="description" content="Så kopplar du din domän till Framer: rätt A- och CNAME-poster, steg för steg hos Loopia, One.com, Binero och GoDaddy, utan att e-posten slutar fungera.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Koppla domän till Framer (2026): Steg för steg hos Loopia, One.com, Binero och GoDaddy">
+  <meta property="og:description" content="Rätt DNS-poster för Framer, steg för steg hos svenska domänleverantörer, och hur du behåller e-posten under bytet.">
+  <meta property="og:url" content="https://framerexpert.se/koppla-doman-framer.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="FramerExpert.se">
+  <meta property="article:published_time" content="2026-09-30">
+  <meta property="article:modified_time" content="2026-09-30">
+  <meta property="article:author" content="FramerExpert">
+  <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://framerexpert.se/assets/og-default.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://framerexpert.se/koppla-doman-framer.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/animations.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://framerexpert.se/#organization",
+        "name": "FramerExpert.se",
+        "alternateName": "FramerExpert",
+        "url": "https://framerexpert.se/",
+        "description": "Svensk kunskapskälla med guider, tips och expertkunskap om Framer-plattformen.",
+        "foundingDate": "2026-04",
+        "inLanguage": "sv",
+        "areaServed": { "@type": "Country", "name": "Sverige" },
+        "knowsAbout": [
+          "Framer",
+          "Framer CMS",
+          "webbdesign",
+          "teknisk SEO",
+          "Core Web Vitals",
+          "migrering från WordPress till Framer",
+          "Framer-mallar"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://framerexpert.se/#website",
+        "url": "https://framerexpert.se/",
+        "name": "FramerExpert.se",
+        "description": "Sveriges kunskapskälla för Framer. Guider, tips och expertkunskap.",
+        "inLanguage": "sv",
+        "publisher": { "@id": "https://framerexpert.se/#organization" }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://framerexpert.se/koppla-doman-framer.html#article",
+    "headline": "Koppla domän till Framer (2026): Steg för steg hos Loopia, One.com, Binero och GoDaddy",
+    "description": "Rätt DNS-poster för Framer, steg för steg hos svenska domänleverantörer, och hur du behåller e-posten under bytet.",
+    "datePublished": "2026-09-30",
+    "dateModified": "2026-09-30",
+    "author": { "@id": "https://framerexpert.se/#organization" },
+    "publisher": { "@id": "https://framerexpert.se/#organization" },
+    "isPartOf": { "@id": "https://framerexpert.se/#website" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://framerexpert.se/koppla-doman-framer.html" },
+    "image": "https://framerexpert.se/assets/og-default.png",
+    "inLanguage": "sv"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se/" },
+      { "@type": "ListItem", "position": 2, "name": "Koppla domän till Framer (2026): Steg för steg hos Loopia, One.com, Binero och GoDaddy" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vilka DNS-poster behöver Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "För en huvuddomän som exempel.se behöver Framer två A-poster med värdena 31.43.160.6 och 31.43.161.6 samt en CNAME-post där www pekar på sites.framer.app. För en subdomän som blogg.exempel.se räcker en CNAME-post som pekar på sites.framer.app. Övriga A- och AAAA-poster för samma namn ska tas bort."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Påverkas min e-post när jag kopplar domänen till Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nej, inte så länge du bara ändrar A-, AAAA- och CNAME-posterna för webbplatsen. E-posten styrs av MX-poster och tillhörande TXT-poster som SPF och DKIM, och de ska lämnas som de är. Säg inte heller upp ett webbhotellspaket innan du har kontrollerat att e-posten inte ingår i det."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur lång tid tar det innan domänen fungerar med Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ofta fungerar domänen inom någon timme efter att DNS-posterna har ändrats, men Framer anger att det kan ta upp till 48 timmar innan ändringen har slagit igenom överallt. SSL-certifikatet skapas automatiskt av Framer när posterna pekar rätt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan jag koppla en egen domän på Framers gratisplan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nej. På gratisplanen kan sajten bara ligga på en Framer-subdomän. För att koppla en egen domän krävs ett betalt abonnemang för sajten."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Behöver jag köpa ett SSL-certifikat till min Framer-sajt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nej. Framer skapar och förnyar SSL-certifikat automatiskt för egna domäner. Om domänen har CAA-poster måste de tillåta de certifikatutfärdare Framer använder, annars kan certifikatet inte utfärdas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ska jag använda Cloudflares proxy framför Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nej, inte vid en vanlig koppling. Framer rekommenderar att posterna i Cloudflare står på DNS only, alltså utan proxy. Att köra Cloudflare som omvänd proxy framför Framer är en separat uppsättning som bara stöds på vissa av Framers högre planer."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="guideDoman">
+
+  <!-- NAVIGATION -->
+  <nav data-twostep-nav data-nav-status="not-active" class="twostep-nav">
+    <div data-nav-toggle="close" class="twostep-nav__bg"></div>
+    <div class="twostep-nav__wrap">
+      <div class="twostep-nav__width">
+        <div class="twostep-nav__bar">
+          <div class="twostep-nav__back">
+            <div class="twostep-nav__back-bg"></div>
+          </div>
+          <div class="twostep-nav__top">
+            <a href="/" class="twostep-nav__logo">
+              framer.expert
+            </a>
+            <button data-nav-toggle="toggle" class="twostep-nav__toggle" aria-label="Öppna meny" aria-expanded="false">
+              <div class="twostep-nav__toggle-bar"></div>
+              <div class="twostep-nav__toggle-bar"></div>
+            </button>
+            <div class="twostep-nav__top-line"></div>
+          </div>
+          <div class="twostep-nav__bottom">
+            <div class="twostep-nav__bottom-overflow">
+              <div class="twostep-nav__bottom-inner">
+                <div class="twostep-nav__bottom-row">
+                  <div class="twostep-nav__bottom-col">
+                    <div class="twostep-nav__info">
+                      <ul class="twostep-nav__ul">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-span" data-i18n="nav.blog">Blogg</span></a>
+                        </li>
+                      </ul>
+                      <ul class="twostep-nav__ul is--small">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=getting-started" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.getting-started">Kom igång</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=comparison" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.comparison">Jämförelse</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=tips" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.tips">Tips</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=seo" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.seo">SEO</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=cms" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.cms">CMS</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="https://www.framer.com" target="_blank" rel="noopener" class="twostep-nav__link"><span class="twostep-nav__link-eyebrow">Framer.com</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumbs container">
+    <ol class="breadcrumbs__list">
+      <li><a href="/" data-i18n="nav.home">Hem</a></li>
+      <li><span aria-current="page">Koppla domän till Framer (2026): Steg för steg hos Loopia, One.com, Binero och GoDaddy</span></li>
+    </ol>
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="container">
+    <header class="blog-post__header">
+      <div class="blog-post__meta">
+        <span class="blog-post__category">Guide</span>
+        <span>Uppdaterad <time datetime="2026-09-30">30 september 2026</time></span>
+      </div>
+      <h1 class="blog-post__title">Koppla domän till Framer (2026): Steg för steg hos Loopia, One.com, Binero och GoDaddy</h1>
+      <p class="blog-post__intro">För att koppla en egen domän till Framer lägger du till domänen under Site Settings i Framer och pekar sedan om den hos din domänleverantör: två A-poster för huvuddomänen och en CNAME för www. Här går vi igenom exakt vilka poster som behövs, var du hittar dem hos de leverantörer svenska företag oftast använder, hur du låter e-posten vara orörd och vad du gör när något inte fungerar.</p>
+    </header>
+
+    <div class="blog-post__content">
+      <h2>Kort svar: det här behöver du göra</h2>
+      <p>Du lägger till domänen i Framer, ändrar två eller tre DNS-poster hos din domänleverantör och väntar tills Framer visar att domänen är verifierad. SSL ordnas automatiskt. Det enda som kräver lite eftertanke är att ta bort gamla poster som krockar och att låta e-postens poster vara ifred.</p>
+      <p>Innan du börjar behöver sajten ett betalt Framer-abonnemang, eftersom gratisplanen bara tillåter en Framer-subdomän. Vilka planer som finns och vad de kostar går vi igenom i <a href="/blog/framer-pris.html">prisguiden för Framer</a>. Du behöver också inloggning till kontot där domänen är registrerad, eller till den tjänst som sköter domänens DNS om det är en annan.</p>
+      <aside class="blog-post__factbox">
+        <h3>Innan du ändrar något</h3>
+        <ul>
+          <li>Ta en skärmdump av alla nuvarande DNS-poster, så att du kan återställa om något går fel</li>
+          <li>Kontrollera var e-posten ligger och vilka MX-poster den använder</li>
+          <li>Publicera sajten på Framer-subdomänen först och kontrollera att allt fungerar</li>
+          <li>Lägg upp redirects från gamla adresser innan bytet, inte efter</li>
+        </ul>
+      </aside>
+      <h2>Vilka DNS-poster Framer kräver</h2>
+      <p>Framer använder två A-poster för huvuddomänen och en CNAME för www. Värdena nedan kommer från Framers egen hjälpartikel om att koppla en egen domän och är desamma för alla sajter.</p>
+      <div class="blog-post__table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Namn (värd)</th><th scope="col">Typ</th><th scope="col">Värde</th><th scope="col">Används för</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">@ (huvuddomänen)</th><td>A</td><td>31.43.160.6</td><td>exempel.se</td></tr>
+            <tr><th scope="row">@ (huvuddomänen)</th><td>A</td><td>31.43.161.6</td><td>exempel.se</td></tr>
+            <tr><th scope="row">www</th><td>CNAME</td><td>sites.framer.app</td><td>www.exempel.se</td></tr>
+            <tr><th scope="row">subdomän, t.ex. blogg</th><td>CNAME</td><td>sites.framer.app</td><td>Om bara en subdomän ska till Framer</td></tr>
+            <tr><th scope="row">MX, SPF, DKIM, DMARC</th><td>MX / TXT</td><td>Lämnas orörda</td><td>E-post</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Två regler gäller oavsett leverantör. Det får inte finnas några andra A- eller AAAA-poster för samma namn, och huvuddomänen kan aldrig ha en CNAME, bara A-poster. Framer stöder inte IPv6, så en kvarglömd AAAA-post kan hindra både att sajten laddar och att SSL-certifikatet skapas.</p>
+      <p>Olika leverantörer skriver huvuddomänen på olika sätt. Loopia använder @, medan Websupport låter dig lämna fältet för subdomän tomt. Ser du inget fält för namnet alls är det oftast huvuddomänen som redigeras.</p>
+      <h2>Så lägger du till domänen i Framer</h2>
+      <p>Öppna projektet, gå till Site Settings och sedan till Domains under Hosting. Välj att koppla en domän du redan äger och skriv in domänen. Framer visar då vilka poster som ska läggas in och markerar domänen som verifierad när den ser att posterna pekar rätt.</p>
+      <h3>Primär domän och redirect</h3>
+      <p>Bestäm tidigt om sajten ska ligga på exempel.se eller www.exempel.se. Den du väljer blir primär domän, och den andra adressen skickas vidare dit med en redirect. För SEO spelar valet mindre roll än att det är konsekvent. Välj den form som redan används i Google Search Console, på visitkort och i gamla länkar, så slipper du onödiga omdirigeringar. Lägg alltid in både A-posterna och www-posten, så att båda adresserna fungerar och den ena kan skickas vidare.</p>
+      <h2>Loopia</h2>
+      <p>Hos Loopia ändrar du posterna i DNS-editorn i Loopia Kundzon. Logga in, klicka på domännamnet och välj DNS-editor. Där ser du bland annat raderna @ för huvuddomänen och www.</p>
+      <ul>
+        <li>Under @: ändra eller ersätt A-posterna så att de pekar på 31.43.160.6 och 31.43.161.6. Ta bort eventuella AAAA-poster på samma rad.</li>
+        <li>Under www: ta bort den befintliga A-posten om det finns en och lägg till en CNAME med värdet sites.framer.app.</li>
+        <li>Byter du posttyp, till exempel från A till CNAME, tar du först bort den gamla posten och lägger sedan till den nya.</li>
+      </ul>
+      <p>Loopia skriver själva i sin supportwiki att e-posten inte påverkas så länge du bara tar bort A-poster och CNAME. Rör alltså inte MX-posterna, och byt inte namnservrar. Framer kräver inga egna namnservrar, bara att posterna ovan finns.</p>
+      <h2>One.com</h2>
+      <p>Hos One.com hittar du posterna i kontrollpanelen under DNS-inställningar, som ligger under avancerade inställningar. Där finns en flik för DNS-poster och en funktion för att skapa nya poster av typen A och CNAME.</p>
+      <ul>
+        <li>Skapa två A-poster för huvuddomänen med Framers två IP-adresser.</li>
+        <li>Skapa en CNAME med värdnamnet www och värdet sites.framer.app.</li>
+        <li>Ta bort eller ersätt de A- och AAAA-poster som tidigare pekade på One.com:s webbhotell.</li>
+      </ul>
+      <p>Många små företag har både webbplats och e-post hos One.com. E-posten styrs av MX-posterna, så låt dem stå kvar. Om webbhotellet säger upp sig självt när du slutar använda det, eller om du funderar på att säga upp paketet, kontrollera först om e-posten ingår i samma paket.</p>
+      <h2>Binero, i dag Websupport</h2>
+      <p>Binero ingår sedan 2019 i Loopia Group, och Bineros domän- och webbhotellskunder har flyttats över till systerbolaget Websupport. Har du en äldre Binero-domän redigerar du den alltså i Websupports kontrollpanel. Klicka på domänen, välj DNS och sedan DNS-inställningar.</p>
+      <ul>
+        <li>Klicka på posttypen A och ange de två IP-adresserna för huvuddomänen. Lämna subdomänfältet tomt för att redigera huvuddomänen.</li>
+        <li>Välj CNAME och lägg till www med värdet sites.framer.app.</li>
+        <li>Kontrollera att inga andra A- eller AAAA-poster finns kvar för huvuddomänen eller www.</li>
+      </ul>
+      <p>Websupport påpekar, precis som Loopia, att huvuddomänen inte kan ha en CNAME. Är du osäker på var din domän faktiskt administreras, se efter vilka namnservrar den använder. Det är där posterna ska ändras.</p>
+      <h2>GoDaddy</h2>
+      <p>Hos GoDaddy väljer du domänen, går till domäninställningarna och öppnar DNS. Där finns en knapp för att lägga till en ny post där du väljer typ A eller CNAME. Enligt GoDaddy slår de flesta ändringar igenom inom en timme, men det kan ta upp till 48 timmar.</p>
+      <ul>
+        <li>Ersätt A-posten för @ med Framers två IP-adresser. GoDaddy har ofta en förinställd A-post som pekar på en parkeringssida, och den måste bort.</li>
+        <li>Ändra www-posten så att den är en CNAME med värdet sites.framer.app.</li>
+        <li>Stäng av eventuell domänvidarebefordran, eftersom den skapar egna poster som krockar med Framers.</li>
+      </ul>
+      <p>Har domänen extra skydd kan GoDaddy be om en verifieringskod innan ändringen sparas.</p>
+      <h2>Andra leverantörer och Cloudflare</h2>
+      <p>Hos andra leverantörer, till exempel Namecheap, gäller samma poster. Leta efter en sida som heter något i stil med DNS, DNS-poster eller avancerad DNS, lägg in A-posterna och CNAME-posten och ta bort det som krockar. Framers hjälpcenter har egna guider för flera internationella leverantörer.</p>
+      <p>Sköts DNS av Cloudflare ska posterna stå på DNS only, alltså utan Cloudflares proxy. Med proxyn påslagen ser Framer Cloudflares adresser i stället för sina egna, och domänen kan inte verifieras. Att köra Cloudflare som omvänd proxy framför Framer är en separat uppsättning som Framer bara stöder på vissa högre planer, och den behövs sällan för en vanlig företagssajt.</p>
+      <h2>Behåll e-posten orörd</h2>
+      <p>E-posten påverkas inte av en domänkoppling så länge du bara ändrar posterna för webbplatsen. Det är MX-posterna som bestämmer vart e-post levereras, och TXT-posterna för SPF, DKIM och DMARC som gör att den inte hamnar i skräpposten. De ska stå kvar exakt som de är.</p>
+      <p>Det som faktiskt brukar slå ut e-posten är tre saker. Att någon byter namnservrar och därmed tappar alla gamla poster, att någon rensar hela DNS-zonen i stället för enskilda poster, eller att webbhotellspaketet sägs upp trots att e-posten ingick i det. Ta en skärmdump före ändringen, ändra bara A, AAAA och CNAME för @ och www, och vänta med uppsägningar tills du vet var e-posten ligger.</p>
+      <h2>Byt från gammal sajt utan avbrott</h2>
+      <p>Du undviker avbrott genom att ha Framer-sajten helt klar innan du rör DNS. Själva bytet tar sedan bara några minuter, och den gamla sajten svarar för de besökare som fortfarande har de gamla posterna sparade.</p>
+      <ul>
+        <li><strong>Dagen innan:</strong> sänk TTL på de poster som ska ändras, om leverantören tillåter det, så att bytet slår igenom snabbare.</li>
+        <li><strong>Före bytet:</strong> publicera på Framer-subdomänen, lägg in redirects från gamla adresser och testa formulär.</li>
+        <li><strong>Bytet:</strong> lägg till domänen i Framer, ändra posterna och välj primär domän.</li>
+        <li><strong>Efter bytet:</strong> låt den gamla sajten ligga kvar ett par dygn innan du säger upp något.</li>
+      </ul>
+      <p>Flyttar du från WordPress eller Webflow finns det mer att tänka på kring innehåll och adresser. Läs <a href="/blog/migrera-wordpress-till-framer.html">migrera från WordPress till Framer</a> eller <a href="/migrera-webflow-till-framer.html">migrera från Webflow till Framer</a>, och gå igenom <a href="/blog/framer-seo-checklista.html">SEO-checklistan för Framer</a> innan lansering.</p>
+      <h2>Kontrollera att posterna är rätt</h2>
+      <p>Det snabbaste sättet att kontrollera är att fråga DNS direkt från datorn. I Terminal på Mac eller Linux skriver du <code>dig +short exempel.se A</code>, som ska svara med 31.43.160.6 och 31.43.161.6, och <code>dig +short www.exempel.se CNAME</code>, som ska svara med sites.framer.app. På Windows fungerar <code>nslookup exempel.se</code> och <code>nslookup -type=CNAME www.exempel.se</code>.</p>
+      <p>Svarar din dator med gamla värden kan det bero på cache. Då kan en DNS-kontroll på webben, som visar svar från servrar i flera länder, ge en bättre bild av hur långt ändringen har kommit. Kör också <code>dig +short exempel.se AAAA</code>. Svaret ska vara tomt.</p>
+      <h2>Vanliga fel och hur du löser dem</h2>
+      <p>De flesta problem beror på en gammal post som ligger kvar eller på att ändringen inte har slagit igenom än. Tabellen bygger på Framers felsökningsguide för egna domäner.</p>
+      <div class="blog-post__table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Fel</th><th scope="col">Trolig orsak</th><th scope="col">Lösning</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Framer visar att DNS är fel</th><td>Ändringen har inte slagit igenom, eller fel värde</td><td>Kontrollera med dig och vänta upp till 48 timmar</td></tr>
+            <tr><th scope="row">Sajten laddar ibland gamla sidan</th><td>En gammal A-post ligger kvar bredvid Framers</td><td>Ta bort alla A-poster utom Framers två</td></tr>
+            <tr><th scope="row">HTTPS fungerar inte</th><td>AAAA-post finns kvar</td><td>Ta bort AAAA-posten, kontakta leverantören om den läggs till automatiskt</td></tr>
+            <tr><th scope="row">SSL-certifikatet skapas inte</th><td>CAA-post begränsar utfärdare</td><td>Tillåt letsencrypt.org, pki.goog och sectigo.com</td></tr>
+            <tr><th scope="row">Domänen verifieras inte i Cloudflare</th><td>Proxyn är påslagen</td><td>Ställ posterna på DNS only</td></tr>
+            <tr><th scope="row">Parkeringssida visas</th><td>Leverantörens standardpost eller vidarebefordran</td><td>Ta bort parkeringsposten och stäng av vidarebefordran</td></tr>
+            <tr><th scope="row">Ändringarna syns inte alls</th><td>Domänen använder andra namnservrar</td><td>Ändra posterna där namnservrarna pekar</td></tr>
+            <tr><th scope="row">E-posten slutade fungera</th><td>MX-poster eller namnservrar ändrades</td><td>Återställ MX och TXT från skärmdumpen</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Om du fortfarande sitter fast efter ett dygn med rätt poster är det dags att kontakta Framers support eller domänleverantören, med en skärmdump av DNS-posterna till hands.</p>
+      <h2>Sammanfattning</h2>
+      <p>Att koppla en domän till Framer handlar om tre poster: två A-poster för huvuddomänen och en CNAME för www. Lägg in dem hos Loopia, One.com, Websupport, GoDaddy eller där din DNS ligger, ta bort gamla A- och AAAA-poster och låt e-postens poster vara. SSL sköter Framer, och ändringen slår oftast igenom inom några timmar. Planerar du en ny sajt från början beskriver vi hela vägen i <a href="/framer-hemsida.html">Framer-hemsida</a>, och behöver du hjälp med mer tekniska delar som proxy eller integrationer finns <a href="/framer-utvecklare.html">Framer-utvecklare</a>.</p>
+    </div>
+
+    <!-- Related Articles -->
+    <aside class="blog-post__related">
+      <h2 class="blog-post__related-title" data-i18n="post.related">Relaterade artiklar</h2>
+      <div class="blog-post__related-grid">
+        <a href="/framer-hemsida.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-hemsida.svg" alt="Framer-hemsida (2026): Så går det till, vad det kostar och vad du får" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Framer-hemsida (2026): Så går det till, vad det kostar och vad du får</strong> — <span>Tre vägar till en hemsida i Framer, hur ett projekt går till steg för steg, vad det kostar och vad som händer efter lansering.</span></p>
+        </a>
+        <a href="/blog/migrera-wordpress-till-framer.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-migrera-wordpress.svg" alt="Migrera från WordPress till Framer (2026): Steg-för-steg utan att tappa SEO" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Migrera från WordPress till Framer (2026): Steg-för-steg utan att tappa SEO</strong> — <span>Praktisk guide till att flytta en WordPress-sajt till Framer — innehåll, redirects, CMS-import, DNS och de vanligaste fallgroparna som kostar SEO-ranking.</span></p>
+        </a>
+      </div>
+    </aside>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__left">&copy; <span data-current-year>2026</span> FramerExpert.se</span>
+      <div class="footer__links">
+        <button class="lang-toggle" id="langToggle" aria-label="Byt språk">
+          <span class="lang-toggle__option is-active" data-lang="sv">SV</span>
+          <span class="lang-toggle__divider">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/init.js"></script>
+</body>
+</html>

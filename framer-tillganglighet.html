@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#27272A">
+  <meta name="color-scheme" content="dark">
+  <title>Tillgänglighet i Framer (2026): WCAG och lagkraven</title>
+  <meta name="description" content="Vem omfattas av tillgänglighetslagen, vad Framer löser åt dig och vad du måste göra själv. Vanliga fallgropar, testmetod och checklista för WCAG.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tillgänglighet i Framer (2026): WCAG, tillgänglighetslagen och vad du måste göra">
+  <meta property="og:description" content="Tillgänglighetslagen, WCAG och Framer – vem som omfattas, vad plattformen löser och vad du måste göra själv.">
+  <meta property="og:url" content="https://framerexpert.se/framer-tillganglighet.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="FramerExpert.se">
+  <meta property="article:published_time" content="2026-09-30">
+  <meta property="article:modified_time" content="2026-09-30">
+  <meta property="article:author" content="FramerExpert">
+  <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://framerexpert.se/assets/og-default.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://framerexpert.se/framer-tillganglighet.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/animations.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://framerexpert.se/#organization",
+        "name": "FramerExpert.se",
+        "alternateName": "FramerExpert",
+        "url": "https://framerexpert.se/",
+        "description": "Svensk kunskapskälla med guider, tips och expertkunskap om Framer-plattformen.",
+        "foundingDate": "2026-04",
+        "inLanguage": "sv",
+        "areaServed": { "@type": "Country", "name": "Sverige" },
+        "knowsAbout": [
+          "Framer",
+          "Framer CMS",
+          "webbdesign",
+          "teknisk SEO",
+          "Core Web Vitals",
+          "migrering från WordPress till Framer",
+          "Framer-mallar"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://framerexpert.se/#website",
+        "url": "https://framerexpert.se/",
+        "name": "FramerExpert.se",
+        "description": "Sveriges kunskapskälla för Framer. Guider, tips och expertkunskap.",
+        "inLanguage": "sv",
+        "publisher": { "@id": "https://framerexpert.se/#organization" }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://framerexpert.se/framer-tillganglighet.html#article",
+    "headline": "Tillgänglighet i Framer (2026): WCAG, tillgänglighetslagen och vad du måste göra",
+    "description": "Tillgänglighetslagen, WCAG och Framer – vem som omfattas, vad plattformen löser och vad du måste göra själv.",
+    "datePublished": "2026-09-30",
+    "dateModified": "2026-09-30",
+    "author": { "@id": "https://framerexpert.se/#organization" },
+    "publisher": { "@id": "https://framerexpert.se/#organization" },
+    "isPartOf": { "@id": "https://framerexpert.se/#website" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://framerexpert.se/framer-tillganglighet.html" },
+    "image": "https://framerexpert.se/assets/og-default.png",
+    "inLanguage": "sv"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se/" },
+      { "@type": "ListItem", "position": 2, "name": "Tillgänglighet i Framer (2026): WCAG, tillgänglighetslagen och vad du måste göra" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Omfattas min Framer-sajt av tillgänglighetslagen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lagen (2023:254) om vissa produkters och tjänsters tillgänglighet gäller sedan 28 juni 2025 för bland annat e-handel, banktjänster, elektroniska kommunikationstjänster, persontransporter, e-böcker och audiovisuella medietjänster. En vanlig företagssajt som bara presenterar verksamheten omfattas normalt inte, men en webbshop gör det. Mikroföretag med färre än tio anställda och högst två miljoner euro i årsomsättning eller balansomslutning är undantagna för tjänster."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vilken standard ska en tillgänglig webbplats följa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I praktiken utgår man från den europeiska standarden EN 301 549, som för webbinnehåll hänvisar till WCAG 2.1 på nivå AA. För offentlig sektor är det uttryckligen den nivån som gäller enligt DOS-lagen. För privata tjänster under tillgänglighetslagen är WCAG 2.1 AA det riktmärke de flesta arbetar efter."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Gör Framer min sajt tillgänglig automatiskt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nej. Framer har verktyg som alt-texter, semantiska taggar för rubriker och sektioner, ARIA-etiketter, anpassad tabbordning, inställning för reducerad rörelse och språkattribut. Men kontrast, rubrikstruktur, beskrivande texter, formulär och egna kodkomponenter måste du själv se till att de fungerar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur testar jag tillgängligheten på en Framer-sajt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Börja med att navigera hela sajten med bara tangentbordet. Testa sedan med en skärmläsare som VoiceOver på Mac eller NVDA på Windows, kör en automatisk kontroll med axe eller Lighthouse, mät kontrasten på text och knappar och zooma sidan till 200 procent. Automatiska verktyg hittar bara en del av felen, så de manuella testerna behövs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad är en tillgänglighetsredogörelse?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En tillgänglighetsredogörelse är en sida som beskriver hur tillgänglig webbplatsen är, vilka brister som finns och hur besökare kan påtala problem. Den är obligatorisk för offentlig sektor enligt DOS-lagen och tillsynen sköts av DIGG. För privata verksamheter är en liknande sida ett bra sätt att visa hur ni arbetar med tillgänglighet."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="guideTillganglighet">
+
+  <!-- NAVIGATION -->
+  <nav data-twostep-nav data-nav-status="not-active" class="twostep-nav">
+    <div data-nav-toggle="close" class="twostep-nav__bg"></div>
+    <div class="twostep-nav__wrap">
+      <div class="twostep-nav__width">
+        <div class="twostep-nav__bar">
+          <div class="twostep-nav__back">
+            <div class="twostep-nav__back-bg"></div>
+          </div>
+          <div class="twostep-nav__top">
+            <a href="/" class="twostep-nav__logo">
+              framer.expert
+            </a>
+            <button data-nav-toggle="toggle" class="twostep-nav__toggle" aria-label="Öppna meny" aria-expanded="false">
+              <div class="twostep-nav__toggle-bar"></div>
+              <div class="twostep-nav__toggle-bar"></div>
+            </button>
+            <div class="twostep-nav__top-line"></div>
+          </div>
+          <div class="twostep-nav__bottom">
+            <div class="twostep-nav__bottom-overflow">
+              <div class="twostep-nav__bottom-inner">
+                <div class="twostep-nav__bottom-row">
+                  <div class="twostep-nav__bottom-col">
+                    <div class="twostep-nav__info">
+                      <ul class="twostep-nav__ul">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-span" data-i18n="nav.blog">Blogg</span></a>
+                        </li>
+                      </ul>
+                      <ul class="twostep-nav__ul is--small">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=getting-started" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.getting-started">Kom igång</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=comparison" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.comparison">Jämförelse</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=tips" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.tips">Tips</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=seo" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.seo">SEO</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=cms" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.cms">CMS</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="https://www.framer.com" target="_blank" rel="noopener" class="twostep-nav__link"><span class="twostep-nav__link-eyebrow">Framer.com</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumbs container">
+    <ol class="breadcrumbs__list">
+      <li><a href="/" data-i18n="nav.home">Hem</a></li>
+      <li><span aria-current="page">Tillgänglighet i Framer (2026): WCAG, tillgänglighetslagen och vad du måste göra</span></li>
+    </ol>
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="container">
+    <header class="blog-post__header">
+      <div class="blog-post__meta">
+        <span class="blog-post__category">Guide</span>
+        <span>Uppdaterad <time datetime="2026-09-30">30 september 2026</time></span>
+      </div>
+      <h1 class="blog-post__title">Tillgänglighet i Framer (2026): WCAG, tillgänglighetslagen och vad du måste göra</h1>
+      <p class="blog-post__intro">Sedan den 28 juni 2025 gäller nya krav på tillgänglighet för bland annat e-handel och banktjänster i Sverige. Framer har flera inbyggda verktyg som gör det lättare att bygga en tillgänglig sajt, men plattformen kan inte fatta besluten åt dig. Här går vi igenom vilka som omfattas av lagen, vad Framer löser, vad du måste göra själv och hur du testar resultatet.</p>
+    </header>
+
+    <div class="blog-post__content">
+      <h2>Vem omfattas av tillgänglighetslagen?</h2>
+      <p>Lagen omfattar vissa utpekade tjänster, främst e-handel, banktjänster, elektroniska kommunikationstjänster, persontransporter, e-böcker och audiovisuella medietjänster. Den heter lag (2023:254) om vissa produkters och tjänsters tillgänglighet, kompletteras av förordning (2023:676) och är Sveriges genomförande av EU:s tillgänglighetsdirektiv (European Accessibility Act, direktiv 2019/882). Kraven började gälla den 28 juni 2025.</p>
+      <p>En vanlig företagssajt som presenterar tjänster, visar case och har ett kontaktformulär faller normalt utanför. Säljer du varor eller tjänster direkt på sajten till konsumenter ser det annorlunda ut. Då räknas det som e-handel och sajten ska uppfylla kraven.</p>
+      <p>Mikroföretag som tillhandahåller tjänster är undantagna. Det gäller företag med färre än tio anställda och en årsomsättning eller balansomslutning på högst två miljoner euro. Båda villkoren måste vara uppfyllda, och undantaget gäller tjänster, inte produkter.</p>
+      <div class="blog-post__table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Verksamhet</th><th scope="col">Omfattas?</th><th scope="col">Tillsyn</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Företagssajt utan försäljning</th><td>Normalt inte</td><td>–</td></tr>
+            <tr><th scope="row">E-handel till konsumenter</th><td>Ja, om inte mikroföretag</td><td>PTS</td></tr>
+            <tr><th scope="row">Banktjänster</th><td>Ja</td><td>PTS</td></tr>
+            <tr><th scope="row">Elektroniska kommunikationstjänster</th><td>Ja</td><td>PTS</td></tr>
+            <tr><th scope="row">Persontransporter (webbplats och app)</th><td>Ja</td><td>Konsumentverket</td></tr>
+            <tr><th scope="row">Terminaler för persontransport</th><td>Ja</td><td>Transportstyrelsen</td></tr>
+            <tr><th scope="row">Audiovisuella medietjänster</th><td>Ja</td><td>Mediemyndigheten</td></tr>
+            <tr><th scope="row">E-böcker</th><td>Ja</td><td>Myndigheten för tillgängliga medier</td></tr>
+            <tr><th scope="row">Offentlig sektor</th><td>Ja, enligt DOS-lagen</td><td>DIGG</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Det här är ingen juridisk rådgivning. Är du osäker på om din verksamhet omfattas, läs <a href="https://pts.se/digital-inkludering/lagen-om-vissa-produkters-och-tjansters-tillganglighet/" target="_blank" rel="noopener">PTS vägledning om lagen</a> eller fråga en jurist. Övergångsregler och sanktioner går vi inte in på här.</p>
+      <h3>Offentlig sektor har egna regler</h3>
+      <p>Myndigheter, kommuner, regioner och andra offentliga aktörer omfattas i stället av <a href="https://www.digg.se/analys-och-uppfoljning/lagen-om-tillganglighet-till-digital-offentlig-service-dos-lagen" target="_blank" rel="noopener">lagen (2018:1937) om tillgänglighet till digital offentlig service</a>, ofta kallad DOS-lagen. Där är kraven tydligare formulerade. Webbplatsen ska följa EN 301 549, vilket för webbinnehåll innebär WCAG 2.1 på nivå AA, och det ska finnas en publicerad tillgänglighetsredogörelse. DIGG har tillsynen.</p>
+      <h2>Vilken standard gäller i praktiken?</h2>
+      <p>I praktiken utgår man från WCAG 2.1 på nivå AA, via den europeiska standarden EN 301 549. Det är den nivå offentlig sektor måste följa och det riktmärke de flesta privata verksamheter också arbetar efter.</p>
+      <p>WCAG är uppbyggt kring fyra principer. Innehållet ska gå att uppfatta, hantera, förstå och tolka med olika hjälpmedel. Varje princip bryts ner i konkreta krav, till exempel att bilder har textalternativ, att allt går att nå med tangentbord och att text har tillräcklig kontrast mot bakgrunden.</p>
+      <aside class="blog-post__factbox">
+        <h3>Några krav att ha i huvudet</h3>
+        <ul>
+          <li><strong>Kontrast:</strong> minst 4,5:1 för vanlig text och 3:1 för stor text, ikoner och gränssnittskomponenter.</li>
+          <li><strong>Tangentbord:</strong> allt som går att klicka på ska gå att nå och använda utan mus, med synligt fokus.</li>
+          <li><strong>Textalternativ:</strong> bilder som bär information behöver en alt-text som beskriver innehållet.</li>
+          <li><strong>Förstoring:</strong> sidan ska fungera när texten förstoras till 200 procent.</li>
+          <li><strong>Rörelse:</strong> animationer ska inte hindra läsning och ska gå att stänga av.</li>
+        </ul>
+      </aside>
+      <h2>Vad Framer löser och vad du måste göra själv</h2>
+      <p>Framer ger dig verktygen, men du måste använda dem rätt. Plattformen har inbyggt stöd för det mesta som behövs på en vanlig marknadssajt. Resultatet beror ändå på hur sajten är designad och uppbyggd. Framer beskriver funktionerna i sin <a href="https://www.framer.com/help/articles/guide-to-web-accessibility-in-framer/" target="_blank" rel="noopener">guide till webbtillgänglighet</a>.</p>
+      <div class="blog-post__table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Område</th><th scope="col">Det Framer ger dig</th><th scope="col">Det du måste göra</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Bilder</th><td>Fält för alt-text i tillgänglighetspanelen</td><td>Skriva beskrivande alt-texter och lämna dekorativa bilder tomma</td></tr>
+            <tr><th scope="row">Rubriker</th><td><a href="https://www.framer.com/help/articles/text-styles-and-semantic-tags/" target="_blank" rel="noopener">Textstilar med semantiska taggar</a> h1–h6 och p, som går att ändra per instans</td><td>Välja nivå efter struktur, en h1 per sida och inga hopp i ordningen</td></tr>
+            <tr><th scope="row">Sidstruktur</th><td>Taggar för frames: Article, Header, Footer, Nav och Section</td><td>Sätta rätt tagg på rätt del av sidan</td></tr>
+            <tr><th scope="row">Tangentbord</th><td>Anpassad tabbordning</td><td>Kontrollera att ordningen följer sidans logik och att fokus syns</td></tr>
+            <tr><th scope="row">Etiketter</th><td><a href="https://www.framer.com/help/articles/improving-accessibility-with-aria-labels/" target="_blank" rel="noopener">ARIA-etiketter</a> på element</td><td>Ge ikonknappar och otydliga länkar en etikett som beskriver funktionen</td></tr>
+            <tr><th scope="row">Rörelse</th><td>Inställning för reducerad rörelse som stänger av parallax, transform- och layoutanimationer</td><td>Slå på den och kontrollera att sidan fungerar utan animationerna</td></tr>
+            <tr><th scope="row">Språk</th><td><a href="https://www.framer.com/help/articles/default-language-settings/" target="_blank" rel="noopener">Standardspråk</a> under Settings → General som sätter lang-attributet, och som byts per språkversion med lokalisering</td><td>Välja rätt språk, även på varje översatt version</td></tr>
+            <tr><th scope="row">Färg</th><td>Färgstilar i projektet</td><td>Mäta kontrast på alla kombinationer, även hover- och fokuslägen</td></tr>
+            <tr><th scope="row">Formulär</th><td>Inbyggda formulärfält</td><td>Synliga etiketter, tydliga felmeddelanden och tangentbordsstöd</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Två saker bör du testa själv i stället för att utgå från att de finns. Det ena är hur fokusmarkeringen ser ut när man tabbar genom sajten, särskilt på knappar och länkar med egen design. Det andra är om det finns en hopplänk som låter tangentbordsanvändare gå direkt till huvudinnehållet, och hur huvudinnehållet är märkt i den publicerade koden. Kontrollera det på den publicerade sajten.</p>
+      <p>Har sajten flera språk hänger språkinställningen ihop med lokaliseringen. Vi beskriver det mer i <a href="/blog/framer-flersprakiga-sajter.html">guiden till flerspråkiga sajter i Framer</a>.</p>
+      <h2>Vanliga fallgropar i Framer</h2>
+      <p>De flesta tillgänglighetsfel på Framer-sajter kommer från designval, inte från plattformen. Här är de vi ser oftast.</p>
+      <h3>Text i bilder</h3>
+      <p>En rubrik eller ett erbjudande som ligger i en bild går inte att läsa med skärmläsare, förstoras dåligt och syns inte för sökmotorer. Lägg texten som riktig text ovanpå bilden och använd alt-texten för att beskriva själva motivet.</p>
+      <h3>Låg kontrast i hover-lägen</h3>
+      <p>Grundläget har ofta bra kontrast, men i hover-varianten byts färgen till något ljusare eller mer genomskinligt. Samma sak gäller inaktiva knappar, platshållartext i formulär och text ovanpå bilder. Mät varje variant, inte bara den som syns i designen.</p>
+      <h3>Ikonknappar utan etikett</h3>
+      <p>En hamburgermeny, ett kryss eller en pil utan text läses upp som "knapp" utan sammanhang. Ge varje sådan knapp en ARIA-etikett som säger vad den gör, till exempel "Öppna meny" eller "Nästa bild".</p>
+      <h3>Formulär utan etiketter</h3>
+      <p>Formulär där fältets namn bara finns som platshållartext blir svåra att använda. Texten försvinner när man börjar skriva och läses inte alltid upp. Använd synliga etiketter och kontrollera att felmeddelanden går att uppfatta utan färg. Mer om formulär finns i <a href="/blog/framer-formular-automatisering.html">guiden till formulär och automatisering</a>.</p>
+      <h3>Video som spelas upp automatiskt</h3>
+      <p>Bakgrundsvideo med rörelse kan störa läsning och orsaka obehag. Rörligt innehåll som startar automatiskt och pågår längre än några sekunder ska gå att pausa eller stoppa. Det enklaste är ofta att låta besökaren starta videon själv.</p>
+      <h3>Tunga scrollanimationer</h3>
+      <p>Parallax, element som flyger in och text som byter plats när man scrollar kan ge yrsel och gör sidan svårare att följa. Slå på inställningen för reducerad rörelse i Framer och testa sajten med den aktiverad i operativsystemet. Vi går igenom hur animationerna fungerar i <a href="/blog/framer-animationer-interactions.html">guiden till animationer och interactions</a>.</p>
+      <h3>Rubriknivåer valda efter storlek</h3>
+      <p>Det är lätt att välja h3 för att den har rätt storlek, fast den logiskt borde vara h2. Skärmläsaranvändare navigerar ofta via rubrikerna, så ordningen måste spegla innehållet. Styr utseendet med textstilen och välj taggen efter struktur. Hur du bygger en skala som fungerar på alla skärmar beskriver vi i <a href="/blog/responsiv-typografi-framer.html">guiden till responsiv typografi</a>.</p>
+      <h3>Kodkomponenter som inte fungerar med tangentbord</h3>
+      <p>En egen kodkomponent, till exempel en karusell, ett filter eller en kalkylator, ärver inget tillgänglighetsstöd automatiskt. Den som bygger den måste använda rätt HTML-element, hantera fokus och ge kontrollerna namn. Ställ den frågan när du anlitar en <a href="/framer-utvecklare.html">Framer-utvecklare</a>.</p>
+      <h2>Så testar du tillgängligheten</h2>
+      <p>Kombinera automatiska verktyg med manuella tester. Automatiska kontroller hittar tekniska fel som saknade alt-texter och låg kontrast, men de kan inte avgöra om en alt-text är begriplig eller om tabbordningen är logisk.</p>
+      <ul>
+        <li><strong>Bara tangentbord:</strong> lägg undan musen och ta dig igenom hela sajten med Tab, Skift+Tab, Enter och mellanslag. Du ska alltid se var fokus är och kunna öppna menyn, använda formulär och stänga dialogrutor.</li>
+        <li><strong>Skärmläsare:</strong> testa med VoiceOver på Mac eller iPhone och NVDA på Windows. Lyssna på rubrikerna, länktexterna och formulären.</li>
+        <li><strong>Automatisk kontroll:</strong> kör axe som webbläsartillägg eller tillgänglighetsdelen i Lighthouse på de viktigaste sidorna.</li>
+        <li><strong>Kontrast:</strong> mät text, knappar och ikoner med en kontrastkontroll, i alla lägen.</li>
+        <li><strong>Zoom 200 procent:</strong> förstora sidan i webbläsaren och kontrollera att inget innehåll klipps av eller hamnar ovanpå annat.</li>
+        <li><strong>Reducerad rörelse:</strong> aktivera inställningen i operativsystemet och se hur sajten beter sig.</li>
+      </ul>
+      <p>Testa den publicerade sajten, inte bara förhandsvisningen i editorn, och gör om testerna när du lägger till nya sektioner eller komponenter.</p>
+      <h2>Tillgänglighetsredogörelse</h2>
+      <p>En tillgänglighetsredogörelse är en sida som beskriver hur tillgänglig webbplatsen är, vilka kända brister som finns och hur besökare kan höra av sig om något inte fungerar. För offentlig sektor är den ett krav enligt DOS-lagen, och DIGG har anvisningar för hur den ska se ut.</p>
+      <p>För en privat verksamhet under tillgänglighetslagen är en tydlig sida om tillgänglighet ett bra sätt att visa hur tjänsten uppfyller kraven. Vilken information som krävs i ditt fall framgår av PTS vägledning. Den går att bygga som en vanlig sida i Framer och länka från sidfoten, på samma sätt som integritetspolicyn. Hur du hanterar cookies och personuppgifter tar vi upp i <a href="/framer-gdpr-cookies.html">guiden om GDPR och cookies i Framer</a>.</p>
+      <h2>Checklista</h2>
+      <ul>
+        <li>Ta reda på om verksamheten omfattas av tillgänglighetslagen eller DOS-lagen.</li>
+        <li>Sätt rätt standardspråk i Settings → General, och på varje språkversion.</li>
+        <li>Använd en h1 per sida och rubriknivåer i logisk ordning.</li>
+        <li>Märk upp header, nav, sektioner och footer med rätt taggar.</li>
+        <li>Skriv alt-texter för informativa bilder och lämna dekorativa tomma.</li>
+        <li>Ge ikonknappar och otydliga länkar ARIA-etiketter.</li>
+        <li>Mät kontrasten på text, knappar och ikoner i alla lägen.</li>
+        <li>Ge formulärfält synliga etiketter och tydliga felmeddelanden.</li>
+        <li>Kontrollera tabbordningen och att fokus syns.</li>
+        <li>Testa om det finns en hopplänk till huvudinnehållet.</li>
+        <li>Slå på reducerad rörelse och undvik autoplay-video.</li>
+        <li>Kontrollera att kodkomponenter fungerar med tangentbord och skärmläsare.</li>
+        <li>Testa med tangentbord, skärmläsare, axe eller Lighthouse och zoom 200 procent.</li>
+        <li>Publicera en sida om tillgänglighet med kontaktväg för synpunkter.</li>
+      </ul>
+      <h2>Sammanfattning</h2>
+      <p>Tillgänglighet i Framer handlar mest om beslut du fattar under design och bygge. Plattformen har verktygen: semantiska taggar, alt-texter, ARIA-etiketter, tabbordning, reducerad rörelse och språkattribut. Kontrast, rubrikstruktur, formulär och egna kodkomponenter är ditt ansvar. Driver du e-handel eller en annan tjänst som omfattas av lagen är det ett krav sedan juni 2025. Annars är det fortfarande god praxis, och ofta bra för <a href="/blog/framer-seo-guide.html">SEO</a> också. Bygg in testerna i arbetet från början, så slipper du stora ändringar i efterhand.</p>
+    </div>
+
+    <!-- Related Articles -->
+    <aside class="blog-post__related">
+      <h2 class="blog-post__related-title" data-i18n="post.related">Relaterade artiklar</h2>
+      <div class="blog-post__related-grid">
+        <a href="/blog/responsiv-typografi-framer.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-responsiv-typografi.svg" alt="Typografi i Framer (2026): Bygg en responsiv typskala som håller" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Typografi i Framer (2026): Bygg en responsiv typskala som håller</strong> — <span>Så bygger du en responsiv typskala i Framer med textstilar och brytpunkter — konkreta storlekar, radavstånd och misstagen som förstör mobilvyn.</span></p>
+        </a>
+        <a href="/blog/framer-ecommerce-guide.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-ecommerce.svg" alt="Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Framer för e-handel (2026): Vad funkar — och när ska du välja något annat?</strong> — <span>Framer e-handel 2026 — så långt räcker store-funktionen, när du bör integrera Shopify eller Stripe, och när du ska välja en riktig e-handelsplattform.</span></p>
+        </a>
+      </div>
+    </aside>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__left">&copy; <span data-current-year>2026</span> FramerExpert.se</span>
+      <div class="footer__links">
+        <button class="lang-toggle" id="langToggle" aria-label="Byt språk">
+          <span class="lang-toggle__option is-active" data-lang="sv">SV</span>
+          <span class="lang-toggle__divider">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/init.js"></script>
+</body>
+</html>

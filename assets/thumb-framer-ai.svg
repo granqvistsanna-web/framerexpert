@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" fill="#323236"/>
+
+  <rect x="160" y="100" width="280" height="190" rx="18" fill="#3F3F46"/>
+  <path d="M300 140 L312 178 L350 190 L312 202 L300 240 L288 202 L250 190 L288 178 Z" fill="#F5F5F0" opacity="0.65"/>
+  <path d="M380 130 L385 145 L400 150 L385 155 L380 170 L375 155 L360 150 L375 145 Z" fill="#F5F5F0" opacity="0.35"/>
+
+  <text x="300" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#F5F5F0" opacity="0.55">AI</text>
+</svg>

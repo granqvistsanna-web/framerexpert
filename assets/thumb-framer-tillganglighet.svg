@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" fill="#323236"/>
+
+  <circle cx="300" cy="190" r="100" fill="#3F3F46"/>
+  <circle cx="300" cy="135" r="16" fill="#F5F5F0" opacity="0.7"/>
+  <path d="M240 168 H360" stroke="#F5F5F0" stroke-width="10" stroke-linecap="round" opacity="0.6"/>
+  <path d="M300 168 V215 M300 215 L275 255 M300 215 L325 255" stroke="#F5F5F0" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+
+  <text x="300" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#F5F5F0" opacity="0.55">Tillgänglighet</text>
+</svg>

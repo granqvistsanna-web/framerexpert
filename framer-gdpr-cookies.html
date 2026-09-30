@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#27272A">
+  <meta name="color-scheme" content="dark">
+  <title>GDPR och cookies i Framer (2026): Banner, GA och regler</title>
+  <meta name="description" content="När behöver en Framer-sajt en cookiebanner? Så fungerar Framer Analytics, Google Analytics, Tag Manager och Consent Mode, och vad svenska regler kräver.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GDPR och cookies i Framer (2026): Cookiebanner, Google Analytics och svenska regler">
+  <meta property="og:description" content="Cookiebanner, Google Analytics, Tag Manager och Consent Mode i Framer, och vad svenska regler kräver av din sajt.">
+  <meta property="og:url" content="https://framerexpert.se/framer-gdpr-cookies.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="FramerExpert.se">
+  <meta property="article:published_time" content="2026-09-30">
+  <meta property="article:modified_time" content="2026-09-30">
+  <meta property="article:author" content="FramerExpert">
+  <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://framerexpert.se/assets/og-default.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://framerexpert.se/framer-gdpr-cookies.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/animations.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://framerexpert.se/#organization",
+        "name": "FramerExpert.se",
+        "alternateName": "FramerExpert",
+        "url": "https://framerexpert.se/",
+        "description": "Svensk kunskapskälla med guider, tips och expertkunskap om Framer-plattformen.",
+        "foundingDate": "2026-04",
+        "inLanguage": "sv",
+        "areaServed": { "@type": "Country", "name": "Sverige" },
+        "knowsAbout": [
+          "Framer",
+          "Framer CMS",
+          "webbdesign",
+          "teknisk SEO",
+          "Core Web Vitals",
+          "migrering från WordPress till Framer",
+          "Framer-mallar"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://framerexpert.se/#website",
+        "url": "https://framerexpert.se/",
+        "name": "FramerExpert.se",
+        "description": "Sveriges kunskapskälla för Framer. Guider, tips och expertkunskap.",
+        "inLanguage": "sv",
+        "publisher": { "@id": "https://framerexpert.se/#organization" }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://framerexpert.se/framer-gdpr-cookies.html#article",
+    "headline": "GDPR och cookies i Framer (2026): Cookiebanner, Google Analytics och svenska regler",
+    "description": "Cookiebanner, Google Analytics, Tag Manager och Consent Mode i Framer, och vad svenska regler kräver av din sajt.",
+    "datePublished": "2026-09-30",
+    "dateModified": "2026-09-30",
+    "author": { "@id": "https://framerexpert.se/#organization" },
+    "publisher": { "@id": "https://framerexpert.se/#organization" },
+    "isPartOf": { "@id": "https://framerexpert.se/#website" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://framerexpert.se/framer-gdpr-cookies.html" },
+    "image": "https://framerexpert.se/assets/og-default.png",
+    "inLanguage": "sv"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se/" },
+      { "@type": "ListItem", "position": 2, "name": "GDPR och cookies i Framer (2026): Cookiebanner, Google Analytics och svenska regler" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Behöver en Framer-sajt en cookiebanner?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Inte om sajten bara använder Framers inbyggda funktioner. Framer Analytics sätter inga cookies, och Framer skriver att ingen banner behövs för den. En banner behövs när du lägger till tredjepartsverktyg som sätter icke nödvändiga cookies, till exempel Google Analytics, Meta Pixel, HubSpot eller inbäddade YouTube-filmer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Har Framer en inbyggd cookiebanner?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Framer har en inbyggd komponent som heter Cookie Banner. Den går att formge, placera i en gemensam komponent på alla sidor och koppla till ett Google Tag Manager-container-ID. Bannern skickar besökarens val vidare till Google Consent Mode, har separata inställningar för EU och resten av världen och kan länka till en cookiepolicy per region."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Är det lagligt att använda Google Analytics i Sverige 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, med samtycke till cookies och korrekt information till besökarna. Sedan 2023 kan överföringar till amerikanska företag som är certifierade enligt EU–US Data Privacy Framework ske på den grunden. EU:s tribunal ogiltigförklarade inte ramverket i september 2025, men ett överklagande ligger hos EU-domstolen. Faller ramverket kan läget förändras igen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vilken myndighet granskar cookies i Sverige?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Post- och telestyrelsen, PTS, har tillsyn över cookieregeln i lagen om elektronisk kommunikation, som kräver samtycke för cookies som inte är nödvändiga. Integritetsskyddsmyndigheten, IMY, har tillsyn över hur personuppgifter behandlas enligt GDPR, till exempel när data från analysverktyg förs över till länder utanför EU."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Blockerar Framers cookiebanner skript som lagts in som egen kod?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Det har vi inte kunnat bekräfta i Framers dokumentation. Bannern skickar samtyckessignaler till Google Tag Manager och Google Consent Mode. Det säkraste är därför att ladda alla tredjepartsskript via Tag Manager och låta samtycket styra dem där, i stället för att klistra in dem direkt i sajtens egen kod."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Var lagras data från en Framer-sajt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Framer körs på Amazon Web Services, främst i USA, med infrastruktur även i Europa och Asien och leverans via CloudFronts CDN. Framers personuppgiftsbiträdesavtal gäller automatiskt för kunder, och överföringar till USA sker enligt EU–US Data Privacy Framework och EU-kommissionens standardavtalsklausuler från 2021."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="guideGdpr">
+
+  <!-- NAVIGATION -->
+  <nav data-twostep-nav data-nav-status="not-active" class="twostep-nav">
+    <div data-nav-toggle="close" class="twostep-nav__bg"></div>
+    <div class="twostep-nav__wrap">
+      <div class="twostep-nav__width">
+        <div class="twostep-nav__bar">
+          <div class="twostep-nav__back">
+            <div class="twostep-nav__back-bg"></div>
+          </div>
+          <div class="twostep-nav__top">
+            <a href="/" class="twostep-nav__logo">
+              framer.expert
+            </a>
+            <button data-nav-toggle="toggle" class="twostep-nav__toggle" aria-label="Öppna meny" aria-expanded="false">
+              <div class="twostep-nav__toggle-bar"></div>
+              <div class="twostep-nav__toggle-bar"></div>
+            </button>
+            <div class="twostep-nav__top-line"></div>
+          </div>
+          <div class="twostep-nav__bottom">
+            <div class="twostep-nav__bottom-overflow">
+              <div class="twostep-nav__bottom-inner">
+                <div class="twostep-nav__bottom-row">
+                  <div class="twostep-nav__bottom-col">
+                    <div class="twostep-nav__info">
+                      <ul class="twostep-nav__ul">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-span" data-i18n="nav.blog">Blogg</span></a>
+                        </li>
+                      </ul>
+                      <ul class="twostep-nav__ul is--small">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=getting-started" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.getting-started">Kom igång</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=comparison" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.comparison">Jämförelse</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=tips" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.tips">Tips</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=seo" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.seo">SEO</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=cms" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.cms">CMS</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="https://www.framer.com" target="_blank" rel="noopener" class="twostep-nav__link"><span class="twostep-nav__link-eyebrow">Framer.com</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumbs container">
+    <ol class="breadcrumbs__list">
+      <li><a href="/" data-i18n="nav.home">Hem</a></li>
+      <li><span aria-current="page">GDPR och cookies i Framer (2026): Cookiebanner, Google Analytics och svenska regler</span></li>
+    </ol>
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="container">
+    <header class="blog-post__header">
+      <div class="blog-post__meta">
+        <span class="blog-post__category">Guide</span>
+        <span>Uppdaterad <time datetime="2026-09-30">30 september 2026</time></span>
+      </div>
+      <h1 class="blog-post__title">GDPR och cookies i Framer (2026): Cookiebanner, Google Analytics och svenska regler</h1>
+      <p class="blog-post__intro">En Framer-sajt utan tredjepartsverktyg klarar sig oftast utan cookiebanner, eftersom Framers egen analys inte använder cookies. Så fort du lägger till Google Analytics, en Meta-pixel eller en inbäddad YouTube-film ändras läget. Här går vi igenom vilka verktyg som kräver samtycke, hur du sätter upp Framers inbyggda cookiebanner tillsammans med Google Tag Manager och vad svenska regler säger om cookies och Google Analytics.</p>
+    </header>
+
+    <div class="blog-post__content">
+      <h2>Behöver din Framer-sajt en cookiebanner?</h2>
+      <p>Nej, inte om du bara använder det som ingår i Framer. Ja, så fort du lägger till verktyg som sätter cookies som inte är nödvändiga för att sajten ska fungera. Den gränsen är den viktigaste att hålla koll på, och den flyttas ofta utan att någon märker det, till exempel när någon lägger in en YouTube-film eller en pixel från en annonsplattform.</p>
+      <p>Framers inbyggda analys sätter inga cookies och skapar inga bestående identifierare. Unika besökare räknas inom ett fönster på en dag, och IP-adresser hashas med ett salt som byts varje dygn. Framer skriver därför att analysen inte kräver någon banner. Ansvaret för det du själv lägger till, som Google Analytics, HubSpot eller inbäddningar från tredje part, ligger hos dig som äger sajten.</p>
+      <p>En sak till innan vi går vidare: den här sidan är en praktisk genomgång, inte juridisk rådgivning. För sajter med känsliga data eller stora mängder personuppgifter är det värt att stämma av med någon som arbetar med dataskydd.</p>
+      <aside class="blog-post__factbox">
+        <h3>Kort sagt</h3>
+        <ul>
+          <li><strong>Bara Framer Analytics och Framers formulär:</strong> ingen cookiebanner behövs för själva analysen.</li>
+          <li><strong>Google Analytics, pixlar, HubSpot, YouTube, Google Maps:</strong> samtycke krävs innan cookies sätts.</li>
+          <li><strong>Framer har en inbyggd Cookie Banner</strong> som kopplas till Google Tag Manager och Consent Mode.</li>
+          <li><strong>Tillsyn i Sverige:</strong> PTS för cookies, IMY för personuppgifter.</li>
+        </ul>
+      </aside>
+      <h2>Vad svenska regler säger om cookies</h2>
+      <p>Cookies som inte är nödvändiga får bara användas om besökaren har samtyckt. Regeln finns i lagen om elektronisk kommunikation (LEK), 9 kap. 28 §, och gäller all lagring och läsning av information i besökarens enhet, alltså även liknande tekniker som localStorage och pixlar. Nödvändiga cookies, till exempel för en varukorg eller en inloggning som besökaren själv har bett om, är undantagna.</p>
+      <p>I Sverige delas ansvaret mellan två myndigheter. Post- och telestyrelsen, PTS, har tillsyn över själva cookieregeln och har publicerat vägledande beslut om hur samtycke ska inhämtas. Integritetsskyddsmyndigheten, IMY, har tillsyn över GDPR, alltså över vad som händer med personuppgifterna efter att de har samlats in. För en vanlig Framer-sajt betyder det att bannern och samtycket är en fråga om LEK och PTS, medan valet av analysverktyg och var datan hamnar är en fråga om GDPR och IMY.</p>
+      <p>I praktiken innebär ett giltigt samtycke att besökaren aktivt har valt, att det är lika lätt att neka som att godkänna, att inga icke nödvändiga cookies sätts före valet och att det går att ändra sig i efterhand.</p>
+      <h2>Vilka verktyg kräver samtycke?</h2>
+      <p>Tumregeln är enkel: allt som sätter cookies eller läser information från besökarens webbläsare för analys, marknadsföring eller tredjepartsinnehåll kräver samtycke. Tabellen visar de vanligaste verktygen på Framer-sajter.</p>
+      <div class="blog-post__table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Verktyg</th><th scope="col">Sätter cookies?</th><th scope="col">Kräver samtycke?</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Framer Analytics</th><td>Nej, inga cookies eller bestående identifierare</td><td>Nej, enligt Framer</td></tr>
+            <tr><th scope="row">Google Analytics 4</th><td>Ja</td><td>Ja</td></tr>
+            <tr><th scope="row">Google Tag Manager</th><td>Inte i sig, men laddar taggar som gör det</td><td>Taggarna den laddar kräver samtycke</td></tr>
+            <tr><th scope="row">Meta Pixel</th><td>Ja</td><td>Ja</td></tr>
+            <tr><th scope="row">HubSpot (spårningskod, chatt)</th><td>Ja</td><td>Ja, för spårning och marknadsföring</td></tr>
+            <tr><th scope="row">YouTube-inbäddning</th><td>Ja, via youtube.com</td><td>Ja. youtube-nocookie.com minskar spårningen men tar inte bort den helt</td></tr>
+            <tr><th scope="row">Google Maps-inbäddning</th><td>Ja, via Google</td><td>Ja, eller visa en bild med länk tills besökaren samtycker</td></tr>
+            <tr><th scope="row">Framers formulär</th><td>Inga cookies enligt Framers dokumentation om inbyggda funktioner</td><td>Inget cookiesamtycke, men personuppgifterna kräver rättslig grund och information</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Formulären är värda en egen kommentar. Även om de inte kräver någon cookiebanner behandlar de personuppgifter så fort någon skriver in namn eller e-post. Då behöver du en rättslig grund, till exempel samtycke till ett nyhetsbrev eller att besvara en förfrågan, och en integritetspolicy som beskriver vad som händer med uppgifterna. Skickas datan vidare till Zapier, Make eller ett CRM tillkommer fler mottagare att redovisa. Mer om det finns i <a href="/blog/framer-formular-automatisering.html">formulär och automatisering i Framer</a>.</p>
+      <h2>Framers inbyggda Cookie Banner</h2>
+      <p>Framer har sedan september 2023 en inbyggd komponent som heter Cookie Banner. Den räcker för de flesta marknadssajter, så länge tredjepartsverktygen laddas via Google Tag Manager.</p>
+      <p>Det här kan komponenten enligt Framers egen dokumentation:</p>
+      <ul>
+        <li>Formges fritt och placeras i en gemensam komponent, till exempel sidfoten, så att den finns på alla sidor.</li>
+        <li>Kopplas till ett Google Tag Manager-container-ID direkt i komponentens inställningar.</li>
+        <li>Skickar besökarens val vidare till Google Consent Mode.</li>
+        <li>Har separata inställningar för besökare i EU och för resten av världen.</li>
+        <li>Visas automatiskt när besökaren inte har gjort något val tidigare.</li>
+        <li>Kan få en synlig eller osynlig knapp som öppnar bannern igen, så att besökaren kan ändra sitt val.</li>
+        <li>Har inställbara standardval för samtycke.</li>
+        <li>Kan länka till en cookiepolicy per region.</li>
+      </ul>
+      <p>Det finns saker vi inte har kunnat bekräfta i dokumentationen. Framer beskriver inte att bannern blockerar skript som du klistrat in som egen kod under Site Settings, och det framgår inte heller i detalj vilka samtyckeskategorier som skickas eller hur stödet för Consent Mode v2 ser ut. Vår rekommendation är därför att lägga alla tredjepartstaggar i Tag Manager och låta samtycket styra dem där.</p>
+      <h2>Så sätter du upp banner, Tag Manager och Consent Mode</h2>
+      <p>Den mest robusta uppsättningen är Framers Cookie Banner plus Google Tag Manager, där GA4 och andra verktyg ligger som taggar i Tag Manager. Stegen nedan förutsätter att du har ett Google Tag Manager-konto och en container.</p>
+      <h3>Steg 1: Inventera vad sajten laddar</h3>
+      <p>Gå igenom sajten och lista allt som hämtar något från tredje part: analys, pixlar, chattar, inbäddade filmer, kartor, typsnitt från externa servrar och formulärverktyg. Öppna även Site Settings och se vad som redan ligger under egen kod. Det som står där kommer att laddas oavsett vad besökaren väljer.</p>
+      <h3>Steg 2: Flytta tredjepartsskript till Tag Manager</h3>
+      <p>Lägg in GA4, Meta Pixel och liknande som taggar i Tag Manager i stället för som egen kod i Framer. Om du tidigare har fyllt i fältet för Google Analytics Measurement ID i Site Settings bör du ta bort det när GA4 i stället laddas via Tag Manager, så att det inte finns två vägar in och så att samtycket styr mätningen.</p>
+      <h3>Steg 3: Lägg in Cookie Banner i Framer</h3>
+      <p>Infoga Cookie Banner-komponenten och placera den i en komponent som finns på alla sidor. Formge den med sajtens egna färg- och textstilar. Se till att knapparna för att godkänna och neka är lika synliga, eftersom ett samtycke som bara går att ge med en tydlig knapp är svårt att försvara.</p>
+      <h3>Steg 4: Koppla bannern till Tag Manager</h3>
+      <p>Fyll i ditt container-ID från Tag Manager i bannerns inställningar. Framer beskriver också ett manuellt sätt att lägga in Tag Manager, via två poster under egen kod i Site Settings: en i början av head och en i början av body, båda på alla sidor och en gång. Välj ett av sätten, inte båda.</p>
+      <h3>Steg 5: Ställ in Consent Mode och standardval</h3>
+      <p>Välj EU-inställningen för besökare från EU, så att inga icke nödvändiga cookies sätts innan besökaren har valt. Kontrollera sedan i Tag Manager att taggarna är inställda på att vänta på rätt samtyckessignal, till exempel analys för GA4 och annonsering för pixlar.</p>
+      <h3>Steg 6: Lägg till en knapp för att ändra valet</h3>
+      <p>Koppla bannerns återöppningsfunktion till en länk i sidfoten, till exempel "Cookieinställningar". Besökare ska kunna ändra sig lika enkelt som de gav sitt samtycke.</p>
+      <h3>Steg 7: Testa innan du publicerar</h3>
+      <p>Använd förhandsvisningsläget i Tag Manager och webbläsarens utvecklarverktyg. Ladda sajten i ett privat fönster, neka allt och kontrollera att inga analys- eller marknadsföringscookies sätts. Godkänn sedan och kontrollera att taggarna startar.</p>
+      <h2>Google Analytics och svenska myndigheter</h2>
+      <p>Google Analytics går att använda lagligt i Sverige i dag, med samtycke till cookies och korrekt information, men frågan har varit omstridd och kan bli det igen. Det hänger på reglerna för överföring av personuppgifter till USA.</p>
+      <p>I juli 2023 meddelade IMY beslut i granskningar av CDON, Coop, Dagens Industri och Tele2, efter klagomål från organisationen NOYB. Tele2 fick en sanktionsavgift på 12 miljoner kronor och CDON på 300 000 kronor. CDON, Coop och Dagens Industri beordrades att sluta använda Google Analytics, medan Tele2 redan hade slutat. Skälet var att personuppgifter fördes över till USA utan tillräckliga skyddsåtgärder. Besluten gällde läget före det nya ramverket för dataöverföringar.</p>
+      <p>Sedan juli 2023 finns EU–US Data Privacy Framework, som gör det möjligt att föra över personuppgifter till certifierade amerikanska företag. Ramverket prövades av EU:s tribunal i målet Latombe (T-553/23), och den 3 september 2025 ogillades talan. Beslutet har överklagats till EU-domstolen i mål C-703/25 P, som ännu inte är avgjort.</p>
+      <p>Vad betyder det i praktiken? Just nu finns en giltig grund för överföringar till Google. Om EU-domstolen underkänner ramverket kan läget snabbt bli likt det 2023. Därför är det klokt att bara samla in det du faktiskt använder, att ha samtycket på plats och att veta vilket alternativ du skulle byta till. För många sajter räcker Framer Analytics för att följa besök och sidvisningar, och den påverkas inte av samtycket eftersom den inte sätter cookies.</p>
+      <h2>Var Framer lagrar data</h2>
+      <p>Framer körs på Amazon Web Services, främst i USA, med infrastruktur även i Europa och Asien–Stillahavsområdet och leverans via Amazons CDN CloudFront. Det betyder att data om besök på sajten kan behandlas utanför EU.</p>
+      <p>Framers personuppgiftsbiträdesavtal, version 2.0, gäller från den 16 juni 2026 och gäller automatiskt för kunder, utan att du behöver signera något separat. Överföringar till USA sker enligt EU–US Data Privacy Framework och EU-kommissionens standardavtalsklausuler från 2021 (2021/914). Nämn Framer som personuppgiftsbiträde i din integritetspolicy, tillsammans med de andra tjänster som tar emot data från sajten.</p>
+      <h2>Vad cookiepolicyn ska innehålla</h2>
+      <p>En cookiepolicy ska tala om, på begriplig svenska, vilka cookies sajten använder, varför och hur besökaren ändrar sitt val. Lägg den som en vanlig sida i Framer och länka till den från bannern och sidfoten. Den kan vara en del av integritetspolicyn eller en egen sida.</p>
+      <ul>
+        <li>Vem som ansvarar för sajten och hur man kontaktar er.</li>
+        <li>Vilka kategorier av cookies som används: nödvändiga, analys och marknadsföring.</li>
+        <li>Varje cookie eller tjänst med namn, leverantör, syfte och lagringstid.</li>
+        <li>Vilka tredje parter som tar emot data och om data förs över till länder utanför EU.</li>
+        <li>Att Framer Analytics används utan cookies, om ni använder den.</li>
+        <li>Hur besökaren ändrar eller återkallar sitt samtycke, med en länk eller knapp.</li>
+        <li>Datum för senaste uppdatering.</li>
+      </ul>
+      <p>Håll policyn uppdaterad. En vanlig brist är en policy som skrevs vid lansering och sedan inte har följt med när nya verktyg lagts till.</p>
+      <h2>Checklista för en GDPR-anpassad Framer-sajt</h2>
+      <ul>
+        <li>Alla tredjepartsverktyg är inventerade och listade.</li>
+        <li>Skript för analys och marknadsföring laddas via Google Tag Manager, inte som egen kod.</li>
+        <li>Google Analytics ligger inte dubbelt, både i Site Settings och i Tag Manager.</li>
+        <li>Framers Cookie Banner är infogad på alla sidor, med EU-inställning för EU-besökare.</li>
+        <li>Knapparna för att godkänna och neka är lika tydliga.</li>
+        <li>Det finns en länk i sidfoten som öppnar bannern igen.</li>
+        <li>Inga icke nödvändiga cookies sätts innan besökaren har valt, testat i ett privat fönster.</li>
+        <li>YouTube-filmer och kartor laddas först efter samtycke, eller via youtube-nocookie.com och en statisk bild.</li>
+        <li>Formulären har en tydlig text om vad uppgifterna används till och en länk till integritetspolicyn.</li>
+        <li>Cookiepolicy och integritetspolicy finns, är länkade och nämner Framer och övriga mottagare.</li>
+        <li>Någon ansvarar för att uppdatera bannern och policyn när nya verktyg läggs till.</li>
+      </ul>
+      <h2>Sammanfattning</h2>
+      <p>En Framer-sajt som bara använder Framers egna funktioner behöver ingen cookiebanner, eftersom Framer Analytics inte sätter cookies. När du lägger till Google Analytics, pixlar eller inbäddningar krävs samtycke enligt LEK, med PTS som tillsynsmyndighet, och personuppgifterna omfattas av GDPR, med IMY som tillsynsmyndighet. Framers inbyggda Cookie Banner fungerar bäst ihop med Google Tag Manager och Consent Mode, så låt alla tredjepartstaggar gå den vägen och testa att inget laddas före samtycket. Google Analytics är tillåtet i dag tack vare Data Privacy Framework, men ha ett alternativ i bakhuvudet om EU-domstolen ändrar förutsättningarna.</p>
+      <p>Vill du veta hur mätningen hänger ihop med sökmotoroptimering går vi igenom det i <a href="/blog/framer-seo-guide.html">Framer SEO-guiden</a>. Behöver du hjälp med Tag Manager, egen kod eller integrationer finns mer om det i <a href="/framer-utvecklare.html">när du behöver en Framer-utvecklare</a>, och den bredare bilden av vad en sajt i Framer innebär finns i <a href="/framer-hemsida.html">Framer-hemsida</a>. Ska sajten få en egen domän först läser du <a href="/koppla-doman-framer.html">koppla domän till Framer</a>. Kostnaden för Framers abonnemang hittar du i <a href="/blog/framer-pris.html">prisguiden för Framer</a>.</p>
+    </div>
+
+    <!-- Related Articles -->
+    <aside class="blog-post__related">
+      <h2 class="blog-post__related-title" data-i18n="post.related">Relaterade artiklar</h2>
+      <div class="blog-post__related-grid">
+        <a href="/blog/framer-seo-guide.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-seo.svg" alt="Framer SEO (2026): Så optimerar du din sajt för Google" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Framer SEO (2026): Så optimerar du din sajt för Google</strong> — <span>Framer SEO 2026 — komplett guide till titlar, strukturerad data, Core Web Vitals och sitemap. Så får du Framer-sajten att ranka i Google.</span></p>
+        </a>
+        <a href="/blog/framer-formular-automatisering.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-formular.svg" alt="Formulär och automatisering i Framer (2026): Koppla till Zapier och Make" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Formulär och automatisering i Framer (2026): Koppla till Zapier och Make</strong> — <span>Så kopplar du Framers inbyggda formulär till Zapier eller Make via webhook — Slack-notiser, CRM, Google Sheets och andra automationsflöden utan kod.</span></p>
+        </a>
+      </div>
+    </aside>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__left">&copy; <span data-current-year>2026</span> FramerExpert.se</span>
+      <div class="footer__links">
+        <button class="lang-toggle" id="langToggle" aria-label="Byt språk">
+          <span class="lang-toggle__option is-active" data-lang="sv">SV</span>
+          <span class="lang-toggle__divider">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/init.js"></script>
+</body>
+</html>

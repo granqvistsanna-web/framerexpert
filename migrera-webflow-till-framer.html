@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#27272A">
+  <meta name="color-scheme" content="dark">
+  <title>Migrera Webflow till Framer (2026): Steg för steg</title>
+  <meta name="description" content="Så flyttar du en Webflow-sajt till Framer: URL-inventering, CSV-export av CMS, redirects, DNS och uppföljning i Search Console – utan att tappa ranking.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Migrera från Webflow till Framer (2026): Steg för steg utan att tappa ranking">
+  <meta property="og:description" content="URL-inventering, CMS-export, redirects och DNS – så flyttar du från Webflow till Framer utan att tappa ranking.">
+  <meta property="og:url" content="https://framerexpert.se/migrera-webflow-till-framer.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="FramerExpert.se">
+  <meta property="article:published_time" content="2026-09-30">
+  <meta property="article:modified_time" content="2026-09-30">
+  <meta property="article:author" content="FramerExpert">
+  <meta property="og:image" content="https://framerexpert.se/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://framerexpert.se/assets/og-default.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://framerexpert.se/migrera-webflow-till-framer.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/animations.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://framerexpert.se/#organization",
+        "name": "FramerExpert.se",
+        "alternateName": "FramerExpert",
+        "url": "https://framerexpert.se/",
+        "description": "Svensk kunskapskälla med guider, tips och expertkunskap om Framer-plattformen.",
+        "foundingDate": "2026-04",
+        "inLanguage": "sv",
+        "areaServed": { "@type": "Country", "name": "Sverige" },
+        "knowsAbout": [
+          "Framer",
+          "Framer CMS",
+          "webbdesign",
+          "teknisk SEO",
+          "Core Web Vitals",
+          "migrering från WordPress till Framer",
+          "Framer-mallar"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://framerexpert.se/#website",
+        "url": "https://framerexpert.se/",
+        "name": "FramerExpert.se",
+        "description": "Sveriges kunskapskälla för Framer. Guider, tips och expertkunskap.",
+        "inLanguage": "sv",
+        "publisher": { "@id": "https://framerexpert.se/#organization" }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://framerexpert.se/migrera-webflow-till-framer.html#article",
+    "headline": "Migrera från Webflow till Framer (2026): Steg för steg utan att tappa ranking",
+    "description": "URL-inventering, CMS-export, redirects och DNS – så flyttar du från Webflow till Framer utan att tappa ranking.",
+    "datePublished": "2026-09-30",
+    "dateModified": "2026-09-30",
+    "author": { "@id": "https://framerexpert.se/#organization" },
+    "publisher": { "@id": "https://framerexpert.se/#organization" },
+    "isPartOf": { "@id": "https://framerexpert.se/#website" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://framerexpert.se/migrera-webflow-till-framer.html" },
+    "image": "https://framerexpert.se/assets/og-default.png",
+    "inLanguage": "sv"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://framerexpert.se/" },
+      { "@type": "ListItem", "position": 2, "name": "Migrera från Webflow till Framer (2026): Steg för steg utan att tappa ranking" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Finns det en officiell import från Webflow till Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nej. Framer har ingen officiell importer som flyttar en hel Webflow-sajt. CMS-innehåll förs över genom att exportera varje Webflow-collection som CSV och importera den i Framer, medan sidor byggs om i Framer, bilder laddas ner och upp manuellt och interaktioner skapas på nytt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Tappar jag ranking när jag flyttar från Webflow till Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Inte om grundarbetet görs. Behåll samma URL-struktur där det går, lägg 301-redirects för alla adresser som ändras innan DNS byts, för över titlar och metabeskrivningar och följ upp i Google Search Console de första veckorna. En kortare svängning i placeringarna är normal vid alla plattformsbyten."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan jag behålla samma URL:er som på Webflow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oftast ja. I Webflow ligger CMS-sidor under en mapp, till exempel /post/artikelns-slug. I Framer väljer du själv sökvägen för CMS-sidan, så du kan sätta den till /post/:slug och få exakt samma adresser. Då behövs inga redirects för just de sidorna."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Följer Webflow-interaktioner med till Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nej. Interaktioner och animationer från Webflow kan inte föras över. De byggs om med Framers egna effekter, varianter och övergångar, vilket ofta ger enklare och lättare animationer än originalet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad kostar det att migrera från Webflow till Framer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "På svenska marknaden kostar en migrering oftast 25 000–75 000 kr hos en frilansare och 50 000–150 000 kr hos en byrå. Priset styrs mest av antal sidor och CMS-poster, hur mycket av designen som görs om och hur många integrationer som ska kopplas på nytt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur skiljer sig en flytt från Wix eller Squarespace?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Exportmöjligheterna är mer begränsade. Wix låter dig exportera CMS-samlingar som CSV men inte hela sajten, och Squarespace exporterar bara viss innehållstyp till en XML-fil avsedd för WordPress. Räkna med mer manuellt arbete med sidor och bilder, medan redirects och DNS görs på samma sätt som från Webflow."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="guideWebflowMigrering">
+
+  <!-- NAVIGATION -->
+  <nav data-twostep-nav data-nav-status="not-active" class="twostep-nav">
+    <div data-nav-toggle="close" class="twostep-nav__bg"></div>
+    <div class="twostep-nav__wrap">
+      <div class="twostep-nav__width">
+        <div class="twostep-nav__bar">
+          <div class="twostep-nav__back">
+            <div class="twostep-nav__back-bg"></div>
+          </div>
+          <div class="twostep-nav__top">
+            <a href="/" class="twostep-nav__logo">
+              framer.expert
+            </a>
+            <button data-nav-toggle="toggle" class="twostep-nav__toggle" aria-label="Öppna meny" aria-expanded="false">
+              <div class="twostep-nav__toggle-bar"></div>
+              <div class="twostep-nav__toggle-bar"></div>
+            </button>
+            <div class="twostep-nav__top-line"></div>
+          </div>
+          <div class="twostep-nav__bottom">
+            <div class="twostep-nav__bottom-overflow">
+              <div class="twostep-nav__bottom-inner">
+                <div class="twostep-nav__bottom-row">
+                  <div class="twostep-nav__bottom-col">
+                    <div class="twostep-nav__info">
+                      <ul class="twostep-nav__ul">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-span" data-i18n="nav.blog">Blogg</span></a>
+                        </li>
+                      </ul>
+                      <ul class="twostep-nav__ul is--small">
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=getting-started" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.getting-started">Kom igång</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=comparison" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.comparison">Jämförelse</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=tips" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.tips">Tips</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=seo" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.seo">SEO</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="/blog/?category=cms" class="twostep-nav__link" data-nav-toggle="close"><span class="twostep-nav__link-eyebrow" data-i18n="blog.filter.cms">CMS</span></a>
+                        </li>
+                        <li class="twostep-nav__li">
+                          <a href="https://www.framer.com" target="_blank" rel="noopener" class="twostep-nav__link"><span class="twostep-nav__link-eyebrow">Framer.com</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumbs container">
+    <ol class="breadcrumbs__list">
+      <li><a href="/" data-i18n="nav.home">Hem</a></li>
+      <li><span aria-current="page">Migrera från Webflow till Framer (2026): Steg för steg utan att tappa ranking</span></li>
+    </ol>
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="container">
+    <header class="blog-post__header">
+      <div class="blog-post__meta">
+        <span class="blog-post__category">Guide</span>
+        <span>Uppdaterad <time datetime="2026-09-30">30 september 2026</time></span>
+      </div>
+      <h1 class="blog-post__title">Migrera från Webflow till Framer (2026): Steg för steg utan att tappa ranking</h1>
+      <p class="blog-post__intro">Webflow och Framer liknar varandra mer än WordPress och Framer gör. Båda bygger visuellt, båda har CMS och hosting inbyggt. Därför går en migrering ofta smidigt, men det finns ingen knapp som flyttar sajten åt dig. Här går vi igenom när flytten är värd besväret, hur du gör den steg för steg och var rankingen brukar tappas om ordningen blir fel.</p>
+    </header>
+
+    <div class="blog-post__content">
+      <h2>Är det värt att flytta från Webflow till Framer?</h2>
+      <p>Flytten är värd det när ni vill att marknadsavdelningen ska kunna bygga och ändra sidor själva, när sajten består av sidor, blogg och case, och när Webflows sätt att arbeta med klasser känns tyngre än det behöver vara. Den är sällan värd det om sajten fungerar bra, rankar bra och ingen i teamet upplever Webflow som ett hinder. En migrering kostar alltid tid, och den ger ingen SEO-vinst i sig.</p>
+      <p>Tecken på att flytten är rätt:</p>
+      <ul>
+        <li>Redaktörerna är beroende av en utvecklare för enkla layoutändringar.</li>
+        <li>Designen ska ändå göras om, så ombyggnaden behövs oavsett plattform.</li>
+        <li>Sajten är en marknadssajt med normalstort CMS, formulär och animationer.</li>
+      </ul>
+      <p>Tecken på att ni bör vänta:</p>
+      <ul>
+        <li>Sajten har en omfattande e-handel eller medlemsfunktioner byggda i Webflow.</li>
+        <li>CMS:et har väldigt många poster och komplexa kopplingar mellan samlingar. Kontrollera först vad ert Framer-abonnemang tillåter, eftersom antal samlingar och poster styrs av planen. Se <a href="/blog/framer-pris.html">vår genomgång av Framers priser</a>.</li>
+        <li>Ni saknar tid att följa upp i Search Console efter lansering.</li>
+      </ul>
+      <p>En bredare jämförelse av plattformarna finns i <a href="/blog/framer-vs-webflow.html">Framer vs Webflow</a>. Kommer ni från WordPress i stället gäller i stort sett samma metod, men exporten ser annorlunda ut. Den beskrivs i <a href="/blog/migrera-wordpress-till-framer.html">guiden för WordPress till Framer</a>.</p>
+      <aside class="blog-post__factbox">
+        <h3>Det här flyttar inte automatiskt</h3>
+        <ul>
+          <li>Det finns ingen officiell import från Webflow till Framer.</li>
+          <li>Sidor och layout byggs om i Framer.</li>
+          <li>Bilder och andra filer laddas ner och upp igen manuellt.</li>
+          <li>Interaktioner följer inte med och skapas om med Framers egna verktyg.</li>
+          <li>CMS-innehåll förs över via CSV, en collection i taget.</li>
+        </ul>
+      </aside>
+      <h2>Webflow-begrepp och deras motsvarighet i Framer</h2>
+      <p>Det mesta i Webflow har en direkt motsvarighet i Framer, men arbetssättet skiljer sig. Den största skillnaden är att Framer inte bygger på CSS-klasser. Tabellen hjälper dig att översätta när du planerar ombyggnaden.</p>
+      <div class="blog-post__table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Webflow</th><th scope="col">Framer</th><th scope="col">Att tänka på</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Collections</th><td>CMS Collections</td><td>Skapa samlingar och fält i Framer innan du importerar</td></tr>
+            <tr><th scope="row">Collection List</th><td>Collection List</td><td>Fungerar på samma sätt, med filter, sortering och gräns för antal poster</td></tr>
+            <tr><th scope="row">Symbols / Components</th><td>Components</td><td>Varianter i Framer ersätter ofta flera Webflow-komponenter</td></tr>
+            <tr><th scope="row">Interactions</th><td>Effects och interaktioner</td><td>Byggs om med appear-, scroll- och hover-effekter samt varianter</td></tr>
+            <tr><th scope="row">Classes och combo classes</th><td>Styles och komponenter</td><td>Färg- och textstilar plus komponenter tar över rollen</td></tr>
+            <tr><th scope="row">Designer och Editor</th><td>Canvas och redaktörsbehörighet</td><td>Redaktörer kan få begränsad åtkomst till innehåll</td></tr>
+            <tr><th scope="row">Hosting-inställningar</th><td>Site Settings</td><td>Domän, redirects, SEO och egen kod samlas här</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Steg 1: Inventera alla URL:er</h2>
+      <p>Börja med en komplett lista över alla adresser sajten har i dag. Den listan styr både redirects och kontrollen efter lansering, så den behöver vara fullständig.</p>
+      <p>Hämta adresserna från två håll. Kör en crawl av sajten med ett crawlverktyg för att få allt som länkas internt. Exportera sedan sidor med visningar eller klick från Google Search Console, eftersom den visar adresser som Google känner till men som kanske inte längre länkas. Jämför listorna och lägg till sådant som bara finns i den ena.</p>
+      <p>Markera samtidigt vilka sidor som ska flytta, vilka som ska slås ihop och vilka som kan tas bort. Gallra hellre nu än efter att allt är ombyggt.</p>
+      <h2>Steg 2: Exportera CMS-innehållet som CSV</h2>
+      <p>Webflow exporterar CMS-innehåll per collection. Öppna Collections-panelen, välj en collection och klicka på Export. Upprepa för varje samling. Två saker är bra att veta: arkiverade poster följer med i exporten, och bara det språk som är valt för tillfället exporteras. Har sajten flera språk behöver du exportera en gång per språk, eller hantera översättningarna separat.</p>
+      <p>I Framer skapar du först samlingarna och fälten, sedan importerar du via CMS-importen eller det officiella pluginet CSV Import, där du mappar varje kolumn mot rätt fält. Ordningen spelar roll när samlingar refererar till varandra. Importera de samlingar som det refereras till först, till exempel kategorier och författare, och därefter de samlingar som pekar på dem. Räkna med att fält med flera referenser (multi-reference) kan behöva kopplas ihop för hand efteråt.</p>
+      <p>Rensa bort arkiverade poster ur CSV-filen innan import om de inte ska publiceras. Läs mer om hur samlingar och fält bör byggas i <a href="/blog/framer-cms-i-praktiken.html">vår guide till Framer CMS</a>.</p>
+      <h2>Steg 3: Hantera formaterad text och bilder</h2>
+      <p>Kontrollera formaterad text och bilder noga, för det är här importen oftast brister. Rubriker, listor och länkar i Webflows rich text-fält följer vanligtvis med som formatering, men inbäddade element, egna kodblock och specialtecken behöver stickprovas.</p>
+      <p>Bilderna ligger kvar på Webflows servrar tills sajten stängs. Ladda ner originalen och ladda upp dem i Framer, så att sajten inte är beroende av gamla filadresser. Passa på att komprimera och ge bilderna beskrivande alt-texter. Gå igenom ett urval poster från varje samling och jämför med originalet innan du fortsätter.</p>
+      <h2>Steg 4: Bygg om designen med stilar och komponenter</h2>
+      <p>Designen byggs om i Framer, och det lönar sig att göra det ordentligt. Skapa färgstilar och textstilar först, bygg återkommande delar som komponenter med varianter och sätt upp brytpunkterna innan sidorna fylls med innehåll.</p>
+      <p>Försök inte återskapa Webflows klasstruktur. Det som i Webflow var en combo class blir i Framer oftast en variant på en komponent eller en egen textstil. För sektioner där du vill ha en snabb utgångspunkt listar Framers egen guide för Webflow-flytt även Framer Agents och Server API som hjälpmedel, men räkna med att strukturen ändå behöver ses över för hand.</p>
+      <h2>Steg 5: Skapa interaktionerna på nytt, native i Framer</h2>
+      <p>Webflow-interaktioner följer inte med, så varje animation byggs om. Använd i första hand Framers inbyggda effekter: appear-effekter vid scroll, hover- och pressade lägen via varianter och övergångar mellan varianter. Kod behövs bara när beteendet inte går att uttrycka på canvasen.</p>
+      <p>Se det som ett tillfälle att rensa. Många Webflow-sajter har lager av animationer som gör sidan långsammare utan att tillföra något. Mer om hur effekterna fungerar finns i <a href="/blog/framer-animationer-interactions.html">guiden till animationer och interaktioner i Framer</a>.</p>
+      <h2>Steg 6: Koppla formulär och integrationer</h2>
+      <p>Lista alla formulär och vart svaren skickas i dag, och bygg om dem i Framer med samma fält. Framers formulär kan skicka svar via e-post eller vidare till andra tjänster. Kontrollera också spårningsskript, cookiebanner, chattverktyg och annat som ligger som egen kod i Webflow, och lägg in det på nytt i Framers inställningar för egen kod. Testa varje formulär med riktiga inskick innan lansering. Automatiseringar går vi igenom i <a href="/blog/framer-formular-automatisering.html">guiden till formulär och automatisering</a>.</p>
+      <h2>Steg 7: För över SEO-fält, meta och OG</h2>
+      <p>Titlar, metabeskrivningar och delningsbilder måste föras över aktivt. För statiska sidor sätts de per sida i sidinställningarna. För CMS-sidor skapar du fält för SEO-titel, beskrivning och OG-bild i samlingen, importerar dem från CSV:n och kopplar dem till CMS-sidans SEO-inställningar.</p>
+      <p>Kontrollera också canonical-adresser, att sidor som inte ska indexeras är markerade och att strukturerad data som fanns på den gamla sajten läggs in igen. Hela listan finns i <a href="/blog/framer-seo-checklista.html">vår SEO-checklista för Framer</a>.</p>
+      <h2>Steg 8: Mappa redirects från gammal till ny URL</h2>
+      <p>Det enklaste sättet att undvika redirects är att behålla adresserna. I Webflow ligger en collections sidor under en mapp, till exempel /post/artikelns-slug. I Framer väljer du fritt sökvägen för CMS-sidan, så sätt den till /post/:slug om du vill ha exakt samma adresser. Redirects behövs då bara för det som faktiskt ändras.</p>
+      <p>Redirects läggs upp under Site Settings, Hosting och Redirects. Framer stöder wildcard med *, fångade värden som återanvänds med :1 och :2 samt namngivna parametrar som :slug. Reglerna kan dras i önskad ordning, de gäller bara sökvägar på den aktuella domänen och de uppdateras inte automatiskt om du senare byter en sidas adress. Redirects kräver betalt abonnemang, se <a href="/blog/framer-pris.html">prisguiden</a>.</p>
+      <div class="blog-post__table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Gammal URL (Webflow)</th><th scope="col">Ny URL (Framer)</th><th scope="col">Typ av regel</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">/post/:slug</th><td>/blog/:slug</td><td>Namngiven parameter, en regel för alla inlägg</td></tr>
+            <tr><th scope="row">/services/*</th><td>/tjanster/:1</td><td>Wildcard med fångat värde</td></tr>
+            <tr><th scope="row">/om-oss-2</th><td>/om-oss</td><td>Enskild sida</td></tr>
+            <tr><th scope="row">/kampanj-var-2024</th><td>/</td><td>Borttagen sida till närmaste relevanta sida</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Gå igenom inventeringen från steg 1 rad för rad och se till att varje adress antingen finns kvar eller har en regel. Undvik att peka borttagna sidor mot startsidan om det finns en bättre matchning.</p>
+      <h2>Steg 9: Byt DNS</h2>
+      <p>När innehåll, SEO-fält och redirects är på plats pekar du domänen mot Framer. Lägg till domänen i Framer, uppdatera DNS-posterna hos din domänleverantör och ta bort de gamla posterna som pekar mot Webflow. Säg inte upp Webflow-planen förrän den nya sajten är live och kontrollerad, så att du kan gå tillbaka om något går fel. Hur du gör själva kopplingen beskriver vi i <a href="/koppla-doman-framer.html">guiden om att koppla en domän till Framer</a>.</p>
+      <h2>Steg 10: Följ upp i Search Console efter lansering</h2>
+      <p>Skicka in Framers sitemap i Google Search Console samma dag som sajten går live. Följ sedan rapporten över sidindexering och håll särskilt koll på 404-fel och sidor som plötsligt räknas som omdirigerade eller exkluderade.</p>
+      <p>Testa ett urval av de gamla adresserna direkt efter lansering och se att de hamnar rätt. Jämför klick och visningar veckovis med perioden före flytten. Små svängningar är normala. Tappar en viss sida mycket är det oftast en redirect som saknas eller en titel som inte följt med.</p>
+      <h2>Vad kostar en migrering från Webflow?</h2>
+      <p>En migrering kostar oftast 25 000–75 000 kr hos en frilansare och 50 000–150 000 kr hos en byrå på svenska marknaden. Det som driver priset är antal sidor och CMS-poster, om designen görs om samtidigt och hur många formulär och integrationer som ska kopplas på nytt. Till det kommer Framers abonnemang.</p>
+      <div class="blog-post__table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Upplägg</th><th scope="col">Frilansare</th><th scope="col">Byrå</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Migrering</th><td>25 000–75 000 kr</td><td>50 000–150 000 kr</td></tr>
+            <tr><th scope="row">Timpris för tillägg</th><td>1 000–1 500 kr</td><td>1 400–2 200 kr</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Be om en offert där inventering, CMS-import, redirects och uppföljning efter lansering redovisas som egna delar. Då ser du vad som ingår.</p>
+      <h2>Vanliga misstag</h2>
+      <ul>
+        <li><strong>DNS byts innan redirects är klara.</strong> Google hinner registrera 404-fel på några timmar.</li>
+        <li><strong>URL-strukturen ändras i onödan.</strong> Framer kan spegla Webflows mappar, så använd det.</li>
+        <li><strong>Arkiverade poster publiceras av misstag</strong> eftersom de följer med i CSV-exporten.</li>
+        <li><strong>Bara ett språk flyttas</strong> för att exporten bara tar med det valda språket.</li>
+        <li><strong>Referensfält kopplas inte om</strong> efter importen, så listor och filter visar fel innehåll.</li>
+        <li><strong>Bilderna ligger kvar på Webflow</strong> och slutar fungera när planen sägs upp.</li>
+        <li><strong>Gamla animationer kopieras rakt av</strong> i stället för att förenklas med Framers egna effekter.</li>
+      </ul>
+      <h2>Kommer du från Wix eller Squarespace?</h2>
+      <p>Metoden är densamma, men exporten är mer begränsad och mer arbete blir manuellt. Inventering, redirects, DNS och uppföljning görs precis som ovan.</p>
+      <p>Wix låter dig exportera CMS-samlingar som CSV, men hela sajten kan inte exporteras eftersom den är byggd för att köras på Wix egen plattform. Blogginlägg kan enligt Wix hjälpcenter inte exporteras direkt till andra plattformar, så räkna med att föra över dem på annat sätt. Squarespace kan exportera visst innehåll till en XML-fil avsedd för WordPress, men långt ifrån allt följer med och bara en bloggsida exporteras. Den filen behöver ofta bearbetas till CSV innan den kan importeras i Framer. Kontrollera alltid plattformens aktuella hjälpsidor innan du planerar flytten, eftersom exportfunktionerna ändras över tid.</p>
+      <h2>Sammanfattning</h2>
+      <p>En flytt från Webflow till Framer är tekniskt rak men kräver disciplin. Inventera alla adresser, exportera CMS-innehållet per collection, bygg om designen med stilar och komponenter, skapa interaktionerna på nytt och behåll URL-strukturen där det går. Lägg redirects för resten innan DNS byts och följ upp i Search Console tills trafiken har stabiliserat sig. Gör du stegen i den ordningen följer rankingen med.</p>
+    </div>
+
+    <!-- Related Articles -->
+    <aside class="blog-post__related">
+      <h2 class="blog-post__related-title" data-i18n="post.related">Relaterade artiklar</h2>
+      <div class="blog-post__related-grid">
+        <a href="/blog/migrera-wordpress-till-framer.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-migrera-wordpress.svg" alt="Migrera från WordPress till Framer (2026): Steg-för-steg utan att tappa SEO" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Migrera från WordPress till Framer (2026): Steg-för-steg utan att tappa SEO</strong> — <span>Praktisk guide till att flytta en WordPress-sajt till Framer — innehåll, redirects, CMS-import, DNS och de vanligaste fallgroparna som kostar SEO-ranking.</span></p>
+        </a>
+        <a href="/blog/framer-vs-webflow.html" class="card">
+          <div class="card__image">
+            <img src="../assets/thumb-framer-vs-webflow.svg" alt="Framer vs Webflow (2026): Vilken ska du välja?" loading="lazy">
+          </div>
+          <p class="card__text"><strong>Framer vs Webflow (2026): Vilken ska du välja?</strong> — <span>Framer vs Webflow 2026: ärlig jämförelse av pris, CMS, e-handel, SEO och användarvänlighet. Så väljer du rätt plattform för din sajt.</span></p>
+        </a>
+      </div>
+    </aside>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__left">&copy; <span data-current-year>2026</span> FramerExpert.se</span>
+      <div class="footer__links">
+        <button class="lang-toggle" id="langToggle" aria-label="Byt språk">
+          <span class="lang-toggle__option is-active" data-lang="sv">SV</span>
+          <span class="lang-toggle__divider">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/init.js"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 > Svensk kunskapskälla om Framer. Guider, plattformsjämförelser, SEO-hjälp och listor över verifierade Framer Experts, för dig som bygger eller beställer en webbplats i Framer.
 
-Senast uppdaterad: 2026-08-13
+Senast uppdaterad: 2026-09-30
 
 Innehållet är skrivet på svenska och uppdateras löpande. Alla artiklar ligger under `/blog/`, har publicerings- och uppdateringsdatum i sidhuvudet och JSON-LD (`BlogPosting`, `BreadcrumbList`, i de flesta fall `FAQPage`) i källkoden. Årtalet i titeln anger vilken version av Framer och vilken prisbild texten beskriver.
 
@@ -10,6 +10,11 @@ Innehållet är skrivet på svenska och uppdateras löpande. Alla artiklar ligge
 
 - [FramerExpert.se — start](https://framerexpert.se/): Ingång till allt innehåll om Framer, med de senaste artiklarna.
 - [Blogg — alla artiklar](https://framerexpert.se/blog/): Samtliga artiklar, filtrerbara på kategorierna Kom igång, Jämförelse, Tips, SEO och CMS.
+
+## Guider
+
+- [Framer-hemsida (2026): Så går det till, vad det kostar och vad du får](https://framerexpert.se/framer-hemsida.html): Tre vägar till en hemsida i Framer, projektets steg, tidsåtgång, prisnivåer på svenska marknaden och ansvar efter lansering.
+- [Framer-utvecklare (2026): Vad de gör, när du behöver en och vad du ska fråga](https://framerexpert.se/framer-utvecklare.html): Kodkomponenter, overrides, integrationer, CMS-arkitektur och prestanda, med testfrågor, timpriser och krav vid överlämning.
 
 ## Kom igång med Framer
 

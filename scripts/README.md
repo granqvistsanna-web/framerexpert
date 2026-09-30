@@ -28,3 +28,10 @@ is no watch mode — re-run it after every content change.
 
 See `content/blog/README.md` for the authoring workflow and frontmatter
 reference.
+
+### Guide pages
+
+Markdown in `content/pages/<slug>.md` builds to `<slug>.html` at the site root
+with `content/pages/_template.html` (Article schema, no blog breadcrumb). Same
+frontmatter as posts minus `category` and `readtime`. `build-sitemap.js` picks
+them up too.

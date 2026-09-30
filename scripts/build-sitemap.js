@@ -5,6 +5,7 @@
  *   node scripts/build-sitemap.js
  *
  * Reads:  content/blog/<slug>.md   (every non-stub post)
+ * Reads:  content/pages/<slug>.md  (root-level guide pages)
  * Writes: sitemap.xml
  *
  * The point of generating rather than hand-editing: <lastmod> and the page's
@@ -21,6 +22,7 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const CONTENT_DIR = path.join(ROOT, 'content', 'blog');
+const PAGES_DIR = path.join(ROOT, 'content', 'pages');
 const OUT_PATH = path.join(ROOT, 'sitemap.xml');
 const BASE = 'https://framerexpert.se';
 
@@ -47,7 +49,7 @@ function main() {
   }
   for (const post of posts) {
     entries.push({
-      loc: `${BASE}/blog/${post.slug}.html`,
+      loc: post.isPage ? `${BASE}/${post.slug}.html` : `${BASE}/blog/${post.slug}.html`,
       lastmod: post.lastmod,
       changefreq: 'monthly',
       priority: '0.8',
@@ -59,13 +61,21 @@ function main() {
 }
 
 function loadPosts() {
-  const files = fs.readdirSync(CONTENT_DIR).filter((f) => {
+  const posts = [];
+  for (const dir of [CONTENT_DIR, PAGES_DIR]) {
+    if (fs.existsSync(dir)) posts.push(...loadDir(dir, dir === PAGES_DIR));
+  }
+  return posts.sort((a, b) => (a.lastmod < b.lastmod ? 1 : a.lastmod > b.lastmod ? -1 : a.slug.localeCompare(b.slug)));
+}
+
+function loadDir(dir, isPage) {
+  const files = fs.readdirSync(dir).filter((f) => {
     return f.endsWith('.md') && !f.startsWith('_') && f.toLowerCase() !== 'readme.md';
   });
 
   const posts = [];
   for (const file of files) {
-    const front = parseFrontmatter(path.join(CONTENT_DIR, file));
+    const front = parseFrontmatter(path.join(dir, file));
     const slug = front.slug || file.replace(/\.md$/, '');
 
     // A stub's HTML predates the build script and is maintained by hand, so its
@@ -76,9 +86,9 @@ function loadPosts() {
 
     if (!lastmod) die(`${file}: missing both date_modified and date.`);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(lastmod)) die(`${file}: lastmod "${lastmod}" is not YYYY-MM-DD.`);
-    posts.push({ slug, lastmod });
+    posts.push({ slug, lastmod, isPage });
   }
-  return posts.sort((a, b) => (a.lastmod < b.lastmod ? 1 : a.lastmod > b.lastmod ? -1 : a.slug.localeCompare(b.slug)));
+  return posts;
 }
 
 function dateModifiedFromHtml(slug) {

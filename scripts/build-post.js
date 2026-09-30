@@ -5,9 +5,11 @@
  *   node scripts/build-post.js <slug>     # build one post
  *   node scripts/build-post.js --all      # build every non-stub post
  *
- * Reads:  content/blog/<slug>.md
- * Reads:  blog/_template.html
- * Writes: blog/<slug>.html
+ * Reads:  content/blog/<slug>.md    → blog/<slug>.html   (template blog/_template.html)
+ * Reads:  content/pages/<slug>.md   → <slug>.html        (template content/pages/_template.html)
+ *
+ * Pages are standalone guides at the site root: same markdown, no blog
+ * category or readtime, WebPage breadcrumb instead of Blogg.
  *
  * Zero runtime dependencies — uses only Node's stdlib.
  */
@@ -22,6 +24,8 @@ const CONTENT_DIR = path.join(ROOT, 'content', 'blog');
 const TEMPLATE_PATH = path.join(ROOT, 'blog', '_template.html');
 const I18N_PATH = path.join(ROOT, 'js', 'i18n.js');
 const OUT_DIR = path.join(ROOT, 'blog');
+const PAGES_DIR = path.join(ROOT, 'content', 'pages');
+const PAGE_TEMPLATE_PATH = path.join(PAGES_DIR, '_template.html');
 
 const CATEGORY_LABELS = {
   'getting-started': 'Kom igång',
@@ -39,7 +43,10 @@ function main() {
   }
 
   const registry = loadRegistry();
-  const template = fs.readFileSync(TEMPLATE_PATH, 'utf8');
+  const templates = {
+    post: fs.readFileSync(TEMPLATE_PATH, 'utf8'),
+    page: fs.readFileSync(PAGE_TEMPLATE_PATH, 'utf8'),
+  };
   const i18n = loadSwedishI18n();
 
   const slugs = args[0] === '--all'
@@ -50,25 +57,36 @@ function main() {
     const post = registry[slug];
     if (!post) die(`No content/blog/${slug}.md found.`);
     if (post.stub) die(`${slug} is a stub — add body content before building.`);
-    const html = render(template, post, registry, i18n);
-    const outPath = path.join(OUT_DIR, `${slug}.html`);
+    const html = render(templates[post.kind], post, registry, i18n);
+    const outPath = post.kind === 'page'
+      ? path.join(ROOT, `${slug}.html`)
+      : path.join(OUT_DIR, `${slug}.html`);
     fs.writeFileSync(outPath, html);
     console.log(`wrote ${path.relative(ROOT, outPath)}`);
   }
 }
 
 function loadRegistry() {
-  const files = fs.readdirSync(CONTENT_DIR).filter((f) => {
-    return f.endsWith('.md') && !f.startsWith('_') && f.toLowerCase() !== 'readme.md';
-  });
   const registry = {};
-  for (const f of files) {
-    const raw = fs.readFileSync(path.join(CONTENT_DIR, f), 'utf8');
-    const parsed = parseMarkdown(raw);
-    parsed.slug = parsed.slug || f.replace(/\.md$/, '');
-    registry[parsed.slug] = parsed;
+  for (const [dir, kind] of [[CONTENT_DIR, 'post'], [PAGES_DIR, 'page']]) {
+    if (!fs.existsSync(dir)) continue;
+    const files = fs.readdirSync(dir).filter((f) => {
+      return f.endsWith('.md') && !f.startsWith('_') && f.toLowerCase() !== 'readme.md';
+    });
+    for (const f of files) {
+      const raw = fs.readFileSync(path.join(dir, f), 'utf8');
+      const parsed = parseMarkdown(raw);
+      parsed.slug = parsed.slug || f.replace(/\.md$/, '');
+      if (registry[parsed.slug]) die(`Slug "${parsed.slug}" exists as both a post and a page.`);
+      parsed.kind = kind;
+      registry[parsed.slug] = parsed;
+    }
   }
   return registry;
+}
+
+function urlPath(p) {
+  return p.kind === 'page' ? `/${p.slug}.html` : `/blog/${p.slug}.html`;
 }
 
 /*
@@ -124,12 +142,15 @@ function assertI18nMatches(post, i18n) {
 }
 
 function render(template, post, registry, i18n) {
-  required(post, ['slug', 'page_id', 'category', 'date', 'date_display', 'readtime',
-    'thumbnail', 'title', 'meta_title', 'description', 'intro']);
+  const isPage = post.kind === 'page';
+  required(post, isPage
+    ? ['slug', 'page_id', 'date', 'date_display', 'title', 'meta_title', 'description', 'intro']
+    : ['slug', 'page_id', 'category', 'date', 'date_display', 'readtime',
+      'thumbnail', 'title', 'meta_title', 'description', 'intro']);
 
   assertI18nMatches(post, i18n);
 
-  const categoryLabel = CATEGORY_LABELS[post.category];
+  const categoryLabel = isPage ? 'Guide' : CATEGORY_LABELS[post.category];
   if (!categoryLabel) die(`Unknown category "${post.category}" on ${post.slug}.`);
 
   const vars = {
@@ -142,7 +163,7 @@ function render(template, post, registry, i18n) {
     DATE: post.date,
     DATE_MODIFIED: post.date_modified || post.date,
     DATE_DISPLAY: escapeHtml(post.date_display),
-    READTIME: escapeHtml(post.readtime),
+    READTIME: escapeHtml(post.readtime || ''),
     OG_IMAGE: post.og_image || 'og-default.png',
     CATEGORY_LABEL: escapeHtml(categoryLabel),
     INTRO: escapeHtml(post.intro),
@@ -337,7 +358,7 @@ function renderRelated(slugs, registry, selfSlug) {
     required(p, ['thumbnail', 'title']);
     const excerpt = p.excerpt || p.description || '';
     blocks.push(
-      `        <a href="/blog/${p.slug}.html" class="card">\n` +
+      `        <a href="${urlPath(p)}" class="card">\n` +
       `          <div class="card__image">\n` +
       `            <img src="../assets/${p.thumbnail}" alt="${escapeAttr(p.title)}" loading="lazy">\n` +
       `          </div>\n` +

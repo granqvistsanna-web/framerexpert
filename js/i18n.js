@@ -76,6 +76,10 @@ const translations = {
     'page.404.description': 'Sidan du letar efter kunde inte hittas.',
     'page.hackathon2026.title': 'Framer Agents Hackathon 2026: Alla vinnare \u2014 FramerExpert.se',
     'page.hackathon2026.description': 'Resultatet fr\u00e5n Framer Agents Hackathon 2026: 600 deltagare, 24 timmar och tio utsedda vinnare. Hela vinnarlistan med bidrag och skapare \u2014 inklusive svenska Sanna Granqvist.',
+    'page.guideUtvecklare.title': 'Framer-utvecklare (2026): Vad de gör och när du behöver en',
+    'page.guideUtvecklare.description': 'Vad gör en Framer-utvecklare? Kodkomponenter, CMS, integrationer och prestanda – när du behöver en, vad det kostar och vilka frågor du ska ställa.',
+    'page.guideHemsida.title': 'Framer-hemsida (2026): Så går det till och vad det kostar',
+    'page.guideHemsida.description': 'Allt om att skaffa en hemsida i Framer: tre vägar dit, projektets steg, prisnivåer på svenska marknaden och vad du ansvarar för efter lansering.',
 
     'nav.home': 'Hem',
     'nav.blog': 'Blogg',
@@ -134,6 +138,10 @@ const translations = {
 
     'articles.hackathon2026.title': 'Framer Agents Hackathon 2026: Alla vinnare',
     'articles.hackathon2026.excerpt': '600 deltagare, 24 timmar, tio vinnande bidrag \u2014 hela listan, med det svenska bidraget bland vinnarna.',
+    'articles.guideUtvecklare.title': 'Framer-utvecklare (2026): Vad de gör, när du behöver en och vad du ska fråga',
+    'articles.guideUtvecklare.excerpt': 'Kodkomponenter, CMS-struktur, integrationer och prestanda – vad en Framer-utvecklare faktiskt gör och när du behöver en.',
+    'articles.guideHemsida.title': 'Framer-hemsida (2026): Så går det till, vad det kostar och vad du får',
+    'articles.guideHemsida.excerpt': 'Tre vägar till en hemsida i Framer, hur ett projekt går till steg för steg, vad det kostar och vad som händer efter lansering.',
 
     'articles.a1.category': 'Kom ig\u00e5ng',
     'articles.a1.title': 'Vad \u00e4r Framer? En komplett guide',
@@ -471,6 +479,10 @@ const translations = {
     'page.404.description': 'The page you are looking for could not be found.',
     'page.hackathon2026.title': 'Framer Agents Hackathon 2026: All winners \u2014 FramerExpert.se',
     'page.hackathon2026.description': 'Results from the Framer Agents Hackathon 2026: 600 participants, 24 hours and ten winning entries. The full winner list with projects and creators \u2014 including Sweden\u2019s Sanna Granqvist.',
+    'page.guideUtvecklare.title': 'Framer developer (2026): What they do and when you need one',
+    'page.guideUtvecklare.description': 'What does a Framer developer do? Code components, CMS, integrations and performance – when you need one, what it costs and which questions to ask.',
+    'page.guideHemsida.title': 'Framer website (2026): How it works and what it costs',
+    'page.guideHemsida.description': 'Everything about getting a website in Framer: three routes, the project steps, Swedish market prices and what you own after launch.',
 
     'nav.home': 'Home',
     'nav.blog': 'Blog',
@@ -529,6 +541,10 @@ const translations = {
 
     'articles.hackathon2026.title': 'Framer Agents Hackathon 2026: All winners',
     'articles.hackathon2026.excerpt': '600 participants, 24 hours, ten winning entries — the full list, including the Swedish entry among the winners.',
+    'articles.guideUtvecklare.title': 'Framer developer (2026): What they do, when you need one and what to ask',
+    'articles.guideUtvecklare.excerpt': 'Code components, CMS structure, integrations and performance – what a Framer developer actually does and when you need one.',
+    'articles.guideHemsida.title': 'Framer website (2026): How it works, what it costs and what you get',
+    'articles.guideHemsida.excerpt': 'Three routes to a Framer website, how a project runs step by step, what it costs and what happens after launch.',
 
     'articles.a1.category': 'Getting started',
     'articles.a1.title': 'What is Framer? A complete guide',
